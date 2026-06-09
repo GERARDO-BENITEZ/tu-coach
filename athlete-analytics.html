@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Coach — Rendimiento & Analytics</title>
+<style>
+:root{
+  --bg:#0f1117;--bg2:#181c27;--bg3:#1e2336;--border:#2a2f45;
+  --accent:#4f8ef7;--accent2:#7c6ef5;
+  --green:#22c55e;--red:#ef4444;--orange:#f97316;--yellow:#eab308;
+  --text:#e8eaf0;--text2:#8b92a8;--text3:#5a6080;--card:#1a1f30;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;min-height:100vh;display:flex}
+
+/* SIDEBAR */
+.sidebar{width:220px;min-height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;left:0;top:0;z-index:100}
+.logo{padding:20px 20px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border)}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:#fff}
+.logo-text{font-size:15px;font-weight:700}
+.logo-sub{font-size:10px;color:var(--text2);letter-spacing:1px;text-transform:uppercase}
+.int-strip{display:flex;gap:5px;padding:8px 10px;border-bottom:1px solid var(--border)}
+.int-badge{display:flex;align-items:center;gap:4px;padding:3px 7px;border-radius:20px;font-size:10px;font-weight:700;border:1px solid}
+.int-g{background:rgba(0,123,255,.1);border-color:rgba(0,123,255,.3);color:#4f9ef8}
+.int-w{background:rgba(0,232,122,.08);border-color:rgba(0,232,122,.25);color:#00e87a}
+.int-dot{width:5px;height:5px;border-radius:50%}
+.int-g .int-dot{background:#4f9ef8}
+.int-w .int-dot{background:#00e87a}
+.nav{padding:10px 0;flex:1}
+.nav-section{padding:6px 16px 3px;font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-top:8px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:13px;color:var(--text2);cursor:pointer;transition:all .15s;margin:1px 8px;border-radius:6px}
+.nav-item:hover{background:var(--bg3);color:var(--text)}
+.nav-item.active{background:rgba(79,142,247,.15);color:var(--accent)}
+.nav-item svg{width:15px;height:15px;flex-shrink:0}
+.sidebar-bottom{padding:14px;border-top:1px solid var(--border)}
+.s-user{display:flex;align-items:center;gap:10px}
+.s-avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff}
+
+/* MAIN */
+.main{margin-left:220px;flex:1;display:flex;flex-direction:column}
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.page-title{font-size:15px;font-weight:700}
+.topbar-right{display:flex;gap:8px;align-items:center}
+.btn{padding:8px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:none;transition:all .15s}
+.btn-secondary{background:var(--bg3);color:var(--text2);border:1px solid var(--border)}
+.btn-secondary:hover{background:var(--border);color:var(--text)}
+.btn-primary{background:var(--accent);color:#fff}
+
+.content{padding:20px 24px}
+
+/* STAT HEADER */
+.stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:28px}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;position:relative;overflow:hidden}
+.stat-box::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.sb-blue::after{background:var(--accent)}
+.sb-red::after{background:var(--red)}
+.sb-green::after{background:var(--green)}
+.sb-yellow::after{background:var(--yellow)}
+.sb-purple::after{background:var(--accent2)}
+.sb-orange::after{background:var(--orange)}
+.stat-label{font-size:10px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+.stat-val{font-size:26px;font-weight:900;letter-spacing:-1px;line-height:1}
+.stat-sub{font-size:11px;color:var(--text2);margin-top:4px}
+.stat-delta{font-size:11px;font-weight:600;margin-top:3px}
+.d-up{color:var(--green)}.d-down{color:var(--red)}.d-neu{color:var(--yellow)}
+
+/* SECTION CARD */
+.section-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.card-title{font-size:13px;font-weight:700}
+.card-sub{font-size:11px;color:var(--text3)}
+.period-pills{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:7px;overflow:hidden}
+.pp{padding:5px 11px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);transition:all .15s;border:none;background:transparent}
+.pp.active{background:var(--accent);color:#fff}
+
+/* TWO/THREE COLUMN */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:24px}
+
+/* CHART LABELS */
+.y-label{fill:#5a6080;font-size:9px}
+.x-label{fill:#5a6080;font-size:9px}
+.chart-line{fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* POWER CURVE */
+.pc-wrap{position:relative}
+.pc-svg{width:100%;display:block}
+.pc-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+.pc-leg-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.pc-leg-dot{width:8px;height:3px;border-radius:2px}
+.pr-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;background:rgba(234,179,8,.15);border-radius:10px;font-size:10px;font-weight:700;color:var(--yellow);margin-left:6px}
+
+/* HRV CHART */
+.hrv-svg{width:100%;display:block}
+.hrv-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.hrv-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.hrv-dot{width:8px;height:8px;border-radius:50%}
+
+/* FTP CHART */
+.ftp-svg{width:100%;display:block}
+.ftp-milestone{position:relative}
+
+/* COMPLIANCE */
+.comp-svg{width:100%;display:block}
+
+/* WEEKLY LOAD */
+.load-svg{width:100%;display:block}
+
+/* ZONE HISTORY */
+.zone-history-bars{display:flex;gap:6px;height:120px;align-items:flex-end;margin:16px 0}
+.zh-week{flex:1;display:flex;flex-direction:column;gap:0;border-radius:4px;overflow:hidden;cursor:pointer;transition:opacity .15s}
+.zh-week:hover{opacity:.8}
+.zh-seg{flex-shrink:0}
+.zh-label{font-size:9px;color:var(--text3);text-align:center;margin-top:4px}
+
+/* SENSATION SUMMARY */
+.sensation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sens-card{background:var(--bg3);border-radius:8px;padding:12px;text-align:center}
+.sens-icon{font-size:20px;margin-bottom:4px}
+.sens-label{font-size:10px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
+.sens-bar-wrap{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:4px}
+.sens-bar{height:100%;border-radius:3px;transition:width .6s ease}
+.sens-val{font-size:18px;font-weight:900;line-height:1}
+.sens-sub{font-size:10px;color:var(--text2);margin-top:2px}
+
+/* NUTRITION BARS */
+.nut-week-bars{display:flex;flex-direction:column;gap:6px}
+.nwb-row{display:flex;align-items:center;gap:10px}
+.nwb-day{font-size:10px;color:var(--text3);font-weight:600;width:24px;flex-shrink:0}
+.nwb-bar-wrap{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden;display:flex}
+.nwb-seg{height:100%}
+.nwb-val{font-size:10px;color:var(--text2);width:50px;text-align:right;flex-shrink:0}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.stats-row{grid-template-columns:repeat(3,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
+@media(max-width:768px){.sidebar{width:60px}.main{margin-left:60px}.stats-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="logo">
+    <div class="logo-icon">TC</div>
+    <div><div class="logo-text">Tu Coach</div><div class="logo-sub">Athlete</div></div>
+  </div>
+  <div class="int-strip">
+    <div class="int-badge int-g"><div class="int-dot"></div>Garmin</div>
+    <div class="int-badge int-w"><div class="int-dot"></div>Whoop</div>
+  </div>
+  <nav class="nav">
+    <div class="nav-section">Entrenamiento</div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Dashboard</span>
+    </div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#calendario'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Calendario</span>
+    </div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#historial'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/></svg>
+      <span>Historial</span>
+    </div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#mensajes'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Coach</span>
+    </div>
+    <div class="nav-section">Análisis</div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#resumen'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Estado Integral</span>
+    </div>
+    <div class="nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Rendimiento</span>
+    </div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#recuperacion'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Recuperación</span>
+    </div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#nutricion'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+      <span>Nutrición</span>
+    </div>
+    <div class="nav-section">Cuenta</div>
+    <div class="nav-item" onclick="window.location='athlete-dashboard.html#plan'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <span>Plan CAC</span>
+    </div>
+    <div class="nav-item" onclick="window.location='integrations-garmin-whoop.html'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+      <span>Dispositivos</span>
+    </div>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="s-user">
+      <div class="s-avatar">GB</div>
+      <div><div style="font-size:13px;font-weight:600">Gerardo B.</div><div style="font-size:11px;color:var(--text2)">Atleta · Premium</div></div>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="page-title">Rendimiento & Analytics</div>
+      <div style="font-size:12px;color:var(--text3)">Gerardo Benítez · Triatleta</div>
+    </div>
+    <div class="topbar-right">
+      <div class="period-pills">
+        <button class="pp">4S</button>
+        <button class="pp">3M</button>
+        <button class="pp active">6M</button>
+        <button class="pp">1A</button>
+      </div>
+      <button class="btn btn-secondary">Exportar PDF</button>
+      <button class="btn btn-primary" onclick="window.location='athlete-dashboard.html'">← Dashboard</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- STAT HEADER -->
+    <div class="stats-row">
+      <div class="stat-box sb-blue">
+        <div class="stat-label">CTL Actual</div>
+        <div class="stat-val" style="color:var(--accent)" id="perf-ctl">—</div>
+        <div class="stat-sub" id="perf-ctl-sub">42-day avg TSS</div>
+        <div class="stat-delta" id="perf-ctl-delta">cargando...</div>
+      </div>
+      <div class="stat-box sb-yellow">
+        <div class="stat-label">ATL / Fatiga</div>
+        <div class="stat-val" style="color:var(--yellow)" id="perf-atl">—</div>
+        <div class="stat-sub">7-day avg TSS</div>
+        <div class="stat-delta" id="perf-tsb-delta">TSB: —</div>
+      </div>
+      <div class="stat-box sb-green">
+        <div class="stat-label">TSS Semana</div>
+        <div class="stat-val" style="color:var(--green)" id="perf-wtss">—</div>
+        <div class="stat-sub" id="perf-wtss-sub">workouts completados</div>
+        <div class="stat-delta" id="perf-wtss-delta">meta: 580</div>
+      </div>
+      <div class="stat-box sb-orange">
+        <div class="stat-label">Forma (TSB)</div>
+        <div class="stat-val" style="color:var(--orange)" id="perf-tsb">—</div>
+        <div class="stat-sub">CTL − ATL</div>
+        <div class="stat-delta" id="perf-phase">cargando...</div>
+      </div>
+      <div class="stat-box sb-purple">
+        <div class="stat-label">HRV esta mañana</div>
+        <div class="stat-val" style="color:var(--accent2)" id="perf-hrv">—</div>
+        <div class="stat-sub">Whoop · sync matutino</div>
+        <div class="stat-delta" id="perf-hrv-delta">baseline 58ms</div>
+      </div>
+      <div class="stat-box sb-red">
+        <div class="stat-label">Recovery hoy</div>
+        <div class="stat-val" style="color:var(--red)" id="perf-rec">—</div>
+        <div class="stat-sub">% Whoop recovery score</div>
+        <div class="stat-delta" id="perf-sleep">sueño: —h</div>
+      </div>
+    </div>
+
+    <!-- PMC COMPLETO + CARGA SEMANAL -->
+    <div class="section-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Performance Management Chart — 6 Meses</div>
+          <div class="card-sub">CTL (Fitness) · ATL (Fatiga) · TSB (Forma) · Barras = TSS diario</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div style="display:flex;gap:10px;font-size:11px">
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:2.5px;background:var(--accent);border-radius:2px;display:inline-block"></span>CTL</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:2px;background:var(--red);border-radius:2px;display:inline-block"></span>ATL</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;background:var(--green);border-radius:50%;display:inline-block"></span>TSB</span>
+          </div>
+        </div>
+      </div>
+      <svg id="pmc-full" viewBox="0 0 960 200" style="width:100%;display:block"></svg>
+    </div>
+
+    <!-- TWO COL: Curva Potencia + Zonas Históricas -->
+    <div class="two-col">
+
+      <!-- POWER CURVE -->
+      <div class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Curva de Potencia (MMP) — Ciclismo</div>
+            <div class="card-sub">Mean Max Power · Watts vs duración</div>
+          </div>
+        </div>
+        <svg id="power-curve" viewBox="0 0 480 160" style="width:100%;display:block"></svg>
+        <div class="pc-legend">
+          <div class="pc-leg-item"><div class="pc-leg-dot" style="background:var(--accent)"></div>Últimos 90 días</div>
+          <div class="pc-leg-item"><div class="pc-leg-dot" style="background:var(--border)"></div>Mejor histórico</div>
+          <div class="pc-leg-item"><div class="pc-leg-dot" style="background:var(--yellow)"></div>FTP estimado</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <div style="background:var(--bg3);border-radius:6px;padding:6px 10px;text-align:center">
+            <div style="font-size:10px;color:var(--text3);font-weight:600">5 seg</div>
+            <div style="font-size:14px;font-weight:800;color:var(--red)">820 W</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:6px;padding:6px 10px;text-align:center">
+            <div style="font-size:10px;color:var(--text3);font-weight:600">1 min</div>
+            <div style="font-size:14px;font-weight:800;color:var(--orange)">520 W</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:6px;padding:6px 10px;text-align:center">
+            <div style="font-size:10px;color:var(--text3);font-weight:600">5 min</div>
+            <div style="font-size:14px;font-weight:800;color:var(--yellow)">380 W</div>
+          </div>
+          <div style="background:rgba(234,179,8,.15);border:1px solid rgba(234,179,8,.3);border-radius:6px;padding:6px 10px;text-align:center">
+            <div style="font-size:10px;color:var(--yellow);font-weight:600">20 min FTP</div>
+            <div style="font-size:14px;font-weight:800;color:var(--yellow)">295 W</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:6px;padding:6px 10px;text-align:center">
+            <div style="font-size:10px;color:var(--text3);font-weight:600">60 min</div>
+            <div style="font-size:14px;font-weight:800;color:var(--accent)">272 W</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZONE DISTRIBUTION HISTORY -->
+      <div class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Distribución de Zonas — Historial</div>
+            <div class="card-sub">Tiempo en zona por semana (ciclismo + running)</div>
+          </div>
+        </div>
+        <div class="zone-history-bars" id="zone-history"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+          <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)"><div style="width:8px;height:8px;background:#22c55e;border-radius:50%"></div>Z1 Rec</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)"><div style="width:8px;height:8px;background:#4f8ef7;border-radius:50%"></div>Z2 Base</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)"><div style="width:8px;height:8px;background:#eab308;border-radius:50%"></div>Z3 Tempo</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)"><div style="width:8px;height:8px;background:#f97316;border-radius:50%"></div>Z4 Umbral</div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)"><div style="width:8px;height:8px;background:#ef4444;border-radius:50%"></div>Z5 VO2</div>
+        </div>
+        <div style="margin-top:14px">
+          <div style="font-size:11px;color:var(--text3);margin-bottom:8px;font-weight:600">Modelo de distribución de carga (polarizado)</div>
+          <div style="display:flex;gap:6px">
+            <div style="flex:1;padding:8px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:7px;text-align:center">
+              <div style="font-size:15px;font-weight:800;color:var(--green)">78%</div>
+              <div style="font-size:10px;color:var(--text3)">Baja intensidad (Z1-Z2)</div>
+            </div>
+            <div style="flex:1;padding:8px;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:7px;text-align:center">
+              <div style="font-size:15px;font-weight:800;color:var(--yellow)">10%</div>
+              <div style="font-size:10px;color:var(--text3)">Medio (Z3)</div>
+            </div>
+            <div style="flex:1;padding:8px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:7px;text-align:center">
+              <div style="font-size:15px;font-weight:800;color:var(--red)">12%</div>
+              <div style="font-size:10px;color:var(--text3)">Alta intensidad (Z4-Z5)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THREE COL: FTP Progress + HRV Trend + Compliance -->
+    <div class="three-col">
+
+      <!-- FTP PROGRESSION -->
+      <div class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div class="card-title">Progresión FTP — Ciclismo</div>
+          <div class="card-sub">Watts · 12 meses</div>
+        </div>
+        <svg id="ftp-chart" viewBox="0 0 300 140" style="width:100%;display:block"></svg>
+        <div style="margin-top:10px;display:flex;flex-direction:column;gap:5px" id="ftp-milestones"></div>
+      </div>
+
+      <!-- HRV & BIOMETRICS TREND -->
+      <div id="sec-recuperacion" class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div class="card-title">HRV & Biométricos — 90 días</div>
+          <div class="card-sub">Whoop + Garmin</div>
+        </div>
+        <svg id="hrv-chart" viewBox="0 0 300 140" style="width:100%;display:block"></svg>
+        <div class="hrv-legend">
+          <div class="hrv-item"><div class="hrv-dot" style="background:var(--accent)"></div>HRV (ms)</div>
+          <div class="hrv-item"><div class="hrv-dot" style="background:var(--green)"></div>Recovery %</div>
+          <div class="hrv-item"><div class="hrv-dot" style="background:var(--red)"></div>RHR (bpm)</div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE HISTORY -->
+      <div class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div class="card-title">Compliance — 12 semanas</div>
+          <div class="card-sub">% de plan completado</div>
+        </div>
+        <svg id="comp-chart" viewBox="0 0 300 140" style="width:100%;display:block"></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:8px">
+          <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:var(--green)">89%</div><div style="font-size:10px;color:var(--text3)">Promedio</div></div>
+          <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:var(--accent)">98%</div><div style="font-size:10px;color:var(--text3)">Mejor semana</div></div>
+          <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:var(--red)">69%</div><div style="font-size:10px;color:var(--text3)">Peor semana</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SENSACIONES & NUTRITION -->
+    <div class="two-col">
+
+      <!-- SENSACIONES SUMMARY -->
+      <div class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div class="card-title">Sensaciones Post-Entreno — Últimas 4 semanas</div>
+          <div class="card-sub">Promedio semanal · Escala 0–10</div>
+        </div>
+        <div class="sensation-grid">
+          <div class="sens-card">
+            <div class="sens-icon">🦵</div>
+            <div class="sens-label">Piernas</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:72%;background:var(--accent)"></div></div>
+            <div class="sens-val" style="color:var(--accent)">7.2</div>
+            <div class="sens-sub">↑ mejora constante</div>
+          </div>
+          <div class="sens-card">
+            <div class="sens-icon">🧠</div>
+            <div class="sens-label">Mental</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:80%;background:var(--green)"></div></div>
+            <div class="sens-val" style="color:var(--green)">8.0</div>
+            <div class="sens-sub">↑ motivación alta</div>
+          </div>
+          <div class="sens-card">
+            <div class="sens-icon">⚡</div>
+            <div class="sens-label">Energía</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:74%;background:var(--yellow)"></div></div>
+            <div class="sens-val" style="color:var(--yellow)">7.4</div>
+            <div class="sens-sub">→ estable</div>
+          </div>
+          <div class="sens-card">
+            <div class="sens-icon">😴</div>
+            <div class="sens-label">Sueño</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:76%;background:var(--accent2)"></div></div>
+            <div class="sens-val" style="color:var(--accent2)">7.6</div>
+            <div class="sens-sub">↑ mejorando</div>
+          </div>
+          <div class="sens-card">
+            <div class="sens-icon">😰</div>
+            <div class="sens-label">Estrés</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:28%;background:var(--green)"></div></div>
+            <div class="sens-val" style="color:var(--green)">2.8</div>
+            <div class="sens-sub">✓ nivel bajo</div>
+          </div>
+          <div class="sens-card">
+            <div class="sens-icon">⚠️</div>
+            <div class="sens-label">Dolor</div>
+            <div class="sens-bar-wrap"><div class="sens-bar" style="width:15%;background:var(--orange)"></div></div>
+            <div class="sens-val" style="color:var(--green)">1.5</div>
+            <div class="sens-sub">✓ sin lesiones</div>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <svg id="sensation-trend" viewBox="0 0 480 90" style="width:100%;display:block"></svg>
+          <div style="display:flex;gap:10px;margin-top:6px;font-size:10px">
+            <span style="display:flex;align-items:center;gap:3px;color:var(--text2)"><span style="width:10px;height:2px;background:var(--accent);display:inline-block"></span>Piernas</span>
+            <span style="display:flex;align-items:center;gap:3px;color:var(--text2)"><span style="width:10px;height:2px;background:var(--green);display:inline-block"></span>Mental</span>
+            <span style="display:flex;align-items:center;gap:3px;color:var(--text2)"><span style="width:10px;height:2px;background:var(--yellow);display:inline-block"></span>Energía</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- NUTRITION & COMPLIANCE -->
+      <div id="sec-nutricion" class="section-card" style="margin-bottom:0">
+        <div class="card-header">
+          <div class="card-title">Adherencia Nutricional — Última semana</div>
+          <div class="card-sub">Calorías consumidas vs objetivo</div>
+        </div>
+        <div class="nut-week-bars" id="nut-bars"></div>
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <div style="flex:1;background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Carbohidratos</div>
+            <div style="font-size:18px;font-weight:900;color:var(--yellow)">78%</div>
+            <div style="font-size:10px;color:var(--text2)">adherencia</div>
+          </div>
+          <div style="flex:1;background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Proteína</div>
+            <div style="font-size:18px;font-weight:900;color:var(--accent)">92%</div>
+            <div style="font-size:10px;color:var(--text2)">adherencia</div>
+          </div>
+          <div style="flex:1;background:var(--bg3);border-radius:8px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px">Hidratación</div>
+            <div style="font-size:18px;font-weight:900;color:var(--green)">85%</div>
+            <div style="font-size:10px;color:var(--text2)">adherencia</div>
+          </div>
+        </div>
+        <div style="margin-top:14px">
+          <div style="font-size:11px;font-weight:700;color:var(--text2);margin-bottom:8px">Sensaciones de energía durante entrenos</div>
+          <div style="display:flex;gap:3px;height:40px;align-items:flex-end" id="fuel-bars"></div>
+          <div style="display:flex;gap:4px;margin-top:4px;font-size:9px;color:var(--text3)">
+            <span style="flex:1;text-align:center">L</span><span style="flex:1;text-align:center">M</span>
+            <span style="flex:1;text-align:center">X</span><span style="flex:1;text-align:center">J</span>
+            <span style="flex:1;text-align:center">V</span><span style="flex:1;text-align:center">S</span>
+            <span style="flex:1;text-align:center">D</span>
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:10px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:8px">
+          <div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">✓ Insight del coach</div>
+          <div style="font-size:11px;color:var(--text2)">Tus mejores entrenos correlacionan con días donde comiste +380g de carbohidratos. Sigue el plan de carga pre-entrenamiento.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WEEKLY TRAINING LOAD -->
+    <div class="section-card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Carga Semanal — 24 semanas</div>
+          <div class="card-sub">TSS semanal · Barras = planificado vs real · Línea = objetivo de carga</div>
+        </div>
+      </div>
+      <svg id="weekly-load" viewBox="0 0 960 140" style="width:100%;display:block"></svg>
+      <div style="display:flex;gap:12px;margin-top:8px;font-size:10px">
+        <span style="display:flex;align-items:center;gap:4px;color:var(--text2)"><span style="width:10px;height:10px;background:var(--green);border-radius:2px;display:inline-block"></span>Completado</span>
+        <span style="display:flex;align-items:center;gap:4px;color:var(--text2)"><span style="width:10px;height:10px;background:var(--border);border-radius:2px;display:inline-block"></span>Planificado</span>
+        <span style="display:flex;align-items:center;gap:4px;color:var(--text2)"><span style="width:12px;height:2px;background:var(--accent);border-radius:1px;display:inline-block"></span>Objetivo CTL</span>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<script src="api-client.js"></script>
+<script>
+// ═══ PMC FULL CHART ═══
+const K_CTL=1-Math.exp(-1/42), K_ATL=1-Math.exp(-1/7);
+
+function renderPMCFull(d){
+  if(!d||!d.length)return;
+  const svg=document.getElementById('pmc-full');
+  const W=960, H=200, PL=38, PR=10, PT=12, PB=30, TSH=25;
+  const cW=W-PL-PR, cH=H-PT-PB-TSH;
+  const maxV=Math.max(...d.map(x=>Math.max(x.ctl,x.atl)));
+  const minV=Math.min(...d.map(x=>x.tsb))-5;
+  const range=maxV-minV||1;
+  const xOf=i=>PL+i/(d.length-1)*cW;
+  const yOf=v=>PT+(1-(v-minV)/range)*cH;
+  let html='';
+  // Zones
+  html+=`<rect x="${PL}" y="${PT}" width="${cW}" height="${Math.max(0,yOf(0)-PT)}" fill="rgba(34,197,94,.04)"/>`;
+  html+=`<rect x="${PL}" y="${yOf(0)}" width="${cW}" height="${Math.max(0,yOf(-10)-yOf(0))}" fill="rgba(234,179,8,.04)"/>`;
+  html+=`<rect x="${PL}" y="${yOf(-10)}" width="${cW}" height="${Math.max(0,yOf(-30)-yOf(-10))}" fill="rgba(239,68,68,.03)"/>`;
+  // Grid
+  [-20,-10,0,10,20,30,40,50,60,70,80,90,100].forEach(v=>{
+    const y=yOf(v); if(y<PT||y>PT+cH)return;
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}</text>`;
+  });
+  html+=`<line x1="${PL}" y1="${yOf(0)}" x2="${W-PR}" y2="${yOf(0)}" stroke="#3a4060" stroke-width="1.5"/>`;
+  // TSS bars
+  const tssY=H-PB-TSH, maxTSS=Math.max(...d.map(x=>x.tss),1);
+  d.forEach((pt,i)=>{
+    const x=xOf(i), bw=Math.max(1,cW/d.length*0.55);
+    const bh=pt.tss/maxTSS*TSH;
+    const col=pt.tss>130?'#ef4444':pt.tss>70?'#eab308':'#4f8ef7';
+    html+=`<rect x="${x-bw/2}" y="${tssY+TSH-bh}" width="${bw}" height="${bh}" fill="${col}" opacity=".45" rx="1"/>`;
+  });
+  // Month x-labels — usa campo date si está disponible, si no calcula desde hoy
+  let lastMonth=-1;
+  d.forEach((pt,i)=>{
+    let month;
+    if(pt.date){ month=new Date(pt.date+'T12:00:00Z').getUTCMonth(); }
+    else{ const sd=new Date(); sd.setDate(sd.getDate()-(d.length-1-i)); month=sd.getMonth(); }
+    if(month!==lastMonth){
+      lastMonth=month;
+      const label=pt.date ? new Date(pt.date+'T12:00:00Z').toLocaleDateString('es-MX',{month:'short',timeZone:'UTC'}) : '';
+      if(label) html+=`<text x="${xOf(i)}" y="${H-4}" text-anchor="middle" fill="${pt.projected?'#3a4060':'#5a6080'}" font-size="9">${label}</text>`;
+    }
+  });
+  // Smooth helper
+  function sp(pts){
+    if(!pts.length)return'';
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  // Separar real vs proyectado
+  const todayIdx = d.reduce((ti,pt,i)=>pt.projected?ti:i, 0);
+  const realD = d.filter(pt=>!pt.projected);
+  const projD = d.filter(pt=>pt.projected);
+  const realIdxMap = d.map((pt,i)=>pt.projected?null:i).filter(i=>i!==null);
+  // Puntos reales (hasta hoy)
+  const ctlPR = realD.map((_,ri)=>[xOf(realIdxMap[ri]),yOf(realD[ri].ctl)]);
+  const atlPR = realD.map((_,ri)=>[xOf(realIdxMap[ri]),yOf(realD[ri].atl)]);
+  const tsbPR = realD.map((_,ri)=>[xOf(realIdxMap[ri]),yOf(realD[ri].tsb)]);
+  // Puntos proyectados (desde hoy en adelante) — empalman con último punto real
+  const projIdxMap = d.map((pt,i)=>pt.projected?i:null).filter(i=>i!==null);
+  const ctlPProj = projIdxMap.length ? [[xOf(todayIdx),yOf(d[todayIdx].ctl)],...projIdxMap.map(i=>[xOf(i),yOf(d[i].ctl)])] : [];
+  const atlPProj = projIdxMap.length ? [[xOf(todayIdx),yOf(d[todayIdx].atl)],...projIdxMap.map(i=>[xOf(i),yOf(d[i].atl)])] : [];
+  const tsbPProj = projIdxMap.length ? [[xOf(todayIdx),yOf(d[todayIdx].tsb)],...projIdxMap.map(i=>[xOf(i),yOf(d[i].tsb)])] : [];
+
+  const area=sp(ctlPR)+` L${ctlPR.length?ctlPR[ctlPR.length-1][0]:PL},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${area}" fill="rgba(79,142,247,.06)"/>`;
+  html+=`<path d="${sp(atlPR)}" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4,3" opacity=".8"/>`;
+  html+=`<path d="${sp(tsbPR)}" fill="none" stroke="#22c55e" stroke-width="1.8" opacity=".8"/>`;
+  html+=`<path d="${sp(ctlPR)}" fill="none" stroke="#4f8ef7" stroke-width="2.5"/>`;
+  if(ctlPProj.length>1){
+    html+=`<path d="${sp(ctlPProj)}" fill="none" stroke="#4f8ef7" stroke-width="1.8" stroke-dasharray="5,3" opacity=".6"/>`;
+    html+=`<path d="${sp(atlPProj)}" fill="none" stroke="#ef4444" stroke-width="1.4" stroke-dasharray="4,3" opacity=".45"/>`;
+    html+=`<path d="${sp(tsbPProj)}" fill="none" stroke="#22c55e" stroke-width="1.4" stroke-dasharray="5,3" opacity=".5"/>`;
+    // Label "proyección" al inicio del tramo
+    const px=ctlPProj[1][0], py=ctlPProj[1][1]-6;
+    html+=`<text x="${px+2}" y="${py}" fill="#4f8ef7" font-size="8" opacity=".7">proyección</text>`;
+  }
+  // Today marker — en el último punto REAL
+  const todayPt = d[todayIdx];
+  const lx=xOf(todayIdx);
+  html+=`<line x1="${lx}" y1="${PT}" x2="${lx}" y2="${PT+cH}" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3" opacity=".5"/>`;
+  const hoyDia=new Date().toLocaleDateString('es-MX',{weekday:'short'}).replace('.','').toUpperCase();
+  html+=`<text x="${lx}" y="${PT-2}" text-anchor="middle" fill="#4f8ef7" font-size="9" font-weight="700">HOY · ${hoyDia}</text>`;
+  html+=`<circle cx="${lx}" cy="${yOf(todayPt.ctl)}" r="4" fill="#4f8ef7" stroke="#0f1117" stroke-width="2"/>`;
+  html+=`<circle cx="${lx}" cy="${yOf(todayPt.tsb)}" r="4" fill="#22c55e" stroke="#0f1117" stroke-width="2"/>`;
+  // Race marker — solo si hay suficientes puntos o se puede calcular por fecha
+  const raceDate='2026-07-25';
+  const firstDate=d[0]?.date;
+  if(firstDate && raceDate>=firstDate){
+    const msPerDay=86400000;
+    const raceIdx=Math.round((new Date(raceDate)-new Date(firstDate))/msPerDay);
+    if(raceIdx>0 && raceIdx<d.length){
+      const rx=xOf(raceIdx);
+      html+=`<line x1="${rx}" y1="${PT}" x2="${rx}" y2="${PT+cH}" stroke="#ef4444" stroke-width="1" stroke-dasharray="2" opacity=".5"/>`;
+      html+=`<text x="${rx}" y="${PT-2}" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700">🏁</text>`;
+    }
+  }
+  svg.innerHTML=html;
+}
+
+// ═══ CARGA DINÁMICA DESDE API ═══
+async function loadAnalyticsData(){
+  const token = (typeof Auth !== 'undefined') ? Auth.getToken() : localStorage.getItem('tc_token');
+  if(!token || token==='demo-token') return;
+  try {
+    const res = await fetch('/api/athlete/executive-summary', { headers:{ Authorization:`Bearer ${token}` } });
+    if(!res.ok) return;
+    const data = await res.json();
+    const p = data.performance || {};
+    const r = data.recovery || {};
+
+    // Stat boxes
+    if(p.ctl != null){ document.getElementById('perf-ctl').textContent = p.ctl; }
+    if(p.atl != null){ document.getElementById('perf-atl').textContent = p.atl; }
+    if(p.tsb != null){
+      const tsb = p.tsb;
+      const tsbEl = document.getElementById('perf-tsb');
+      tsbEl.textContent = tsb;
+      tsbEl.style.color = tsb >= 5 ? 'var(--green)' : tsb >= -10 ? 'var(--yellow)' : 'var(--red)';
+      const phase = tsb >= 5 ? '✓ Fresco para entrenar' : tsb >= -10 ? '⚡ Carga acumulada' : '⚠ Fatiga alta';
+      document.getElementById('perf-phase').textContent = phase;
+      document.getElementById('perf-tsb-delta').textContent = `TSB: ${tsb > 0 ? '+' : ''}${tsb}`;
+    }
+    if(p.weekly_tss != null){
+      const wtss = p.weekly_tss, goal = p.tss_goal || 580;
+      document.getElementById('perf-wtss').textContent = wtss;
+      const pct = Math.round(wtss/goal*100);
+      document.getElementById('perf-wtss-sub').textContent = `${pct}% de meta semanal`;
+      const delta = document.getElementById('perf-wtss-delta');
+      delta.textContent = `meta: ${goal} TSS`;
+      delta.className = pct>=90 ? 'stat-delta d-up' : pct>=60 ? 'stat-delta d-neu' : 'stat-delta d-down';
+    }
+    if(p.ctl != null){
+      const ctlDelta = document.getElementById('perf-ctl-delta');
+      ctlDelta.textContent = `ATL ${p.atl} · TSB ${p.tsb > 0 ? '+' : ''}${p.tsb}`;
+      ctlDelta.className = p.tsb >= 0 ? 'stat-delta d-up' : 'stat-delta d-down';
+    }
+    if(r.hrv_7d != null){
+      document.getElementById('perf-hrv').textContent = r.hrv_7d + 'ms';
+      const diff = Math.round(r.hrv_7d - (r.hrv_baseline || 58));
+      const hEl = document.getElementById('perf-hrv-delta');
+      hEl.textContent = `${diff >= 0 ? '↑ +' : '↓ '}${diff}ms vs baseline`;
+      hEl.className = diff >= 0 ? 'stat-delta d-up' : 'stat-delta d-down';
+    }
+    if(r.recovery_7d != null){
+      const recEl = document.getElementById('perf-rec');
+      recEl.textContent = r.recovery_7d + '%';
+      recEl.style.color = r.recovery_7d>=67 ? 'var(--green)' : r.recovery_7d>=34 ? 'var(--yellow)' : 'var(--red)';
+    }
+    if(r.sleep_7d != null){
+      document.getElementById('perf-sleep').textContent = `sueño: ${r.sleep_7d}h prom`;
+    }
+
+    // Rerender PMC con datos reales si están disponibles
+    if(p.mini_pmc && p.mini_pmc.length > 3){
+      renderPMCFull(p.mini_pmc);
+    }
+  } catch(e) { console.warn('[analytics] exec-summary error:', e.message); }
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  // Render fallback PMC con esqueleto mientras carga la API
+  const K=1-Math.exp(-1/42), A=1-Math.exp(-1/7);
+  const today=new Date();
+  const tssRaw=[0,38,52,45,78,115,88,0,40,58,48,82,118,92,0,42,62,52,88,125,95,0,18,32,22,38,58,28,0,36];
+  let c=20, a=20;
+  const fallback=tssRaw.map((t,idx)=>{
+    c=c+(t-c)*K; a=a+(t-a)*A;
+    const d2=new Date(today); d2.setDate(d2.getDate()-(tssRaw.length-1-idx));
+    return{tss:t,ctl:+c.toFixed(1),atl:+a.toFixed(1),tsb:+(c-a).toFixed(1),date:d2.toISOString().slice(0,10),projected:false};
+  });
+  renderPMCFull(fallback);
+  loadAnalyticsData();
+});
+
+// ═══ POWER CURVE ═══
+(function(){
+  const svg=document.getElementById('power-curve');
+  const W=480,H=160,PL=36,PR=10,PT=10,PB=28;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  // Duration labels (log scale)
+  const durations=[5,10,30,60,300,600,1200,1800,3600,5400];
+  const durLabels=['5s','10s','30s','1m','5m','10m','20m','30m','1h','90m'];
+  // Current power (90 days)
+  const powers=[820,750,620,540,420,370,330,310,275,255];
+  // Best historical (PR)
+  const prPowers=[840,780,645,558,438,388,348,325,285,265];
+
+  const logMin=Math.log(durations[0]), logMax=Math.log(durations[durations.length-1]);
+  const xOf=dur=>PL+(Math.log(dur)-logMin)/(logMax-logMin)*cW;
+  const yOf=v=>PT+(1-v/900)*cH;
+
+  let html='';
+  // Grid
+  [100,200,300,400,500,600,700,800].forEach(v=>{
+    const y=yOf(v); if(y<PT||y>PT+cH)return;
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-4}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}W</text>`;
+  });
+  // X axis labels
+  durations.forEach((d,i)=>{
+    const x=xOf(d);
+    html+=`<line x1="${x}" y1="${PT}" x2="${x}" y2="${PT+cH}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${x}" y="${H-4}" text-anchor="middle" fill="#5a6080" font-size="9">${durLabels[i]}</text>`;
+  });
+  // FTP line at 285W
+  const ftpY=yOf(285);
+  html+=`<line x1="${PL}" y1="${ftpY}" x2="${W-PR}" y2="${ftpY}" stroke="#eab308" stroke-width="1.5" stroke-dasharray="5,3" opacity=".7"/>`;
+  html+=`<text x="${W-PR+2}" y="${ftpY+4}" fill="#eab308" font-size="9" font-weight="700">FTP</text>`;
+
+  function sp(pts){
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  const prPts=durations.map((d,i)=>[xOf(d),yOf(prPowers[i])]);
+  const curPts=durations.map((d,i)=>[xOf(d),yOf(powers[i])]);
+  // PR area
+  const prArea=sp(prPts)+` L${xOf(durations[durations.length-1])},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${prArea}" fill="rgba(42,47,69,.5)"/>`;
+  html+=`<path d="${sp(prPts)}" fill="none" stroke="#3a4060" stroke-width="2"/>`;
+  // Current area
+  const curArea=sp(curPts)+` L${xOf(durations[durations.length-1])},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${curArea}" fill="rgba(79,142,247,.12)"/>`;
+  html+=`<path d="${sp(curPts)}" fill="none" stroke="#4f8ef7" stroke-width="2.5"/>`;
+  // PR dots where current > historical
+  durations.forEach((d,i)=>{
+    if(powers[i]>=prPowers[i]){
+      html+=`<circle cx="${xOf(d)}" cy="${yOf(powers[i])}" r="5" fill="#eab308" stroke="#0f1117" stroke-width="2"/>`;
+    }
+  });
+  svg.innerHTML=html;
+})();
+
+// ═══ FTP CHART ═══
+(function(){
+  const svg=document.getElementById('ftp-chart');
+  const W=300,H=140,PL=36,PR=12,PT=10,PB=28;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const ftpHistory=[
+    {label:'Ene',val:263},{label:'Feb',val:263},{label:'Mar',val:270},
+    {label:'Abr',val:270},{label:'May',val:285},{label:'Jun',val:285}
+  ];
+  const minV=240, maxV=300;
+  const xOf=i=>PL+i/(ftpHistory.length-1)*cW;
+  const yOf=v=>PT+(1-(v-minV)/(maxV-minV))*cH;
+
+  let html='';
+  [250,260,270,280,290,300].forEach(v=>{
+    const y=yOf(v); if(y<PT||y>PT+cH)return;
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-4}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}W</text>`;
+  });
+  ftpHistory.forEach((d,i)=>{
+    html+=`<text x="${xOf(i)}" y="${H-4}" text-anchor="middle" fill="#5a6080" font-size="9">${d.label}</text>`;
+  });
+  function sp(pts){
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  const pts=ftpHistory.map((d,i)=>[xOf(i),yOf(d.val)]);
+  const area=sp(pts)+` L${W-PR},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${area}" fill="rgba(234,179,8,.1)"/>`;
+  html+=`<path d="${sp(pts)}" fill="none" stroke="#eab308" stroke-width="2.5"/>`;
+  // Milestone dots
+  const milestones=[{i:0,val:263},{i:2,val:270},{i:4,val:285}];
+  milestones.forEach(m=>{
+    const d=ftpHistory[m.i];
+    html+=`<circle cx="${xOf(m.i)}" cy="${yOf(d.val)}" r="5" fill="#eab308" stroke="#0f1117" stroke-width="2"/>`;
+  });
+  // Current
+  const li=ftpHistory.length-1;
+  html+=`<circle cx="${xOf(li)}" cy="${yOf(ftpHistory[li].val)}" r="6" fill="#eab308" stroke="#0f1117" stroke-width="2"/>`;
+  html+=`<text x="${xOf(li)+8}" y="${yOf(ftpHistory[li].val)+4}" fill="#eab308" font-size="10" font-weight="800">${ftpHistory[li].val}W</text>`;
+  svg.innerHTML=html;
+
+  document.getElementById('ftp-milestones').innerHTML=milestones.map(m=>`
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:5px 8px;background:var(--bg3);border-radius:6px">
+      <div style="font-size:11px;color:var(--text2)">${ftpHistory[m.i].label} 2026</div>
+      <div style="font-size:12px;font-weight:700;color:var(--yellow)">${m.val} W</div>
+      ${m.i>0?`<div style="font-size:10px;color:var(--green)">+${m.val-263}W</div>`:'<div style="font-size:10px;color:var(--text3)">Base</div>'}
+    </div>`).join('');
+})();
+
+// ═══ HRV CHART ═══
+(function(){
+  const svg=document.getElementById('hrv-chart');
+  const W=300,H=140,PL=32,PR=10,PT=10,PB=22;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const days=30;
+  // Generate realistic HRV/recovery/RHR data
+  const hrvData=[], recData=[], rhrData=[];
+  let hrv=52, rec=65, rhr=44;
+  for(let i=0;i<days;i++){
+    hrv=Math.max(38,Math.min(72,hrv+(Math.random()-.3)*5));
+    rec=Math.max(30,Math.min(90,rec+(Math.random()-.35)*12));
+    rhr=Math.max(38,Math.min(50,rhr+(Math.random()-.5)*1.5));
+    hrvData.push(+hrv.toFixed(1));
+    recData.push(+rec.toFixed(1));
+    rhrData.push(+rhr.toFixed(1));
+  }
+  // Dual axes: HRV/Recovery on left (0-100), RHR on right (35-55)
+  const xOf=i=>PL+i/(days-1)*cW;
+  const yHRV=v=>PT+(1-v/100)*cH;
+  const yRHR=v=>PT+(1-(v-35)/20)*cH;
+
+  let html='';
+  // Grid
+  [25,50,75,100].forEach(v=>{
+    const y=yHRV(v); if(y<PT||y>PT+cH)return;
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}</text>`;
+  });
+  // Week labels
+  for(let i=0;i<days;i+=7){
+    html+=`<text x="${xOf(i)}" y="${H-2}" text-anchor="middle" fill="#5a6080" font-size="9">-${days-i}d</text>`;
+  }
+  html+=`<text x="${xOf(days-1)}" y="${H-2}" text-anchor="middle" fill="#5a6080" font-size="9">hoy</text>`;
+
+  function sp(pts){
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  const recPts=recData.map((v,i)=>[xOf(i),yHRV(v)]);
+  const hrvPts=hrvData.map((v,i)=>[xOf(i),yHRV(v)]);
+  const rhrPts=rhrData.map((v,i)=>[xOf(i),yRHR(v)]);
+  const recArea=sp(recPts)+` L${W-PR},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${recArea}" fill="rgba(34,197,94,.08)"/>`;
+  html+=`<path d="${sp(recPts)}" fill="none" stroke="#22c55e" stroke-width="1.8" opacity=".7"/>`;
+  html+=`<path d="${sp(rhrPts)}" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2" opacity=".7"/>`;
+  html+=`<path d="${sp(hrvPts)}" fill="none" stroke="#4f8ef7" stroke-width="2"/>`;
+  // Baseline band for HRV
+  const bMin=yHRV(52*100/100), bMax=yHRV(67*100/100);
+  // Actually map baseline 52-67 ms → scale on 0-100
+  const bY1=yHRV(67), bY2=yHRV(52);
+  html+=`<rect x="${PL}" y="${bY1}" width="${cW}" height="${bY2-bY1}" fill="rgba(79,142,247,.06)" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3" opacity=".5"/>`;
+  // Last dot
+  const li=days-1;
+  html+=`<circle cx="${xOf(li)}" cy="${yHRV(hrvData[li])}" r="4" fill="#4f8ef7" stroke="#0f1117" stroke-width="2"/>`;
+  svg.innerHTML=html;
+})();
+
+// ═══ COMPLIANCE CHART ═══
+(function(){
+  const svg=document.getElementById('comp-chart');
+  const W=300,H=140,PL=30,PR=10,PT=10,PB=28;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const weeks=[88,98,69,97,96,86,90,84,92,95,88,0];
+  const labels=['S6','S7','S8','S9','S10','S11','S12','S13','S14','S15','S16','HOY'];
+  const xOf=i=>PL+i/(weeks.length-1)*cW;
+  const yOf=v=>PT+(1-v/100)*cH;
+
+  let html='';
+  [50,75,100].forEach(v=>{
+    const y=yOf(v);
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}%</text>`;
+  });
+  weeks.forEach((v,i)=>{
+    html+=`<text x="${xOf(i)}" y="${H-4}" text-anchor="middle" fill="#5a6080" font-size="8">${labels[i]}</text>`;
+  });
+  // Bars
+  const bw=cW/weeks.length*0.55;
+  weeks.forEach((v,i)=>{
+    if(v===0)return;
+    const bh=(v/100)*cH, by=PT+cH-bh;
+    const col=v>=90?'var(--green)':v>=75?'var(--yellow)':'var(--red)';
+    html+=`<rect x="${xOf(i)-bw/2}" y="${by}" width="${bw}" height="${bh}" fill="${col}" opacity=".7" rx="2"/>`;
+    html+=`<text x="${xOf(i)}" y="${by-3}" text-anchor="middle" fill="${col}" font-size="8" font-weight="700">${v}%</text>`;
+  });
+  // 90% target line
+  const ty=yOf(90);
+  html+=`<line x1="${PL}" y1="${ty}" x2="${W-PR}" y2="${ty}" stroke="#4f8ef7" stroke-width="1.5" stroke-dasharray="4,3" opacity=".6"/>`;
+  html+=`<text x="${W-PR+2}" y="${ty+4}" fill="#4f8ef7" font-size="8">90%</text>`;
+  svg.innerHTML=html;
+})();
+
+// ═══ ZONE HISTORY ═══
+(function(){
+  const wrap=document.getElementById('zone-history');
+  const zoneColors=['#22c55e','#4f8ef7','#eab308','#f97316','#ef4444'];
+  const weeksData=[
+    [25,40,15,15,5],[20,42,18,15,5],[30,38,12,14,6],[22,44,14,14,6],
+    [18,38,20,18,6],[20,35,18,20,7],[22,38,18,15,7],[15,38,20,20,7]
+  ];
+  const labels=['S17','S18','S19','S20','S21','S22','S23','S24'];
+  const maxH=90;
+  wrap.innerHTML=weeksData.map((zones,i)=>{
+    const segs=zones.map((pct,z)=>`<div class="zh-seg" style="height:${pct/100*maxH}px;background:${zoneColors[z]}"></div>`).join('');
+    return`<div class="zh-week" style="display:flex;flex-direction:column-reverse">${segs}<div class="zh-label">${labels[i]}</div></div>`;
+  }).join('');
+})();
+
+// ═══ SENSATION TREND ═══
+(function(){
+  const svg=document.getElementById('sensation-trend');
+  const W=480,H=90,PL=10,PR=10,PT=8,PB=20;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const weeks=8;
+  const legs=[5.8,6.2,6.8,7.0,6.5,7.1,7.3,7.2];
+  const mental=[7.0,7.5,7.8,8.0,7.6,7.9,8.2,8.0];
+  const energy=[6.5,7.0,7.2,7.5,7.0,7.3,7.6,7.4];
+  const xOf=i=>PL+i/(weeks-1)*cW;
+  const yOf=v=>PT+(1-v/10)*cH;
+
+  function sp(vals){
+    const pts=vals.map((v,i)=>[xOf(i),yOf(v)]);
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  let html='';
+  [4,6,8,10].forEach(v=>{
+    html+=`<line x1="${PL}" y1="${yOf(v)}" x2="${W-PR}" y2="${yOf(v)}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+  });
+  html+=`<path d="${sp(energy)}" fill="none" stroke="#eab308" stroke-width="1.8" opacity=".7"/>`;
+  html+=`<path d="${sp(legs)}" fill="none" stroke="#4f8ef7" stroke-width="2"/>`;
+  html+=`<path d="${sp(mental)}" fill="none" stroke="#22c55e" stroke-width="2"/>`;
+  for(let i=0;i<weeks;i++){
+    const label=`S${17+i}`;
+    html+=`<text x="${xOf(i)}" y="${H-2}" text-anchor="middle" fill="#5a6080" font-size="9">${label}</text>`;
+  }
+  svg.innerHTML=html;
+})();
+
+// ═══ NUTRITION BARS ═══
+(function(){
+  const days=['L','M','X','J','V','S','D'];
+  const kcal=    [2650,2840,2200,2780,2900,3100,2400];
+  const objetivo=[2800,2800,2400,2800,2900,3000,2400];
+  const wrap=document.getElementById('nut-bars');
+  const maxK=Math.max(...objetivo,3200);
+  wrap.innerHTML=days.map((d,i)=>{
+    const pct=(kcal[i]/objetivo[i]*100).toFixed(0);
+    const col=pct>=90?'var(--green)':pct>=70?'var(--yellow)':'var(--red)';
+    const frac=objetivo[i]/maxK*100;
+    const afrac=kcal[i]/maxK*100;
+    return`<div class="nwb-row">
+      <div class="nwb-day">${d}</div>
+      <div class="nwb-bar-wrap">
+        <div class="nwb-seg" style="width:${afrac}%;background:${col};opacity:.8"></div>
+      </div>
+      <div class="nwb-val" style="color:${col}">${pct}%</div>
+    </div>`;
+  }).join('');
+})();
+
+// ═══ FUEL BARS ═══
+(function(){
+  const scores=[7,8,5,8,9,7,0];
+  const colors=['var(--green)','var(--green)','var(--yellow)','var(--green)','var(--green)','var(--green)','var(--border)'];
+  const wrap=document.getElementById('fuel-bars');
+  wrap.innerHTML=scores.map((s,i)=>`
+    <div style="flex:1;height:${s/10*40}px;background:${colors[i]};border-radius:3px 3px 0 0;opacity:.8"></div>`).join('');
+})();
+
+// ═══ WEEKLY LOAD ═══
+(function(){
+  const svg=document.getElementById('weekly-load');
+  const W=960,H=140,PL=38,PR=12,PT=10,PB=28;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const data=[
+    {w:'S1',plan:400,real:380},{w:'S2',plan:440,real:420},{w:'S3',plan:480,real:498},
+    {w:'S4',plan:220,real:210},{w:'S5',plan:520,real:510},{w:'S6',plan:560,real:480},
+    {w:'S7',plan:600,real:598},{w:'S8',plan:230,real:198},{w:'S9',plan:580,real:575},
+    {w:'S10',plan:620,real:498},{w:'S11',plan:650,real:640},{w:'S12',plan:680,real:680},
+    {w:'S13',plan:250,real:230},{w:'S14',plan:700,real:695},{w:'S15',plan:720,real:712},
+    {w:'S16',plan:750,real:748},{w:'S17',plan:280,real:265},{w:'S18',plan:580,real:498},
+    {w:'S19',plan:620,real:510},{w:'S20',plan:660,real:465},{w:'S21',plan:600,real:575},
+    {w:'S22',plan:580,real:498},{w:'S23',plan:600,real:542},{w:'S24',plan:580,real:0}
+  ];
+  const n=data.length, maxV=Math.max(...data.map(d=>d.plan));
+  const xOf=i=>PL+i/(n-1)*cW;
+  const yOf=v=>PT+(1-v/maxV)*cH;
+  const bw=cW/n*0.38;
+
+  let html='';
+  [200,400,600,800].forEach(v=>{
+    if(v>maxV+50)return;
+    const y=yOf(v);
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}</text>`;
+  });
+  data.forEach((d,i)=>{
+    const cx=xOf(i);
+    const ph=d.plan/maxV*cH, py=PT+cH-ph;
+    html+=`<rect x="${cx-bw}" y="${py}" width="${bw}" height="${ph}" fill="var(--border)" opacity=".7" rx="2"/>`;
+    if(d.real>0){
+      const rh=d.real/maxV*cH, ry=PT+cH-rh;
+      const col=d.real>=d.plan*0.9?'var(--green)':d.real>=d.plan*0.7?'var(--yellow)':'var(--red)';
+      html+=`<rect x="${cx}" y="${ry}" width="${bw}" height="${rh}" fill="${col}" opacity=".75" rx="2"/>`;
+    }
+    if(i%3===0||i===n-1){
+      html+=`<text x="${cx}" y="${H-4}" text-anchor="middle" fill="#5a6080" font-size="8">${d.w}</text>`;
+    }
+  });
+  // CTL target line (TSS/week that maintains CTL growth)
+  const ctlTargetPts=data.map((d,i)=>[xOf(i), yOf(Math.min(d.plan*0.9+50, maxV))]);
+  let p=`M${ctlTargetPts[0][0]},${ctlTargetPts[0][1]}`;
+  for(let i=1;i<ctlTargetPts.length;i++){
+    const a=ctlTargetPts[i-1],b=ctlTargetPts[i],cx=(a[0]+b[0])/2;
+    p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+  }
+  html+=`<path d="${p}" fill="none" stroke="#4f8ef7" stroke-width="1.5" stroke-dasharray="5,3" opacity=".5"/>`;
+  // Today
+  const ti=n-1, tx=xOf(ti);
+  html+=`<line x1="${tx}" y1="${PT}" x2="${tx}" y2="${PT+cH}" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3" opacity=".5"/>`;
+  svg.innerHTML=html;
+})();
+
+// ═══ AUTO-REFRESH A LAS 12:00 AM ═══
+(function scheduleNextDay(){
+  const now=new Date();
+  const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,5);
+  setTimeout(()=>{
+    const today=new Date();
+    const dayName=today.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long'});
+    const b=document.createElement('div');
+    b.innerHTML=`<div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#4f8ef7;color:#fff;padding:10px 24px;border-radius:30px;font-size:13px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(79,142,247,.4)">
+      📊 Nuevo día — ${dayName}. Actualizando analytics...
+    </div>`;
+    document.body.appendChild(b);
+    setTimeout(()=>location.reload(),2500);
+    scheduleNextDay();
+  },midnight-now);
+})();
+</script>
+</body>
+</html>
