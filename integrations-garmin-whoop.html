@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Coach — Integración Garmin & Whoop</title>
+<style>
+  :root {
+    --bg: #0f1117; --bg2: #181c27; --bg3: #1e2336; --border: #2a2f45;
+    --accent: #4f8ef7; --green: #22c55e; --red: #ef4444; --orange: #f97316;
+    --yellow: #eab308; --text: #e8eaf0; --text2: #8b92a8; --text3: #5a6080;
+    --card: #1a1f30; --garmin: #007bff; --whoop: #00e87a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; padding: 40px; max-width: 1100px; margin: 0 auto; }
+
+  h1 { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+  h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+  .subtitle { color: var(--text2); font-size: 14px; margin-bottom: 40px; }
+
+  /* CONNECT CARDS */
+  .connect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+  .connect-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+  .connect-card.connected { border-color: rgba(34,197,94,0.4); }
+  .brand-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .brand-logo { width: 52px; height: 52px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: #fff; }
+  .brand-garmin { background: linear-gradient(135deg, #003c8a, #007bff); }
+  .brand-whoop { background: linear-gradient(135deg, #004d2e, #00e87a); color: #004d2e; }
+  .brand-name { font-size: 18px; font-weight: 800; }
+  .brand-desc { font-size: 12px; color: var(--text2); margin-top: 2px; }
+  .connected-badge { display: flex; align-items: center; gap: 6px; padding: 4px 10px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); border-radius: 20px; font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 16px; width: fit-content; }
+  .connected-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .data-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .data-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; background: var(--bg3); border-radius: 7px; }
+  .data-label { font-size: 12px; color: var(--text2); }
+  .data-val { font-size: 13px; font-weight: 700; }
+  .sync-info { font-size: 11px; color: var(--text3); margin-bottom: 16px; }
+  .btn { padding: 9px 16px; border-radius: 7px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-garmin { background: #007bff; color: #fff; }
+  .btn-whoop { background: #00e87a; color: #003a1e; }
+  .btn-secondary { background: var(--bg3); color: var(--text2); border: 1px solid var(--border); }
+  .btn-danger { background: rgba(239,68,68,0.1); color: var(--red); border: 1px solid rgba(239,68,68,0.2); }
+
+  /* PERMISSIONS */
+  .permission-item { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .permission-item:last-child { border-bottom: none; }
+  .perm-icon { font-size: 14px; flex-shrink: 0; }
+  .perm-text { flex: 1; }
+  .perm-name { font-size: 12px; font-weight: 600; }
+  .perm-desc { font-size: 11px; color: var(--text3); }
+  .toggle { width: 36px; height: 20px; background: var(--green); border-radius: 10px; position: relative; cursor: pointer; flex-shrink: 0; transition: background 0.2s; }
+  .toggle::after { content: ''; position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; background: #fff; border-radius: 50%; transition: right 0.2s; }
+  .toggle.off { background: var(--border); }
+  .toggle.off::after { right: auto; left: 2px; }
+
+  /* FLOW CHART */
+  .flow-section { margin-bottom: 40px; }
+  .flow-title { font-size: 15px; font-weight: 800; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .flow { display: flex; align-items: flex-start; gap: 0; }
+  .flow-step { display: flex; flex-direction: column; align-items: center; flex: 1; }
+  .flow-box { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 12px; text-align: center; width: 100%; margin-bottom: 8px; }
+  .flow-icon { font-size: 22px; margin-bottom: 6px; }
+  .flow-name { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .flow-desc { font-size: 10px; color: var(--text3); line-height: 1.4; }
+  .flow-arrow { display: flex; align-items: flex-start; padding-top: 28px; color: var(--text3); font-size: 20px; flex-shrink: 0; }
+  .flow-tag { font-size: 9px; padding: 2px 6px; border-radius: 10px; font-weight: 700; margin-top: 4px; }
+  .tag-api { background: rgba(79,142,247,0.15); color: var(--accent); }
+  .tag-webhook { background: rgba(124,110,245,0.15); color: #a89ef7; }
+  .tag-realtime { background: rgba(34,197,94,0.15); color: var(--green); }
+
+  /* DATA TABLE */
+  .data-table-section { margin-bottom: 40px; }
+  .data-table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .data-table th { padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.6px; background: var(--bg2); border-bottom: 1px solid var(--border); }
+  .data-table td { padding: 12px 16px; font-size: 12px; border-bottom: 1px solid rgba(42,47,69,0.5); vertical-align: top; }
+  .data-table tr:last-child td { border-bottom: none; }
+  .field-chip { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; background: var(--bg3); color: var(--text2); margin: 1px; font-family: monospace; }
+  .source-garmin { color: #4f9ef8; font-weight: 700; }
+  .source-whoop { color: #00e87a; font-weight: 700; }
+  .source-both { color: var(--yellow); font-weight: 700; }
+  .use-tag { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; margin: 1px; }
+  .use-pmc { background: rgba(79,142,247,0.15); color: var(--accent); }
+  .use-coach { background: rgba(249,115,22,0.15); color: var(--orange); }
+  .use-alert { background: rgba(239,68,68,0.15); color: var(--red); }
+  .use-display { background: rgba(34,197,94,0.15); color: var(--green); }
+
+  /* LIVE SYNC PANEL */
+  .live-panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 40px; }
+  .live-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .live-badge { display: flex; align-items: center; gap: 6px; padding: 4px 12px; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); border-radius: 20px; font-size: 11px; font-weight: 700; color: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .sync-log { display: flex; flex-direction: column; gap: 6px; }
+  .log-entry { display: flex; align-items: center; gap: 12px; padding: 8px 12px; background: var(--bg3); border-radius: 6px; }
+  .log-time { font-size: 11px; color: var(--text3); width: 60px; flex-shrink: 0; font-family: monospace; }
+  .log-source { font-size: 11px; font-weight: 700; width: 70px; flex-shrink: 0; }
+  .log-src-garmin { color: #4f9ef8; }
+  .log-src-whoop { color: #00e87a; }
+  .log-msg { font-size: 12px; color: var(--text2); flex: 1; }
+  .log-status { font-size: 10px; font-weight: 700; }
+  .log-ok { color: var(--green); }
+  .log-warn { color: var(--yellow); }
+
+  section { margin-bottom: 40px; }
+  .tag-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<h1>Integración Garmin & Whoop</h1>
+<div class="subtitle">Configuración de dispositivos, flujo de datos y permisos — Tu Coach App</div>
+
+<!-- CONNECT CARDS -->
+<div class="connect-grid">
+
+  <!-- GARMIN -->
+  <div class="connect-card connected">
+    <div class="brand-header">
+      <div class="brand-logo brand-garmin">G</div>
+      <div>
+        <div class="brand-name">Garmin Connect</div>
+        <div class="brand-desc">Actividades, potencia, FC, GPS, VO2max</div>
+      </div>
+    </div>
+    <div class="connected-badge"><div class="connected-dot"></div>Conectado · gerardo@gmail.com</div>
+    <div class="data-list">
+      <div class="data-row"><div class="data-label">Última sincronización</div><div class="data-val">Hoy · 6:42 AM</div></div>
+      <div class="data-row"><div class="data-label">Dispositivos vinculados</div><div class="data-val">Garmin Forerunner 965</div></div>
+      <div class="data-row"><div class="data-label">Actividades sincronizadas</div><div class="data-val" style="color:var(--accent)">284 actividades</div></div>
+      <div class="data-row"><div class="data-label">FTP detectado</div><div class="data-val" style="color:var(--yellow)">285 W</div></div>
+      <div class="data-row"><div class="data-label">VO2max estimado</div><div class="data-val" style="color:var(--green)">58 ml/kg/min</div></div>
+      <div class="data-row"><div class="data-label">Entrenamientos enviados</div><div class="data-val" style="color:var(--green)">✓ Auto-push activo</div></div>
+    </div>
+    <div class="sync-info">Sincronización automática · Webhook en tiempo real tras cada actividad</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary">Sincronizar ahora</button>
+      <button class="btn btn-secondary">Ver historial</button>
+      <button class="btn btn-danger">Desconectar</button>
+    </div>
+
+    <div style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px">
+      <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px">Permisos de acceso</div>
+      <div class="permission-item">
+        <div class="perm-icon">🏃</div>
+        <div class="perm-text"><div class="perm-name">Actividades y workouts</div><div class="perm-desc">Historial completo de actividades</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">❤️</div>
+        <div class="perm-text"><div class="perm-name">Frecuencia cardíaca</div><div class="perm-desc">FC en reposo, promedio y máxima</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">⚡</div>
+        <div class="perm-text"><div class="perm-name">Datos de potencia</div><div class="perm-desc">Potencia, FTP, NP, IF, TSS</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">🗺️</div>
+        <div class="perm-text"><div class="perm-name">GPS y rutas</div><div class="perm-desc">Coordenadas, elevación, mapa</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">💤</div>
+        <div class="perm-text"><div class="perm-name">Sueño</div><div class="perm-desc">Duración y fases del sueño</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">📊</div>
+        <div class="perm-text"><div class="perm-name">Body Battery & Stress</div><div class="perm-desc">Nivel de energía y estrés del día</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">📅</div>
+        <div class="perm-text"><div class="perm-name">Push de entrenamientos</div><div class="perm-desc">Enviar plan del coach al reloj</div></div>
+        <div class="toggle"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHOOP -->
+  <div class="connect-card connected">
+    <div class="brand-header">
+      <div class="brand-logo brand-whoop">W</div>
+      <div>
+        <div class="brand-name">Whoop</div>
+        <div class="brand-desc">Recuperación, HRV, sueño, strain</div>
+      </div>
+    </div>
+    <div class="connected-badge"><div class="connected-dot"></div>Conectado · gerardo@gmail.com</div>
+    <div class="data-list">
+      <div class="data-row"><div class="data-label">Última sincronización</div><div class="data-val">Hoy · 7:15 AM (al despertar)</div></div>
+      <div class="data-row"><div class="data-label">Dispositivo</div><div class="data-val">Whoop 4.0</div></div>
+      <div class="data-row"><div class="data-label">Recovery hoy</div><div class="data-val" style="color:var(--green)">73% · Verde 🟢</div></div>
+      <div class="data-row"><div class="data-label">HRV esta mañana</div><div class="data-val" style="color:var(--accent)">58 ms</div></div>
+      <div class="data-row"><div class="data-label">FC en reposo</div><div class="data-val">42 bpm</div></div>
+      <div class="data-row"><div class="data-label">Sueño anoche</div><div class="data-val">7h 12min · Perf. 84%</div></div>
+    </div>
+    <div class="sync-info">Sincronización automática cada mañana al despertar + webhook tras cada ciclo de sueño</div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-secondary">Sincronizar ahora</button>
+      <button class="btn btn-secondary">Ver historial</button>
+      <button class="btn btn-danger">Desconectar</button>
+    </div>
+
+    <div style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px">
+      <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:10px">Permisos de acceso</div>
+      <div class="permission-item">
+        <div class="perm-icon">💚</div>
+        <div class="perm-text"><div class="perm-name">Recovery Score</div><div class="perm-desc">% recuperación diaria</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">📈</div>
+        <div class="perm-text"><div class="perm-name">HRV (Heart Rate Variability)</div><div class="perm-desc">ms diario + tendencia 7 días</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">❤️</div>
+        <div class="perm-text"><div class="perm-name">FC en reposo (RHR)</div><div class="perm-desc">Frecuencia cardíaca basal</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">🌙</div>
+        <div class="perm-text"><div class="perm-name">Datos de sueño</div><div class="perm-desc">Duración, eficiencia, fases, deuda</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">🔥</div>
+        <div class="perm-text"><div class="perm-name">Strain diario</div><div class="perm-desc">Carga cardiovascular del día</div></div>
+        <div class="toggle"></div>
+      </div>
+      <div class="permission-item">
+        <div class="perm-icon">🫁</div>
+        <div class="perm-text"><div class="perm-name">SpO2 y respiración</div><div class="perm-desc">Saturación de oxígeno nocturna</div></div>
+        <div class="toggle"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FLOW -->
+<section class="flow-section">
+  <div class="flow-title">🔄 Flujo de Datos — Garmin & Whoop → Tu Coach</div>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-box">
+        <div class="flow-icon">⌚</div>
+        <div class="flow-name">Dispositivo</div>
+        <div class="flow-desc">Garmin Forerunner 965 / Whoop 4.0 registra actividad y biosignales</div>
+      </div>
+      <div class="flow-tag tag-realtime">Hardware</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-box">
+        <div class="flow-icon">📡</div>
+        <div class="flow-name">API Oficial</div>
+        <div class="flow-desc">Garmin Connect API v1 / Whoop API v1 · OAuth 2.0 · HTTPS</div>
+      </div>
+      <div class="flow-tag tag-api">REST API</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-box">
+        <div class="flow-icon">🔔</div>
+        <div class="flow-name">Webhook</div>
+        <div class="flow-desc">Push inmediato al backend de Tu Coach al completar actividad o ciclo de sueño</div>
+      </div>
+      <div class="flow-tag tag-webhook">Webhook</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-box">
+        <div class="flow-icon">⚙️</div>
+        <div class="flow-name">Procesamiento</div>
+        <div class="flow-desc">Cálculo TSS, CTL, ATL, TSB · Detección de anomalías HRV · Alertas al coach</div>
+      </div>
+      <div class="flow-tag tag-api">Backend</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="flow-box">
+        <div class="flow-icon">📊</div>
+        <div class="flow-name">Dashboard</div>
+        <div class="flow-desc">Atleta y coach ven datos actualizados · Notificación push a móvil</div>
+      </div>
+      <div class="flow-tag tag-realtime">Realtime</div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA TABLE -->
+<section class="data-table-section">
+  <h2>Campos de Datos Integrados</h2>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Dato</th>
+        <th>Fuente</th>
+        <th>Campo API</th>
+        <th>Frecuencia</th>
+        <th>Uso en Tu Coach</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Actividad completa</strong><br><span style="font-size:11px;color:var(--text3)">Distancia, tiempo, FC, cadencia, potencia, GPS</span></td>
+        <td class="source-garmin">Garmin</td>
+        <td><span class="field-chip">activityId</span><span class="field-chip">distance</span><span class="field-chip">movingDuration</span><span class="field-chip">averageHR</span><span class="field-chip">averagePower</span></td>
+        <td>Post-actividad (webhook)</td>
+        <td><span class="use-tag use-pmc">PMC</span><span class="use-tag use-display">Calendario</span><span class="use-tag use-coach">Coach</span></td>
+      </tr>
+      <tr>
+        <td><strong>Datos de potencia</strong><br><span style="font-size:11px;color:var(--text3)">FTP, NP, IF, TSS, zonas</span></td>
+        <td class="source-garmin">Garmin</td>
+        <td><span class="field-chip">normalizedPower</span><span class="field-chip">intensityFactor</span><span class="field-chip">trainingStressScore</span><span class="field-chip">functionalThresholdPower</span></td>
+        <td>Post-actividad</td>
+        <td><span class="use-tag use-pmc">CTL/ATL/TSB</span><span class="use-tag use-coach">FTP tracking</span></td>
+      </tr>
+      <tr>
+        <td><strong>VO2max estimado</strong><br><span style="font-size:11px;color:var(--text3)">Predicción Firstbeat</span></td>
+        <td class="source-garmin">Garmin</td>
+        <td><span class="field-chip">vo2MaxPreciseValue</span></td>
+        <td>Post-actividad intensa</td>
+        <td><span class="use-tag use-display">Perfil atleta</span><span class="use-tag use-coach">Progresión</span></td>
+      </tr>
+      <tr>
+        <td><strong>Body Battery & Stress</strong><br><span style="font-size:11px;color:var(--text3)">Nivel de energía 0-100</span></td>
+        <td class="source-garmin">Garmin</td>
+        <td><span class="field-chip">bodyBatteryHighestValue</span><span class="field-chip">bodyBatteryLowestValue</span><span class="field-chip">averageStressLevel</span></td>
+        <td>Diario (mañana)</td>
+        <td><span class="use-tag use-alert">Alertas coach</span><span class="use-tag use-display">Dashboard</span></td>
+      </tr>
+      <tr>
+        <td><strong>Sueño Garmin</strong><br><span style="font-size:11px;color:var(--text3)">Duración, fases, SpO2</span></td>
+        <td class="source-garmin">Garmin</td>
+        <td><span class="field-chip">sleepTimeSeconds</span><span class="field-chip">deepSleepSeconds</span><span class="field-chip">remSleepSeconds</span><span class="field-chip">averageSpO2Value</span></td>
+        <td>Diario (al despertar)</td>
+        <td><span class="use-tag use-display">Recuperación</span></td>
+      </tr>
+      <tr>
+        <td><strong>Recovery Score</strong><br><span style="font-size:11px;color:var(--text3)">% recuperación 0-100</span></td>
+        <td class="source-whoop">Whoop</td>
+        <td><span class="field-chip">recovery_score</span><span class="field-chip">recovery_score_state</span></td>
+        <td>Diario (post-sueño)</td>
+        <td><span class="use-tag use-alert">Alertas críticas</span><span class="use-tag use-coach">Modificar plan</span></td>
+      </tr>
+      <tr>
+        <td><strong>HRV (Heart Rate Variability)</strong><br><span style="font-size:11px;color:var(--text3)">ms · baseline · tendencia</span></td>
+        <td class="source-whoop">Whoop</td>
+        <td><span class="field-chip">hrv_rmssd_milli</span><span class="field-chip">baseline_hrv_min</span><span class="field-chip">baseline_hrv_max</span></td>
+        <td>Diario (post-sueño)</td>
+        <td><span class="use-tag use-alert">🚨 Alerta HRV bajo</span><span class="use-tag use-pmc">Recuperación</span></td>
+      </tr>
+      <tr>
+        <td><strong>FC en reposo (RHR)</strong><br><span style="font-size:11px;color:var(--text3)">bpm basal nocturno</span></td>
+        <td class="source-both">Garmin + Whoop</td>
+        <td><span class="field-chip">restingHeartRate</span><span class="field-chip">resting_heart_rate</span></td>
+        <td>Diario</td>
+        <td><span class="use-tag use-display">Dashboard</span><span class="use-tag use-coach">Tendencia fatiga</span></td>
+      </tr>
+      <tr>
+        <td><strong>Sueño Whoop</strong><br><span style="font-size:11px;color:var(--text3)">Eficiencia, deuda, fases detalladas</span></td>
+        <td class="source-whoop">Whoop</td>
+        <td><span class="field-chip">sleep_efficiency_percentage</span><span class="field-chip">sleep_debt_minutes</span><span class="field-chip">slow_wave_sleep_minutes</span><span class="field-chip">rem_sleep_minutes</span></td>
+        <td>Diario</td>
+        <td><span class="use-tag use-display">Módulo sueño</span></td>
+      </tr>
+      <tr>
+        <td><strong>Strain diario Whoop</strong><br><span style="font-size:11px;color:var(--text3)">Carga cardiovascular 0-21</span></td>
+        <td class="source-whoop">Whoop</td>
+        <td><span class="field-chip">day_strain</span><span class="field-chip">workout_strain</span><span class="field-chip">kilojoule</span></td>
+        <td>Post-entreno / diario</td>
+        <td><span class="use-tag use-pmc">Complementa TSS</span><span class="use-tag use-coach">Carga real</span></td>
+      </tr>
+      <tr>
+        <td><strong>Entrenamientos push → Garmin</strong><br><span style="font-size:11px;color:var(--text3)">Envío del plan del coach al reloj</span></td>
+        <td class="source-garmin">Garmin (write)</td>
+        <td><span class="field-chip">POST /workout</span><span class="field-chip">workoutName</span><span class="field-chip">sport</span><span class="field-chip">segments[]</span><span class="field-chip">targetHR</span><span class="field-chip">targetPower</span></td>
+        <td>Al asignar entreno</td>
+        <td><span class="use-tag" style="background:rgba(124,110,245,0.15);color:#a89ef7">Push al reloj</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- LIVE SYNC LOG -->
+<section>
+  <div class="live-panel">
+    <div class="live-header">
+      <h2 style="margin-bottom:0">Log de Sincronización en Vivo</h2>
+      <div class="live-badge"><div class="live-dot"></div>Activo · Escuchando webhooks</div>
+    </div>
+    <div class="sync-log">
+      <div class="log-entry">
+        <div class="log-time">07:15:33</div>
+        <div class="log-source log-src-whoop">WHOOP</div>
+        <div class="log-msg">Ciclo de sueño completado — Recovery 73%, HRV 58ms, RHR 42bpm, Sueño 7h12m</div>
+        <div class="log-status log-ok">✓ OK</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">07:15:34</div>
+        <div class="log-source" style="color:var(--accent)">SISTEMA</div>
+        <div class="log-msg">HRV 58ms dentro de baseline (52–67ms) → Recovery verde → Entreno de alta intensidad autorizado</div>
+        <div class="log-status log-ok">✓ Procesado</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">07:16:01</div>
+        <div class="log-source" style="color:var(--orange)">NOTIF</div>
+        <div class="log-msg">Push enviado a Gerardo B.: "Recuperación 73% ✅ — Tu entreno de hoy está confirmado"</div>
+        <div class="log-status log-ok">✓ Entregado</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">06:42:18</div>
+        <div class="log-source log-src-garmin">GARMIN</div>
+        <div class="log-msg">Actividad recibida: Easy run 9.8km, 50:06, FC avg 138bpm, TSS 52, Cadencia 174spm</div>
+        <div class="log-status log-ok">✓ Sincronizado</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">06:42:19</div>
+        <div class="log-source" style="color:var(--accent)">SISTEMA</div>
+        <div class="log-msg">CTL actualizado: 73.2 → 74.0 · ATL actualizado: 86.4 · TSB: -12.4</div>
+        <div class="log-status log-ok">✓ PMC recalculado</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">06:18:44</div>
+        <div class="log-source log-src-whoop">WHOOP</div>
+        <div class="log-msg">Ana López — Recovery 28%, HRV 32ms (baseline: 58ms) — 3 SD por debajo</div>
+        <div class="log-status log-warn">⚠ Alerta crítica</div>
+      </div>
+      <div class="log-entry">
+        <div class="log-time">06:18:45</div>
+        <div class="log-source" style="color:var(--red)">ALERTA</div>
+        <div class="log-msg">Notificación urgente enviada al Coach Martínez: "Ana L. — HRV crítico, considerar modificar plan de mañana"</div>
+        <div class="log-status log-warn">⚠ Requiere acción</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LÓGICA DE ALERTAS -->
+<section>
+  <h2>Lógica de Alertas Inteligentes</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:16px">
+      <div style="color:var(--red);font-weight:800;font-size:13px;margin-bottom:12px">🚨 ALERTA ROJA — Modificar plan obligatorio</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+        <li style="font-size:12px;color:var(--text2)">• Recovery Whoop &lt; 33%</li>
+        <li style="font-size:12px;color:var(--text2)">• HRV &lt; 3 desviaciones estándar del baseline</li>
+        <li style="font-size:12px;color:var(--text2)">• RHR &gt; +8 bpm del promedio semanal</li>
+        <li style="font-size:12px;color:var(--text2)">• TSB &lt; -35 con competencia en &lt;7 días</li>
+        <li style="font-size:12px;color:var(--text2)">• Sueño &lt; 5h con entreno de alta intensidad programado</li>
+      </ul>
+    </div>
+    <div style="background:rgba(234,179,8,0.08);border:1px solid rgba(234,179,8,0.2);border-radius:10px;padding:16px">
+      <div style="color:var(--yellow);font-weight:800;font-size:13px;margin-bottom:12px">⚠️ ALERTA AMARILLA — Coach notificado</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+        <li style="font-size:12px;color:var(--text2)">• Recovery Whoop 33–66%</li>
+        <li style="font-size:12px;color:var(--text2)">• HRV 1–3 SD por debajo del baseline</li>
+        <li style="font-size:12px;color:var(--text2)">• TSB &lt; -25</li>
+        <li style="font-size:12px;color:var(--text2)">• Body Battery Garmin &lt; 25 al inicio de entreno</li>
+        <li style="font-size:12px;color:var(--text2)">• 2+ días consecutivos con recovery amarillo</li>
+      </ul>
+    </div>
+    <div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:10px;padding:16px">
+      <div style="color:var(--green);font-weight:800;font-size:13px;margin-bottom:12px">✅ VERDE — Entrenamiento confirmado</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+        <li style="font-size:12px;color:var(--text2)">• Recovery Whoop &gt; 66%</li>
+        <li style="font-size:12px;color:var(--text2)">• HRV dentro o sobre baseline</li>
+        <li style="font-size:12px;color:var(--text2)">• TSB entre -10 y +10</li>
+        <li style="font-size:12px;color:var(--text2)">• Sueño &gt; 7h con eficiencia &gt; 80%</li>
+        <li style="font-size:12px;color:var(--text2)">• Body Battery &gt; 60 al despertar</li>
+      </ul>
+    </div>
+    <div style="background:rgba(79,142,247,0.08);border:1px solid rgba(79,142,247,0.2);border-radius:10px;padding:16px">
+      <div style="color:var(--accent);font-weight:800;font-size:13px;margin-bottom:12px">⚡ SUPERCOMPENSACIÓN — Aumentar carga</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+        <li style="font-size:12px;color:var(--text2)">• Recovery &gt; 85% + HRV sobre baseline &gt;2 días</li>
+        <li style="font-size:12px;color:var(--text2)">• TSB entre +5 y +20 (forma pico)</li>
+        <li style="font-size:12px;color:var(--text2)">• Coach puede considerar test FTP o sesión de calidad extra</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

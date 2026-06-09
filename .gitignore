@@ -1,0 +1,24 @@
+# ── Dependencias ──────────────────────────────────────────────────────────────
+node_modules/
+package-lock.json
+
+# ── Credenciales y entorno ────────────────────────────────────────────────────
+.env
+
+# ── Base de datos local (datos reales del atleta) ─────────────────────────────
+# El seed (data/tucoach.seed.json) SÍ se incluye en el repo.
+# El archivo real (data/tucoach.json) NO — contiene datos personales y tokens.
+data/tucoach.json
+
+# ── Sistema operativo ─────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+Thumbs.db
+desktop.ini
+
+# ── Memoria de Claude Code (configuración local del IDE) ──────────────────────
+.claude/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/

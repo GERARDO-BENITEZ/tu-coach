@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Coach — Dashboard Coach</title>
+<style>
+  :root {
+    --bg: #0f1117; --bg2: #181c27; --bg3: #1e2336; --border: #2a2f45;
+    --accent: #4f8ef7; --accent2: #7c6ef5; --green: #22c55e; --red: #ef4444;
+    --orange: #f97316; --yellow: #eab308; --text: #e8eaf0; --text2: #8b92a8;
+    --text3: #5a6080; --card: #1a1f30;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, sans-serif; min-height: 100vh; display: flex; }
+
+  .sidebar { width: 220px; min-height: 100vh; background: var(--bg2); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: fixed; }
+  .logo { padding: 20px 20px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+  .logo-icon { width: 32px; height: 32px; background: var(--orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 16px; color: #fff; }
+  .logo-text { font-size: 15px; font-weight: 700; }
+  .logo-sub { font-size: 10px; color: var(--text2); letter-spacing: 1px; text-transform: uppercase; }
+  .nav { padding: 12px 0; flex: 1; }
+  .nav-section { padding: 6px 16px 4px; font-size: 10px; color: var(--text3); letter-spacing: 1px; text-transform: uppercase; font-weight: 600; margin-top: 8px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 16px; font-size: 13px; color: var(--text2); cursor: pointer; margin: 1px 8px; border-radius: 6px; transition: all 0.15s; }
+  .nav-item:hover { background: var(--bg3); color: var(--text); }
+  .nav-item.active { background: rgba(249,115,22,0.15); color: var(--orange); }
+  .nav-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .nav-badge { margin-left: auto; background: var(--red); color: #fff; font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 10px; }
+  .sidebar-bottom { padding: 16px; border-top: 1px solid var(--border); }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, var(--orange), var(--red)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #fff; flex-shrink: 0; }
+  .athlete-card { display: flex; align-items: center; gap: 10px; }
+
+  .main { margin-left: 220px; flex: 1; display: flex; flex-direction: column; }
+  .topbar { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50; }
+  .topbar-left { display: flex; align-items: center; gap: 16px; }
+  .page-title { font-size: 15px; font-weight: 700; }
+  .topbar-right { display: flex; align-items: center; gap: 10px; }
+  .btn { padding: 8px 14px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-primary { background: var(--orange); color: #fff; }
+  .btn-primary:hover { background: #ea6c10; }
+  .btn-secondary { background: var(--bg3); color: var(--text2); border: 1px solid var(--border); }
+  .btn-accent { background: var(--accent); color: #fff; }
+
+  .content { padding: 20px 24px; flex: 1; }
+
+  /* ATHLETE ROSTER */
+  .roster-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 20px; }
+  .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .stat-num { font-size: 28px; font-weight: 900; letter-spacing: -1px; }
+  .stat-label { font-size: 10px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 2px; }
+  .stat-sub { font-size: 11px; color: var(--text2); margin-top: 4px; }
+
+  .main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; }
+
+  /* ATHLETE TABLE */
+  .athlete-table-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
+  .table-header { padding: 16px 20px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .table-title { font-size: 13px; font-weight: 700; }
+  .search-input { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; color: var(--text); font-size: 12px; outline: none; width: 200px; }
+  .table { width: 100%; border-collapse: collapse; }
+  .table th { padding: 10px 16px; text-align: left; font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.6px; border-bottom: 1px solid var(--border); background: var(--bg2); }
+  .table td { padding: 12px 16px; font-size: 12px; border-bottom: 1px solid rgba(42,47,69,0.5); }
+  .table tr:last-child td { border-bottom: none; }
+  .table tr:hover td { background: rgba(255,255,255,0.02); }
+  .athlete-info { display: flex; align-items: center; gap: 10px; }
+  .av-sm { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .at-name { font-size: 13px; font-weight: 600; }
+  .at-sport { font-size: 10px; color: var(--text3); }
+  .compliance-bar { height: 6px; border-radius: 3px; background: var(--border); overflow: hidden; width: 80px; }
+  .compliance-fill { height: 100%; border-radius: 3px; }
+  .compliance-row { display: flex; align-items: center; gap: 6px; }
+  .compliance-pct { font-size: 11px; font-weight: 700; width: 30px; }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .status-green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .status-yellow { background: var(--yellow); }
+  .status-red { background: var(--red); }
+  .ctl-chip { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 10px; background: rgba(79,142,247,0.15); color: var(--accent); }
+  .tsb-pos { color: var(--green); font-weight: 700; }
+  .tsb-neg { color: var(--red); font-weight: 700; }
+  .tsb-neu { color: var(--yellow); font-weight: 700; }
+  .action-btns { display: flex; gap: 4px; }
+  .icon-btn { width: 26px; height: 26px; border-radius: 5px; background: var(--bg3); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text2); }
+  .icon-btn:hover { background: var(--border); color: var(--text); }
+  .tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+  .tag-tri { background: rgba(124,110,245,0.2); color: var(--accent2); }
+  .tag-run { background: rgba(79,142,247,0.2); color: var(--accent); }
+  .tag-bike { background: rgba(234,179,8,0.2); color: var(--yellow); }
+
+  /* CALENDAR COACH VIEW */
+  .cal-coach { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  .cal-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .cal-nav-btn { width: 28px; height: 28px; background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text2); font-size: 14px; }
+  .athlete-filter { display: flex; gap: 6px; flex-wrap: wrap; }
+  .filter-chip { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--bg3); color: var(--text2); transition: all 0.1s; }
+  .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .week-cal { display: grid; grid-template-columns: 100px repeat(7, 1fr); gap: 1px; background: var(--border); border-radius: 8px; overflow: hidden; }
+  .wc-header { background: var(--bg2); padding: 8px 10px; font-size: 10px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; text-align: center; }
+  .wc-athlete-col { background: var(--bg2); padding: 10px 12px; display: flex; align-items: center; gap: 8px; min-height: 70px; }
+  .wc-day-cell { background: var(--bg3); padding: 6px; min-height: 70px; cursor: pointer; }
+  .wc-day-cell:hover { background: #242840; }
+  .wc-day-cell.today-col { background: rgba(79,142,247,0.06); border: 1px solid rgba(79,142,247,0.2); }
+  .wc-pill { border-radius: 3px; padding: 2px 5px; font-size: 10px; font-weight: 600; margin-bottom: 2px; border-left: 2px solid; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wc-done { opacity: 0.5; }
+  .wc-done::after { content: " ✓"; }
+  .wc-missed { border-left-color: var(--red) !important; background: rgba(239,68,68,0.12) !important; color: #f87171 !important; }
+  .add-btn { width: 100%; height: 22px; border-radius: 3px; border: 1px dashed var(--border); background: transparent; color: var(--text3); font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .add-btn:hover { background: rgba(79,142,247,0.1); border-color: var(--accent); color: var(--accent); }
+
+  /* RIGHT SIDEBAR */
+  .right-side { display: flex; flex-direction: column; gap: 16px; }
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .panel-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text3); margin-bottom: 12px; }
+
+  /* WORKOUT BUILDER */
+  .workout-builder { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  .builder-tabs { display: flex; gap: 2px; background: var(--bg3); padding: 3px; border-radius: 7px; margin-bottom: 16px; width: fit-content; }
+  .tab { padding: 6px 14px; border-radius: 5px; font-size: 12px; font-weight: 600; cursor: pointer; color: var(--text2); transition: all 0.15s; }
+  .tab.active { background: var(--bg2); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+  .builder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  .field-group { display: flex; flex-direction: column; gap: 5px; }
+  .field-label { font-size: 11px; color: var(--text3); font-weight: 600; }
+  .field-input { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; color: var(--text); font-size: 13px; outline: none; width: 100%; }
+  .field-input:focus { border-color: var(--accent); }
+  .field-select { background: var(--bg3); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; color: var(--text); font-size: 13px; outline: none; width: 100%; appearance: none; cursor: pointer; }
+  .segments-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+  .segment-row { display: grid; grid-template-columns: 1fr 80px 80px 90px 28px; gap: 6px; align-items: center; }
+  .seg-input { background: var(--bg3); border: 1px solid var(--border); border-radius: 5px; padding: 6px 8px; color: var(--text); font-size: 12px; outline: none; width: 100%; }
+  .seg-del { width: 28px; height: 28px; border-radius: 5px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #f87171; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .assign-row { display: flex; gap: 8px; align-items: center; }
+  .assign-label { font-size: 11px; color: var(--text3); font-weight: 600; flex-shrink: 0; }
+
+  /* MODAL */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 200; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .2s; }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; width: 820px; max-width: 95vw; max-height: 90vh; overflow-y: auto; }
+  .modal-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+  .modal-body { padding: 20px 24px; }
+  .modal-close { width: 30px; height: 30px; border-radius: 6px; background: var(--bg3); border: 1px solid var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text2); font-size: 16px; }
+  .modal-close:hover { background: var(--border); }
+  .modal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .modal-section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .modal-section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: var(--text3); margin-bottom: 10px; }
+  .modal-full { grid-column: 1/-1; }
+
+  /* SENSATION ROW */
+  .sens-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .sens-name { font-size: 11px; color: var(--text2); width: 80px; flex-shrink: 0; }
+  .sens-bar-w { flex: 1; height: 7px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .sens-bar-f { height: 100%; border-radius: 4px; }
+  .sens-num { font-size: 11px; font-weight: 700; width: 24px; text-align: right; }
+
+  /* TEAM COMPLIANCE CHART */
+  .team-comp-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 10px; }
+  .tcp-card { background: var(--bg3); border-radius: 7px; padding: 8px; text-align: center; cursor: pointer; border: 1px solid transparent; transition: all .15s; }
+  .tcp-card:hover { border-color: var(--accent); }
+  .tcp-av { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; margin: 0 auto 5px; }
+  .tcp-name { font-size: 10px; color: var(--text2); margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tcp-pct { font-size: 16px; font-weight: 900; line-height: 1; }
+  .tcp-bar { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; margin-top: 5px; }
+  .tcp-bar-f { height: 100%; border-radius: 2px; }
+
+  /* ALERTS */
+  .alert { display: flex; gap: 10px; padding: 10px 12px; border-radius: 7px; margin-bottom: 8px; align-items: flex-start; }
+  .alert-red { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25); }
+  .alert-yellow { background: rgba(234,179,8,0.1); border: 1px solid rgba(234,179,8,0.25); }
+  .alert-green { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); }
+  .alert-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+  .alert-content { flex: 1; }
+  .alert-title { font-size: 12px; font-weight: 700; }
+  .alert-red .alert-title { color: var(--red); }
+  .alert-yellow .alert-title { color: var(--yellow); }
+  .alert-green .alert-title { color: var(--green); }
+  .alert-body { font-size: 11px; color: var(--text2); margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="logo">
+    <div class="logo-icon">TC</div>
+    <div>
+      <div class="logo-text">Tu Coach</div>
+      <div class="logo-sub">Coach Panel</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="nav-section">Gestión</div>
+    <div class="nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Dashboard</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span>Mis Atletas</span>
+      <div class="nav-badge">12</div>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Calendario</span>
+    </div>
+    <div class="nav-section">Creación</div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <span>Crear Entreno</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span>Biblioteca de Planes</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      <span>Plantillas</span>
+    </div>
+    <div class="nav-section">Análisis</div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Rendimiento</span>
+    </div>
+    <div class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Mensajes</span>
+      <div class="nav-badge">3</div>
+    </div>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="athlete-card">
+      <div class="avatar">CE</div>
+      <div>
+        <div style="font-size:13px;font-weight:600" class="coach-name">Coach Erick</div>
+        <div style="font-size:11px;color:var(--text2)">Pro Coach · 12 atletas</div>
+        <div onclick="logout()" style="font-size:10px;color:var(--text3);cursor:pointer;margin-top:3px">Cerrar sesión ↩</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ATHLETE DETAIL MODAL -->
+<div class="modal-overlay" id="athlete-modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div id="modal-avatar" class="av-sm" style="width:40px;height:40px;font-size:14px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff"></div>
+        <div>
+          <div id="modal-name" style="font-size:16px;font-weight:800"></div>
+          <div id="modal-sport" style="font-size:12px;color:var(--text2)"></div>
+        </div>
+        <div id="modal-status-badge" style="padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:8px"></div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="btn btn-secondary" style="font-size:11px">Ver analytics completo</button>
+        <button class="btn btn-primary" style="font-size:11px">Enviar mensaje</button>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+    </div>
+    <div class="modal-body">
+
+      <!-- KPI STRIP -->
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:16px" id="modal-kpis"></div>
+
+      <!-- PMC MINI + SENSACIONES -->
+      <div class="modal-grid">
+        <div class="modal-section modal-full">
+          <div class="modal-section-title">Performance Management Chart — 60 días</div>
+          <svg id="modal-pmc" viewBox="0 0 760 120" style="width:100%;display:block"></svg>
+          <div style="display:flex;gap:14px;margin-top:6px;font-size:11px">
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:2.5px;background:var(--accent);border-radius:2px;display:inline-block"></span>CTL</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:2px;background:var(--red);border-radius:2px;display:inline-block"></span>ATL</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;background:var(--green);border-radius:50%;display:inline-block"></span>TSB</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;background:var(--border);border-radius:2px;display:inline-block"></span>TSS diario</span>
+          </div>
+        </div>
+
+        <!-- SENSACIONES RECIENTES -->
+        <div class="modal-section">
+          <div class="modal-section-title">Sensaciones post-entreno — Último mes</div>
+          <div id="modal-sensations"></div>
+        </div>
+
+        <!-- COMPLIANCE DETALLE -->
+        <div class="modal-section">
+          <div class="modal-section-title">Compliance — Últimas 8 semanas</div>
+          <svg id="modal-comp" viewBox="0 0 340 90" style="width:100%;display:block;margin-bottom:8px"></svg>
+          <div id="modal-nutrition" style="margin-top:8px;padding:10px;background:var(--bg3);border-radius:8px;font-size:11px;color:var(--text2)"></div>
+        </div>
+
+        <!-- NOTA DEL COACH -->
+        <div class="modal-section modal-full">
+          <div class="modal-section-title">Nota al atleta</div>
+          <textarea id="modal-note" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:10px;color:var(--text);font-size:13px;resize:vertical;min-height:70px;outline:none;font-family:inherit" placeholder="Escribe una nota personalizada para este atleta..."></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn btn-primary" style="font-size:12px">Enviar nota</button>
+            <button class="btn btn-secondary" style="font-size:12px">Ajustar plan</button>
+            <button class="btn btn-secondary" style="font-size:12px">Modificar entreno de hoy</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="page-title">Panel del Coach</div>
+      <div style="font-size:12px;color:var(--text3)">Semana 23 · Jun 1–7, 2026</div>
+    </div>
+    <div class="topbar-right">
+      <button class="btn btn-secondary">Importar Plan</button>
+      <button class="btn btn-primary">+ Nuevo Entreno</button>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- STATS -->
+    <div class="roster-stats">
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--accent)">12</div>
+        <div class="stat-label">Atletas activos</div>
+        <div class="stat-sub">2 en tapering</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--green)">87%</div>
+        <div class="stat-label">Compliance semanal</div>
+        <div class="stat-sub">↑ +4% vs semana pasada</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--orange)">3</div>
+        <div class="stat-label">Alertas activas</div>
+        <div class="stat-sub">1 alta prioridad</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--yellow)">42</div>
+        <div class="stat-label">Entrenos esta semana</div>
+        <div class="stat-sub">36 completados</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--accent2)">5</div>
+        <div class="stat-label">Competencias próximas</div>
+        <div class="stat-sub">2 en &lt;2 semanas</div>
+      </div>
+    </div>
+
+    <div class="main-grid">
+      <div>
+
+        <!-- ALERTS -->
+        <div style="margin-bottom:16px">
+          <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--text2)">ALERTAS DEL EQUIPO</div>
+          <div class="alert alert-red">
+            <div class="alert-icon">🚨</div>
+            <div class="alert-content">
+              <div class="alert-title">Ana López — HRV crítico (32ms)</div>
+              <div class="alert-body">Whoop reporta recuperación 28% y HRV 3 desviaciones bajo baseline. Recomendación: modificar el entreno de mañana a recuperación activa.</div>
+            </div>
+            <button class="btn btn-secondary" style="font-size:10px;padding:4px 8px;white-space:nowrap;flex-shrink:0">Ajustar plan</button>
+          </div>
+          <div class="alert alert-yellow">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+              <div class="alert-title">Carlos Ruiz — TSB muy negativo (-28)</div>
+              <div class="alert-body">Acumuló 680 TSS esta semana. Considerar reducir intensidad del viernes para evitar sobreentrenamiento pre-competencia.</div>
+            </div>
+            <button class="btn btn-secondary" style="font-size:10px;padding:4px 8px;white-space:nowrap;flex-shrink:0">Ver PMC</button>
+          </div>
+          <div class="alert alert-green">
+            <div class="alert-icon">✅</div>
+            <div class="alert-content">
+              <div class="alert-title">Gerardo B. — En forma ideal para competencia</div>
+              <div class="alert-body">TSB +8. HRV en baseline alta. CTL 74. Todo en verde para la regata ILCA 7 del 28 de junio.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ATHLETE ROSTER TABLE -->
+        <div class="athlete-table-card">
+          <div class="table-header">
+            <div class="table-title">Roster de Atletas</div>
+            <div style="display:flex;gap:8px">
+              <input class="search-input" placeholder="Buscar atleta...">
+              <button class="btn btn-secondary" style="font-size:11px">Filtrar</button>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Atleta</th>
+                <th>Deporte</th>
+                <th>Estado hoy</th>
+                <th>Compliance</th>
+                <th>CTL</th>
+                <th>TSB</th>
+                <th>Whoop</th>
+                <th>Próxima comp.</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="cursor:pointer" onclick="openModal('gb')">
+                <td><div class="athlete-info"><div class="av-sm" style="background:linear-gradient(135deg,#4f8ef7,#7c6ef5)">GB</div><div><div class="at-name">Gerardo B.</div><div class="at-sport">ILCA 7 · Vela</div></div></div></td>
+                <td><span class="tag tag-tri">Tri</span></td>
+                <td><span class="status-dot status-green"></span> Entreno hoy</td>
+                <td><div class="compliance-row"><div class="compliance-bar"><div class="compliance-fill" style="width:93%;background:var(--green)"></div></div><div class="compliance-pct" style="color:var(--green)">93%</div></div></td>
+                <td><span class="ctl-chip">74</span></td>
+                <td class="tsb-pos">-14</td>
+                <td style="color:var(--green);font-weight:700">73% 🟢</td>
+                <td style="font-size:11px;color:var(--accent)">28 Jun · Tri</td>
+                <td><div class="action-btns"><div class="icon-btn" onclick="event.stopPropagation()">📅</div><div class="icon-btn" onclick="event.stopPropagation()">💬</div><div class="icon-btn">📊</div></div></td>
+              </tr>
+              <tr style="cursor:pointer" onclick="openModal('al')">
+                <td><div class="athlete-info"><div class="av-sm" style="background:linear-gradient(135deg,#ef4444,#f97316)">AL</div><div><div class="at-name">Ana López</div><div class="at-sport">Running</div></div></div></td>
+                <td><span class="tag tag-run">Run</span></td>
+                <td><span class="status-dot status-red"></span> <span style="color:var(--red)">HRV bajo</span></td>
+                <td><div class="compliance-row"><div class="compliance-bar"><div class="compliance-fill" style="width:78%;background:var(--yellow)"></div></div><div class="compliance-pct" style="color:var(--yellow)">78%</div></div></td>
+                <td><span class="ctl-chip">61</span></td>
+                <td class="tsb-neg">-22</td>
+                <td style="color:var(--red);font-weight:700">28% 🔴</td>
+                <td style="font-size:11px;color:var(--text3)">15 Jul · 10K</td>
+                <td><div class="action-btns"><div class="icon-btn" onclick="event.stopPropagation()">📅</div><div class="icon-btn" onclick="event.stopPropagation()">💬</div><div class="icon-btn">📊</div></div></td>
+              </tr>
+              <tr style="cursor:pointer" onclick="openModal('cr')">
+                <td><div class="athlete-info"><div class="av-sm" style="background:linear-gradient(135deg,#eab308,#f97316)">CR</div><div><div class="at-name">Carlos Ruiz</div><div class="at-sport">Ciclismo</div></div></div></td>
+                <td><span class="tag tag-bike">Bike</span></td>
+                <td><span class="status-dot status-yellow"></span> Alta carga</td>
+                <td><div class="compliance-row"><div class="compliance-bar"><div class="compliance-fill" style="width:95%;background:var(--green)"></div></div><div class="compliance-pct" style="color:var(--green)">95%</div></div></td>
+                <td><span class="ctl-chip">89</span></td>
+                <td class="tsb-neg" style="color:var(--red)">-28</td>
+                <td style="color:var(--yellow);font-weight:700">55% 🟡</td>
+                <td style="font-size:11px;color:var(--orange)">22 Jun · Criterium</td>
+                <td><div class="action-btns"><div class="icon-btn" onclick="event.stopPropagation()">📅</div><div class="icon-btn" onclick="event.stopPropagation()">💬</div><div class="icon-btn">📊</div></div></td>
+              </tr>
+              <tr style="cursor:pointer" onclick="openModal('mr')">
+                <td><div class="athlete-info"><div class="av-sm" style="background:linear-gradient(135deg,#22c55e,#4f8ef7)">MR</div><div><div class="at-name">Marta Ríos</div><div class="at-sport">Triatlón</div></div></div></td>
+                <td><span class="tag tag-tri">Tri</span></td>
+                <td><span class="status-dot status-green"></span> Descansando</td>
+                <td><div class="compliance-row"><div class="compliance-bar"><div class="compliance-fill" style="width:88%;background:var(--green)"></div></div><div class="compliance-pct" style="color:var(--green)">88%</div></div></td>
+                <td><span class="ctl-chip">68</span></td>
+                <td class="tsb-pos">+6</td>
+                <td style="color:var(--green);font-weight:700">81% 🟢</td>
+                <td style="font-size:11px;color:var(--text3)">10 Ago · IronMan</td>
+                <td><div class="action-btns"><div class="icon-btn" onclick="event.stopPropagation()">📅</div><div class="icon-btn" onclick="event.stopPropagation()">💬</div><div class="icon-btn">📊</div></div></td>
+              </tr>
+              <tr style="cursor:pointer" onclick="openModal('jp')">
+                <td><div class="athlete-info"><div class="av-sm" style="background:linear-gradient(135deg,#7c6ef5,#ef4444)">JP</div><div><div class="at-name">Jorge Pérez</div><div class="at-sport">Running</div></div></div></td>
+                <td><span class="tag tag-run">Run</span></td>
+                <td><span class="status-dot status-green"></span> Entreno hoy</td>
+                <td><div class="compliance-row"><div class="compliance-bar"><div class="compliance-fill" style="width:72%;background:var(--yellow)"></div></div><div class="compliance-pct" style="color:var(--yellow)">72%</div></div></td>
+                <td><span class="ctl-chip">54</span></td>
+                <td class="tsb-neu">-8</td>
+                <td style="color:var(--yellow);font-weight:700">62% 🟡</td>
+                <td style="font-size:11px;color:var(--text3)">20 Jul · Maratón</td>
+                <td><div class="action-btns"><div class="icon-btn" onclick="event.stopPropagation()">📅</div><div class="icon-btn" onclick="event.stopPropagation()">💬</div><div class="icon-btn">📊</div></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- WEEK CALENDAR COACH VIEW -->
+        <div class="cal-coach">
+          <div class="cal-header">
+            <div style="display:flex;gap:4px">
+              <div class="cal-nav-btn">‹</div>
+              <div class="cal-nav-btn">›</div>
+            </div>
+            <div style="font-size:14px;font-weight:700">Semana 23 — Jun 1–7</div>
+            <div class="athlete-filter" style="margin-left:auto">
+              <div class="filter-chip active">Todos</div>
+              <div class="filter-chip">Gerardo B.</div>
+              <div class="filter-chip">Ana L.</div>
+              <div class="filter-chip">Carlos R.</div>
+            </div>
+          </div>
+
+          <div class="week-cal">
+            <!-- Headers -->
+            <div class="wc-header">Atleta</div>
+            <div class="wc-header">Lun 1</div>
+            <div class="wc-header">Mar 2</div>
+            <div class="wc-header">Mié 3</div>
+            <div class="wc-header">Jue 4</div>
+            <div class="wc-header">Vie 5</div>
+            <div class="wc-header">Sáb 6</div>
+            <div class="wc-header" style="color:var(--accent)">Dom 7 HOY</div>
+
+            <!-- Gerardo -->
+            <div class="wc-athlete-col">
+              <div class="av-sm" style="background:linear-gradient(135deg,#4f8ef7,#7c6ef5)">GB</div>
+              <div><div style="font-size:12px;font-weight:600">Gerardo B.</div><div style="font-size:10px;color:var(--text3)">CTL 74</div></div>
+            </div>
+            <!-- Gerardo: Lun 1 a Dom 7 HOY — todos completados excepto hoy (Regata táctica) -->
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(124,110,245,0.15);color:#a89ef7;border-color:#7c6ef5">Descanso</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(79,142,247,0.15);color:#7db5ff;border-color:#4f8ef7">Atletismo 50'</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(6,182,212,0.15);color:#22d3ee;border-color:#06b6d4">Agua — Regata</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(239,68,68,0.12);color:#f87171;border-color:#ef4444">Fuerza + core</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(239,68,68,0.12);color:#f87171;border-color:#ef4444">Fuerza + movilidad</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(6,182,212,0.15);color:#22d3ee;border-color:#06b6d4">Agua — Match racing</div></div>
+            <div class="wc-day-cell today-col">
+              <div class="wc-pill" style="background:rgba(6,182,212,0.15);color:#22d3ee;border-color:#06b6d4">Agua — Regata táctica</div>
+              <div class="wc-pill" style="background:rgba(239,68,68,0.12);color:#f87171;border-color:#ef4444">Core 20'</div>
+              <button class="add-btn">+</button>
+            </div>
+
+            <!-- Ana López -->
+            <div class="wc-athlete-col">
+              <div class="av-sm" style="background:linear-gradient(135deg,#ef4444,#f97316)">AL</div>
+              <div><div style="font-size:12px;font-weight:600">Ana L.</div><div style="font-size:10px;color:var(--red)">⚠ HRV bajo</div></div>
+            </div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(79,142,247,0.15);color:#7db5ff;border-color:#4f8ef7">Tempo 8km</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-missed">Long run 18km ✗</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(124,110,245,0.12);color:#a89ef7;border-color:#7c6ef5">Descanso activo</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(34,197,94,0.15);color:#4ade80;border-color:#22c55e">Recuperación</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(79,142,247,0.15);color:#7db5ff;border-color:#4f8ef7">Easy 45'</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(79,142,247,0.15);color:#7db5ff;border-color:#4f8ef7">Carrera 12km</div></div>
+            <div class="wc-day-cell today-col"><div class="wc-pill" style="background:rgba(124,110,245,0.12);color:#a89ef7;border-color:#7c6ef5">Descanso ← AJUSTADO</div><button class="add-btn">+</button></div>
+
+            <!-- Carlos -->
+            <div class="wc-athlete-col">
+              <div class="av-sm" style="background:linear-gradient(135deg,#eab308,#f97316)">CR</div>
+              <div><div style="font-size:12px;font-weight:600">Carlos R.</div><div style="font-size:10px;color:var(--yellow)">TSB -28</div></div>
+            </div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(234,179,8,0.15);color:#fbbf24;border-color:#eab308">Rodada Z2 90'</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(234,179,8,0.15);color:#fbbf24;border-color:#eab308">Intervals 2x20'</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(124,110,245,0.12);color:#a89ef7;border-color:#7c6ef5">Descanso</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(234,179,8,0.15);color:#fbbf24;border-color:#eab308">Z2 60' suave</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(234,179,8,0.15);color:#fbbf24;border-color:#eab308">Brick 2h</div></div>
+            <div class="wc-day-cell"><div class="wc-pill wc-done" style="background:rgba(234,179,8,0.15);color:#fbbf24;border-color:#eab308">Long ride 3h</div></div>
+            <div class="wc-day-cell today-col"><div class="wc-pill" style="background:rgba(124,110,245,0.12);color:#a89ef7;border-color:#7c6ef5">Recuperación</div></div>
+          </div>
+        </div>
+
+        <!-- TEAM COMPLIANCE CHART -->
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <div>
+              <div style="font-size:13px;font-weight:700">Compliance del Equipo — 8 semanas</div>
+              <div style="font-size:11px;color:var(--text3);margin-top:2px">% de plan completado por atleta · Click en un atleta para ver detalle</div>
+            </div>
+            <div style="display:flex;gap:8px;font-size:10px;color:var(--text2)">
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;background:var(--green);border-radius:50%"></span>≥90%</span>
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;background:var(--yellow);border-radius:50%"></span>75–89%</span>
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:8px;height:8px;background:var(--red);border-radius:50%"></span>&lt;75%</span>
+            </div>
+          </div>
+          <svg id="team-comp-svg" viewBox="0 0 900 130" style="width:100%;display:block"></svg>
+          <div class="team-comp-grid">
+            <div class="tcp-card" onclick="openModal('gb')">
+              <div class="tcp-av" style="background:linear-gradient(135deg,#4f8ef7,#7c6ef5)">GB</div>
+              <div class="tcp-name">Gerardo B.</div>
+              <div class="tcp-pct" style="color:var(--green)">93%</div>
+              <div class="tcp-bar"><div class="tcp-bar-f" style="width:93%;background:var(--green)"></div></div>
+            </div>
+            <div class="tcp-card" onclick="openModal('al')">
+              <div class="tcp-av" style="background:linear-gradient(135deg,#ef4444,#f97316)">AL</div>
+              <div class="tcp-name">Ana López</div>
+              <div class="tcp-pct" style="color:var(--yellow)">78%</div>
+              <div class="tcp-bar"><div class="tcp-bar-f" style="width:78%;background:var(--yellow)"></div></div>
+            </div>
+            <div class="tcp-card" onclick="openModal('cr')">
+              <div class="tcp-av" style="background:linear-gradient(135deg,#eab308,#f97316)">CR</div>
+              <div class="tcp-name">Carlos R.</div>
+              <div class="tcp-pct" style="color:var(--green)">95%</div>
+              <div class="tcp-bar"><div class="tcp-bar-f" style="width:95%;background:var(--green)"></div></div>
+            </div>
+            <div class="tcp-card" onclick="openModal('mr')">
+              <div class="tcp-av" style="background:linear-gradient(135deg,#22c55e,#4f8ef7)">MR</div>
+              <div class="tcp-name">Marta Ríos</div>
+              <div class="tcp-pct" style="color:var(--green)">88%</div>
+              <div class="tcp-bar"><div class="tcp-bar-f" style="width:88%;background:var(--green)"></div></div>
+            </div>
+            <div class="tcp-card" onclick="openModal('jp')">
+              <div class="tcp-av" style="background:linear-gradient(135deg,#7c6ef5,#ef4444)">JP</div>
+              <div class="tcp-name">Jorge P.</div>
+              <div class="tcp-pct" style="color:var(--yellow)">72%</div>
+              <div class="tcp-bar"><div class="tcp-bar-f" style="width:72%;background:var(--red)"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORKOUT BUILDER -->
+        <div class="workout-builder">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <div style="font-size:13px;font-weight:700">Constructor de Entrenamientos</div>
+            <div style="font-size:11px;color:var(--text3)">Coach Erick · Asignación directa al atleta</div>
+          </div>
+          <div class="builder-tabs">
+            <div class="tab active" onclick="setBuilderTab('tierra',this)">🏃 Tierra</div>
+            <div class="tab" onclick="setBuilderTab('fuerza',this)">💪 Fuerza</div>
+            <div class="tab" onclick="setBuilderTab('agua',this)">⛵ En Agua</div>
+            <div class="tab" onclick="setBuilderTab('regata',this)">🏁 Regata</div>
+          </div>
+          <div class="builder-grid">
+            <div class="field-group">
+              <div class="field-label">Nombre del entreno</div>
+              <input class="field-input" id="builder-name" placeholder="ej. Agua — Técnica viradas">
+            </div>
+            <div class="field-group">
+              <div class="field-label">Tipo</div>
+              <select class="field-select" id="workout-type">
+                <option>Atletismo aeróbico</option>
+                <option>Atletismo intervalos Z4</option>
+                <option>Atletismo largo</option>
+                <option>Trote suave + movilidad</option>
+                <option>Atletismo fartlek</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <div class="field-label">Duración (min)</div>
+              <input class="field-input" id="builder-dur" placeholder="120" type="number">
+            </div>
+            <div class="field-group">
+              <div class="field-label">TSS estimado</div>
+              <input class="field-input" id="builder-tss" placeholder="auto" type="number">
+            </div>
+          </div>
+          <div style="font-size:11px;color:var(--text3);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.6px">Nota para el atleta</div>
+          <textarea id="builder-note" style="width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:8px 10px;color:var(--text);font-size:12px;resize:none;outline:none;font-family:inherit;margin-bottom:10px" rows="2" placeholder="Instrucciones específicas para el atleta..."></textarea>
+          <div style="font-size:11px;color:var(--text3);font-weight:600;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.6px">Segmentos</div>
+          <div class="segments-list" id="segments-list">
+            <div class="segment-row" style="grid-template-columns:1fr 70px 110px 80px 28px;font-size:10px;color:var(--text3);font-weight:600">
+              <div>Nombre del segmento</div><div>Duración</div><div>Intensidad / Zona</div><div>Repeticiones</div><div></div>
+            </div>
+            <div class="segment-row">
+              <input class="seg-input" value="Calentamiento dinámico">
+              <input class="seg-input" value="10 min">
+              <select class="seg-input" style="appearance:none;font-size:11px">
+                <option selected>Z1 — Recuperación</option><option>Z2 — Aeróbico base</option><option>Z3 — Táctico / Moderado</option><option>Z4 — Alta intensidad</option><option>Z5 — Máximo</option><option>Fuerza</option>
+              </select>
+              <input class="seg-input" value="1x">
+              <div class="seg-del" onclick="this.parentElement.remove()">×</div>
+            </div>
+            <div class="segment-row">
+              <input class="seg-input" value="Rodaje aeróbico">
+              <input class="seg-input" value="50 min">
+              <select class="seg-input" style="appearance:none;font-size:11px">
+                <option>Z1 — Recuperación</option><option selected>Z2 — Aeróbico base</option><option>Z3 — Táctico / Moderado</option><option>Z4 — Alta intensidad</option><option>Z5 — Máximo</option><option>Fuerza</option>
+              </select>
+              <input class="seg-input" value="1x">
+              <div class="seg-del" onclick="this.parentElement.remove()">×</div>
+            </div>
+            <div class="segment-row">
+              <input class="seg-input" value="Vuelta suave + estiramientos">
+              <input class="seg-input" value="10 min">
+              <select class="seg-input" style="appearance:none;font-size:11px">
+                <option selected>Z1 — Recuperación</option><option>Z2 — Aeróbico base</option><option>Z3 — Táctico / Moderado</option><option>Z4 — Alta intensidad</option><option>Z5 — Máximo</option><option>Fuerza</option>
+              </select>
+              <input class="seg-input" value="1x">
+              <div class="seg-del" onclick="this.parentElement.remove()">×</div>
+            </div>
+          </div>
+          <div style="margin-bottom:14px;display:flex;gap:8px">
+            <button class="btn btn-secondary" style="font-size:11px;flex:1" onclick="addSegment()">+ Añadir segmento</button>
+          </div>
+          <div class="assign-row">
+            <div class="assign-label">Asignar a:</div>
+            <select class="field-select" id="assign-athlete" style="flex:1">
+              <option value="gb">Gerardo B. · ILCA 7</option>
+              <option value="al">Ana López · Running</option>
+              <option value="cr">Carlos Ruiz · Ciclismo</option>
+              <option value="all">Todos los atletas</option>
+            </select>
+            <div class="assign-label">Fecha:</div>
+            <input class="field-input" id="assign-date" type="date" value="2026-06-08" style="width:130px">
+            <button class="btn btn-primary" onclick="assignWorkout()">✓ Asignar</button>
+            <button class="btn btn-secondary" onclick="saveTemplate()">Guardar plantilla</button>
+          </div>
+          <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border)">
+            <div style="font-size:10px;color:var(--text3);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:.5px">Plan completo de periodización</div>
+            <button class="btn btn-accent" style="width:100%;font-size:12px;font-weight:700" onclick="loadCACPlan()">
+              📋 Cargar Plan CAC Games → Gerardo B. (48 sesiones · Jun 7 – Jul 25)
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="right-side">
+
+        <!-- Quick Stats per Athlete -->
+        <div class="panel">
+          <div class="panel-title">Actividad de Hoy</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="av-sm" style="background:linear-gradient(135deg,#4f8ef7,#7c6ef5);width:24px;height:24px;font-size:10px">GB</div>
+                <div style="font-size:12px;font-weight:600">Gerardo B.</div>
+              </div>
+              <div style="font-size:11px;color:var(--yellow)">⏳ Pendiente</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="av-sm" style="background:linear-gradient(135deg,#ef4444,#f97316);width:24px;height:24px;font-size:10px">AL</div>
+                <div style="font-size:12px;font-weight:600">Ana L.</div>
+              </div>
+              <div style="font-size:11px;color:var(--accent2)">💜 Descanso</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="av-sm" style="background:linear-gradient(135deg,#eab308,#f97316);width:24px;height:24px;font-size:10px">CR</div>
+                <div style="font-size:12px;font-weight:600">Carlos R.</div>
+              </div>
+              <div style="font-size:11px;color:var(--red)">❌ Ajustado</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="av-sm" style="background:linear-gradient(135deg,#22c55e,#4f8ef7);width:24px;height:24px;font-size:10px">MR</div>
+                <div style="font-size:12px;font-weight:600">Marta R.</div>
+              </div>
+              <div style="font-size:11px;color:var(--green)">✅ Completado</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div class="av-sm" style="background:linear-gradient(135deg,#7c6ef5,#ef4444);width:24px;height:24px;font-size:10px">JP</div>
+                <div style="font-size:12px;font-weight:600">Jorge P.</div>
+              </div>
+              <div style="font-size:11px;color:var(--green)">✅ Completado</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Sensations Panel -->
+        <div class="panel">
+          <div class="panel-title">Sensaciones de Hoy</div>
+          <div id="team-sensations-panel" style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;cursor:pointer" onclick="openModal('gb')">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                <div style="display:flex;align-items:center;gap:7px">
+                  <div class="av-sm" style="background:linear-gradient(135deg,#4f8ef7,#7c6ef5);width:22px;height:22px;font-size:10px">GB</div>
+                  <div style="font-size:12px;font-weight:600">Gerardo B.</div>
+                </div>
+                <div style="font-size:16px">😊 <span style="font-size:10px;color:var(--yellow);font-weight:700">RPE 6</span></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Piernas</div><div style="font-size:13px;font-weight:800;color:var(--accent)">7.2</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Mental</div><div style="font-size:13px;font-weight:800;color:var(--green)">8.0</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Energía</div><div style="font-size:13px;font-weight:800;color:var(--yellow)">7.5</div></div>
+              </div>
+            </div>
+            <div style="padding:10px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:7px;cursor:pointer" onclick="openModal('al')">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                <div style="display:flex;align-items:center;gap:7px">
+                  <div class="av-sm" style="background:linear-gradient(135deg,#ef4444,#f97316);width:22px;height:22px;font-size:10px">AL</div>
+                  <div style="font-size:12px;font-weight:600">Ana L.</div>
+                </div>
+                <div style="font-size:16px">😞 <span style="font-size:10px;color:var(--red);font-weight:700">RPE 8 alta</span></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Piernas</div><div style="font-size:13px;font-weight:800;color:var(--red)">3.1</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Mental</div><div style="font-size:13px;font-weight:800;color:var(--yellow)">5.2</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Energía</div><div style="font-size:13px;font-weight:800;color:var(--red)">3.8</div></div>
+              </div>
+              <div style="margin-top:6px;font-size:10px;color:var(--red)">⚠️ "Muy cansada, no dormí bien"</div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;cursor:pointer" onclick="openModal('mr')">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+                <div style="display:flex;align-items:center;gap:7px">
+                  <div class="av-sm" style="background:linear-gradient(135deg,#22c55e,#4f8ef7);width:22px;height:22px;font-size:10px">MR</div>
+                  <div style="font-size:12px;font-weight:600">Marta R.</div>
+                </div>
+                <div style="font-size:16px">😄 <span style="font-size:10px;color:var(--green);font-weight:700">RPE 5</span></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Piernas</div><div style="font-size:13px;font-weight:800;color:var(--green)">8.5</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Mental</div><div style="font-size:13px;font-weight:800;color:var(--green)">9.0</div></div>
+                <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Energía</div><div style="font-size:13px;font-weight:800;color:var(--green)">8.8</div></div>
+              </div>
+            </div>
+            <div style="font-size:11px;color:var(--text3);text-align:center;padding-top:4px">Jorge P. y Carlos R. aún no reportan</div>
+          </div>
+        </div>
+
+        <!-- Plan Library -->
+        <div class="panel">
+          <div class="panel-title">Biblioteca de Planes</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:10px;background:rgba(6,182,212,.07);border-radius:7px;cursor:pointer;border:1px solid rgba(6,182,212,.3);transition:all 0.15s" onclick="loadCACPlan()" onmouseover="this.style.borderColor='#22d3ee'" onmouseout="this.style.borderColor='rgba(6,182,212,.3)'">
+              <div style="font-size:12px;font-weight:700">⛵ ILCA 7 CAC Games — 7 semanas</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:2px">F1 Base · F2 Carga · F3 Pico · F4 Taper · 48 sesiones</div>
+              <div style="display:flex;gap:4px;margin-top:6px">
+                <span class="tag" style="background:rgba(6,182,212,.15);color:#22d3ee">⛵ Agua</span>
+                <span class="tag tag-run">🏃 Tierra</span>
+                <span class="tag" style="background:rgba(239,68,68,.13);color:#f87171">💪 Fuerza</span>
+                <span class="tag" style="background:rgba(249,115,22,.15);color:var(--orange);margin-left:auto">Clic para cargar</span>
+              </div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;cursor:pointer;border:1px solid transparent;transition:all 0.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+              <div style="font-size:12px;font-weight:700">Triatlón 70.3 — 16 semanas</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:2px">Base → Build → Peak → Taper</div>
+              <div style="display:flex;gap:4px;margin-top:6px"><span class="tag tag-run">Run</span><span class="tag tag-bike">Bike</span><span class="tag" style="background:rgba(34,197,94,0.15);color:#4ade80">Swim</span></div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;cursor:pointer;border:1px solid transparent;transition:all 0.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+              <div style="font-size:12px;font-weight:700">Maratón Sub-4h — 20 semanas</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:2px">Periodización ondulada</div>
+              <div style="display:flex;gap:4px;margin-top:6px"><span class="tag tag-run">Run</span><span class="tag tag-bike">Cross-train</span></div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;cursor:pointer;border:1px solid transparent;transition:all 0.15s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='transparent'">
+              <div style="font-size:12px;font-weight:700">FTP Builder — 8 semanas</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:2px">Sweet spot + VO2max</div>
+              <div style="display:flex;gap:4px;margin-top:6px"><span class="tag tag-bike">Bike</span></div>
+            </div>
+            <button class="btn btn-secondary" style="width:100%;font-size:11px">Ver todos los planes (24)</button>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <div class="panel">
+          <div class="panel-title">Mensajes Recientes</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;border-left:3px solid var(--accent)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <div style="font-size:12px;font-weight:600">Gerardo B.</div>
+                <div style="font-size:10px;color:var(--text3)">8:45 AM</div>
+              </div>
+              <div style="font-size:11px;color:var(--text2)">Coach, el viento estuvo increíble hoy. ¿Agrego una regata más el sábado? ⛵</div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;border-left:3px solid var(--red)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <div style="font-size:12px;font-weight:600">Ana López</div>
+                <div style="font-size:10px;color:var(--text3)">7:20 AM</div>
+              </div>
+              <div style="font-size:11px;color:var(--text2)">Me desperté muy cansada, ¿hacemos el entreno igual?</div>
+            </div>
+            <div style="padding:10px;background:var(--bg3);border-radius:7px;border-left:3px solid var(--green)">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                <div style="font-size:12px;font-weight:600">Marta Ríos</div>
+                <div style="font-size:10px;color:var(--text3)">Ayer</div>
+              </div>
+              <div style="font-size:11px;color:var(--text2)">¡Los intervalos del martes fueron increíbles! Nuevo PR de FTP 🎉</div>
+            </div>
+          </div>
+          <button class="btn btn-secondary" style="width:100%;font-size:11px;margin-top:10px">Ver todos los mensajes</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="api-client.js"></script>
+<script>
+// ═══ CONEXIÓN AL API — COACH ═══════════════════════════════════════
+
+if (typeof requireAuth === 'function') requireAuth(['COACH', 'ADMIN'])
+
+const SPORT_TAG = { triathlon:'tag-tri', running:'tag-run', cycling:'tag-bike', swimming:'tag-swim' }
+const SPORT_LABEL = { triathlon:'Tri', running:'Run', cycling:'Bike', swimming:'Swim' }
+
+async function loadCoachDashboard() {
+  const user = (typeof Auth !== 'undefined') ? Auth.getUser() : null
+  if (!user) return
+
+  // Nombre del coach en sidebar
+  document.querySelectorAll('.coach-name').forEach(el => el.textContent = user.name)
+
+  try {
+    // ── 1. Roster de atletas ─────────────────────────────────────────
+    const athletesData = await api.get('/api/coach/athletes')
+    if (athletesData?.length) renderRoster(athletesData)
+
+    // ── 2. Vista del equipo hoy ──────────────────────────────────────
+    const teamToday = await api.get('/api/coach/team/today')
+    if (teamToday) renderTeamToday(teamToday)
+
+    // ── 3. Sensaciones del equipo ────────────────────────────────────
+    const sensations = await api.get('/api/coach/team/sensations')
+    if (sensations?.length) renderTeamSensations(sensations)
+
+    // ── 4. Compliance del equipo ─────────────────────────────────────
+    const compliance = await api.get('/api/coach/team/compliance?weeks=8')
+    if (compliance?.length) updateComplianceCards(compliance)
+
+  } catch (err) {
+    console.warn('[Tu Coach] API no disponible, usando datos estáticos:', err.message)
+  }
+}
+
+// ── Renderiza la tabla del roster con datos reales ─────────────────
+function renderRoster(athletes) {
+  const tbody = document.querySelector('.table tbody')
+  if (!tbody) return
+  tbody.innerHTML = athletes.map(a => {
+    const pmc = a.pmc
+    const tsb = pmc?.tsb ?? 0
+    const tsbClass = tsb > 5 ? 'tsb-pos' : tsb < -15 ? 'tsb-neg' : 'tsb-neu'
+    const ctl = pmc?.ctl ? Math.round(pmc.ctl) : '—'
+    const tsbStr = pmc?.tsb != null ? (pmc.tsb > 0 ? '+' : '') + Math.round(pmc.tsb) : '—'
+    const recovery = a.wellness?.recoveryScore
+    const recStr = recovery != null
+      ? `${recovery}% ${recovery >= 67 ? '🟢' : recovery >= 34 ? '🟡' : '🔴'}`
+      : '— Sin datos'
+    const recColor = recovery != null
+      ? (recovery >= 67 ? 'var(--green)' : recovery >= 34 ? 'var(--yellow)' : 'var(--red)')
+      : 'var(--text3)'
+    const sport = a.sport || 'running'
+    const initials = a.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()
+    const gradients = ['#4f8ef7,#7c6ef5','#ef4444,#f97316','#eab308,#f97316','#22c55e,#4f8ef7','#7c6ef5,#ef4444']
+    const grad = gradients[a.name.length % gradients.length]
+    const form = pmc?.form
+    const statusLabel = form ? form.label : 'Sin datos'
+    const statusColor = form ? form.color : 'var(--text3)'
+    const readyDot = a.wellness?.readyToTrain === false ? 'status-red' : 'status-green'
+
+    return `<tr style="cursor:pointer" onclick="openModal('${a.id}')">
+      <td><div class="athlete-info">
+        <div class="av-sm" style="background:linear-gradient(135deg,${grad})">${initials}</div>
+        <div><div class="at-name">${a.name}</div><div class="at-sport">${sport}</div></div>
+      </div></td>
+      <td><span class="tag ${SPORT_TAG[sport] || 'tag-run'}">${SPORT_LABEL[sport] || sport}</span></td>
+      <td><span class="status-dot ${readyDot}"></span> <span style="color:${statusColor};font-size:11px">${statusLabel}</span></td>
+      <td><div class="compliance-row">
+        <div class="compliance-bar"><div class="compliance-fill" style="width:0%;background:var(--text3)"></div></div>
+        <div class="compliance-pct" style="color:var(--text3)" data-athlete-comp="${a.id}">—</div>
+      </div></td>
+      <td><span class="ctl-chip">${ctl}</span></td>
+      <td class="${tsbClass}">${tsbStr}</td>
+      <td style="color:${recColor};font-weight:700">${recStr}</td>
+      <td style="font-size:11px;color:var(--text3)">—</td>
+      <td><div class="action-btns">
+        <div class="icon-btn" onclick="event.stopPropagation()">📅</div>
+        <div class="icon-btn" onclick="event.stopPropagation()">💬</div>
+        <div class="icon-btn">📊</div>
+      </div></td>
+    </tr>`
+  }).join('')
+}
+
+// ── Renderiza el panel "Actividad de Hoy" ─────────────────────────
+function renderTeamToday(data) {
+  const panel = document.querySelector('.panel:first-child .panel-title')?.parentElement
+  if (!panel) return
+  const statusMap = {
+    COMPLETED: ['✅ Completado', 'var(--green)'],
+    PENDING:   ['⏳ Pendiente',  'var(--yellow)'],
+    MISSED:    ['❌ No hizo',    'var(--red)'],
+    MODIFIED:  ['⚡ Ajustado',   'var(--orange)'],
+    SKIPPED:   ['💜 Descanso',   'var(--accent2)'],
+  }
+  const byAthlete = {}
+  data.assignments.forEach(a => {
+    if (!byAthlete[a.athleteId]) byAthlete[a.athleteId] = { athlete: a.athlete, statuses: [] }
+    byAthlete[a.athleteId].statuses.push(a.status)
+  })
+  if (!Object.keys(byAthlete).length) return
+  const container = panel.querySelector('div[style*="flex-direction:column"]')
+  if (!container) return
+  container.innerHTML = Object.values(byAthlete).map(({ athlete, statuses }) => {
+    const mainStatus = statuses.includes('COMPLETED') ? 'COMPLETED'
+                     : statuses.includes('MISSED')    ? 'MISSED'
+                     : statuses.includes('MODIFIED')  ? 'MODIFIED' : 'PENDING'
+    const [label, color] = statusMap[mainStatus] || ['—', 'var(--text3)']
+    const initials = athlete.name.split(' ').map(n=>n[0]).join('').slice(0,2).toUpperCase()
+    const gradients = ['#4f8ef7,#7c6ef5','#ef4444,#f97316','#eab308,#f97316','#22c55e,#4f8ef7','#7c6ef5,#ef4444']
+    const grad = gradients[athlete.name.length % gradients.length]
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:var(--bg3);border-radius:7px">
+      <div style="display:flex;align-items:center;gap:8px">
+        <div class="av-sm" style="background:linear-gradient(135deg,${grad});width:24px;height:24px;font-size:10px">${initials}</div>
+        <div style="font-size:12px;font-weight:600">${athlete.name.split(' ')[0]}</div>
+      </div>
+      <div style="font-size:11px;color:${color}">${label}</div>
+    </div>`
+  }).join('')
+}
+
+// ── Renderiza sensaciones del equipo en el sidebar ────────────────
+function renderTeamSensations(sensations) {
+  const panel = document.querySelector('#team-sensations-panel')
+  if (!panel) return
+  const bySports = {}
+  sensations.slice(0, 5).forEach(s => {
+    if (!bySports[s.athleteId]) bySports[s.athleteId] = s
+  })
+  panel.innerHTML = Object.values(bySports).map(s => {
+    const a = s.athlete
+    const emojis = ['😞','😟','😐','🙂','😄']
+    const emoji = emojis[(s.feeling || 3) - 1]
+    const rpeColor = s.rpe >= 8 ? 'var(--red)' : s.rpe >= 6 ? 'var(--yellow)' : 'var(--green)'
+    const initials = a.name.split(' ').map(n=>n[0]).join('').slice(0,2).toUpperCase()
+    const gradients = ['#4f8ef7,#7c6ef5','#ef4444,#f97316','#eab308,#f97316','#22c55e,#4f8ef7']
+    const grad = gradients[a.name.length % gradients.length]
+    const alertBorder = s.rpe >= 8 || s.legsScore <= 4
+      ? 'background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2)'
+      : ''
+    return `<div style="padding:10px;${alertBorder || 'background:var(--bg3)'};border-radius:7px;cursor:pointer;margin-bottom:6px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <div style="display:flex;align-items:center;gap:7px">
+          <div class="av-sm" style="background:linear-gradient(135deg,${grad});width:22px;height:22px;font-size:10px">${initials}</div>
+          <div style="font-size:12px;font-weight:600">${a.name.split(' ')[0]}</div>
+        </div>
+        <div style="font-size:16px">${emoji} <span style="font-size:10px;color:${rpeColor};font-weight:700">RPE ${s.rpe}</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">
+        <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Piernas</div>
+          <div style="font-size:13px;font-weight:800;color:${s.legsScore>=7?'var(--green)':s.legsScore>=5?'var(--yellow)':'var(--red)'}">${s.legsScore}</div></div>
+        <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Mental</div>
+          <div style="font-size:13px;font-weight:800;color:var(--accent)">${s.mentalScore}</div></div>
+        <div style="text-align:center"><div style="font-size:9px;color:var(--text3)">Energía</div>
+          <div style="font-size:13px;font-weight:800;color:var(--yellow)">${s.energyScore}</div></div>
+      </div>
+      ${s.note ? `<div style="margin-top:5px;font-size:10px;color:var(--text2);font-style:italic">"${s.note}"</div>` : ''}
+    </div>`
+  }).join('')
+}
+
+// ── Actualiza tarjetas de compliance con datos reales ─────────────
+function updateComplianceCards(data) {
+  data.forEach(({ athlete, compliance }) => {
+    const el = document.querySelector(`[data-athlete-comp="${athlete.id}"]`)
+    if (el) {
+      const col = compliance >= 90 ? 'var(--green)' : compliance >= 75 ? 'var(--yellow)' : 'var(--red)'
+      el.textContent = `${compliance}%`
+      el.style.color = col
+      const bar = el.previousElementSibling?.querySelector('.compliance-fill')
+      if (bar) { bar.style.width = `${compliance}%`; bar.style.background = col }
+    }
+  })
+}
+
+// ── Asignar entreno desde el builder ─────────────────────────────
+async function assignWorkout(workoutId) {
+  const athleteSelect = document.querySelector('.assign-row select')
+  const dateInput = document.querySelector('.assign-row input[type=date]')
+  if (!athleteSelect || !dateInput) return
+  // Buscar el athleteId del nombre seleccionado
+  try {
+    const athletes = await api.get('/api/coach/athletes')
+    const selected = athletes.find(a => a.name === athleteSelect.value)
+    if (!selected) { alert('Selecciona un atleta válido'); return }
+    await api.post(`/api/coach/workouts/${workoutId}/assign`, {
+      athleteId: selected.id,
+      date: dateInput.value,
+    })
+    showSuccessToast(`✅ Entreno asignado a ${selected.name}`)
+  } catch(e) {
+    alert('Error al asignar: ' + e.message)
+  }
+}
+
+async function createAndAssign() {
+  const nameInput = document.querySelector('.field-input[placeholder*="ej."]')
+  if (!nameInput?.value) { alert('Ponle nombre al entreno'); return }
+  try {
+    const workout = await api.post('/api/coach/workouts', {
+      name: nameInput.value,
+      type: 'intervals',
+      sport: 'cycling',
+      durationMin: 90,
+      tssEstimated: 95,
+      segments: [],
+    })
+    await assignWorkout(workout.id)
+  } catch(e) {
+    alert('Error: ' + e.message)
+  }
+}
+
+function showSuccessToast(msg) {
+  const t = document.createElement('div')
+  t.innerHTML = `<div style="position:fixed;bottom:24px;right:24px;background:var(--green);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(34,197,94,.3)">${msg}</div>`
+  document.body.appendChild(t)
+  setTimeout(() => t.remove(), 3000)
+}
+
+function logout() {
+  if (typeof Auth !== 'undefined') Auth.clear()
+  else localStorage.clear()
+  window.location.href = 'login.html'
+}
+
+// Arrancar
+document.addEventListener('DOMContentLoaded', () => loadCoachDashboard())
+
+// ═══ ATHLETE DATA ═══
+const athletes = {
+  gb: {
+    name:'Gerardo B.', sport:'ILCA 7 · Whoop 73% 🟢', avatar:'GB',
+    bg:'linear-gradient(135deg,#4f8ef7,#7c6ef5)',
+    status:{text:'En forma para competencia',bg:'rgba(34,197,94,.15)',color:'#22c55e'},
+    kpis:[
+      {label:'CTL',val:'74',color:'#4f8ef7'},{label:'ATL',val:'88',color:'#ef4444'},
+      {label:'TSB',val:'-14',color:'#eab308'},{label:'Compliance',val:'93%',color:'#22c55e'},
+      {label:'Whoop',val:'73%',color:'#22c55e'},{label:'HRV',val:'58ms',color:'#7c6ef5'}
+    ],
+    sensations:{legs:7.2,mental:8.0,energy:7.5,rpe:6,emoji:'😊',pain:1.0,note:''},
+    comp:[93,88,91,95,90,87,94,93],
+    nutrition:'Cumplimiento nutricional: 89%. Buena carga de carbohidratos pre-entreno esta semana.',
+    tssBase:65, ctlInit:55
+  },
+  al: {
+    name:'Ana López', sport:'Running · Whoop 28% 🔴', avatar:'AL',
+    bg:'linear-gradient(135deg,#ef4444,#f97316)',
+    status:{text:'⚠️ HRV crítico – revisar plan',bg:'rgba(239,68,68,.15)',color:'#ef4444'},
+    kpis:[
+      {label:'CTL',val:'61',color:'#4f8ef7'},{label:'ATL',val:'83',color:'#ef4444'},
+      {label:'TSB',val:'-22',color:'#ef4444'},{label:'Compliance',val:'78%',color:'#eab308'},
+      {label:'Whoop',val:'28%',color:'#ef4444'},{label:'HRV',val:'32ms',color:'#ef4444'}
+    ],
+    sensations:{legs:3.1,mental:5.2,energy:3.8,rpe:8,emoji:'😞',pain:4.0,note:'Muy cansada, no dormí bien'},
+    comp:[82,78,85,80,75,79,78,78],
+    nutrition:'Cumplimiento: 72%. Déficit de proteína detectado en últimas 3 días.',
+    tssBase:55, ctlInit:48
+  },
+  cr: {
+    name:'Carlos Ruiz', sport:'Ciclismo · Whoop 55% 🟡', avatar:'CR',
+    bg:'linear-gradient(135deg,#eab308,#f97316)',
+    status:{text:'TSB muy negativo – monitorear',bg:'rgba(234,179,8,.15)',color:'#eab308'},
+    kpis:[
+      {label:'CTL',val:'89',color:'#4f8ef7'},{label:'ATL',val:'117',color:'#ef4444'},
+      {label:'TSB',val:'-28',color:'#ef4444'},{label:'Compliance',val:'95%',color:'#22c55e'},
+      {label:'Whoop',val:'55%',color:'#eab308'},{label:'HRV',val:'47ms',color:'#eab308'}
+    ],
+    sensations:{legs:5.0,mental:6.5,energy:5.5,rpe:7,emoji:'😐',pain:2.0,note:'Piernas pesadas pero motivado'},
+    comp:[90,92,95,88,94,96,91,95],
+    nutrition:'Cumplimiento: 95%. Correcta carga de carbohidratos los días de rodada larga.',
+    tssBase:85, ctlInit:68
+  },
+  mr: {
+    name:'Marta Ríos', sport:'Triatlón · Whoop 81% 🟢', avatar:'MR',
+    bg:'linear-gradient(135deg,#22c55e,#4f8ef7)',
+    status:{text:'Forma óptima – IronMan en camino',bg:'rgba(34,197,94,.15)',color:'#22c55e'},
+    kpis:[
+      {label:'CTL',val:'68',color:'#4f8ef7'},{label:'ATL',val:'62',color:'#ef4444'},
+      {label:'TSB',val:'+6',color:'#22c55e'},{label:'Compliance',val:'88%',color:'#22c55e'},
+      {label:'Whoop',val:'81%',color:'#22c55e'},{label:'HRV',val:'62ms',color:'#22c55e'}
+    ],
+    sensations:{legs:8.5,mental:9.0,energy:8.8,rpe:5,emoji:'😄',pain:0.5,note:'¡Increíble PR en natación!'},
+    comp:[85,88,90,86,91,88,89,88],
+    nutrition:'Cumplimiento: 91%. Excelente hidratación y timing de nutrición.',
+    tssBase:60, ctlInit:52
+  },
+  jp: {
+    name:'Jorge Pérez', sport:'Running · Whoop 62% 🟡', avatar:'JP',
+    bg:'linear-gradient(135deg,#7c6ef5,#ef4444)',
+    status:{text:'Compliance bajo – revisar',bg:'rgba(124,110,245,.15)',color:'#7c6ef5'},
+    kpis:[
+      {label:'CTL',val:'54',color:'#4f8ef7'},{label:'ATL',val:'62',color:'#ef4444'},
+      {label:'TSB',val:'-8',color:'#eab308'},{label:'Compliance',val:'72%',color:'#ef4444'},
+      {label:'Whoop',val:'62%',color:'#eab308'},{label:'HRV',val:'51ms',color:'#eab308'}
+    ],
+    sensations:{legs:6.0,mental:7.0,energy:6.5,rpe:6,emoji:'🙂',pain:1.5,note:''},
+    comp:[80,75,68,72,70,74,72,72],
+    nutrition:'Cumplimiento: 74%. Saltar comidas pre-entreno afecta el rendimiento.',
+    tssBase:45, ctlInit:38
+  }
+};
+
+// ═══ MODAL ═══
+function openModal(id){
+  const a=athletes[id];
+  document.getElementById('athlete-modal').classList.add('open');
+  document.getElementById('modal-name').textContent=a.name;
+  document.getElementById('modal-sport').textContent=a.sport;
+  const av=document.getElementById('modal-avatar');
+  av.textContent=a.avatar; av.style.background=a.bg;
+  const badge=document.getElementById('modal-status-badge');
+  badge.textContent=a.status.text;
+  badge.style.background=a.status.bg; badge.style.color=a.status.color;
+
+  // KPIs
+  document.getElementById('modal-kpis').innerHTML=a.kpis.map(k=>`
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px;text-align:center">
+      <div style="font-size:9px;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">${k.label}</div>
+      <div style="font-size:20px;font-weight:900;color:${k.color}">${k.val}</div>
+    </div>`).join('');
+
+  // Sensations
+  const s=a.sensations;
+  const sensRows=[
+    {label:'Piernas',val:s.legs,max:10},{label:'Mental',val:s.mental,max:10},
+    {label:'Energía',val:s.energy,max:10},{label:'Dolor',val:s.pain,max:10,invert:true}
+  ];
+  document.getElementById('modal-sensations').innerHTML=`
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+      <div style="font-size:28px">${s.emoji}</div>
+      <div><div style="font-size:14px;font-weight:800">RPE ${s.rpe}/10</div>${s.note?`<div style="font-size:11px;color:var(--text2);font-style:italic">"${s.note}"</div>`:''}</div>
+    </div>
+    ${sensRows.map(r=>{
+      const pct=r.val/r.max*100;
+      const col=r.invert?(pct<20?'var(--green)':pct<50?'var(--yellow)':'var(--red)')
+                        :(pct>=70?'var(--green)':pct>=40?'var(--yellow)':'var(--red)');
+      return`<div class="sens-row">
+        <div class="sens-name">${r.label}</div>
+        <div class="sens-bar-w"><div class="sens-bar-f" style="width:${pct}%;background:${col}"></div></div>
+        <div class="sens-num" style="color:${col}">${r.val}</div>
+      </div>`;
+    }).join('')}`;
+
+  // Mini PMC
+  renderModalPMC(a);
+  // Compliance mini chart
+  renderModalComp(a.comp);
+  // Nutrition note
+  document.getElementById('modal-nutrition').innerHTML=`<span style="color:var(--text3);font-weight:600">Nutrición:</span> ${a.nutrition}`;
+}
+
+function closeModal(){
+  document.getElementById('athlete-modal').classList.remove('open');
+}
+
+function renderModalPMC(a){
+  const K_CTL=1-Math.exp(-1/42), K_ATL=1-Math.exp(-1/7);
+  const days=60;
+  // Generate TSS
+  const tssArr=[];
+  for(let i=0;i<days;i++){
+    const rest=(i%7===0);
+    const base=rest?0:a.tssBase;
+    tssArr.push(Math.max(0,base+(Math.random()-.3)*base*.6));
+  }
+  let ctl=a.ctlInit, atl=a.ctlInit+8;
+  const data=tssArr.map(tss=>{
+    ctl=ctl+(tss-ctl)*K_CTL; atl=atl+(tss-atl)*K_ATL;
+    return{tss,ctl:+ctl.toFixed(1),atl:+atl.toFixed(1),tsb:+(ctl-atl).toFixed(1)};
+  });
+  const svg=document.getElementById('modal-pmc');
+  const W=760,H=120,PL=32,PR=8,PT=8,PB=20,TSH=18;
+  const cW=W-PL-PR, cH=H-PT-PB-TSH;
+  const maxV=Math.max(...data.map(x=>Math.max(x.ctl,x.atl)));
+  const minV=Math.min(...data.map(x=>x.tsb))-5;
+  const range=maxV-minV||1;
+  const xOf=i=>PL+i/(data.length-1)*cW;
+  const yOf=v=>PT+(1-(v-minV)/range)*cH;
+  let html='';
+  // grid
+  [-10,0,10,20,30,40,50,60,70,80,90].forEach(v=>{
+    const y=yOf(v); if(y<PT||y>PT+cH)return;
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}</text>`;
+  });
+  html+=`<line x1="${PL}" y1="${yOf(0)}" x2="${W-PR}" y2="${yOf(0)}" stroke="#3a4060" stroke-width="1.5"/>`;
+  // TSS bars
+  const tssBaseY=H-PB-TSH, maxTSS=Math.max(...tssArr,1);
+  data.forEach((pt,i)=>{
+    const x=xOf(i), bw=Math.max(1,cW/data.length*0.6);
+    const bh=pt.tss/maxTSS*TSH;
+    const col=pt.tss>a.tssBase*1.4?'#ef4444':pt.tss>a.tssBase*.7?'#eab308':'#4f8ef7';
+    html+=`<rect x="${x-bw/2}" y="${tssBaseY+TSH-bh}" width="${bw}" height="${bh}" fill="${col}" opacity=".4" rx="1"/>`;
+  });
+  // week labels
+  for(let i=0;i<days;i+=7){
+    html+=`<text x="${xOf(i)}" y="${H-2}" text-anchor="middle" fill="#5a6080" font-size="9">-${days-i}d</text>`;
+  }
+  html+=`<text x="${xOf(days-1)}" y="${H-2}" text-anchor="middle" fill="#4f8ef7" font-size="9">hoy</text>`;
+  function sp(pts){
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let i=1;i<pts.length;i++){
+      const a=pts[i-1],b=pts[i],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  const ctlP=data.map((pt,i)=>[xOf(i),yOf(pt.ctl)]);
+  const atlP=data.map((pt,i)=>[xOf(i),yOf(pt.atl)]);
+  const tsbP=data.map((pt,i)=>[xOf(i),yOf(pt.tsb)]);
+  const area=sp(ctlP)+` L${W-PR},${PT+cH} L${PL},${PT+cH} Z`;
+  html+=`<path d="${area}" fill="rgba(79,142,247,.06)"/>`;
+  html+=`<path d="${sp(atlP)}" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" opacity=".8"/>`;
+  html+=`<path d="${sp(tsbP)}" fill="none" stroke="#22c55e" stroke-width="1.5" opacity=".8"/>`;
+  html+=`<path d="${sp(ctlP)}" fill="none" stroke="#4f8ef7" stroke-width="2.2"/>`;
+  const li=data.length-1;
+  html+=`<circle cx="${xOf(li)}" cy="${yOf(data[li].ctl)}" r="4" fill="#4f8ef7" stroke="#181c27" stroke-width="2"/>`;
+  html+=`<circle cx="${xOf(li)}" cy="${yOf(data[li].tsb)}" r="4" fill="#22c55e" stroke="#181c27" stroke-width="2"/>`;
+  svg.innerHTML=html;
+}
+
+function renderModalComp(comp){
+  const svg=document.getElementById('modal-comp');
+  const W=340,H=90,PL=28,PR=8,PT=8,PB=22;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const n=comp.length;
+  const xOf=i=>PL+i/(n-1)*cW;
+  const yOf=v=>PT+(1-v/100)*cH;
+  const bw=cW/n*0.5;
+  let html='';
+  [50,75,100].forEach(v=>{
+    const y=yOf(v);
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-3}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}%</text>`;
+  });
+  comp.forEach((v,i)=>{
+    const bh=(v/100)*cH, by=PT+cH-bh;
+    const col=v>=90?'var(--green)':v>=75?'var(--yellow)':'var(--red)';
+    html+=`<rect x="${xOf(i)-bw/2}" y="${by}" width="${bw}" height="${bh}" fill="${col}" opacity=".75" rx="2"/>`;
+    html+=`<text x="${xOf(i)}" y="${H-4}" text-anchor="middle" fill="#5a6080" font-size="9">S${i+1}</text>`;
+    if(i===n-1||v<75||v>=90)
+      html+=`<text x="${xOf(i)}" y="${by-3}" text-anchor="middle" fill="${col}" font-size="8" font-weight="700">${v}%</text>`;
+  });
+  const ty=yOf(90);
+  html+=`<line x1="${PL}" y1="${ty}" x2="${W-PR}" y2="${ty}" stroke="#4f8ef7" stroke-width="1.5" stroke-dasharray="4,3" opacity=".5"/>`;
+  svg.innerHTML=html;
+}
+
+// ═══ TEAM COMPLIANCE CHART ═══
+(function(){
+  const svg=document.getElementById('team-comp-svg');
+  if(!svg)return;
+  const W=900,H=130,PL=70,PR=10,PT=10,PB=20;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const weeks=8;
+  const teamData=[
+    {name:'Gerardo B.',color:'#4f8ef7',vals:[93,88,91,95,90,87,94,93]},
+    {name:'Ana López',color:'#ef4444',vals:[82,78,85,80,75,79,78,78]},
+    {name:'Carlos R.',color:'#eab308',vals:[90,92,95,88,94,96,91,95]},
+    {name:'Marta R.',color:'#22c55e',vals:[85,88,90,86,91,88,89,88]},
+    {name:'Jorge P.',color:'#7c6ef5',vals:[80,75,68,72,70,74,72,72]}
+  ];
+  const xOf=i=>PL+i/(weeks-1)*cW;
+  const yOf=v=>PT+(1-v/100)*cH;
+  let html='';
+  // Grid
+  [60,70,80,90,100].forEach(v=>{
+    const y=yOf(v);
+    html+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2a2f45" stroke-width="1" stroke-dasharray="3"/>`;
+    html+=`<text x="${PL-4}" y="${y+4}" text-anchor="end" fill="#5a6080" font-size="9">${v}%</text>`;
+  });
+  for(let i=0;i<weeks;i++){
+    html+=`<text x="${xOf(i)}" y="${H-2}" text-anchor="middle" fill="#5a6080" font-size="9">S${i+1}</text>`;
+  }
+  // Target line 90%
+  const ty=yOf(90);
+  html+=`<line x1="${PL}" y1="${ty}" x2="${W-PR}" y2="${ty}" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="4,3" opacity=".4"/>`;
+
+  function sp(vals){
+    const pts=vals.map((v,i)=>[xOf(i),yOf(v)]);
+    let p=`M${pts[0][0]},${pts[0][1]}`;
+    for(let j=1;j<pts.length;j++){
+      const a=pts[j-1],b=pts[j],cx=(a[0]+b[0])/2;
+      p+=` C${cx},${a[1]} ${cx},${b[1]} ${b[0]},${b[1]}`;
+    }
+    return p;
+  }
+  teamData.forEach(t=>{
+    html+=`<path d="${sp(t.vals)}" fill="none" stroke="${t.color}" stroke-width="1.8" opacity=".85"/>`;
+    const li=weeks-1;
+    html+=`<circle cx="${xOf(li)}" cy="${yOf(t.vals[li])}" r="4" fill="${t.color}" stroke="#181c27" stroke-width="2"/>`;
+    // Left labels
+    html+=`<text x="${PL-6}" y="${yOf(t.vals[0])+4}" text-anchor="end" fill="${t.color}" font-size="9" font-weight="700">${t.name.split(' ')[0]}</text>`;
+  });
+  svg.innerHTML=html;
+})();
+
+// ═══════════════════════════════════════════════════════════════════════════════
+//  WORKOUT BUILDER — FLUJO COACH → ATLETA (localStorage demo mode)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const BUILDER_TEMPLATES = {
+  agua: {
+    types: ['Regata táctica','Técnica de viradas','Upwind / VMG','Downwind / Surfing','Salidas cronometradas','Upwind + Downwind combinado','Activación en agua'],
+    segments: [
+      {name:'Aparejo + calentamiento en agua',  duration:'20 min', zone:'Z1 — Recuperación', reps:'1x'},
+      {name:'Técnica de viradas y trasluches',   duration:'30 min', zone:'Z2 — Aeróbico base', reps:'1x'},
+      {name:'Regata 3 vueltas de boya',          duration:'45 min', zone:'Z3 — Táctico',       reps:'1x'},
+      {name:'Vuelta al puerto + desamarre',      duration:'10 min', zone:'Z1 — Recuperación',  reps:'1x'},
+      {name:'Core + movilidad',                  duration:'20 min', zone:'Fuerza',              reps:'1x'},
+    ]
+  },
+  tierra: {
+    types: ['Atletismo aeróbico','Atletismo intervalos Z4','Ergómetro / Remo','Cross training','Trote suave + movilidad','Atletismo fartlek'],
+    segments: [
+      {name:'Calentamiento dinámico',   duration:'10 min', zone:'Z1 — Recuperación', reps:'1x'},
+      {name:'Rodaje aeróbico',          duration:'50 min', zone:'Z2 — Aeróbico base', reps:'1x'},
+      {name:'Vuelta suave + estiramientos', duration:'10 min', zone:'Z1 — Recuperación', reps:'1x'},
+    ]
+  },
+  fuerza: {
+    types: ['Fuerza general','Fuerza máxima','Fuerza preventiva','Core + estabilidad','Movilidad activa','Fuerza específica vela'],
+    segments: [
+      {name:'Activación + movilidad',       duration:'10 min', zone:'Z1 — Recuperación', reps:'1x'},
+      {name:'Fuerza tren superior (trapecio/hombros)', duration:'20 min', zone:'Fuerza', reps:'3x'},
+      {name:'Core + estabilidad lumbar',    duration:'20 min', zone:'Fuerza', reps:'3x'},
+      {name:'Fuerza tren inferior',         duration:'20 min', zone:'Fuerza', reps:'3x'},
+      {name:'Movilidad y estiramientos',    duration:'10 min', zone:'Z1 — Recuperación', reps:'1x'},
+    ]
+  },
+  regata: {
+    types: ['Simulación regata completa','Match racing series','Fleet racing','Race practice ×5','Regata larga 3h+','Regata con salidas cronometradas'],
+    segments: [
+      {name:'Calentamiento en agua',  duration:'20 min', zone:'Z1 — Recuperación', reps:'1x'},
+      {name:'Simulación de regata',   duration:'120 min', zone:'Z2 — Z5',          reps:'1x'},
+      {name:'Análisis + vuelta',      duration:'15 min', zone:'Z1 — Recuperación', reps:'1x'},
+    ]
+  }
+}
+
+const ZONE_OPTIONS = ['Z1 — Recuperación','Z2 — Aeróbico base','Z3 — Táctico / Moderado','Z4 — Alta intensidad','Z5 — Máximo','Fuerza']
+
+function zoneSelect(selected='Z2 — Aeróbico base') {
+  return `<select class="seg-input" style="appearance:none;font-size:11px">${
+    ZONE_OPTIONS.map(z => `<option${z===selected?' selected':''}>${z}</option>`).join('')
+  }</select>`
+}
+
+function setBuilderTab(tab, el) {
+  document.querySelectorAll('.builder-tabs .tab').forEach(t => t.classList.remove('active'))
+  el.classList.add('active')
+  const tpl = BUILDER_TEMPLATES[tab]
+  // Update type dropdown
+  const ts = document.getElementById('workout-type')
+  if (ts) ts.innerHTML = tpl.types.map(t => `<option>${t}</option>`).join('')
+  // Rebuild segments list
+  const list = document.getElementById('segments-list')
+  if (!list) return
+  const header = list.querySelector('.segment-row:first-child')
+  list.innerHTML = ''
+  list.appendChild(header)
+  tpl.segments.forEach(seg => appendSegmentRow(list, seg))
+}
+
+function appendSegmentRow(list, seg={}) {
+  const row = document.createElement('div')
+  row.className = 'segment-row'
+  row.innerHTML = `
+    <input class="seg-input" value="${seg.name||''}">
+    <input class="seg-input" value="${seg.duration||''}">
+    ${zoneSelect(seg.zone)}
+    <input class="seg-input" value="${seg.reps||'1x'}">
+    <div class="seg-del" onclick="this.parentElement.remove()">×</div>
+  `
+  list.appendChild(row)
+}
+
+function addSegment() {
+  const list = document.getElementById('segments-list')
+  if (list) appendSegmentRow(list, {name:'', duration:'', zone:'Z2 — Aeróbico base', reps:'1x'})
+}
+
+function assignWorkout() {
+  const athleteMap = {
+    'gb':  {label:'Gerardo B.'},
+    'al':  {label:'Ana López'},
+    'cr':  {label:'Carlos Ruiz'},
+    'all': {label:'todos los atletas', ids:['gb','al','cr']}
+  }
+  const athleteId   = document.getElementById('assign-athlete')?.value || 'gb'
+  const date        = document.getElementById('assign-date')?.value || new Date().toISOString().slice(0,10)
+  const name        = document.getElementById('builder-name')?.value.trim() || 'Entreno del día'
+  const typeEl      = document.getElementById('workout-type')
+  const dur         = parseInt(document.getElementById('builder-dur')?.value) || 90
+  const tss         = parseInt(document.getElementById('builder-tss')?.value) || 75
+  const note        = document.getElementById('builder-note')?.value.trim() || ''
+
+  const segments = Array.from(document.querySelectorAll('#segments-list .segment-row:not(:first-child)')).map(row => {
+    const inputs = row.querySelectorAll('.seg-input')
+    return { name: inputs[0]?.value||'', duration: inputs[1]?.value||'', zone: inputs[2]?.value||'Z2', reps: inputs[3]?.value||'1x' }
+  })
+
+  const assignment = {
+    id: Date.now().toString(),
+    date,
+    assignedAt: new Date().toISOString(),
+    status: 'PENDING',
+    workout: { name, type: typeEl?.value||'En Agua', durationMin: dur, tssEstimated: tss, coachNote: note, segments }
+  }
+
+  const targets = athleteId === 'all' ? ['gb','al','cr'] : [athleteId]
+  targets.forEach(id => {
+    const key = `tc_plan_${id}`
+    let plan = []
+    try { plan = JSON.parse(localStorage.getItem(key)||'[]') } catch {}
+    plan = plan.filter(a => a.date !== date)  // reemplaza si ya hay algo ese día
+    plan.push({...assignment, athleteId: id})
+    localStorage.setItem(key, JSON.stringify(plan))
+  })
+
+  const who = athleteMap[athleteId]?.label || athleteId
+  showToast(`✓ "${name}" asignado a ${who} para ${date}`)
+
+  // ── FLUJO 1: persistir en la BD (además del localStorage) ──────────────────
+  // TC_API viene de api-client.js. Si no está disponible, el localStorage es suficiente.
+  if (typeof TC_API !== 'undefined') {
+    // Guardar para cada atleta destino
+    targets.forEach(id => {
+      TC_API.saveWorkout({
+        athleteId: id, date, name,
+        type: typeEl?.value || 'Tierra / Físico',
+        durationMin: dur, tssPlanned: tss, coachNote: note, segments
+      }).then(saved => {
+        if (saved) console.info(`[Tu Coach] Workout "${name}" persistido en BD para ${id} (${date})`)
+      })
+    })
+  }
+}
+
+function saveTemplate() {
+  showToast('Plantilla guardada ✓ (próximamente en biblioteca de planes)')
+}
+
+// ─── PLAN COMPLETO CAC GAMES — 48 días · 100% FÍSICO ────────────────────────
+// Las sesiones de agua las asigna el coach día a día según condiciones de viento.
+
+function loadCACPlan() {
+  const Z = ZONE_OPTIONS
+  const seg = (n,d,z,r='1x') => ({name:n, duration:d, zone:z, reps:r})
+
+  // ── Segmentos base ────────────────────────────────────────────────────────
+  const segsRun = (dur, note='Rodaje aeróbico') => [
+    seg('Calentamiento dinámico',           '10 min', Z[0]),
+    seg(note,                               dur,      Z[1]),
+    seg('Vuelta suave + estiramientos',     '10 min', Z[0]),
+  ]
+  const segsRunInterval = (dur='60 min') => [
+    seg('Calentamiento dinámico',             '10 min', Z[0]),
+    seg('Rodaje aeróbico base',               '15 min', Z[1]),
+    seg('Intervalos 6×3\' — Z4',             dur,      Z[3], '6x'),
+    seg('Recuperación 2\' entre intervalos', '2 min',  Z[0], '6x'),
+    seg('Vuelta suave',                       '15 min', Z[0]),
+  ]
+  const segsRunLong = (dur) => [
+    seg('Calentamiento dinámico',    '10 min', Z[0]),
+    seg('Rodaje largo aeróbico Z2',  dur,      Z[1]),
+    seg('Últimos 10\' progresivo',   '10 min', Z[2]),
+    seg('Vuelta suave + movilidad',  '10 min', Z[0]),
+  ]
+  const segsStrength = (sets='3x') => [
+    seg('Activación + movilidad articular',         '10 min', Z[0]),
+    seg('Fuerza tren superior — trapecio/hombros',  '20 min', Z[5], sets),
+    seg('Core antirotacional — hiking simulation',  '20 min', Z[5], sets),
+    seg('Fuerza tren inferior — piernas/glúteos',   '20 min', Z[5], sets),
+    seg('Movilidad final + respiración',            '10 min', Z[0]),
+  ]
+  const segsStrengthCombo = (runDur) => [
+    seg('Calentamiento dinámico',                   '10 min', Z[0]),
+    seg('Rodaje aeróbico',                          runDur,   Z[1]),
+    seg('Fuerza preventiva hombros + cadera',       '20 min', Z[5], '3x'),
+    seg('Core + estabilidad lumbar',                '20 min', Z[5], '3x'),
+    seg('Movilidad + estiramientos finales',        '10 min', Z[0]),
+  ]
+  const segsCore = () => [
+    seg('Movilidad articular completa (cadera, hombros, columna)', '15 min', Z[0]),
+    seg('Plancha isométrica + rotaciones de cadera', '10 min', Z[5], '3x'),
+    seg('Core antirotacional — Pallof press / bird-dog',           '10 min', Z[5], '3x'),
+    seg('Estabilidad lumbar — hiking position holds',              '10 min', Z[5], '3x'),
+    seg('Estiramientos y respiración diafragmática',               '5 min',  Z[0]),
+  ]
+  const segsMobility = () => [
+    seg('Movilidad articular general',          '15 min', Z[0]),
+    seg('Movilidad de cadera + isquiotibiales', '10 min', Z[0]),
+    seg('Movilidad de hombros + pectoral',      '10 min', Z[0]),
+    seg('Estiramientos profundos',              '10 min', Z[0]),
+    seg('Respiración + relajación',             '5 min',  Z[0]),
+  ]
+  const segsActivation = () => [
+    seg('Movilidad articular + activación neural', '10 min', Z[0]),
+    seg('Trote suave de activación',               '15 min', Z[1]),
+    seg('Core ligero — activación',                '10 min', Z[5], '2x'),
+    seg('Respiración + visualización',             '5 min',  Z[0]),
+  ]
+  const segsRest = () => [
+    seg('Movilidad articular suave',    '20 min', Z[0]),
+    seg('Caminata libre (opcional)',    '20 min', Z[0]),
+  ]
+
+  // ── Constructores de sesión ───────────────────────────────────────────────
+  const run  = (name,dur,tss,note,segs) => ({type:'Tierra / Físico',name,durationMin:dur,tssEstimated:tss,coachNote:note,segments:segs})
+  const str  = (name,tss,note,sets='3x') => ({type:'Fuerza',name,durationMin:80,tssEstimated:tss,coachNote:note,segments:segsStrength(sets)})
+  const core = (note) => ({type:'Fuerza',name:'Core + movilidad',durationMin:50,tssEstimated:20,coachNote:note,segments:segsCore()})
+  const mob  = (note) => ({type:'Fuerza',name:'Movilidad completa',durationMin:50,tssEstimated:12,coachNote:note,segments:segsMobility()})
+  const rest = (note) => ({type:'Descanso',name:'Descanso activo',durationMin:30,tssEstimated:8,coachNote:note,segments:segsRest()})
+
+  // ── F1 BASE  Jun 7–21 ────────────────────────────────────────────────────
+  const entries = [
+    ['2026-06-07', core('Inicio del plan CAC. Activa el core y trabaja movilidad profunda. Foco en posición de hiking y hombros. Sesión corta y de calidad.')],
+    ['2026-06-08', rest('Descanso. Hidratación y sueño prioritarios. Prepara la semana.')],
+    ['2026-06-09', run('Atletismo aeróbico 50\'',70,52,'Rodaje aeróbico Z2 constante. FC máx 145. Sin acelerar. Técnica de carrera.',segsRun('50 min'))],
+    ['2026-06-10', str('Fuerza + core',48,'Fuerza completa. Énfasis en trapecio y hombros para la posición de trapecio/hiking. Core pesado.')],
+    ['2026-06-11', run('Atletismo 60\'',80,58,'Rodaje aeróbico Z2. Últimos 10\' a Z3. Escucha la FC.',segsRun('60 min','Rodaje aeróbico progresivo'))],
+    ['2026-06-12', str('Fuerza general',45,'Fuerza de mantenimiento. Menos volumen, buena técnica en cada rep.')],
+    ['2026-06-13', run('Atletismo largo 70\'',90,70,'Primera sesión larga de la base. Z2 todo el tiempo. No forzar. Hidratación constante.',segsRunLong('70 min'))],
+    ['2026-06-14', core('Core + movilidad. Recuperación activa post-semana 1. Movilidad de cadera y columna profunda.')],
+    ['2026-06-15', run('Atletismo 60\'',80,58,'Rodaje aeróbico moderado. FC en Z2. Concéntrate en la técnica de pisada.',segsRun('60 min'))],
+    ['2026-06-16', str('Fuerza + core',50,'Fuerza completa. Agrega 1 serie más en hombros y trapecio esta semana.')],
+    ['2026-06-17', run('Atletismo 60\' con progresión',85,62,'Rodaje progresivo: 40\' Z2 + 15\' Z3 + 5\' suave.',segsRun('60 min','Rodaje progresivo Z2→Z3'))],
+    ['2026-06-18', str('Fuerza general',48,'Fuerza completa. Core. Movilidad al final.')],
+    ['2026-06-19', mob('Movilidad completa. Prepara el cuerpo para el largo del sábado. Cadera y columna profundo.')],
+    ['2026-06-20', run('Atletismo largo 80\'',100,78,'Segunda sesión larga. Z2 completo. Sal con agua y gel si es más de 60\'.',segsRunLong('80 min'))],
+    ['2026-06-21', rest('Último descanso de F1. ¡Semana base completada! Mañana arranca F2 — más intensidad.')],
+    // ── F2 CARGA  Jun 22 – Jul 5 ────────────────────────────────────────────
+    ['2026-06-22', run('Atletismo 70\' progresivo',90,68,'F2 comienza. Rodaje 40\' Z2 + 20\' Z3 + 10\' Z1. Nota la diferencia de esfuerzo.',segsRun('70 min','Rodaje progresivo — Z2 luego Z3'))],
+    ['2026-06-23', str('Fuerza máxima',62,'Primera sesión pesada de F2. Trabaja al máximo en cada serie. Descansa 3\' completos entre series.','4x')],
+    ['2026-06-24', run('Intervalos 6×3\'',80,72,'Primera sesión de intervalos. 6 repeticiones de 3\' a Z4. Recupera 2\' entre cada una. RPE 8/10 en los intervalos.',segsRunInterval())],
+    ['2026-06-25', str('Fuerza + core pesado',60,'Fuerza pesada en todos los grupos. Core con carga. Foco en la posición de hiking: isquiotibiales + core + hombros.','4x')],
+    ['2026-06-26', run('Atletismo 60\' aeróbico',80,56,'Recuperación activa. Z2 completo. No te tientes a ir más rápido mañana es día libre.',segsRun('60 min'))],
+    ['2026-06-27', run('Atletismo largo 90\'',110,88,'Primera salida larga de F2. Mantén Z2 aunque se haga difícil. Lleva hidratación.',segsRunLong('90 min'))],
+    ['2026-06-28', rest('3 semanas completadas. ¡Vas en ritmo! Descansa bien. Come carbos de recuperación.')],
+    ['2026-06-29', run('Atletismo 70\' + fuerza preventiva',100,75,'Rodaje 70\' + fuerza preventiva encadenado. Día completo de tierra.',segsStrengthCombo('70 min'))],
+    ['2026-06-30', str('Fuerza máxima',65,'Fuerza pesada. Trapecio, hombros y core al máximo. Descansa 3\' entre series.','4x')],
+    ['2026-07-01', run('Intervalos Z4 — 8×2\'',85,78,'8 intervalos de 2\' a Z4. Más cortos, más explosivos. Recupera 90\" entre cada uno.',segsRunInterval('50 min'))],
+    ['2026-07-02', str('Fuerza + core',58,'Fuerza completa. Core funcional con carga. Énfasis en estabilidad para el movimiento de hiking.')],
+    ['2026-07-03', run('Atletismo 60\' aeróbico',80,56,'Z2 constante. No forzar. Prepara el largo del sábado.',segsRun('60 min'))],
+    ['2026-07-04', run('Atletismo largo 100\'',120,95,'Sesión larga más exigente hasta ahora. Z2 todo el tiempo. Si sientes bien los últimos 20\', sube a Z3.',segsRunLong('100 min'))],
+    ['2026-07-05', rest('Descanso. Mañana comienza F3 — la fase más exigente. Mentalízate. Come y descansa bien. 💪')],
+    // ── F3 PICO  Jul 6–19 ────────────────────────────────────────────────────
+    ['2026-07-06', run('Atletismo 70\' + fuerza — inicio pico',110,80,'F3. Desde hoy todo va a ser más intenso. Rodaje 70\' + fuerza el mismo día.',segsStrengthCombo('70 min'))],
+    ['2026-07-07', str('Fuerza pico',70,'Al máximo en todo. 4 series de cada ejercicio. Descansa completo. Come proteína enseguida.','4x')],
+    ['2026-07-08', run('Intervalos intensos — 10×2\'',85,80,'10 intervalos de 2\' a Z4–Z5. Más intenso que antes. RPE 9/10. Recupera 90\" entre cada uno.',segsRunInterval('55 min'))],
+    ['2026-07-09', str('Fuerza pico + core',72,'Fuerza pesada y core con carga máxima. La semana más dura del ciclo. Dale.','4x')],
+    ['2026-07-10', run('Atletismo 60\' Z3',80,65,'Rodaje en Z3 sostenido. Más rápido que las sesiones anteriores. Mantén la forma.',segsRun('60 min','Rodaje sostenido Z3'))],
+    ['2026-07-11', run('Atletismo largo + fuerza (máxima carga)',130,100,'Sesión combinada de mayor carga del plan. Largo + fuerza en el mismo día. Dale todo hoy.',segsStrengthCombo('80 min'))],
+    ['2026-07-12', rest('Descanso total. La semana más dura está hecha. Recupera muy bien. Hielo, movilidad suave, come bien. 🧊')],
+    ['2026-07-13', run('Atletismo 60\' + movilidad',75,55,'Reducción de carga comienza. Z2 moderado. Movilidad profunda al terminar.',segsRun('60 min'))],
+    ['2026-07-14', str('Fuerza + core',55,'Fuerza de mantenimiento. Menos series que la semana pasada. Mantén la calidad.')],
+    ['2026-07-15', run('Intervalos Z4 — 6×3\'',80,70,'Intervalos de calidad. Misma intensidad, menos volumen. Mantén la potencia.',segsRunInterval('50 min'))],
+    ['2026-07-16', str('Fuerza mantenimiento',48,'Fuerza de mantenimiento. 3 series. Movilidad extensa al final. El taper empieza a sentirse.')],
+    ['2026-07-17', run('Atletismo suave 45\'',60,40,'Trote suave Z1–Z2. Sin presión. Escucha tu cuerpo.',segsRun('45 min','Trote suave — Z1 a Z2'))],
+    ['2026-07-18', str('Fuerza + core — última sesión pesada',55,'Última sesión de fuerza de alta carga. Después solo mantenimiento y taper.','4x')],
+    ['2026-07-19', rest('INICIO TAPER. Descansa total. El trabajo más duro ya está hecho. Tu cuerpo ahora supercompensa. 🎯')],
+    // ── F4 TAPER  Jul 20–25 ─────────────────────────────────────────────────
+    ['2026-07-20', run('Atletismo suave 30\'',40,28,'Taper. Suave y relajado. Mantén la forma sin cargar. Disfruta el trote.',segsRun('30 min','Trote suave de taper'))],
+    ['2026-07-21', core('Taper. Core y movilidad ligera. Mantén la activación neural sin fatigarte.')],
+    ['2026-07-22', run('Activación física 20\' + core',35,22,'Muy suave. Solo mantener el sistema activo. No acumules fatiga.',segsActivation())],
+    ['2026-07-23', mob('Movilidad completa. El cuerpo debe llegar fresquísimo al sábado. Dedica tiempo a cada articulación.')],
+    ['2026-07-24', rest('Último descanso. Equipo listo. Bote en orden. Visualiza las regatas. Duerme temprano. ⛵🏆')],
+    // ── DÍA DE COMPETENCIA ───────────────────────────────────────────────────
+    ['2026-07-25', {type:'Competencia',name:'🏁 JUEGOS CAC — ILCA 7 D1',durationMin:0,tssEstimated:0,
+      coachNote:'¡HOY ES EL DÍA! 48 días de trabajo físico llegan a este momento. Tu cuerpo está listo. Confía en tu preparación. Llega 90 min antes. Revisa el equipo. ¡Tú puedes Gerardo! 🇲🇽⛵🏆',
+      segments:[
+        seg('Preparación física + calentamiento en tierra', '30 min', Z[0]),
+        seg('Calentamiento en agua',                         '30 min', Z[1]),
+        seg('🏁 REGATA OFICIAL ILCA 7 — CAC Games',         '—',      'Z1 — Z5', 'Todas las regatas'),
+      ]}],
+  ]
+
+  const now = new Date().toISOString()
+  const plan = entries.map(([date, w]) => ({
+    id: `cac_${date}_${Math.random().toString(36).slice(2,7)}`,
+    date,
+    athleteId: 'gb',
+    assignedAt: now,
+    status: date < new Date().toISOString().slice(0,10) ? 'COMPLETED' : 'PENDING',
+    workout: w
+  }))
+
+  localStorage.setItem('tc_plan_gb', JSON.stringify(plan))
+  showToast('📋 Plan CAC Games cargado — 48 días físicos asignados a Gerardo B. ✓  (agua se agrega día a día)')
+
+  // ── FLUJO 1: persistir los 48 días en la BD de un solo POST ────────────────
+  if (typeof TC_API !== 'undefined') {
+    const apiWorkouts = plan.map(entry => ({
+      id:          entry.id,
+      date:        entry.date,
+      name:        entry.workout.name,
+      type:        entry.workout.type,
+      durationMin: entry.workout.durationMin,
+      tssPlanned:  entry.workout.tssEstimated,
+      coachNote:   entry.workout.coachNote || '',
+      segments:    entry.workout.segments  || [],
+    }))
+    TC_API.saveBulkPlan('gb', apiWorkouts).then(r => {
+      if (r?.ok) console.info(`[Tu Coach] Plan CAC: ${r.count} entrenos persistidos en BD`)
+    })
+  }
+}
+
+// ─── Inicializar fecha del asignador al día de hoy ───────────────────────────
+(function initAssignDate(){
+  const el = document.getElementById('assign-date')
+  if (el) el.value = new Date().toISOString().slice(0,10)
+})();
+
+// ═══ AUTO-REFRESH A LAS 12:00 AM ═══
+(function scheduleNextDay(){
+  const now=new Date();
+  const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,5);
+  setTimeout(()=>{
+    const today=new Date();
+    const dayName=today.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long'});
+    const b=document.createElement('div');
+    b.innerHTML=`<div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#f97316;color:#fff;padding:10px 24px;border-radius:30px;font-size:13px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(249,115,22,.4)">
+      👥 Nuevo día — ${dayName}. Cargando datos del equipo...
+    </div>`;
+    document.body.appendChild(b);
+    setTimeout(()=>location.reload(),2500);
+    scheduleNextDay();
+  },midnight-now);
+})();
+</script>
+</body>
+</html>
