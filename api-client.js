@@ -3,7 +3,7 @@
  * Maneja: base URL, JWT en localStorage, refresh automático, redirect al login
  */
 
-const API_BASE = 'http://localhost:3001'
+const API_BASE = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin
 
 // ─── TOKEN MANAGEMENT ────────────────────────────────────────────────────────
 
