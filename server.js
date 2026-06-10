@@ -14,10 +14,13 @@ const path    = require('path')
 const fs      = require('fs')
 const crypto  = require('crypto')
 
-const PORT       = 3001
+const PORT       = process.env.PORT || 3001
 const JWT_SECRET = 'tc-cac-games-2026-ilca7'
 const DATA_DIR   = path.join(__dirname, 'data')
-const DB_FILE    = path.join(DATA_DIR, 'tucoach.json')
+const COACH_VIEW = process.env.COACH_VIEW === '1'
+const DB_FILE    = COACH_VIEW
+  ? path.join(DATA_DIR, 'coach-view.json')
+  : path.join(DATA_DIR, 'tucoach.json')
 
 fs.mkdirSync(DATA_DIR, { recursive: true })
 
