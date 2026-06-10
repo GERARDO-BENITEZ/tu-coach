@@ -1349,6 +1349,8 @@ app.get('/api/athlete/garmin/activities', auth, (req, res) => {
 // ── PMC REBUILD — función reutilizable (llamada internamente + desde endpoint) ──
 
 async function rebuildPMCForAthlete(athleteId) {
+  // En modo COACH_VIEW, el PMC viene del export — no recalcular
+  if (COACH_VIEW) return DB.pmc_cache
   // Combinar TSS: Garmin activities base + workouts completados con TSS real (mayor prioridad)
   const tssByDate = {}
 
