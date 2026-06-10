@@ -4022,7 +4022,27 @@ async function openCwp(dateStr) {
 
     body.innerHTML = html
   } catch(e) {
-    body.innerHTML = `<div class="cwp-spinner" style="color:var(--red)">Error al cargar los datos</div>`
+    console.error('[openCwp] error:', e)
+    // Fallback: mostrar info del PLAN_CALENDAR local si la API no responde
+    const entry = typeof PLAN_CALENDAR !== 'undefined' ? PLAN_CALENDAR[dateStr] : null
+    const prog  = entry && typeof WORKOUT_PROGRAMS !== 'undefined' ? WORKOUT_PROGRAMS[entry.key] : null
+    if (entry && prog) {
+      title.textContent = entry.name
+      body.innerHTML = `
+        <div class="cwp-section">
+          <div class="cwp-section-title">Plan (datos locales)</div>
+          <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px">
+            <span class="cwp-badge" style="background:rgba(79,142,247,.12);color:var(--accent)">${entry.dur} min</span>
+            <span class="cwp-badge" style="background:rgba(249,115,22,.1);color:var(--orange)">TSS ${entry.tss}</span>
+          </div>
+          ${entry.note ? `<div class="cwp-note">${entry.note}</div>` : ''}
+        </div>
+        ${prog.html ? `<div class="cwp-section">${prog.html(entry.param)}</div>` : ''}
+        <div style="padding:10px 12px;margin-top:8px;border-radius:8px;background:rgba(255,165,0,.08);font-size:11px;color:var(--text3)">⚠️ Datos del servidor no disponibles — mostrando plan base</div>
+      `
+    } else {
+      body.innerHTML = `<div class="cwp-spinner" style="color:var(--red)">Error al cargar los datos<br><span style="font-size:10px;opacity:.6">${e.message}</span></div>`
+    }
   }
 }
 
