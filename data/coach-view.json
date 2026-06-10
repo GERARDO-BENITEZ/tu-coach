@@ -4,25 +4,29 @@
       "id": "coach-erick-001",
       "email": "coach@tucoach.app",
       "name": "Coach Erick",
-      "role": "COACH"
+      "role": "COACH",
+      "password_hash": "$2a$10$DhUkJTQUye.xFvu4zH4RJeqKSrLwE4Q4wygsy4bOEXwKu2MRTalhS"
     },
     {
       "id": "athlete-gb-001",
       "email": "gerardo@tucoach.app",
       "name": "Gerardo Benítez",
-      "role": "ATHLETE"
+      "role": "ATHLETE",
+      "password_hash": "$2a$10$DhUkJTQUye.xFvu4zH4RJeqKSrLwE4Q4wygsy4bOEXwKu2MRTalhS"
     },
     {
       "id": "athlete-al-001",
       "email": "ana@tucoach.app",
       "name": "Ana López",
-      "role": "ATHLETE"
+      "role": "ATHLETE",
+      "password_hash": "$2a$10$DhUkJTQUye.xFvu4zH4RJeqKSrLwE4Q4wygsy4bOEXwKu2MRTalhS"
     },
     {
       "id": "nutri-001",
       "email": "nutricion@tucoach.app",
       "name": "Nutriólogo García",
-      "role": "NUTRITIONIST"
+      "role": "NUTRITIONIST",
+      "password_hash": "$2a$10$DhUkJTQUye.xFvu4zH4RJeqKSrLwE4Q4wygsy4bOEXwKu2MRTalhS"
     }
   ],
   "coach_athletes": [
