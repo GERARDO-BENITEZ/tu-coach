@@ -4,6 +4,7 @@ package-lock.json
 
 # ── Credenciales y entorno ────────────────────────────────────────────────────
 .env
+.github-token
 
 # ── Base de datos local (datos reales del atleta) ─────────────────────────────
 # El seed (data/tucoach.seed.json) SÍ se incluye en el repo.
