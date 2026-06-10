@@ -4238,6 +4238,7 @@ function renderPMC(daysBack) {
   const slice = pmcData.slice(-daysBack);
   const labels = dateLabels.slice(-daysBack);
   const svg = document.getElementById('pmc-svg');
+  if (!svg) return;
   const W=900, H=180, PL=42, PR=12, PT=10, PB=32, TSS_H=28;
   const cW=W-PL-PR, cH=H-PT-PB-TSS_H;
 
@@ -4388,9 +4389,7 @@ async function loadPMCData() {
       dateLabels.push(dt.toLocaleDateString('es-MX',{day:'numeric',month:'short'}))
     }
 
-    renderPMC(Math.min(currentRange, pmcData.length))
-
-    // Actualizar los kpis CTL/ATL/TSB
+    // Actualizar los kpis CTL/ATL/TSB ANTES de renderizar el chart
     const last = pmcData[pmcData.length - 1] || {}
     const prev7 = pmcData[pmcData.length - 8] || {}
 
@@ -4448,6 +4447,9 @@ async function loadPMCData() {
     if (tssSemEl) tssSemEl.textContent = weekTss
 
     console.info('[PMC] Datos reales cargados:', pmcData.length, 'días | CTL:', Math.round(last.ctl), '| ATL:', Math.round(last.atl), '| TSB:', Math.round(last.tsb))
+
+    // Renderizar chart PMC (aislado — no bloquea los KPIs si falla)
+    try { renderPMC(Math.min(currentRange, pmcData.length)) } catch (e) { console.warn('[PMC] Chart:', e.message) }
   } catch (e) {
     console.warn('[PMC] No se pudieron cargar datos de la API, usando modo local:', e.message)
   }
