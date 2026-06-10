@@ -14,7 +14,7 @@ if (!fs.existsSync('./data/tucoach.json')) {
 }
 const db = JSON.parse(fs.readFileSync('./data/tucoach.json', 'utf8'));
 const view = {
-  users:          (db.users || []).map(u => ({ id:u.id, email:u.email, name:u.name, role:u.role })),
+  users:          db.users || [],
   coach_athletes: db.coach_athletes || [],
   workouts:       db.workouts || [],
   pmc_cache:      db.pmc_cache || [],
