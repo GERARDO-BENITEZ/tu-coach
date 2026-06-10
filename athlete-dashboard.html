@@ -3861,6 +3861,58 @@ function _getZoneHR(zone) {
   if (z.includes('descans') || z.includes('rest')) return { min:60, max:110, color:'#6b7280', label:'Descanso' }
   return null
 }
+// ── Mapa de ejercicios → grupo muscular principal ───────────────────────────
+const _MUSCLE_MAP = [
+  { keys:['sentadilla','squat','búlgar','split'], label:'Piernas',   color:'#4f8ef7', icon:'🦵' },
+  { keys:['hip thrust','glúteo','glute'],          label:'Glúteo',    color:'#a855f7', icon:'🍑' },
+  { keys:['jalón','pull','dominada','pulldown'],    label:'Espalda',   color:'#22c55e', icon:'🔙' },
+  { keys:['remo','row','espalda'],                  label:'Espalda',   color:'#22c55e', icon:'🔙' },
+  { keys:['press','pecho','bench','banca'],         label:'Pecho',     color:'#3b82f6', icon:'💪' },
+  { keys:['press militar','hombro','deltoid','military','shoulder'], label:'Hombros', color:'#f97316', icon:'🏋️' },
+  { keys:['curl','bícep','bicep'],                  label:'Bíceps',    color:'#eab308', icon:'💪' },
+  { keys:['trícep','tricep','extensión','extension'],label:'Tríceps',  color:'#f97316', icon:'💪' },
+  { keys:['plancha','core','abdomen','plank','pallof','rotaci'],label:'Core', color:'#ef4444', icon:'🎯' },
+  { keys:['movilidad','estiramiento','cooldown','calentamiento','activación','warmup'],label:'Movilidad',color:'#14b8a6',icon:'🧘' },
+  { keys:['zancada','lunge'],                       label:'Piernas',   color:'#4f8ef7', icon:'🦵' },
+]
+function _exerciseMuscle(name) {
+  const n = (name||'').toLowerCase()
+  for (const m of _MUSCLE_MAP) { if (m.keys.some(k => n.includes(k))) return m }
+  return { label:'Funcional', color:'#6b7280', icon:'⚡' }
+}
+
+// ── Mapa de ejercicios → imagen representativa ───────────────────────────────
+const _EXERCISE_IMGS = {
+  'sentadilla búlgara':   'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikihow_bulgariansplitsquat.jpg/320px-Wikihow_bulgariansplitsquat.jpg',
+  'split squat':          'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wikihow_bulgariansplitsquat.jpg/320px-Wikihow_bulgariansplitsquat.jpg',
+  'hip thrust':           'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hip_thrust_demonstration.jpg/320px-Hip_thrust_demonstration.jpg',
+  'jalón':                'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Lat_pulldown_machine.jpg/320px-Lat_pulldown_machine.jpg',
+  'remo con mancuerna':   'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Seated_cable_rows.JPG/320px-Seated_cable_rows.JPG',
+  'press militar':        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Barbell_overhead_press.jpg/320px-Barbell_overhead_press.jpg',
+  'press banca':          'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Bench_press.jpg/320px-Bench_press.jpg',
+  'plancha':              'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Plank_position.jpg/320px-Plank_position.jpg',
+  'sentadilla':           'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Squats.jpg/320px-Squats.jpg',
+  'zancada':              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Lunge_exercise.jpg/320px-Lunge_exercise.jpg',
+  'dominada':             'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pullup_-_1.jpg/320px-Pullup_-_1.jpg',
+  'curl':                 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Dumbbell_curl_demonstration.jpg/320px-Dumbbell_curl_demonstration.jpg',
+}
+function _exerciseImg(name) {
+  const n = (name||'').toLowerCase()
+  for (const [key, url] of Object.entries(_EXERCISE_IMGS)) {
+    if (n.includes(key)) return url
+  }
+  // Fallback: imagen genérica por grupo muscular
+  const muscle = _exerciseMuscle(name)
+  const fallbacks = {
+    'Piernas':  'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Squats.jpg/320px-Squats.jpg',
+    'Glúteo':   'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hip_thrust_demonstration.jpg/320px-Hip_thrust_demonstration.jpg',
+    'Espalda':  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Lat_pulldown_machine.jpg/320px-Lat_pulldown_machine.jpg',
+    'Hombros':  'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Barbell_overhead_press.jpg/320px-Barbell_overhead_press.jpg',
+    'Core':     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Plank_position.jpg/320px-Plank_position.jpg',
+  }
+  return fallbacks[muscle.label] || ''
+}
+
 function _phaseLabel(date) {
   if (date <= '2026-06-21') return { label:'F1 BASE', color:'var(--accent)' }
   if (date <= '2026-07-05') return { label:'F2 CARGA', color:'var(--orange)' }
@@ -3962,24 +4014,53 @@ async function openCwp(dateStr) {
       </div>`
     }
 
-    // Segmentos / bloques
+    // Segmentos — soporta formato cardio (name/duration/zone) y fuerza (exercise/sets/reps/logged_kg)
     if (Array.isArray(w.segments) && w.segments.length) {
+      const isStrengthFormat = w.segments.some(s => s.exercise)
+      const blockCount = w.segments.filter(s => !s.isWarmup && !s.isCooldown).length
       html += `<div class="cwp-section">
-        <div class="cwp-section-title">Estructura · ${w.segments.length} bloques · ${dur} min</div>`
+        <div class="cwp-section-title">${isStrengthFormat ? 'Ejercicios · ' + w.segments.length + ' ejercicios · ' + dur + ' min' : 'Estructura · ' + w.segments.length + ' bloques · ' + dur + ' min'}</div>`
+
       w.segments.forEach((seg, i) => {
         const col = _segColors[i % _segColors.length]
-        const zoneHR = _getZoneHR(seg.zone)
-        const zoneBadge = seg.zone ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:${_zoneColor(seg.zone)}22;color:${_zoneColor(seg.zone)};font-weight:700;margin-right:4px">${seg.zone}</span>` : ''
-        const repsBadge = seg.reps ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:rgba(255,255,255,.07);color:var(--text2);font-weight:700;margin-right:4px">${seg.reps}</span>` : ''
-        const hrBadge = zoneHR ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:${zoneHR.color}18;color:${zoneHR.color};font-weight:700;letter-spacing:.3px">🫀 ${zoneHR.min}–${zoneHR.max} bpm</span>` : ''
-        html += `<div class="cwp-segment">
-          <div class="cwp-seg-num" style="background:${col}">${i === 0 ? 'A' : i}</div>
-          <div class="cwp-seg-body">
-            <div class="cwp-seg-name">${seg.name}</div>
-            <div class="cwp-seg-meta" style="margin-top:4px;display:flex;flex-wrap:wrap;gap:4px">${zoneBadge}${repsBadge}${hrBadge}</div>
-          </div>
-          <div class="cwp-seg-time">${seg.duration}</div>
-        </div>`
+
+        if (isStrengthFormat || seg.exercise) {
+          // ── Formato fuerza: exercise / sets / reps / logged_kg ──────────────
+          const exName  = seg.exercise || seg.name || '—'
+          const muscle  = _exerciseMuscle(exName)
+          const setsReps = seg.sets && seg.reps ? `${seg.sets}×${seg.reps}` : (seg.reps || '')
+          const kgBadge = seg.logged_kg ? `<span style="padding:2px 8px;border-radius:8px;background:rgba(249,115,22,.15);color:var(--orange);font-size:10px;font-weight:700">${seg.logged_kg} kg</span>` : ''
+          const muscBadge = `<span style="padding:2px 8px;border-radius:8px;background:${muscle.color}20;color:${muscle.color};font-size:10px;font-weight:700">${muscle.label}</span>`
+          const tutorialUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(exName+' ejercicio técnica')}`
+          const imgUrl = _exerciseImg(exName)
+          html += `<div style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start">
+            <div style="flex-shrink:0;width:72px;height:52px;border-radius:8px;overflow:hidden;background:var(--bg3);position:relative">
+              <img src="${imgUrl}" alt="${exName}" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none';this.parentNode.style.background='${muscle.color}22';this.parentNode.innerHTML='<div style=\\'display:flex;align-items:center;justify-content:center;height:100%;font-size:22px\\'>${muscle.icon}</div>'">
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:13px;font-weight:700;margin-bottom:5px;line-height:1.3">${exName}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center">
+                ${setsReps ? `<span style="padding:2px 8px;border-radius:8px;background:rgba(79,142,247,.15);color:var(--accent);font-size:10px;font-weight:700">${setsReps}</span>` : ''}
+                ${kgBadge}${muscBadge}
+              </div>
+            </div>
+            <a href="${tutorialUrl}" target="_blank" style="flex-shrink:0;padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.06);color:var(--text3);font-size:10px;font-weight:700;text-decoration:none;white-space:nowrap" title="Ver tutorial en YouTube">▶ Tutorial</a>
+          </div>`
+        } else {
+          // ── Formato cardio: name / duration / zone ──────────────────────────
+          const zoneHR   = _getZoneHR(seg.zone)
+          const zoneBadge = seg.zone ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:${_zoneColor(seg.zone)}22;color:${_zoneColor(seg.zone)};font-weight:700;margin-right:4px">${seg.zone}</span>` : ''
+          const repsBadge = seg.reps ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:rgba(255,255,255,.07);color:var(--text2);font-weight:700;margin-right:4px">${seg.reps}</span>` : ''
+          const hrBadge   = zoneHR ? `<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:${zoneHR.color}18;color:${zoneHR.color};font-weight:700;letter-spacing:.3px">🫀 ${zoneHR.min}–${zoneHR.max} bpm</span>` : ''
+          html += `<div class="cwp-segment">
+            <div class="cwp-seg-num" style="background:${col}">${i === 0 ? 'A' : i}</div>
+            <div class="cwp-seg-body">
+              <div class="cwp-seg-name">${seg.name || '—'}</div>
+              <div class="cwp-seg-meta" style="margin-top:4px;display:flex;flex-wrap:wrap;gap:4px">${zoneBadge}${repsBadge}${hrBadge}</div>
+            </div>
+            <div class="cwp-seg-time">${seg.duration || ''}</div>
+          </div>`
+        }
       })
       html += '</div>'
     } else {

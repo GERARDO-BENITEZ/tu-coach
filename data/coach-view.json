@@ -155,16 +155,16 @@
           "zone": "Z1 — Recuperación"
         }
       ],
-      "status": "PENDING",
-      "rpe": null,
+      "status": "COMPLETED",
+      "rpe": 2,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 50,
+      "actual_tss": 100,
+      "completed_at": "2026-06-10T02:52:38.702Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-10T02:52:38.702Z"
     },
     {
       "id": "9d36e6a7-263e-48d0-99e9-d69a78db7910",
@@ -173,37 +173,57 @@
       "date": "2026-06-10",
       "name": "Fuerza + Core — F1",
       "type": "Fuerza / Gym",
-      "duration_min": 65,
-      "tss_planned": 52,
-      "coach_note": "Hip thrust 4×10, Jalón 4×10, Extensiones core. Progresión técnica.",
+      "duration_min": 75,
+      "tss_planned": 60,
+      "coach_note": "Hip thrust 4×10, Jalón 4×10, Extensiones core 3×15. Progresión técnica — controla el peso en la fase excéntrica. Objetivo: técnica limpia antes de aumentar carga.",
       "segments": [
+        {
+          "exercise": "Calentamiento dinámico (movilidad + activación)",
+          "sets": 1,
+          "reps": "10 min",
+          "isWarmup": true
+        },
         {
           "exercise": "Sentadilla búlgara (split squat)",
           "sets": 3,
           "reps": "10/pierna",
-          "logged_kg": 35,
-          "logged_at": "2026-06-09T20:42:20.992Z"
+          "logged_kg": 35
         },
         {
           "exercise": "Hip thrust (glúteo en banco)",
-          "sets": 3,
-          "reps": "12 rep",
-          "logged_kg": 60,
-          "logged_at": "2026-06-09T20:42:20.992Z"
+          "sets": 4,
+          "reps": "10 rep",
+          "logged_kg": 60
+        },
+        {
+          "exercise": "Jalón al pecho agarre ancho",
+          "sets": 4,
+          "reps": "10 rep",
+          "logged_kg": 50
         },
         {
           "exercise": "Remo con mancuerna en banco",
           "sets": 3,
           "reps": "10/lado",
-          "logged_kg": 22,
-          "logged_at": "2026-06-09T20:42:20.992Z"
+          "logged_kg": 22
         },
         {
-          "exercise": "Press militar de pie (barra o mancuernas)",
+          "exercise": "Press militar de pie (barra)",
           "sets": 3,
           "reps": "10 rep",
-          "logged_kg": 40,
-          "logged_at": "2026-06-09T20:42:20.992Z"
+          "logged_kg": 40
+        },
+        {
+          "exercise": "Extensiones de core (pallof press + plancha)",
+          "sets": 3,
+          "reps": "15 rep",
+          "logged_kg": 0
+        },
+        {
+          "exercise": "Estiramiento y vuelta a la calma",
+          "sets": 1,
+          "reps": "10 min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -2192,7 +2212,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-10T02:46:27.985Z",
+    "built_at": "2026-06-10T04:05:37.347Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31365,10 +31385,10 @@
       },
       {
         "date": "2026-06-09",
-        "tss": 0,
-        "ctl": 20.2,
-        "atl": 37.5,
-        "tsb": -17.3
+        "tss": 100,
+        "ctl": 22.6,
+        "atl": 51.8,
+        "tsb": -29.3
       }
     ]
   },
@@ -34146,6 +34166,21 @@
       "hasPain": false,
       "note": "",
       "updated_at": "2026-06-08T23:28:50.051Z"
+    },
+    {
+      "id": "5407dab5-adc3-4866-a579-812885e2e81e",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-09",
+      "sleepHours": 9,
+      "sleepQuality": 4,
+      "energy": 10,
+      "muscleSoreness": 10,
+      "mentalReadiness": 10,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-10T02:52:04.799Z"
     }
   ],
   "whoop_history": [],
