@@ -2212,7 +2212,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-10T04:05:37.347Z",
+    "built_at": "2026-06-10T14:20:04.161Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31389,6 +31389,13 @@
         "ctl": 22.6,
         "atl": 51.8,
         "tsb": -29.3
+      },
+      {
+        "date": "2026-06-10",
+        "tss": 0,
+        "ctl": 22,
+        "atl": 44.4,
+        "tsb": -22.4
       }
     ]
   },
@@ -34147,6 +34154,41 @@
         "calories": 553,
         "tss_actual": 43,
         "synced_at": "2026-06-10T02:46:27.791Z"
+      }
+    },
+    {
+      "id": "8f0bea24-b603-403f-8d5d-fc691ba009f0",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-10T14:19:45.181Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-10T14:19:45.181Z"
+      }
+    },
+    {
+      "id": "79a31c11-9267-4cda-967a-c91159268ff8",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-10T14:19:48.486Z",
+      "data": {
+        "activity_id": 23194876178,
+        "activity_name": "Ciclismo en sala",
+        "activity_type": "indoor_cycling",
+        "duration_min": 75,
+        "hr_avg": 109,
+        "hr_max": 155,
+        "calories": 553,
+        "tss_actual": 43,
+        "synced_at": "2026-06-10T14:19:48.486Z"
       }
     }
   ],
