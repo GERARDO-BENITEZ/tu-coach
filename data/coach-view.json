@@ -72,7 +72,8 @@
         "sleep_hours": 7.8
       },
       "created_at": "2026-06-08T02:13:09.019Z",
-      "updated_at": "2026-06-08T02:14:27.018Z"
+      "updated_at": "2026-06-08T02:14:27.018Z",
+      "tss_actual": 40
     },
     {
       "id": "46d039d5-5ed5-4189-a022-63aaff27b419",
@@ -126,7 +127,9 @@
       },
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T17:30:00.000Z"
+      "updated_at": "2026-06-09T17:30:00.000Z",
+      "tss_actual": 51,
+      "garmin_activity_id": 23182218812
     },
     {
       "id": "e971e4b0-7068-4f2c-b305-a6135bdf84a9",
@@ -164,7 +167,8 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-10T02:52:38.702Z"
+      "updated_at": "2026-06-10T02:52:38.702Z",
+      "tss_actual": 55
     },
     {
       "id": "9d36e6a7-263e-48d0-99e9-d69a78db7910",
@@ -270,16 +274,28 @@
           "zone": "Z1 — Recuperación"
         }
       ],
-      "status": "PENDING",
-      "rpe": null,
+      "status": "COMPLETED",
+      "rpe": 4,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
+      "actual_duration_min": 55,
+      "actual_tss": 53,
+      "completed_at": "2026-06-11T14:31:01.822Z",
+      "garmin_data": {
+        "activity_id": 23201883258,
+        "activity_name": "Fuerza",
+        "activity_type": "strength_training",
+        "duration_min": 73,
+        "hr_avg": 112,
+        "hr_max": 148,
+        "calories": 438,
+        "tss_actual": 53,
+        "synced_at": "2026-06-11T14:40:10.187Z"
+      },
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-11T14:40:10.187Z",
+      "tss_actual": 53,
+      "garmin_activity_id": 23201883258
     },
     {
       "id": "263cdf36-4407-4f9d-9304-cec8f2e493c1",
@@ -2212,7 +2228,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-10T14:20:04.161Z",
+    "built_at": "2026-06-11T14:44:38.725Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31392,10 +31408,17 @@
       },
       {
         "date": "2026-06-10",
-        "tss": 0,
-        "ctl": 22,
-        "atl": 44.4,
-        "tsb": -22.4
+        "tss": 43,
+        "ctl": 23.1,
+        "atl": 50.6,
+        "tsb": -27.5
+      },
+      {
+        "date": "2026-06-11",
+        "tss": 53,
+        "ctl": 23.8,
+        "atl": 50.9,
+        "tsb": -27.1
       }
     ]
   },
@@ -31466,6 +31489,32 @@
   ],
   "strength_logs": [],
   "garmin_activities": [
+    {
+      "activity_id": 23201883258,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-06-11",
+      "duration_min": 73,
+      "hr_avg": 112,
+      "hr_max": 148,
+      "calories": 438,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 53
+    },
+    {
+      "activity_id": 23194876178,
+      "activity_name": "Ciclismo en sala",
+      "activity_type": "indoor_cycling",
+      "date": "2026-06-10",
+      "duration_min": 75,
+      "hr_avg": 109,
+      "hr_max": 155,
+      "calories": 553,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 43
+    },
     {
       "activity_id": 23182218812,
       "activity_name": "Cardio",
@@ -34190,6 +34239,41 @@
         "tss_actual": 43,
         "synced_at": "2026-06-10T14:19:48.486Z"
       }
+    },
+    {
+      "id": "28bce80f-cf93-41f2-8fcf-a934db7b8982",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T14:40:08.655Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-11T14:40:08.654Z"
+      }
+    },
+    {
+      "id": "175e90e6-aa0c-402b-9cc2-70d7be308724",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-11T14:40:10.187Z",
+      "data": {
+        "activity_id": 23201883258,
+        "activity_name": "Fuerza",
+        "activity_type": "strength_training",
+        "duration_min": 73,
+        "hr_avg": 112,
+        "hr_max": 148,
+        "calories": 438,
+        "tss_actual": 53,
+        "synced_at": "2026-06-11T14:40:10.187Z"
+      }
     }
   ],
   "wellness": [
@@ -34223,6 +34307,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-10T02:52:04.799Z"
+    },
+    {
+      "id": "b26cd738-094c-4ec5-a7d1-b51b5146b3ca",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-11",
+      "sleepHours": 7.5,
+      "sleepQuality": 2,
+      "energy": 7,
+      "muscleSoreness": 6,
+      "mentalReadiness": 8,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-11T14:30:41.787Z"
     }
   ],
   "whoop_history": [],
