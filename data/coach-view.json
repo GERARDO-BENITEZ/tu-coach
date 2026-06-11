@@ -777,7 +777,7 @@
       "created_at": "2026-06-09T20:27:17.181Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-06-21",
-      "name": "🔵 Descanso Total — Check HRV",
+      "name": "🔵 Descanso",
       "type": "Core / Movilidad",
       "duration_min": 20,
       "tss_planned": 10,
@@ -1720,46 +1720,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-11",
-      "name": "Vela — Match Race",
-      "type": "En Agua",
-      "duration_min": 180,
-      "tss_planned": 115,
-      "coach_note": "Match Race completo con sparring. Máxima simulación de CAC.",
+      "name": "🟡 Ciclismo Z3 — Resistencia",
+      "type": "Ciclismo",
+      "duration_min": 75,
+      "tss_planned": 65,
+      "coach_note": "S28 F2 · 🟡 MODERADA. Sábado = bici larga en Z3. 75 min a 145–160 bpm. Mantén cadencia 85–90 rpm. Recuperación activa post-semana de pico.",
       "segments": [
         {
-          "name": "Preparación",
-          "duration": "20 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Match Race 1",
-          "duration": "45 min",
-          "zone": "Z4 — Alta intensidad"
-        },
-        {
-          "name": "Pausa + análisis",
+          "name": "Calentamiento",
           "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "zone": "Z2 130–145 bpm"
         },
         {
-          "name": "Match Race 2",
+          "name": "Bloque Z3",
           "duration": "45 min",
-          "zone": "Z4 — Alta intensidad"
+          "zone": "Z3 146–160 bpm"
         },
         {
-          "name": "Pausa + análisis",
+          "name": "Enfriamiento",
           "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Match Race 3",
-          "duration": "35 min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Guindola + debriefing",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "zone": "Z1 <130 bpm"
         }
       ],
       "status": "PENDING",
@@ -1771,7 +1751,8 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW"
     },
     {
       "id": "87c3449d-0c31-4fe5-a575-dfcc7642856d",
@@ -2106,31 +2087,16 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-20",
-      "name": "Vela Ligera — Ajustes Finales",
-      "type": "En Agua",
-      "duration_min": 90,
-      "tss_planned": 62,
-      "coach_note": "Taper activo en agua. Ajuste de trapecio y finesse. Sin esfuerzo máximo.",
+      "name": "🔵 Ciclismo Ligero — Activación",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 30,
+      "coach_note": "S29 F3 · 🔵 BAJA. Tapering activo. Bici suave 45 min en Z1-Z2. No más de 140 bpm. Solo activar piernas, sin fatiga.",
       "segments": [
         {
-          "name": "Preparación embarcación",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Navegación técnica suave",
-          "duration": "55 min",
-          "zone": "Z2 — Base aeróbica"
-        },
-        {
-          "name": "Salidas ligeras × 5",
-          "duration": "15 min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Guindola",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Bici Z1-Z2 suave",
+          "duration": "45 min",
+          "zone": "Z1-Z2 <145 bpm"
         }
       ],
       "status": "PENDING",
@@ -2142,7 +2108,8 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE"
     },
     {
       "id": "95dd0299-3baa-44e6-b652-3b57c68a184d",
@@ -2182,11 +2149,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-22",
-      "name": "Vela Técnica Ligera",
-      "type": "En Agua",
+      "name": "🔵 Movilidad + Stretching",
+      "type": "Core / Movilidad",
       "duration_min": 90,
       "tss_planned": 55,
-      "coach_note": "Taper en agua. Solo técnica limpia. Nada de esfuerzo intenso.",
+      "coach_note": "S29 F3 · 🔵 BAJA. Sesión de movilidad completa: caderas, hombros, tobillo. 40 min. HRV debe subir esta semana.",
       "segments": [
         {
           "name": "Revisión equipo",
@@ -2213,7 +2180,8 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE"
     },
     {
       "id": "4383ddb3-da7c-4c4b-81dc-60907bc11ff2",
@@ -2253,11 +2221,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-24",
-      "name": "Inspección + Activación Final",
-      "type": "En Agua",
+      "name": "🔵 Activación Física Final",
+      "type": "Core / Movilidad",
       "duration_min": 60,
       "tss_planned": 28,
-      "coach_note": "Día previo. Inspección del barco, check de equipo, navegación suave 20 min.",
+      "coach_note": "S30 F3 · 🔵 BAJA. Activación corta: 10 min movilidad + 3×10 Squat + 3×8 Pull-up sin carga. Guardar energía para CAC.",
       "segments": [
         {
           "name": "Inspección embarcación",
@@ -2284,19 +2252,26 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE"
     },
     {
       "id": "28765bb5-50e4-49ff-9686-54e864787a4d",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-25",
-      "name": "Movilidad + Descanso — Pre-Viaje",
-      "type": "Core / Movilidad",
-      "duration_min": 30,
-      "tss_planned": 10,
-      "coach_note": "Descanso total. Solo 20min movilidad suave. Prepara equipo y bote para CAC Games (1-8 ago). Hidratación y sueño: prioridad máxima esta semana.",
-      "segments": [],
+      "name": "🟡 Ciclismo Ligero Pre-CAC",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 35,
+      "coach_note": "S30 F3 · 🟡 MODERADA. Bici ligera 45 min Z2. Sábado = ciclismo. Última sesión activa antes de semana CAC.",
+      "segments": [
+        {
+          "name": "Bici Z2 ligera",
+          "duration": "45 min",
+          "zone": "Z2 130–145 bpm"
+        }
+      ],
       "status": "PENDING",
       "rpe": null,
       "athlete_note": null,
@@ -2306,7 +2281,8 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW"
     },
     {
       "id": "8fa02253-7579-4704-bec9-43f741ca9416",
@@ -2317,11 +2293,12 @@
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-26",
-      "name": "Movilidad + Preparación Mental",
+      "name": "🔵 Descanso Absoluto",
       "type": "Core / Movilidad",
       "duration_min": 30,
       "tss_planned": 8,
-      "coach_note": "Taper. Solo 20min movilidad + visualización de maniobras. Nada intenso. Revisa meteorología de CAC."
+      "coach_note": "S30 F3 · 🔵 BAJA. Domingo = descanso completo. Sin entrenamiento. Hidratación, sueño 9h. Prepara cuerpo y mente para CAC.",
+      "zone": "BLUE"
     },
     {
       "id": "af223092-49bf-42f2-9fcd-a731811b9ecb",
@@ -2332,11 +2309,12 @@
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-27",
-      "name": "Vela Suave — Revisión de Equipo",
-      "type": "Vela",
+      "name": "🔵 Activación Ligera",
+      "type": "Core / Movilidad",
       "duration_min": 90,
       "tss_planned": 35,
-      "coach_note": "Taper activo. Salida ligera en vela — revisa equipo, ajusta jarcia. Máximo Z1-Z2. No compites, solo te preparas."
+      "coach_note": "S31 F3 · 🔵 PRE-COMP. Activación nerviosa ligera: 15 min movilidad + 10 squat explosivo + 5 pull-up. Nada más. Cuerpo fresco para Day 1.",
+      "zone": "BLUE"
     },
     {
       "id": "b045b2fa-4346-4702-8779-e72c47f7020b",
@@ -2362,11 +2340,12 @@
       "created_at": "2026-06-09T20:27:17.183Z",
       "updated_at": "2026-06-09T20:27:17.183Z",
       "date": "2026-07-29",
-      "name": "Vela Técnica Final — Activación",
-      "type": "Vela",
+      "name": "🔵 Movilidad + Activación",
+      "type": "Core / Movilidad",
       "duration_min": 60,
       "tss_planned": 25,
-      "coach_note": "Última sesión de vela antes de CAC. Salidas y 2-3 viradas. 45min en agua máximo. Confirma que el bote responde."
+      "coach_note": "S31 F3 · 🔵 PRE-COMP. Solo estiramientos y activación SNC suave. 20 min máximo. Cuerpo 100% recuperado para Day 1.",
+      "zone": "BLUE"
     },
     {
       "id": "e58fd63d-f04b-4c28-ba35-29164f2be5ed",
