@@ -692,6 +692,23 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 .day-detail-panel{position:fixed;top:0;right:0;height:100vh;width:420px;max-width:95vw;background:var(--bg2);border-left:1px solid rgba(255,255,255,.1);z-index:901;transform:translateX(100%);transition:transform .25s cubic-bezier(.4,0,.2,1);overflow-y:auto;display:flex;flex-direction:column}
 .day-detail-panel.open{transform:translateX(0)}
 .ddp-header{padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--bg2);z-index:1}
+/* ── Performance Timeline Chart ── */
+.ptl-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin-top:28px}
+.ptl-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.ptl-title{font-size:15px;font-weight:800}
+.ptl-subtitle{font-size:11px;color:var(--text2);margin-top:2px}
+.ptl-legend{display:flex;gap:14px;font-size:11px;color:var(--text2);align-items:center;flex-wrap:wrap}
+.ptl-leg-line{display:inline-block;width:20px;height:2px;border-radius:2px;vertical-align:middle;margin-right:4px}
+.ptl-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.ptl-kpi{background:var(--bg3);border-radius:10px;padding:12px 14px;text-align:center;border:1px solid rgba(255,255,255,.05)}
+.ptl-kpi-val{font-size:22px;font-weight:900;letter-spacing:-0.5px}
+.ptl-kpi-lbl{font-size:9px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.ptl-kpi-sub{font-size:9px;color:var(--text3);margin-top:1px}
+.ptl-phases{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:18px}
+.ptl-phase-card{border-radius:9px;padding:10px 12px;border:1px solid}
+.ptl-phase-name{font-size:9px;font-weight:800;letter-spacing:.4px;margin-bottom:4px}
+.ptl-phase-focus{font-size:10px;font-weight:600;margin-bottom:6px;line-height:1.3}
+.ptl-phase-stats{font-size:9px;opacity:.7;line-height:1.5}
 .ddp-close{background:none;border:1px solid rgba(255,255,255,.12);border-radius:50%;width:30px;height:30px;color:var(--text2);cursor:pointer;font-size:14px}
 .ddp-close:hover{border-color:var(--accent);color:var(--accent)}
 .ddp-body{padding:20px 22px;flex:1}
@@ -2425,6 +2442,25 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
         </div>
       </div>
     </div>
+
+  <!-- ── Performance Timeline Chart ── -->
+  <div class="ptl-card" id="ptl-card">
+    <div class="ptl-header">
+      <div>
+        <div class="ptl-title">Proyección de Rendimiento · Jun–Ago 2026</div>
+        <div class="ptl-subtitle">Fitness (CTL) · Fatiga (ATL) · Forma (TSB) — pico en CAC Games</div>
+      </div>
+      <div class="ptl-legend">
+        <span><span class="ptl-leg-line" style="background:#60a5fa"></span>CTL Fitness</span>
+        <span><span class="ptl-leg-line" style="background:#fb923c;opacity:.7"></span>ATL Fatiga</span>
+        <span><span class="ptl-leg-line" style="background:#22c55e"></span>Forma (TSB)</span>
+        <span><span class="ptl-leg-line" style="background:#a78bfa;height:1px;border-top:1.5px dashed #a78bfa"></span>TSS/semana</span>
+      </div>
+    </div>
+    <div class="ptl-kpis" id="ptl-kpis"></div>
+    <div id="ptl-svg-wrap" style="position:relative"></div>
+    <div class="ptl-phases" id="ptl-phases"></div>
+  </div>
 
   </div><!-- /sec-calendario -->
 
@@ -4195,6 +4231,7 @@ document.addEventListener('click', e => {
 document.addEventListener('DOMContentLoaded', () => {
   syncCalendarToToday()
   loadDashboard()
+  setTimeout(renderPerformanceTimeline, 300)
 
   // ── Deep-link desde athlete-analytics.html (ej. athlete-dashboard.html#recuperacion) ─
   const deepSection = location.hash.replace('#', '').trim()
@@ -6201,6 +6238,7 @@ function showSection(id, navEl) {
   if (id === 'nutricion')      setTimeout(animateMacros, 200)
   if (id === 'recuperacion') setTimeout(animateCrossBars, 200)
   if (id === 'historial')      setTimeout(() => loadHistorial(_hstDays), 100)
+  if (id === 'calendario')     setTimeout(renderPerformanceTimeline, 80)
   if (id === 'resumen') {
     setTimeout(() => {
       // Re-animar barras de progreso del bloque Antropometría
@@ -6449,6 +6487,232 @@ async function loadHistorial(days) {
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════════════
+//  PERFORMANCE TIMELINE — Proyección CTL/ATL/TSB · Línea de Tiempo de Fases
+// ══════════════════════════════════════════════════════════════════════════════
+
+function renderPerformanceTimeline() {
+  const wrap = document.getElementById('ptl-svg-wrap')
+  const kpisEl = document.getElementById('ptl-kpis')
+  const phasesEl = document.getElementById('ptl-phases')
+  if (!wrap) return
+
+  // ── Dimensiones ──────────────────────────────────────────────────────────
+  const W = 920, H = 290
+  const PAD = { top: 28, right: 60, bottom: 62, left: 52 }
+  const CW = W - PAD.left - PAD.right   // 808
+  const CH = H - PAD.top - PAD.bottom   // 200
+
+  const START_DAY = new Date('2026-06-07T12:00:00')
+  const TOTAL_DAYS = 63  // Jun 7 → Aug 8
+
+  function dayOf(dateStr) {
+    return Math.round((new Date(dateStr + 'T12:00:00') - START_DAY) / 86400000)
+  }
+  function dx(day) { return PAD.left + (day / (TOTAL_DAYS - 1)) * CW }
+  function ctlY(v)  { return PAD.top + CH - Math.min(v, 80) / 80 * CH }
+  function tsbY(v)  { return PAD.top + CH / 2 - (v / 80) * CH }   // 0 = midpoint
+
+  // ── Datos proyectados (PMC estimado de Jun 7 a Aug 8) ──────────────────
+  const pts = [
+    { d: '2026-06-07', ctl: 19,   atl: 12,  tsb:  7,  tss: 0   },
+    { d: '2026-06-11', ctl: 23.8, atl: 50.9,tsb: -27, tss: 53  },  // actual
+    { d: '2026-06-14', ctl: 22.5, atl: 34,  tsb: -12, tss: 0   },  // J70 descanso
+    { d: '2026-06-21', ctl: 26,   atl: 38,  tsb: -12, tss: 360 },  // S25
+    { d: '2026-06-28', ctl: 33,   atl: 60,  tsb: -27, tss: 420 },  // S26 pico vol
+    { d: '2026-07-05', ctl: 39,   atl: 64,  tsb: -25, tss: 440 },  // S27 explosiva
+    { d: '2026-07-12', ctl: 45,   atl: 67,  tsb: -22, tss: 470 },  // S28 pico int ← FATIGA MAX
+    { d: '2026-07-19', ctl: 44,   atl: 44,  tsb:  0,  tss: 260 },  // S29 taper
+    { d: '2026-07-26', ctl: 41,   atl: 25,  tsb: 16,  tss: 150 },  // S30 aclim
+    { d: '2026-08-02', ctl: 38,   atl: 14,  tsb: 24,  tss: 90  },  // S31 pre-reg
+    { d: '2026-08-08', ctl: 35,   atl: 10,  tsb: 25,  tss: 40  },  // CAC Final ← FORMA MAX
+  ]
+  pts.forEach(p => {
+    p.day = dayOf(p.d)
+    p.x   = dx(p.day)
+    p.yC  = ctlY(p.ctl)
+    p.yA  = ctlY(p.atl)
+    p.yT  = tsbY(p.tsb)
+  })
+
+  // ── Bezier suave ─────────────────────────────────────────────────────────
+  function bezier(arr, key) {
+    let s = `M ${arr[0].x} ${arr[0][key]}`
+    for (let i = 1; i < arr.length; i++) {
+      const c = (arr[i-1].x + arr[i].x) / 2
+      s += ` C ${c} ${arr[i-1][key]} ${c} ${arr[i][key]} ${arr[i].x} ${arr[i][key]}`
+    }
+    return s
+  }
+
+  // ── Fases ─────────────────────────────────────────────────────────────────
+  const phases = [
+    { id:'f1', label:'F1 BASE',  start:'2026-06-07', end:'2026-06-28', bg:'rgba(239,68,68,.1)',   border:'#ef4444', col:'#f87171', focus:'Adaptación · Volumen',    tss:'~250–420/sem', obj:'Construir base aeróbica y fuerza de piernas hiking', icon:'🏗️' },
+    { id:'f2', label:'F2 CARGA', start:'2026-06-29', end:'2026-07-12', bg:'rgba(234,179,8,.1)',   border:'#f59e0b', col:'#fbbf24', focus:'Explosividad · Intensidad',tss:'~440–470/sem', obj:'Fuerza máxima y potencia cardiovascular', icon:'⚡' },
+    { id:'f3', label:'F3 TAPER', start:'2026-07-13', end:'2026-07-26', bg:'rgba(96,165,250,.11)', border:'#3b82f6', col:'#93c5fd', focus:'Especificidad · Descarga', tss:'~150–260/sem', obj:'Llegar fresco manteniendo adaptaciones', icon:'📉' },
+    { id:'f4', label:'F4 PRE',   start:'2026-07-27', end:'2026-07-31', bg:'rgba(167,139,250,.1)',  border:'#8b5cf6', col:'#c4b5fd', focus:'Llegada en Pico',         tss:'~85/sem',      obj:'Activación mínima, cuerpo 100% listo', icon:'🎯' },
+    { id:'cac',label:'🏁 CAC',  start:'2026-08-01', end:'2026-08-08', bg:'rgba(249,115,22,.14)', border:'#f97316', col:'#fb923c', focus:'Competencia ILCA 7',       tss:'Regatas',      obj:'Pico de forma · TSB +25 · CTL 35', icon:'🏆' },
+  ]
+  phases.forEach(ph => {
+    ph.x1 = dx(dayOf(ph.start))
+    ph.x2 = dx(dayOf(ph.end))
+    ph.w  = ph.x2 - ph.x1
+    ph.cx = (ph.x1 + ph.x2) / 2
+  })
+
+  // ── Hoy ──────────────────────────────────────────────────────────────────
+  const now  = new Date()
+  const todayStr = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}`
+  const todayDay = dayOf(todayStr)
+  const todayX   = (todayDay >= 0 && todayDay <= 62) ? dx(todayDay) : null
+
+  const tsbZeroY = tsbY(0)
+  const ctl45Y   = ctlY(45)   // línea objetivo pico CTL
+
+  // ── TSS barras semanales ──────────────────────────────────────────────────
+  const weekBars = [
+    { start:'2026-06-08', end:'2026-06-14', tss: 250 },
+    { start:'2026-06-15', end:'2026-06-21', tss: 360 },
+    { start:'2026-06-22', end:'2026-06-28', tss: 420 },
+    { start:'2026-06-29', end:'2026-07-05', tss: 440 },
+    { start:'2026-07-06', end:'2026-07-12', tss: 470 },
+    { start:'2026-07-13', end:'2026-07-19', tss: 260 },
+    { start:'2026-07-20', end:'2026-07-26', tss: 150 },
+    { start:'2026-07-27', end:'2026-08-02', tss: 85  },
+    { start:'2026-08-03', end:'2026-08-08', tss: 40  },
+  ]
+  const maxTss = 500
+  weekBars.forEach(b => {
+    b.x1 = dx(dayOf(b.start))
+    b.x2 = dx(dayOf(b.end))
+    b.bh = (b.tss / maxTss) * 26   // bar height max 26px
+  })
+
+  // ══ BUILD SVG ══════════════════════════════════════════════════════════════
+  let svg = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="ptlCtlFill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#60a5fa" stop-opacity=".28"/>
+    <stop offset="100%" stop-color="#60a5fa" stop-opacity=".01"/>
+  </linearGradient>
+  <linearGradient id="ptlTsbFill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#22c55e" stop-opacity=".22"/>
+    <stop offset="100%" stop-color="#22c55e" stop-opacity=".01"/>
+  </linearGradient>
+  <clipPath id="ptlClip"><rect x="${PAD.left}" y="${PAD.top}" width="${CW}" height="${CH}"/></clipPath>
+</defs>`
+
+  // Fase backgrounds
+  phases.forEach(ph => {
+    svg += `<rect x="${ph.x1}" y="${PAD.top}" width="${ph.w}" height="${CH}" fill="${ph.bg}"/>`
+    if (ph.id !== 'cac') svg += `<line x1="${ph.x2}" y1="${PAD.top - 4}" x2="${ph.x2}" y2="${PAD.top + CH}" stroke="${ph.border}" stroke-width=".7" stroke-dasharray="4,3" opacity=".55"/>`
+  })
+
+  // Grid horizontales
+  ;[0, 20, 40, 60, 80].forEach(v => {
+    const y = ctlY(v)
+    svg += `<line x1="${PAD.left}" y1="${y}" x2="${PAD.left + CW}" y2="${y}" stroke="rgba(255,255,255,.05)" stroke-width="1"/>`
+    svg += `<text x="${PAD.left - 6}" y="${y + 3.5}" fill="rgba(255,255,255,.28)" font-size="9" text-anchor="end">${v}</text>`
+  })
+
+  // Eje TSB derecha
+  ;[-40,-20,0,20,40].forEach(v => {
+    const y  = tsbY(v)
+    const cl = v > 0 ? '#22c55e' : v < 0 ? '#ef4444' : 'rgba(255,255,255,.3)'
+    svg += `<text x="${PAD.left + CW + 7}" y="${y + 3.5}" fill="${cl}" font-size="9" opacity=".7">${v > 0 ? '+' : ''}${v}</text>`
+  })
+
+  // Línea cero TSB
+  svg += `<line x1="${PAD.left}" y1="${tsbZeroY}" x2="${PAD.left + CW}" y2="${tsbZeroY}" stroke="rgba(255,255,255,.18)" stroke-width=".8" stroke-dasharray="3,3"/>`
+
+  // Línea objetivo CTL 45
+  svg += `<line x1="${dx(dayOf('2026-07-06'))}" y1="${ctl45Y}" x2="${dx(dayOf('2026-07-12'))}" y2="${ctl45Y}" stroke="#fbbf24" stroke-width=".8" stroke-dasharray="2,3" opacity=".45"/>`
+  svg += `<text x="${dx(dayOf('2026-07-09'))}" y="${ctl45Y - 5}" fill="#fbbf24" font-size="8" text-anchor="middle" opacity=".6">CTL objetivo 45</text>`
+
+  // TSS barras (fondo, muy suaves)
+  weekBars.forEach(b => {
+    const barY = PAD.top + CH - b.bh
+    svg += `<rect x="${b.x1 + 2}" y="${barY}" width="${b.x2 - b.x1 - 4}" height="${b.bh}" fill="rgba(167,139,250,.15)" rx="2"/>`
+    if (b.tss >= 300) svg += `<text x="${(b.x1 + b.x2) / 2}" y="${barY - 2}" fill="rgba(167,139,250,.5)" font-size="8" text-anchor="middle">${b.tss}</text>`
+  })
+
+  // ATL area (relleno debajo)
+  const atlFill = bezier(pts, 'yA') + ` L ${pts[pts.length-1].x} ${PAD.top + CH} L ${pts[0].x} ${PAD.top + CH} Z`
+  svg += `<path d="${atlFill}" fill="rgba(251,146,60,.07)" clip-path="url(#ptlClip)"/>`
+
+  // CTL relleno
+  const ctlFill = bezier(pts, 'yC') + ` L ${pts[pts.length-1].x} ${PAD.top + CH} L ${pts[0].x} ${PAD.top + CH} Z`
+  svg += `<path d="${ctlFill}" fill="url(#ptlCtlFill)" clip-path="url(#ptlClip)"/>`
+
+  // TSB fill positivo
+  const tsbPath = bezier(pts, 'yT')
+  svg += `<path d="${tsbPath} L ${pts[pts.length-1].x} ${tsbZeroY} L ${pts[0].x} ${tsbZeroY} Z" fill="url(#ptlTsbFill)" clip-path="url(#ptlClip)"/>`
+
+  // ATL línea punteada
+  svg += `<path d="${bezier(pts, 'yA')}" fill="none" stroke="#fb923c" stroke-width="1.5" stroke-dasharray="5,3" opacity=".6" clip-path="url(#ptlClip)"/>`
+
+  // TSB línea
+  svg += `<path d="${tsbPath}" fill="none" stroke="#22c55e" stroke-width="2" opacity=".9" clip-path="url(#ptlClip)"/>`
+
+  // CTL línea principal
+  svg += `<path d="${bezier(pts, 'yC')}" fill="none" stroke="#60a5fa" stroke-width="2.8" clip-path="url(#ptlClip)"/>`
+
+  // Hoy marker
+  if (todayX) {
+    svg += `<line x1="${todayX}" y1="${PAD.top - 6}" x2="${todayX}" y2="${PAD.top + CH}" stroke="#4f8ef7" stroke-width="1.5" stroke-dasharray="3,3" opacity=".9"/>`
+    svg += `<rect x="${todayX - 14}" y="${PAD.top - 20}" width="28" height="14" rx="4" fill="rgba(79,142,247,.2)"/>`
+    svg += `<text x="${todayX}" y="${PAD.top - 10}" fill="#60a5fa" font-size="8.5" text-anchor="middle" font-weight="700">HOY</text>`
+  }
+
+  // Pico forma (Aug 1) marker
+  const peakX = dx(dayOf('2026-08-01'))
+  svg += `<line x1="${peakX}" y1="${PAD.top}" x2="${peakX}" y2="${PAD.top + CH}" stroke="#f97316" stroke-width="1.5" opacity=".5"/>`
+  svg += `<circle cx="${peakX}" cy="${tsbY(24)}" r="5" fill="#f97316" opacity=".9"/>`
+  svg += `<text x="${peakX + 7}" y="${tsbY(24) + 4}" fill="#f97316" font-size="9" font-weight="800">PICO +24</text>`
+
+  // Puntos CTL key
+  pts.forEach((p, i) => {
+    if (i === 0 || i === pts.length - 1 || p.ctl >= 38) {
+      svg += `<circle cx="${p.x}" cy="${p.yC}" r="${i === 6 ? 5 : 3.5}" fill="${i === 6 ? '#fbbf24' : '#60a5fa'}" stroke="var(--bg2,#151525)" stroke-width="1.8"/>`
+      if (i === 6) svg += `<text x="${p.x}" y="${p.yC - 8}" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="800">MAX ${p.ctl}</text>`
+    }
+  })
+
+  // Ejes
+  svg += `<line x1="${PAD.left}" y1="${PAD.top}" x2="${PAD.left}" y2="${PAD.top + CH}" stroke="rgba(255,255,255,.15)" stroke-width="1"/>`
+  svg += `<line x1="${PAD.left}" y1="${PAD.top + CH}" x2="${PAD.left + CW}" y2="${PAD.top + CH}" stroke="rgba(255,255,255,.15)" stroke-width="1"/>`
+
+  // Labels de fase (abajo)
+  phases.forEach(ph => {
+    svg += `<text x="${ph.cx}" y="${PAD.top + CH + 14}" fill="${ph.col}" font-size="9.5" text-anchor="middle" font-weight="800">${ph.label}</text>`
+    svg += `<text x="${ph.cx}" y="${PAD.top + CH + 26}" fill="${ph.col}" font-size="8" text-anchor="middle" opacity=".65">${ph.focus}</text>`
+    svg += `<text x="${ph.cx}" y="${PAD.top + CH + 37}" fill="${ph.col}" font-size="7.5" text-anchor="middle" opacity=".45">${ph.tss}</text>`
+  })
+
+  // Label ejes
+  svg += `<text x="${PAD.left - 38}" y="${PAD.top + CH / 2}" fill="rgba(255,255,255,.25)" font-size="8.5" text-anchor="middle" transform="rotate(-90,${PAD.left-38},${PAD.top+CH/2})">CTL / ATL</text>`
+  svg += `<text x="${PAD.left + CW + 48}" y="${PAD.top + CH / 2}" fill="rgba(34,197,94,.3)" font-size="8.5" text-anchor="middle" transform="rotate(90,${PAD.left+CW+48},${PAD.top+CH/2})">FORMA TSB</text>`
+
+  svg += `</svg>`
+  wrap.innerHTML = svg
+
+  // ── KPI boxes ────────────────────────────────────────────────────────────
+  const dias = Math.max(0, Math.round((new Date('2026-08-01') - new Date()) / 86400000))
+  kpisEl.innerHTML = `
+    <div class="ptl-kpi"><div class="ptl-kpi-val" style="color:#60a5fa">23.8</div><div class="ptl-kpi-lbl">CTL Actual</div><div class="ptl-kpi-sub">Fitness hoy</div></div>
+    <div class="ptl-kpi"><div class="ptl-kpi-val" style="color:#fbbf24">~45</div><div class="ptl-kpi-lbl">CTL Pico</div><div class="ptl-kpi-sub">S28 · Jul 12</div></div>
+    <div class="ptl-kpi"><div class="ptl-kpi-val" style="color:#22c55e">+24</div><div class="ptl-kpi-lbl">Forma CAC</div><div class="ptl-kpi-sub">TSB esperado</div></div>
+    <div class="ptl-kpi"><div class="ptl-kpi-val" style="color:#fb923c">${dias}</div><div class="ptl-kpi-lbl">Días a CAC</div><div class="ptl-kpi-sub">Ago 1 · Inicio</div></div>`
+
+  // ── Phase detail cards ────────────────────────────────────────────────────
+  phasesEl.innerHTML = phases.map(ph => `
+    <div class="ptl-phase-card" style="background:${ph.bg};border-color:${ph.border}20">
+      <div class="ptl-phase-name" style="color:${ph.col}">${ph.icon} ${ph.label}</div>
+      <div class="ptl-phase-focus" style="color:${ph.col}">${ph.focus}</div>
+      <div class="ptl-phase-stats" style="color:${ph.col}">${ph.obj}<br>${ph.tss}</div>
+    </div>`).join('')
+}
+
 //  HISTORIAL — GRÁFICO TENDENCIA TSS + RECOVERY
 // ══════════════════════════════════════════════════════════════════════════════
 
