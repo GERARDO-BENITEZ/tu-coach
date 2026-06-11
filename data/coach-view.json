@@ -246,11 +246,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-11",
-      "name": "🔵 Ski Ergometer Z2 + Core 45'",
-      "type": "Cardio Máquina",
+      "name": "🏃 Carrera Z2 — J70 Nacional 40'",
+      "type": "Carrera / Movilidad",
       "duration_min": 55,
       "tss_planned": 38,
-      "coach_note": "Semana J70 — sin gym ni bici. Carrera 40min Z2 (cadencia conversacional) + 15min core en casa: plancha 3×40s, puente glúteo 3×15. Energía para las regatas.",
+      "coach_note": "J70 Nacional — sin acceso a gym. Carrera suave 40 min en Z2 al margen del venue. FC 130–145 bpm. Sesión completada fuera de rutina.",
       "segments": [
         {
           "name": "Calentamiento Ski Erg",
@@ -296,99 +296,24 @@
       "updated_at": "2026-06-11T14:54:10.451Z",
       "tss_actual": 53,
       "garmin_activity_id": 23201883258,
-      "zone": "BLUE"
+      "zone": "YELLOW"
     },
     {
       "id": "263cdf36-4407-4f9d-9304-cec8f2e493c1",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-12",
-      "name": "🔴 DÍA A — Fuerza Piernas Hiking",
-      "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 65,
-      "coach_note": "SEMANA 1 | Adaptación 🟡 | Primer DÍA A. Cargas ligeras — aprende los movimientos. Tempo 3s en bajada. Objetivo: activar cadena posterior sin sobrecargar.",
+      "name": "🏃 Carrera Z2 — J70 Día 2 35'",
+      "type": "Carrera / Movilidad",
+      "duration_min": 35,
+      "tss_planned": 40,
+      "coach_note": "J70 Nacional día 2 — sin gym. Carrera suave 35 min Z2 cerca del venue. Sin picos de FC. Mantén 130–145 bpm. Cuerpo descansado para el evento.",
       "segments": [
         {
-          "exercise": "Calentamiento articular",
-          "sets": "1",
-          "reps": "10min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Peso Muerto Rumano con Barra (RDL)",
-          "sets": "4",
-          "reps": "12",
-          "logged_kg": 60,
-          "note": "Tempo 3-0-1 (3s bajada lenta). 65% 1RM. Espalda neutra, cadera hacia atrás."
-        },
-        {
-          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
-          "sets": "4",
-          "reps": "75s / 12 reps",
-          "logged_kg": 15,
-          "note": "Silla 75s — PROGRESIÓN desde 60s semana anterior. Pico de isometría."
-        },
-        {
-          "exercise": "Desplantes Búlgaros con Mancuernas",
-          "sets": "3",
-          "reps": "10/pierna",
-          "logged_kg": 20,
-          "note": "Pie trasero elevado en banco. Rodilla delantera alineada con pie."
-        },
-        {
-          "exercise": "Hamstring Curls en Fitball",
-          "sets": "3",
-          "reps": "12",
-          "note": "Cadena posterior. Controlado. Pelvis neutra todo el recorrido."
-        },
-        {
-          "exercise": "Enfriamiento + Movilidad",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
-      "zone": "RED",
-      "week_label": "S1 · 🟡 Adaptación",
-      "phase": "F1"
-    },
-    {
-      "id": "806092fd-d9f4-4354-8fee-171bb3c8db62",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-06-13",
-      "name": "🟡 Ciclismo Z2 — Base Aeróbica 55'",
-      "type": "Ciclismo",
-      "duration_min": 55,
-      "tss_planned": 42,
-      "coach_note": "S24 F1 · 🟡 MODERADA. Bici estática 55 min en Z2. Mantén FC 130–145 bpm. Cadencia 85–95 rpm. No hay picos de FC. Construye base aeróbica.",
-      "segments": [
-        {
-          "name": "Calentamiento bici",
-          "duration": "5 min",
-          "zone": "Z1"
-        },
-        {
-          "name": "Ciclismo Z2 Sostenido",
-          "duration": "45 min",
+          "name": "Carrera Z2 suave",
+          "duration": "35 min",
           "zone": "Z2",
           "reps": "FC 130–145 bpm"
-        },
-        {
-          "name": "Enfriamiento + Movilidad",
-          "duration": "5 min",
-          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -402,6 +327,38 @@
       "created_at": "2026-06-09T00:35:31.252112Z",
       "updated_at": "2026-06-09T00:35:31.252112Z",
       "zone": "YELLOW",
+      "week_label": "S1 · 🟡 Adaptación",
+      "phase": "F1"
+    },
+    {
+      "id": "806092fd-d9f4-4354-8fee-171bb3c8db62",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-06-13",
+      "name": "🔵 Descanso — Viaje de Regreso J70",
+      "type": "Core / Movilidad",
+      "duration_min": 0,
+      "tss_planned": 0,
+      "coach_note": "Día de viaje de regreso del J70 Nacional. Sin entrenamiento. Hidratación, comida de calidad, descanso en tránsito.",
+      "segments": [
+        {
+          "exercise": "Estiramientos en viaje (cuádriceps, isquios, hombros)",
+          "sets": "1",
+          "reps": "15 min",
+          "note": "En el auto/aeropuerto si hay oportunidad."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
       "week_label": "S1 · 🟡 Adaptación",
       "phase": "F1"
     },
@@ -451,33 +408,17 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-15",
-      "name": "🔴 Test Esfuerzo + DÍA C Core",
+      "name": "🚴 Rodillo Suave — Llegada Casa 45'",
       "type": "Ciclismo",
-      "duration_min": 80,
-      "tss_planned": 72,
-      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | Mañana: Test de esfuerzo cardio — 20min al límite para calibrar zonas reales. Tarde (misma sesión): DÍA C core base.",
+      "duration_min": 45,
+      "tss_planned": 30,
+      "coach_note": "Primer día de vuelta en casa. Rodillo suave 45 min Z1-Z2. Sin presión de ritmo. Activa piernas después del viaje. El Test de Esfuerzo se pospone a la siguiente semana.",
       "segments": [
         {
-          "name": "Calentamiento Z1-Z2",
-          "duration": "10min",
-          "zone": "Z1-Z2"
-        },
-        {
-          "name": "Test Esfuerzo: 20min ritmo máximo sostenible",
-          "duration": "20min",
-          "zone": "Z3-Z4",
-          "reps": "Mide FC promedio y máxima. Registra en Garmin."
-        },
-        {
-          "name": "DÍA C — Core (tarde / misma sesión)",
-          "duration": "30min",
-          "zone": "Z2",
-          "reps": "Body Saw 4×45s + Pallof 3×12 + V-Ups 4×20"
-        },
-        {
-          "name": "Enfriamiento",
-          "duration": "8min",
-          "zone": "Z1"
+          "name": "Rodillo Z1-Z2 suave",
+          "duration": "45 min",
+          "zone": "Z1-Z2",
+          "reps": "FC < 145 bpm, sin picos"
         }
       ],
       "status": "PENDING",
@@ -490,7 +431,7 @@
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
       "updated_at": "2026-06-09T00:35:31.252112Z",
-      "zone": "RED",
+      "zone": "BLUE",
       "week_label": "S2 · 🔴 Bloque Duro",
       "phase": "F1"
     },
@@ -1113,7 +1054,25 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Foam Rolling — cadenas posterior y IT band",
+          "sets": "1",
+          "reps": "10 min",
+          "note": "Lento, 2 min por grupo muscular."
+        },
+        {
+          "exercise": "Estiramientos estáticos generales",
+          "sets": "1",
+          "reps": "10 min"
+        },
+        {
+          "exercise": "Check HRV matutino + nota de sensaciones",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "Registra en app antes de levantarte."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-06-28",
@@ -1121,7 +1080,7 @@
       "type": "Core / Movilidad",
       "duration_min": 15,
       "tss_planned": 8,
-      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA AZUL ABSOLUTO. Nada de ejercicio. Come bien, duerme, hidratación. El cuerpo construye fuerza en el descanso.",
+      "coach_note": "S26 F1 · 🔵 DESCANSO ABSOLUTO. Sin entreno. Foam rolling + estiramientos pasivos 20 min. Dormir 9h. HRV debe estar subiendo esta noche.",
       "zone": "BLUE",
       "week_label": "S3 · 🔴 Pico Volumen",
       "phase": "F1"
@@ -1445,7 +1404,25 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Foam Rolling — cadenas posterior y IT band",
+          "sets": "1",
+          "reps": "10 min",
+          "note": "Lento, 2 min por grupo muscular."
+        },
+        {
+          "exercise": "Estiramientos estáticos generales",
+          "sets": "1",
+          "reps": "10 min"
+        },
+        {
+          "exercise": "Check HRV matutino + nota de sensaciones",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "Registra en app antes de levantarte."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-05",
@@ -1453,7 +1430,7 @@
       "type": "Core / Movilidad",
       "duration_min": 20,
       "tss_planned": 10,
-      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA AZUL. El bloque más pesado termina aquí. Descanso + sueño de calidad.",
+      "coach_note": "S27 F2 · 🔵 DESCANSO ABSOLUTO. Después de semana de explosividad. Foam rolling piernas y espalda. Hidratación máxima. HRV objetivo: > 60ms.",
       "zone": "BLUE",
       "week_label": "S4 · 🔴 Fuerza Explosiva",
       "phase": "F2"
@@ -2067,8 +2044,26 @@
       "type": "Core / Movilidad",
       "duration_min": 20,
       "tss_planned": 12,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA AZUL. Descanso total. El trabajo duro ya está hecho. Ahora llenas el tanque.",
-      "segments": [],
+      "coach_note": "S29 F3 · 🔵 DESCANSO PRE-TAPER. Última semana de carga terminó. Recuperación completa. HRV debe estar por encima del baseline.",
+      "segments": [
+        {
+          "exercise": "Foam Rolling — cadenas posterior y IT band",
+          "sets": "1",
+          "reps": "10 min",
+          "note": "Lento, 2 min por grupo muscular."
+        },
+        {
+          "exercise": "Estiramientos estáticos generales",
+          "sets": "1",
+          "reps": "10 min"
+        },
+        {
+          "exercise": "Check HRV matutino + nota de sensaciones",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "Registra en app antes de levantarte."
+        }
+      ],
       "status": "PENDING",
       "rpe": null,
       "athlete_note": null,
@@ -2290,7 +2285,25 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Foam Rolling — cadenas posterior y IT band",
+          "sets": "1",
+          "reps": "10 min",
+          "note": "Lento, 2 min por grupo muscular."
+        },
+        {
+          "exercise": "Estiramientos estáticos generales",
+          "sets": "1",
+          "reps": "10 min"
+        },
+        {
+          "exercise": "Check HRV matutino + nota de sensaciones",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "Registra en app antes de levantarte."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-26",
@@ -2298,7 +2311,7 @@
       "type": "Core / Movilidad",
       "duration_min": 30,
       "tss_planned": 8,
-      "coach_note": "S30 F3 · 🔵 BAJA. Domingo = descanso completo. Sin entrenamiento. Hidratación, sueño 9h. Prepara cuerpo y mente para CAC.",
+      "coach_note": "S30 F3 · 🔵 DESCANSO TOTAL. Domingo antes de semana CAC. Sin ningún esfuerzo. Sueño 9h, hidratación, mental tranquilo.",
       "zone": "BLUE"
     },
     {
@@ -2306,7 +2319,31 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Movilidad de cadera y tobillo",
+          "sets": "2",
+          "reps": "10 rep c/u",
+          "note": "90/90 hip stretch, rotaciones tobillo. Muy suave."
+        },
+        {
+          "exercise": "Squat explosivo (sin carga)",
+          "sets": "3",
+          "reps": "10",
+          "note": "Solo peso corporal. Activa SNC sin fatiga."
+        },
+        {
+          "exercise": "Pull-up (o Lat Pulldown ligero)",
+          "sets": "3",
+          "reps": "5",
+          "note": "Muy suave, sin llegar al fallo. Solo activar dorsales."
+        },
+        {
+          "exercise": "Foam rolling espalda alta y hombros",
+          "sets": "1",
+          "reps": "8 min"
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-27",
@@ -2314,7 +2351,7 @@
       "type": "Core / Movilidad",
       "duration_min": 90,
       "tss_planned": 35,
-      "coach_note": "S31 F3 · 🔵 PRE-COMP. Activación nerviosa ligera: 15 min movilidad + 10 squat explosivo + 5 pull-up. Nada más. Cuerpo fresco para Day 1.",
+      "coach_note": "S31 F3 · 🔵 ACTIVACIÓN LIGERA PRE-COMP. 20–25 min máximo. Activa SNC con movimientos explosivos pero sin fatiga. Cuerpo fresco para Day 1 CAC.",
       "zone": "BLUE"
     },
     {
@@ -2322,7 +2359,25 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Body Saw TRX / Deslizadores",
+          "sets": "3",
+          "reps": "10",
+          "note": "Control total. Sin apresurar."
+        },
+        {
+          "exercise": "Press Pallof (anti-rotación)",
+          "sets": "3",
+          "reps": "10/lado",
+          "note": "Banda ligera. Mantén posición 1s."
+        },
+        {
+          "exercise": "Estiramientos activos — cadena posterior",
+          "sets": "1",
+          "reps": "10 min"
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.183Z",
       "updated_at": "2026-06-09T20:27:17.183Z",
       "date": "2026-07-28",
@@ -2330,14 +2385,33 @@
       "type": "Core / Movilidad",
       "duration_min": 35,
       "tss_planned": 12,
-      "coach_note": "Core ligero: plancha 3×30s, puente glúteo, rotación torácica. Stretching 20min. Duerme 8-9h esta noche."
+      "coach_note": "S31 F3 · 🔵 CORE ACTIVACIÓN. 25 min. Core anti-rotación suave + estiramientos. Sin impacto. Preparar estabilidad lumbar para el esfuerzo del evento."
     },
     {
       "id": "93a24bb2-62ef-4077-9fe4-82e1e48a8b77",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Movilidad completa — cadera, hombro, tobillo, columna",
+          "sets": "1",
+          "reps": "15 min",
+          "note": "Cat-cow, hip circles, shoulder CARs. Muy suave."
+        },
+        {
+          "exercise": "Activación SNC — saltos en el lugar (10 rep)",
+          "sets": "3",
+          "reps": "10",
+          "note": "Solo despertar piernas. Sin fatiga."
+        },
+        {
+          "exercise": "Respiración diafragmática + visualización",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "Cierra ojos, 4-4-4-4 box breathing."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.183Z",
       "updated_at": "2026-06-09T20:27:17.183Z",
       "date": "2026-07-29",
@@ -2345,7 +2419,7 @@
       "type": "Core / Movilidad",
       "duration_min": 60,
       "tss_planned": 25,
-      "coach_note": "S31 F3 · 🔵 PRE-COMP. Solo estiramientos y activación SNC suave. 20 min máximo. Cuerpo 100% recuperado para Day 1.",
+      "coach_note": "S31 F3 · 🔵 MOVILIDAD + ACTIVACIÓN MENTAL. Mañana Day 1. Solo mover el cuerpo 20 min y preparar la mente. Sin absolutamente ninguna fatiga.",
       "zone": "BLUE"
     },
     {
@@ -2353,7 +2427,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Foam Rolling piernas completas",
+          "sets": "1",
+          "reps": "15 min",
+          "note": "Post-Day 1. Cuádriceps, isquios, gemelos. Presión media."
+        },
+        {
+          "exercise": "Baño frío / Crioterapia (si disponible)",
+          "sets": "1",
+          "reps": "10 min",
+          "note": "12–15°C. Recuperación muscular."
+        },
+        {
+          "exercise": "Comida de recuperación + hidratación",
+          "sets": "1",
+          "reps": "Todo el día",
+          "note": "2g/kg proteína, carbohidratos de calidad. Duerme 9h."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.183Z",
       "updated_at": "2026-06-09T20:27:17.183Z",
       "date": "2026-07-30",
@@ -2361,14 +2454,33 @@
       "type": "Core / Movilidad",
       "duration_min": 20,
       "tss_planned": 5,
-      "coach_note": "Descanso. Solo 15min movilidad articular. Inspecciona todo el equipo de regata. Come bien, hidratación máxima."
+      "coach_note": "S31 F3 · 🔵 RECUPERACIÓN POST-DAY 1. Sin entrenamiento. Solo recuperar. Foam rolling + frío + nutrición. Acuéstate temprano."
     },
     {
       "id": "2e2dad2f-e07c-4447-80d9-7a1b9cb83e99",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Movilidad articular general (10 min)",
+          "sets": "1",
+          "reps": "10 min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Squat explosivo sin carga",
+          "sets": "2",
+          "reps": "6",
+          "note": "Mínimo posible. Solo activar."
+        },
+        {
+          "exercise": "Box breathing + visualización race plan",
+          "sets": "1",
+          "reps": "5 min",
+          "note": "4-4-4-4. Repasa tu estrategia."
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.183Z",
       "updated_at": "2026-06-09T20:27:17.183Z",
       "date": "2026-07-31",
@@ -2376,7 +2488,7 @@
       "type": "Core / Movilidad",
       "duration_min": 25,
       "tss_planned": 8,
-      "coach_note": "Solo 15min movilidad + 10min activación dinámica (saltos, rotaciones). Nada más. Parte meteorológico, descansa la mente."
+      "coach_note": "S31 F3 · 🔵 ACTIVACIÓN MÍNIMA PRE-REGATA FINAL. 15 min máximo. Activa, visualiza, confía en el trabajo hecho. Cuerpo = 100%."
     },
     {
       "id": "d6fbcf95-618b-4a08-aac9-02e1eb525c6d",
