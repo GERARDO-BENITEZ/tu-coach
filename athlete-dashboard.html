@@ -235,6 +235,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 .pill-done{opacity:.6}
 .pill-done::after{content:" ✓"}
 .pill-race{background:rgba(239,68,68,.2);color:#f87171;border-color:var(--red);font-weight:800}
+/* ── ZONE-BASED PILL COLORS (coach plan 🔴🟡🔵) ── */
+.pill-zone-red{background:rgba(239,68,68,.22);color:#fca5a5;border-color:#ef4444;font-weight:700}
+.pill-zone-yellow{background:rgba(234,179,8,.2);color:#fcd34d;border-color:#f59e0b;font-weight:700}
+.pill-zone-blue{background:rgba(96,165,250,.2);color:#93c5fd;border-color:#3b82f6;font-weight:700}
+/* ── WEEK LABEL ENHANCEMENTS ── */
+.wn-phase{font-size:7px;font-weight:800;letter-spacing:.2px;border-radius:3px;padding:1px 4px;margin-top:3px;text-align:center;width:100%}
+.wn-phase.red{background:rgba(239,68,68,.18);color:#f87171}
+.wn-phase.yellow{background:rgba(234,179,8,.15);color:#fbbf24}
+.wn-phase.blue{background:rgba(96,165,250,.15);color:#93c5fd}
+.wn-focus{font-size:7px;color:var(--text3);margin-top:2px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:38px;line-height:1.2}
 .day-tss{height:3px;border-radius:2px;margin-top:4px}
 
 /* ── TWO COLUMN ── */
@@ -635,6 +645,19 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
 .hst-stat{background:var(--bg2);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px 18px}
 .hst-stat-val{font-size:26px;font-weight:900;color:var(--accent);margin-bottom:3px}
 .hst-stat-lbl{font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+/* ── HISTORIAL TENDENCIA ── */
+.hst-trend-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:20px}
+.hst-trend-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.hst-trend-title{font-size:12px;font-weight:800;letter-spacing:-.2px}
+.hst-trend-legend{display:flex;gap:14px;align-items:center;font-size:10px;color:var(--text3)}
+.hst-trend-legend .leg-bar{display:inline-block;width:10px;height:8px;background:var(--accent);border-radius:1px;opacity:.85;margin-right:4px;vertical-align:middle}
+.hst-trend-legend .leg-dash{display:inline-block;width:18px;border-top:2px dashed rgba(251,146,60,.85);margin-right:4px;vertical-align:middle}
+.hst-trend-legend .leg-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:4px;vertical-align:middle}
+.hst-trend-wrap{position:relative;cursor:crosshair}
+.hst-trend-svg{width:100%;display:block}
+.hst-trend-tt{position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;font-size:11px;pointer-events:none;opacity:0;transition:opacity .15s;z-index:10;min-width:150px;white-space:nowrap}
+.hst-trend-tt.visible{opacity:1}
 
 /* ── HISTORIAL CALENDARIO ── */
 .hst-view-toggle{display:flex;gap:4px;background:var(--bg2);border-radius:8px;padding:3px;border:1px solid rgba(255,255,255,.07)}
@@ -2143,6 +2166,14 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
       </div>
     </div>
 
+    <!-- LEYENDA DE ZONAS -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+      <span style="font-size:10px;font-weight:700;color:var(--text3);margin-right:4px">CÓDIGO DE CARGA:</span>
+      <span style="display:flex;align-items:center;gap:5px;background:rgba(239,68,68,.18);border:1px solid #ef4444;border-radius:20px;padding:4px 10px;font-size:10px;font-weight:800;color:#fca5a5">🔴 ALTA — Destrucción / Acumulación</span>
+      <span style="display:flex;align-items:center;gap:5px;background:rgba(234,179,8,.18);border:1px solid #f59e0b;border-radius:20px;padding:4px 10px;font-size:10px;font-weight:800;color:#fcd34d">🟡 MODERADA — Técnica / Potencia</span>
+      <span style="display:flex;align-items:center;gap:5px;background:rgba(96,165,250,.18);border:1px solid #3b82f6;border-radius:20px;padding:4px 10px;font-size:10px;font-weight:800;color:#93c5fd">🔵 BAJA — Descanso / HRV ↑</span>
+    </div>
+
     <!-- VISTA SEMANAL CON SEMANAS / TSS -->
     <div class="calendar-section" style="margin-bottom:28px">
       <div class="cal-header">
@@ -2192,78 +2223,78 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
         <div class="cal-day past" data-date="2026-06-06"><div class="day-num">6 Sáb</div><div class="workout-pill pill-rest pill-done">Descanso</div></div>
         <div class="cal-day past" data-date="2026-06-07"><div class="day-num">7 Dom</div><div class="workout-pill pill-strength pill-done">Core + movilidad</div></div>
 
-        <!-- S24 → Jun 8–14 · F1 BASE -->
-        <div class="cal-week-num"><div class="wn-label">S24</div><div class="wn-val">—</div></div>
-        <div class="cal-day past" data-date="2026-06-08"><div class="day-num">8 Lun</div><div class="workout-pill pill-strength pill-done">Fuerza + Activación</div><div class="day-tss" style="background:var(--red);width:38%"></div></div>
-        <div class="cal-day today" data-date="2026-06-09"><div class="day-num">9 Mar ← HOY</div><div class="workout-pill pill-bike">Ciclismo 50'</div></div>
-        <div class="cal-day" data-date="2026-06-10"><div class="day-num">10</div><div class="workout-pill pill-strength">Fuerza + core</div></div>
-        <div class="cal-day" data-date="2026-06-11" style="outline:1px solid rgba(6,182,212,.4);outline-offset:-2px"><div class="day-num" style="color:#22d3ee">11 ⛵ J70</div><div class="workout-pill" style="background:rgba(6,182,212,.15);color:#22d3ee;border-color:rgba(6,182,212,.4)">Carrera Z2</div></div>
-        <div class="cal-day" data-date="2026-06-12" style="outline:1px solid rgba(6,182,212,.4);outline-offset:-2px"><div class="day-num" style="color:#22d3ee">12 ⛵ J70</div><div class="workout-pill" style="background:rgba(6,182,212,.15);color:#22d3ee;border-color:rgba(6,182,212,.4)">Carrera</div></div>
-        <div class="cal-day" data-date="2026-06-13" style="outline:1px solid rgba(6,182,212,.4);outline-offset:-2px"><div class="day-num" style="color:#22d3ee">13 ⛵ J70</div><div class="workout-pill" style="background:rgba(6,182,212,.15);color:#22d3ee;border-color:rgba(6,182,212,.4)">Carrera 55'</div></div>
-        <div class="cal-day" data-date="2026-06-14" style="outline:1px solid rgba(6,182,212,.4);outline-offset:-2px"><div class="day-num" style="color:#22d3ee">14 ⛵ J70</div><div class="workout-pill" style="background:rgba(6,182,212,.15);color:#22d3ee;border-color:rgba(6,182,212,.4)">Movilidad</div></div>
+        <!-- S24 → Jun 8–14 · F1 · 🟡 Adaptación -->
+        <div class="cal-week-num"><div class="wn-label">S24</div><div class="wn-phase yellow">🟡 F1</div><div class="wn-focus">Adapt.</div></div>
+        <div class="cal-day past" data-date="2026-06-08"><div class="day-num">8 Lun</div><div class="workout-pill pill-zone-red pill-done">🔴 Fuerza+Act.</div><div class="day-tss" style="background:#ef4444;width:38%"></div></div>
+        <div class="cal-day past" data-date="2026-06-09"><div class="day-num">9 Mar</div><div class="workout-pill pill-zone-yellow pill-done">🟡 Ciclismo Z2</div></div>
+        <div class="cal-day past" data-date="2026-06-10"><div class="day-num">10 Mié</div><div class="workout-pill pill-zone-red">🔴 Fuerza+Core</div></div>
+        <div class="cal-day past" data-date="2026-06-11"><div class="day-num">11 Jue</div><div class="workout-pill pill-zone-yellow pill-done">🟡 Carrera Z2</div></div>
+        <div class="cal-day" data-date="2026-06-12"><div class="day-num">12 Vie</div><div class="workout-pill pill-zone-red">🔴 DÍA A</div></div>
+        <div class="cal-day" data-date="2026-06-13"><div class="day-num">13 Sáb</div><div class="workout-pill pill-zone-yellow">🟡 Cardio Z2</div></div>
+        <div class="cal-day" data-date="2026-06-14"><div class="day-num">14 Dom</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
 
-        <!-- S25 → Jun 15–21 · F1 BASE -->
-        <div class="cal-week-num"><div class="wn-label">S25</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-06-15"><div class="day-num">15</div><div class="workout-pill pill-bike">Ciclismo 60'</div></div>
-        <div class="cal-day" data-date="2026-06-16"><div class="day-num">16</div><div class="workout-pill pill-strength">Fuerza + core</div></div>
-        <div class="cal-day" data-date="2026-06-17"><div class="day-num">17</div><div class="workout-pill pill-bike">Ciclismo 60' F2</div></div>
-        <div class="cal-day" data-date="2026-06-18"><div class="day-num">18</div><div class="workout-pill pill-strength">Fuerza general</div></div>
-        <div class="cal-day" data-date="2026-06-19"><div class="day-num">19</div><div class="workout-pill pill-strength">Core + movilidad</div></div>
-        <div class="cal-day" data-date="2026-06-20"><div class="day-num">20</div><div class="workout-pill pill-bike">Cicl. 80'</div></div>
-        <div class="cal-day" data-date="2026-06-21"><div class="day-num">21</div><div class="workout-pill pill-rest">Descanso</div></div>
+        <!-- S25 → Jun 15–21 · F1 · 🔴 Bloque Duro -->
+        <div class="cal-week-num"><div class="wn-label">S25</div><div class="wn-phase red">🔴 F1</div><div class="wn-focus">Bloque Duro</div></div>
+        <div class="cal-day" data-date="2026-06-15"><div class="day-num">15 Lun</div><div class="workout-pill pill-zone-red">🔴 Test+DÍA C</div></div>
+        <div class="cal-day" data-date="2026-06-16"><div class="day-num">16 Mar</div><div class="workout-pill pill-zone-red">🔴 DÍA A</div></div>
+        <div class="cal-day" data-date="2026-06-17"><div class="day-num">17 Mié</div><div class="workout-pill pill-zone-yellow">🟡 HIIT 6×3'</div></div>
+        <div class="cal-day" data-date="2026-06-18"><div class="day-num">18 Jue</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
+        <div class="cal-day" data-date="2026-06-19"><div class="day-num">19 Vie</div><div class="workout-pill pill-zone-red">🔴 DÍA B</div></div>
+        <div class="cal-day" data-date="2026-06-20"><div class="day-num">20 Sáb</div><div class="workout-pill pill-zone-yellow">🟡 Cardio 80'</div></div>
+        <div class="cal-day" data-date="2026-06-21"><div class="day-num">21 Dom</div><div class="workout-pill pill-zone-blue">🔵 Check HRV</div></div>
 
-        <!-- S26 → Jun 22–28 · F2 CARGA -->
-        <div class="cal-week-num"><div class="wn-label">S26</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-06-22"><div class="day-num">22</div><div class="workout-pill pill-bike">Cicl. 70'</div></div>
-        <div class="cal-day" data-date="2026-06-23"><div class="day-num">23</div><div class="workout-pill pill-strength">Fuerza máxima</div></div>
-        <div class="cal-day" data-date="2026-06-24"><div class="day-num">24</div><div class="workout-pill pill-bike">Interv. 🚴 6×3'</div></div>
-        <div class="cal-day" data-date="2026-06-25"><div class="day-num">25</div><div class="workout-pill pill-strength">Fuerza + core pesado</div></div>
-        <div class="cal-day" data-date="2026-06-26"><div class="day-num">26</div><div class="workout-pill pill-bike">Ciclismo 60' Z2</div></div>
-        <div class="cal-day" data-date="2026-06-27"><div class="day-num">27</div><div class="workout-pill pill-bike">Cicl. 90'</div></div>
-        <div class="cal-day" data-date="2026-06-28"><div class="day-num">28</div><div class="workout-pill pill-rest">Descanso</div></div>
+        <!-- S26 → Jun 22–28 · F1 · 🔴 Pico de Volumen -->
+        <div class="cal-week-num"><div class="wn-label">S26</div><div class="wn-phase red">🔴 F1</div><div class="wn-focus">Pico Vol.</div></div>
+        <div class="cal-day" data-date="2026-06-22"><div class="day-num">22 Lun</div><div class="workout-pill pill-zone-red">🔴 DÍA A 75s</div></div>
+        <div class="cal-day" data-date="2026-06-23"><div class="day-num">23 Mar</div><div class="workout-pill pill-zone-yellow">🟡 Cardio Z2</div></div>
+        <div class="cal-day" data-date="2026-06-24"><div class="day-num">24 Mié</div><div class="workout-pill pill-zone-red">🔴 DÍA B+</div></div>
+        <div class="cal-day" data-date="2026-06-25"><div class="day-num">25 Jue</div><div class="workout-pill pill-zone-blue">🔵 Natación</div></div>
+        <div class="cal-day" data-date="2026-06-26"><div class="day-num">26 Vie</div><div class="workout-pill pill-zone-red">🔴 DÍA C+Metcon</div></div>
+        <div class="cal-day" data-date="2026-06-27"><div class="day-num">27 Sáb</div><div class="workout-pill pill-zone-yellow">🟡 Cardio 90'</div></div>
+        <div class="cal-day" data-date="2026-06-28"><div class="day-num">28 Dom</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
 
-        <!-- S27 → Jun 29 – Jul 5 · F2 CARGA -->
-        <div class="cal-week-num"><div class="wn-label">S27</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-06-29"><div class="day-num">29</div><div class="workout-pill pill-bike">Cicl.+Fza</div></div>
-        <div class="cal-day" data-date="2026-06-30"><div class="day-num">30</div><div class="workout-pill pill-strength">Fuerza máxima</div></div>
-        <div class="cal-day" data-date="2026-07-01"><div class="day-num">1 Jul</div><div class="workout-pill pill-bike">Interv. 🚴 Z4</div></div>
-        <div class="cal-day" data-date="2026-07-02"><div class="day-num">2</div><div class="workout-pill pill-strength">Fuerza + core</div></div>
-        <div class="cal-day" data-date="2026-07-03"><div class="day-num">3</div><div class="workout-pill pill-bike">Ciclismo 60'</div></div>
-        <div class="cal-day" data-date="2026-07-04"><div class="day-num">4</div><div class="workout-pill pill-bike">Cicl. 100'</div></div>
-        <div class="cal-day" data-date="2026-07-05"><div class="day-num">5</div><div class="workout-pill pill-rest">Descanso</div></div>
+        <!-- S27 → Jun 29 – Jul 5 · F2 · 🔴 Fuerza Explosiva -->
+        <div class="cal-week-num"><div class="wn-label">S27</div><div class="wn-phase red">🔴 F2</div><div class="wn-focus">Explosiva</div></div>
+        <div class="cal-day" data-date="2026-06-29"><div class="day-num">29 Lun</div><div class="workout-pill pill-zone-red">🔴 DÍA A Exp.</div></div>
+        <div class="cal-day" data-date="2026-06-30"><div class="day-num">30 Mar</div><div class="workout-pill pill-zone-yellow">🟡 Sprint HIIT</div></div>
+        <div class="cal-day" data-date="2026-07-01"><div class="day-num">1 Jul</div><div class="workout-pill pill-zone-red">🔴 DÍA B Pesado</div></div>
+        <div class="cal-day" data-date="2026-07-02"><div class="day-num">2 Jue</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
+        <div class="cal-day" data-date="2026-07-03"><div class="day-num">3 Vie</div><div class="workout-pill pill-zone-red">🔴 DÍA C+Plyo</div></div>
+        <div class="cal-day" data-date="2026-07-04"><div class="day-num">4 Sáb</div><div class="workout-pill pill-zone-yellow">🟡 Cardio Z3</div></div>
+        <div class="cal-day" data-date="2026-07-05"><div class="day-num">5 Dom</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
 
-        <!-- S28 → Jul 6–12 · F3 PICO -->
-        <div class="cal-week-num"><div class="wn-label">S28</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-07-06"><div class="day-num">6</div><div class="workout-pill pill-bike">Cicl.+Fza</div></div>
-        <div class="cal-day" data-date="2026-07-07"><div class="day-num">7</div><div class="workout-pill pill-strength">Fuerza pico 4x</div></div>
-        <div class="cal-day" data-date="2026-07-08"><div class="day-num">8</div><div class="workout-pill pill-bike">Interv. 🚴 intensos</div></div>
-        <div class="cal-day" data-date="2026-07-09"><div class="day-num">9</div><div class="workout-pill pill-strength">Fuerza pico + core</div></div>
-        <div class="cal-day" data-date="2026-07-10"><div class="day-num">10</div><div class="workout-pill pill-bike">Ciclismo 60' Z3</div></div>
-        <div class="cal-day" data-date="2026-07-11"><div class="day-num">11</div><div class="workout-pill pill-bike">Cicl.+Fza</div></div>
-        <div class="cal-day" data-date="2026-07-12"><div class="day-num">12</div><div class="workout-pill pill-rest">Descanso total</div></div>
+        <!-- S28 → Jul 6–12 · F2 · 🔴 Pico de Intensidad -->
+        <div class="cal-week-num"><div class="wn-label">S28</div><div class="wn-phase red">🔴 F2</div><div class="wn-focus">Pico Int.</div></div>
+        <div class="cal-day" data-date="2026-07-06"><div class="day-num">6 Lun</div><div class="workout-pill pill-zone-red">🔴 A+C Comb.</div></div>
+        <div class="cal-day" data-date="2026-07-07"><div class="day-num">7 Mar</div><div class="workout-pill pill-zone-yellow">🟡 Cardio Z2</div></div>
+        <div class="cal-day" data-date="2026-07-08"><div class="day-num">8 Mié</div><div class="workout-pill pill-zone-red">🔴 DÍA B Max</div></div>
+        <div class="cal-day" data-date="2026-07-09"><div class="day-num">9 Jue</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
+        <div class="cal-day" data-date="2026-07-10"><div class="day-num">10 Vie</div><div class="workout-pill pill-zone-red">🔴 Sim. Z4+Iso</div></div>
+        <div class="cal-day" data-date="2026-07-11"><div class="day-num">11 Sáb</div><div class="workout-pill pill-zone-red">🔴 Match Race</div></div>
+        <div class="cal-day" data-date="2026-07-12"><div class="day-num">12 Dom</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
 
-        <!-- S29 → Jul 13–19 · F3 PICO → TAPER -->
-        <div class="cal-week-num"><div class="wn-label">S29</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-07-13"><div class="day-num">13</div><div class="workout-pill pill-bike">Ciclismo 60' + movilidad</div></div>
-        <div class="cal-day" data-date="2026-07-14"><div class="day-num">14</div><div class="workout-pill pill-strength">Fuerza + core</div></div>
-        <div class="cal-day" data-date="2026-07-15"><div class="day-num">15</div><div class="workout-pill pill-bike">Interv. 🚴 Z4</div></div>
-        <div class="cal-day" data-date="2026-07-16"><div class="day-num">16</div><div class="workout-pill pill-strength">Fuerza mantenimiento</div></div>
-        <div class="cal-day" data-date="2026-07-17"><div class="day-num">17</div><div class="workout-pill pill-bike">Cicl. 45'</div></div>
-        <div class="cal-day" data-date="2026-07-18"><div class="day-num">18</div><div class="workout-pill pill-strength">Fuerza + core (último)</div></div>
-        <div class="cal-day" data-date="2026-07-19"><div class="day-num">19</div><div class="workout-pill pill-rest">Descanso total</div></div>
+        <!-- S29 → Jul 13–19 · F3 · 🟡 Tapering Descarga -->
+        <div class="cal-week-num"><div class="wn-label">S29</div><div class="wn-phase yellow">🟡 F3</div><div class="wn-focus">Tapering</div></div>
+        <div class="cal-day" data-date="2026-07-13"><div class="day-num">13 Lun</div><div class="workout-pill pill-zone-yellow">🟡 Test+Core</div></div>
+        <div class="cal-day" data-date="2026-07-14"><div class="day-num">14 Mar</div><div class="workout-pill pill-zone-yellow">🟡 DÍA A Mod.</div></div>
+        <div class="cal-day" data-date="2026-07-15"><div class="day-num">15 Mié</div><div class="workout-pill pill-zone-blue">🔵 Cardio Z2</div></div>
+        <div class="cal-day" data-date="2026-07-16"><div class="day-num">16 Jue</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
+        <div class="cal-day" data-date="2026-07-17"><div class="day-num">17 Vie</div><div class="workout-pill pill-zone-yellow">🟡 DÍA B Mod.</div></div>
+        <div class="cal-day" data-date="2026-07-18"><div class="day-num">18 Sáb</div><div class="workout-pill pill-zone-yellow">🟡 Cardio Lig.</div></div>
+        <div class="cal-day" data-date="2026-07-19"><div class="day-num">19 Dom</div><div class="workout-pill pill-zone-blue">🔵 Descanso</div></div>
 
-        <!-- S30 → Jul 20–26 · F4 TAPER + JUEGOS CAC -->
-        <div class="cal-week-num"><div class="wn-label">S30</div><div class="wn-val">—</div></div>
-        <div class="cal-day" data-date="2026-07-20"><div class="day-num">20</div><div class="workout-pill pill-bike">Cicl. 30'</div></div>
-        <div class="cal-day" data-date="2026-07-21"><div class="day-num">21</div><div class="workout-pill pill-strength">Core + movilidad</div></div>
-        <div class="cal-day" data-date="2026-07-22"><div class="day-num">22</div><div class="workout-pill pill-bike">Cicl. activ.</div></div>
-        <div class="cal-day" data-date="2026-07-23"><div class="day-num">23</div><div class="workout-pill pill-strength">Core + movilidad</div></div>
-        <div class="cal-day" data-date="2026-07-24"><div class="day-num">24</div><div class="workout-pill pill-rest">Descanso</div></div>
-        <div class="cal-day" data-date="2026-07-25"><div class="day-num">25</div><div class="workout-pill pill-rest">Movilidad</div></div>
-        <div class="cal-day" data-date="2026-07-26"><div class="day-num">26</div><div class="workout-pill pill-rest">Movilidad</div></div>
+        <!-- S30 → Jul 20–26 · F3 · 🔵 Aclimatación -->
+        <div class="cal-week-num"><div class="wn-label">S30</div><div class="wn-phase blue">🔵 F3</div><div class="wn-focus">Aclim.</div></div>
+        <div class="cal-day" data-date="2026-07-20"><div class="day-num">20 Lun</div><div class="workout-pill pill-zone-blue">🔵 Movilidad</div></div>
+        <div class="cal-day" data-date="2026-07-21"><div class="day-num">21 Mar</div><div class="workout-pill pill-zone-blue">🔵 Core+Activ.</div></div>
+        <div class="cal-day" data-date="2026-07-22"><div class="day-num">22 Mié</div><div class="workout-pill pill-zone-blue">🔵 Movilidad</div></div>
+        <div class="cal-day" data-date="2026-07-23"><div class="day-num">23 Jue</div><div class="workout-pill pill-zone-yellow">🟡 Activación SNC</div></div>
+        <div class="cal-day" data-date="2026-07-24"><div class="day-num">24 Vie</div><div class="workout-pill pill-zone-blue">🔵 Viaje</div></div>
+        <div class="cal-day" data-date="2026-07-25"><div class="day-num">25 Sáb</div><div class="workout-pill pill-zone-blue">🔵 Sede</div></div>
+        <div class="cal-day" data-date="2026-07-26"><div class="day-num">26 Dom</div><div class="workout-pill pill-zone-blue">🔵 Sede</div></div>
 
-        <!-- S31 → Jul 27–Aug 2 · F4 TAPER + CAC D1 -->
-        <div class="cal-week-num"><div class="wn-label">S31</div><div class="wn-val">—</div></div>
+        <!-- S31 → Jul 27–Aug 2 · F3 · 🔵 Pre-Regata -->
+        <div class="cal-week-num"><div class="wn-label">S31</div><div class="wn-phase blue">🔵 F3</div><div class="wn-focus">Pre-Reg.</div></div>
         <div class="cal-day" data-date="2026-07-27"><div class="day-num">27</div><div class="workout-pill pill-bike">Vela suave</div></div>
         <div class="cal-day" data-date="2026-07-28"><div class="day-num">28</div><div class="workout-pill pill-rest">Core activ.</div></div>
         <div class="cal-day" data-date="2026-07-29"><div class="day-num">29</div><div class="workout-pill pill-bike">Vela técnica</div></div>
@@ -2272,8 +2303,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
         <div class="cal-day" data-date="2026-08-01"><div class="day-num">1 Ago</div><div class="workout-pill pill-race">🏁 CAC D1</div></div>
         <div class="cal-day" data-date="2026-08-02"><div class="day-num">2</div><div class="workout-pill pill-race">🏁 CAC D2</div></div>
 
-        <!-- S32 → Aug 3–8 · JUEGOS CAC GAMES -->
-        <div class="cal-week-num"><div class="wn-label">S32</div><div class="wn-val">—</div></div>
+        <!-- S32 → Aug 3–8 · 🏁 CAC Games -->
+        <div class="cal-week-num"><div class="wn-label">S32</div><div class="wn-phase red">🏁 CAC</div><div class="wn-focus">Regatas</div></div>
         <div class="cal-day" data-date="2026-08-03"><div class="day-num">3</div><div class="workout-pill pill-race">🏁 CAC D3</div></div>
         <div class="cal-day" data-date="2026-08-04"><div class="day-num">4</div><div class="workout-pill pill-race">🏁 CAC D4</div></div>
         <div class="cal-day" data-date="2026-08-05"><div class="day-num">5</div><div class="workout-pill pill-race">🏁 CAC D5</div></div>
@@ -2606,6 +2637,27 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
       <div class="hst-stat"><div class="hst-stat-val" id="hst-s-compliance">—</div><div class="hst-stat-lbl">Compliance</div></div>
       <div class="hst-stat"><div class="hst-stat-val" id="hst-s-avg-rec">—</div><div class="hst-stat-lbl">Recovery prom.</div></div>
       <div class="hst-stat"><div class="hst-stat-val" id="hst-s-tss-total">—</div><div class="hst-stat-lbl">TSS total</div></div>
+    </div>
+
+    <!-- Gráfico de tendencia: TSS bars + Recovery line + media 7d -->
+    <div class="hst-trend-card">
+      <div class="hst-trend-header">
+        <div class="hst-trend-title">Carga Diaria & Recovery</div>
+        <div class="hst-trend-legend">
+          <span><span class="leg-bar"></span>TSS real</span>
+          <span><span class="leg-dash"></span>Media 7d</span>
+          <span><span class="leg-dot"></span>Recovery%</span>
+        </div>
+      </div>
+      <div class="hst-trend-wrap" id="hst-trend-wrap">
+        <svg id="hst-trend-svg" class="hst-trend-svg" viewBox="0 0 900 180" preserveAspectRatio="none"></svg>
+        <div class="hst-trend-tt" id="hst-trend-tooltip">
+          <div class="tt-date" id="htt-date" style="font-weight:700;margin-bottom:6px">—</div>
+          <div class="tt-row"><span class="tt-label">TSS</span><span class="tt-val" style="color:var(--accent)" id="htt-tss">—</span></div>
+          <div class="tt-row"><span class="tt-label">Recovery</span><span class="tt-val" style="color:var(--green)" id="htt-rec">—</span></div>
+          <div class="tt-row"><span class="tt-label">Actividad</span><span class="tt-val" id="htt-act">—</span></div>
+        </div>
+      </div>
     </div>
 
     <!-- Vista Calendario -->
@@ -6300,6 +6352,7 @@ async function loadHistorial(days) {
 
     // Almacenar en caché global para el calendario
     _hstAllRows = rows
+    renderHstTrend(rows)
     if (_hstView === 'calendar') { renderHstCalendar(); return }
 
     const sessions   = rows.filter(r => r.workout_name).length
@@ -6393,6 +6446,146 @@ async function loadHistorial(days) {
   } catch (e) {
     tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:48px;color:var(--red)">⚠️ ${e.message}</td></tr>`
   }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  HISTORIAL — GRÁFICO TENDENCIA TSS + RECOVERY
+// ══════════════════════════════════════════════════════════════════════════════
+
+function renderHstTrend(rows) {
+  const svg = document.getElementById('hst-trend-svg')
+  if (!svg) return
+
+  const sorted = [...rows].sort((a, b) => a.date < b.date ? -1 : 1)
+  if (!sorted.length) {
+    svg.innerHTML = '<text x="450" y="90" text-anchor="middle" fill="rgba(255,255,255,.2)" font-size="13">Sin datos para el período</text>'
+    return
+  }
+
+  const W = 900, H = 180
+  const PL = 44, PR = 52, PT = 14, PB = 34
+  const IW = W - PL - PR, IH = H - PT - PB
+  const n = sorted.length
+
+  const maxTSS = Math.max(...sorted.map(r => r.tss_actual || r.garmin_tss || 0), 60)
+  const tssTop = Math.ceil(maxTSS / 50) * 50
+
+  const xOf  = i => PL + (i + 0.5) * (IW / n)
+  const yTSS = v => H - PB - (v / tssTop) * IH
+  const yRec = v => H - PB - (v / 100) * IH
+
+  // Rolling 7-day avg TSS
+  const rolling = sorted.map((_, i) => {
+    const sl = sorted.slice(Math.max(0, i - 6), i + 1)
+    return sl.reduce((s, d) => s + (d.tss_actual || d.garmin_tss || 0), 0) / sl.length
+  })
+
+  const barW = Math.max(3, (IW / n) * 0.6)
+  const out = []
+
+  out.push(`<defs>
+    <linearGradient id="htg-done" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4f8ef7" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#7c6ef5" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="htg-pend" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4f8ef7" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#7c6ef5" stop-opacity=".2"/>
+    </linearGradient>
+  </defs>`)
+
+  // Grid lines + left axis (TSS)
+  for (let v = 0; v <= tssTop; v += 50) {
+    const y = yTSS(v).toFixed(1)
+    out.push(`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="rgba(255,255,255,.05)" stroke-width="1"/>`)
+    out.push(`<text x="${PL-5}" y="${(+y+3).toFixed(1)}" text-anchor="end" fill="rgba(255,255,255,.22)" font-size="9">${v}</text>`)
+  }
+
+  // Right axis (Recovery%)
+  ;[0, 33, 67, 100].forEach(v => {
+    const y = (+yRec(v)).toFixed(1)
+    out.push(`<text x="${W-PR+5}" y="${(+y+3).toFixed(1)}" text-anchor="start" fill="rgba(34,197,94,.45)" font-size="9">${v}%</text>`)
+  })
+
+  // TSS bars
+  sorted.forEach((r, i) => {
+    const tss = r.tss_actual || r.garmin_tss || 0
+    if (!tss) return
+    const bh = Math.max(2, (tss / tssTop) * IH)
+    const x  = (xOf(i) - barW / 2).toFixed(1)
+    const y  = (H - PB - bh).toFixed(1)
+    const fill = r.workout_status === 'COMPLETED' ? 'url(#htg-done)' : 'url(#htg-pend)'
+    out.push(`<rect x="${x}" y="${y}" width="${barW.toFixed(1)}" height="${bh.toFixed(1)}" fill="${fill}" rx="2"/>`)
+  })
+
+  // Rolling avg line
+  const avgD = rolling.map((v, i) => `${i===0?'M':'L'}${xOf(i).toFixed(1)},${yTSS(v).toFixed(1)}`).join(' ')
+  out.push(`<path d="${avgD}" fill="none" stroke="rgba(251,146,60,.8)" stroke-width="1.5" stroke-dasharray="5,3" stroke-linecap="round"/>`)
+
+  // Recovery% line + dots
+  const recRows = sorted.filter(r => r.recovery_score != null)
+  if (recRows.length > 1) {
+    const pts = sorted
+      .map((r, i) => r.recovery_score != null ? `${xOf(i).toFixed(1)},${yRec(r.recovery_score).toFixed(1)}` : null)
+      .filter(Boolean).join(' ')
+    out.push(`<polyline points="${pts}" fill="none" stroke="rgba(34,197,94,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`)
+    sorted.forEach((r, i) => {
+      if (r.recovery_score == null) return
+      const c = r.recovery_score >= 67 ? '#22c55e' : r.recovery_score >= 33 ? '#f97316' : '#ef4444'
+      out.push(`<circle cx="${xOf(i).toFixed(1)}" cy="${yRec(r.recovery_score).toFixed(1)}" r="2.5" fill="${c}" stroke="var(--bg2)" stroke-width="1"/>`)
+    })
+  }
+
+  // X-axis date labels
+  const evry = n <= 14 ? 1 : n <= 30 ? 3 : n <= 60 ? 7 : 14
+  sorted.forEach((r, i) => {
+    if (i % evry !== 0 && i !== n - 1) return
+    const d = new Date(r.date + 'T12:00:00')
+    const lbl = `${d.getDate()}/${d.getMonth()+1}`
+    out.push(`<text x="${xOf(i).toFixed(1)}" y="${H-4}" text-anchor="middle" fill="rgba(255,255,255,.22)" font-size="9">${lbl}</text>`)
+  })
+
+  // Invisible hover zones
+  sorted.forEach((r, i) => {
+    const x  = (PL + i * (IW / n)).toFixed(1)
+    const bw = (IW / n).toFixed(1)
+    const tss = r.tss_actual || r.garmin_tss || 0
+    const rec = r.recovery_score
+    const act = (r.garmin_name || r.workout_name || '').replace(/"/g,'')
+    const d   = new Date(r.date + 'T12:00:00')
+    const lbl = d.toLocaleDateString('es-MX',{weekday:'short',day:'numeric',month:'short'})
+    out.push(`<rect x="${x}" y="${PT}" width="${bw}" height="${IH}" fill="transparent"
+      onmouseenter="showHstTT(this,event)"
+      onmouseleave="hideHstTT()"
+      data-date="${lbl}"
+      data-tss="${tss || '—'}"
+      data-rec="${rec != null ? rec+'%' : '—'}"
+      data-act="${act}"/>`)
+  })
+
+  svg.innerHTML = out.join('\n')
+}
+
+function showHstTT(el, evt) {
+  const tt = document.getElementById('hst-trend-tooltip')
+  if (!tt) return
+  document.getElementById('htt-date').textContent = el.dataset.date
+  document.getElementById('htt-tss').textContent  = el.dataset.tss
+  document.getElementById('htt-rec').textContent  = el.dataset.rec
+  document.getElementById('htt-act').textContent  = el.dataset.act || '—'
+  tt.classList.add('visible')
+  const wrap = document.getElementById('hst-trend-wrap')
+  if (!wrap) return
+  const wr = wrap.getBoundingClientRect()
+  let left = evt.clientX - wr.left - tt.offsetWidth / 2
+  left = Math.max(4, Math.min(left, wr.width - tt.offsetWidth - 4))
+  tt.style.left = left + 'px'
+  tt.style.top  = '4px'
+}
+
+function hideHstTT() {
+  const tt = document.getElementById('hst-trend-tooltip')
+  if (tt) tt.classList.remove('visible')
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
