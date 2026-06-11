@@ -246,31 +246,31 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-11",
-      "name": "Carrera Z2 40' + Core Casa — J70",
-      "type": "Carrera / Movilidad",
+      "name": "🔵 Ski Ergometer Z2 + Core 45'",
+      "type": "Cardio Máquina",
       "duration_min": 55,
       "tss_planned": 38,
       "coach_note": "Semana J70 — sin gym ni bici. Carrera 40min Z2 (cadencia conversacional) + 15min core en casa: plancha 3×40s, puente glúteo 3×15. Energía para las regatas.",
       "segments": [
         {
-          "name": "Calentamiento",
+          "name": "Calentamiento Ski Erg",
           "duration": "10 min",
           "zone": "Z1 — Recuperación"
         },
         {
-          "name": "Z2 continuo",
+          "name": "Ski Erg Z2 continuo",
           "duration": "20 min",
           "zone": "Z2 — Base aeróbica"
         },
         {
-          "name": "2×8 min Z3 táctico",
+          "name": "2×8 min Ski Erg Z3",
           "duration": "20 min",
           "reps": "2×8min",
-          "zone": "Z3 — Táctico"
+          "zone": "Z3 — Ritmo cardio"
         },
         {
           "name": "Enfriamiento",
-          "duration": "10 min",
+          "duration": "5 min",
           "zone": "Z1 — Recuperación"
         }
       ],
@@ -295,7 +295,8 @@
       "created_at": "2026-06-09T00:35:31.252112Z",
       "updated_at": "2026-06-11T14:54:10.451Z",
       "tss_actual": 53,
-      "garmin_activity_id": 23201883258
+      "garmin_activity_id": 23201883258,
+      "zone": "BLUE"
     },
     {
       "id": "263cdf36-4407-4f9d-9304-cec8f2e493c1",
@@ -367,26 +368,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-13",
-      "name": "🟡 Cardio Z2 — Rodaje Técnico 55'",
-      "type": "Carrera / Movilidad",
+      "name": "🟡 Ciclismo Z2 — Base Aeróbica 55'",
+      "type": "Ciclismo",
       "duration_min": 55,
       "tss_planned": 42,
-      "coach_note": "SEMANA 1 | Adaptación 🟡 | Sustituto día de agua. Cardio aeróbico base en Z2. FC 130-145 bpm todo el tiempo. Sin picos.",
+      "coach_note": "S24 F1 · 🟡 MODERADA. Bici estática 55 min en Z2. Mantén FC 130–145 bpm. Cadencia 85–95 rpm. No hay picos de FC. Construye base aeróbica.",
       "segments": [
         {
-          "name": "Calentamiento caminata",
-          "duration": "5min",
+          "name": "Calentamiento bici",
+          "duration": "5 min",
           "zone": "Z1"
         },
         {
-          "name": "Rodaje Técnico Z2",
-          "duration": "45min",
+          "name": "Ciclismo Z2 Sostenido",
+          "duration": "45 min",
           "zone": "Z2",
-          "reps": "FC 130-145 bpm"
+          "reps": "FC 130–145 bpm"
         },
         {
           "name": "Enfriamiento + Movilidad",
-          "duration": "5min",
+          "duration": "5 min",
           "zone": "Z1"
         }
       ],
@@ -856,26 +857,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-23",
-      "name": "🟡 Cardio Z2 + Técnica 50'",
-      "type": "Carrera / Movilidad",
+      "name": "🟡 Ski Ergometer Z2 — 50'",
+      "type": "Cardio Máquina",
       "duration_min": 50,
       "tss_planned": 55,
-      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | Cardio suave Z2 post-DÍA A. Recuperación activa. Sustituto día de agua técnico.",
+      "coach_note": "S26 F1 · 🟡 MODERADA. Ski Ergometer 50 min Z2. Agarre firme, tirón completo hasta cadera, piernas y brazos coordinados. FC 130–145 bpm. Trabaja espalda alta y dorsales sin carga axial.",
       "segments": [
         {
-          "name": "Calentamiento Z1",
-          "duration": "5min",
+          "name": "Calentamiento Ski Erg",
+          "duration": "5 min",
           "zone": "Z1"
         },
         {
-          "name": "Cardio Z2 Técnico (carrera o ciclismo)",
-          "duration": "40min",
+          "name": "Ski Erg Z2 Sostenido",
+          "duration": "40 min",
           "zone": "Z2",
-          "reps": "FC 130-145 bpm"
+          "reps": "FC 130–145 bpm"
         },
         {
           "name": "Enfriamiento + Movilidad",
-          "duration": "5min",
+          "duration": "5 min",
           "zone": "Z1"
         }
       ],
@@ -973,22 +974,22 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-25",
-      "name": "🔵 Descanso Activo — Natación Suave",
-      "type": "Core / Movilidad",
+      "name": "🔵 Ski Ergometer Suave — Descanso Activo 30'",
+      "type": "Cardio Máquina",
       "duration_min": 40,
       "tss_planned": 15,
-      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA AZUL en mitad del pico. Natación suave 30min o caminata. Sin impacto.",
+      "coach_note": "S26 F1 · 🔵 BAJA. Descanso activo. Ski Erg muy suave 30 min a FC < 125 bpm. O bici Z1. Objetivo: mover sangre y recuperar, no generar fatiga.",
       "segments": [
         {
-          "exercise": "Natación suave (o caminata 30min)",
+          "exercise": "Ski Ergometer suave (o bici Z1)",
           "sets": "1",
-          "reps": "30min",
-          "note": "Sin esfuerzo. FC < 120 bpm."
+          "reps": "30 min",
+          "note": "Sin esfuerzo. FC < 125 bpm."
         },
         {
           "exercise": "Estiramientos activos generales",
           "sets": "1",
-          "reps": "10min"
+          "reps": "10 min"
         }
       ],
       "status": "PENDING",
@@ -1195,19 +1196,19 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-30",
-      "name": "🟡 Sprint HIIT — 10×30' Z5",
-      "type": "Ciclismo",
+      "name": "🟡 Sprint HIIT — 10×30s Z5 (Ski Erg / Bici)",
+      "type": "Cardio Máquina",
       "duration_min": 55,
       "tss_planned": 60,
-      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | Sprints cortos máximos. Potencia anaeróbica. 10 sprints de 30s a todo lo que puedas × 60s descanso Z1.",
+      "coach_note": "S27 F2 · 🟡 MODERADA. HIIT en Ski Ergometer o Bici. 10 sprints ×30s al máximo, 60s recuperación Z1. Total ~25 min. Ski Erg preferido — activa todo el tren superior sin cargar espalda.",
       "segments": [
         {
-          "name": "Calentamiento progresivo Z1-Z2",
-          "duration": "10min",
+          "name": "Calentamiento progresivo",
+          "duration": "10 min",
           "zone": "Z1-Z2"
         },
         {
-          "name": "Sprint Z5 máximo",
+          "name": "Sprint Ski Erg / Bici Z5 máximo",
           "duration": "30s",
           "zone": "Z5",
           "reps": "×10 (c/60s rec Z1)"
@@ -1219,9 +1220,9 @@
           "reps": "×10"
         },
         {
-          "name": "Enfriamiento Z1-Z2",
-          "duration": "10min",
-          "zone": "Z1"
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1-Z2"
         }
       ],
       "status": "PENDING",
@@ -1555,17 +1556,17 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-07",
-      "name": "🟡 Cardio Z2 — Recuperación Activa 50'",
-      "type": "Carrera / Movilidad",
+      "name": "🟡 Remadora Z2 — Recuperación Activa 50'",
+      "type": "Cardio Máquina",
       "duration_min": 50,
       "tss_planned": 50,
-      "coach_note": "SEMANA 5 | Pico Intensidad 🔴 | Cardio suave de recuperación activa. FC < 145 bpm. Sustituto día de agua popas.",
+      "coach_note": "S28 F2 · 🟡 MODERADA. Remadora 50 min Z2. Espalda neutra en todo momento — no redondear lumbar. Ritmo 22–24 spm. FC 130–145 bpm. Recuperación activa post-bloque duro.",
       "segments": [
         {
-          "name": "Cardio Z2 suave",
-          "duration": "50min",
+          "name": "Remadora Z2 sostenida",
+          "duration": "50 min",
           "zone": "Z2",
-          "reps": "FC < 145 bpm"
+          "reps": "FC 130–145 bpm · 22–24 spm"
         }
       ],
       "status": "PENDING",
