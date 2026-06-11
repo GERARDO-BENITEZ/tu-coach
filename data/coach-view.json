@@ -289,11 +289,11 @@
         "hr_max": 148,
         "calories": 438,
         "tss_actual": 53,
-        "synced_at": "2026-06-11T14:40:10.187Z"
+        "synced_at": "2026-06-11T14:54:10.451Z"
       },
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-11T14:40:10.187Z",
+      "updated_at": "2026-06-11T14:54:10.451Z",
       "tss_actual": 53,
       "garmin_activity_id": 23201883258
     },
@@ -302,27 +302,50 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-12",
-      "name": "Carrera Técnica 45' + Movilidad — J70",
-      "type": "Carrera / Movilidad",
-      "duration_min": 50,
-      "tss_planned": 35,
-      "coach_note": "Día J70. Carrera suave mañana antes de competir. Enfócate en la regata — el entreno físico es secundario. 10min movilidad post-run.",
+      "name": "🔴 DÍA A — Fuerza Piernas Hiking",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 65,
+      "coach_note": "SEMANA 1 | Adaptación 🟡 | Primer DÍA A. Cargas ligeras — aprende los movimientos. Tempo 3s en bajada. Objetivo: activar cadena posterior sin sobrecargar.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Circuito funcional x3",
-          "duration": "35 min",
-          "reps": "3 rondas",
-          "zone": "Fuerza — Z3"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "4",
+          "reps": "12",
+          "logged_kg": 60,
+          "note": "Tempo 3-0-1 (3s bajada lenta). 65% 1RM. Espalda neutra, cadera hacia atrás."
         },
         {
-          "name": "Movilidad",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
+          "sets": "4",
+          "reps": "75s / 12 reps",
+          "logged_kg": 15,
+          "note": "Silla 75s — PROGRESIÓN desde 60s semana anterior. Pico de isometría."
+        },
+        {
+          "exercise": "Desplantes Búlgaros con Mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "logged_kg": 20,
+          "note": "Pie trasero elevado en banco. Rodilla delantera alineada con pie."
+        },
+        {
+          "exercise": "Hamstring Curls en Fitball",
+          "sets": "3",
+          "reps": "12",
+          "note": "Cadena posterior. Controlado. Pelvis neutra todo el recorrido."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -334,33 +357,37 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S1 · 🟡 Adaptación",
+      "phase": "F1"
     },
     {
       "id": "806092fd-d9f4-4354-8fee-171bb3c8db62",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-13",
-      "name": "Carrera Larga 55' — J70",
+      "name": "🟡 Cardio Z2 — Rodaje Técnico 55'",
       "type": "Carrera / Movilidad",
-      "duration_min": 60,
+      "duration_min": 55,
       "tss_planned": 42,
-      "coach_note": "Carrera larga Z2 entre regatas J70. Mantén piernas activas. Sin bici ni gym. Finaliza con 10min stretching caderas y espalda baja.",
+      "coach_note": "SEMANA 1 | Adaptación 🟡 | Sustituto día de agua. Cardio aeróbico base en Z2. FC 130-145 bpm todo el tiempo. Sin picos.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento caminata",
+          "duration": "5min",
+          "zone": "Z1"
         },
         {
-          "name": "Z2 aeróbico largo",
-          "duration": "55 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Rodaje Técnico Z2",
+          "duration": "45min",
+          "zone": "Z2",
+          "reps": "FC 130-145 bpm"
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento + Movilidad",
+          "duration": "5min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -372,33 +399,36 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S1 · 🟡 Adaptación",
+      "phase": "F1"
     },
     {
       "id": "02ba7a52-2e0c-4b23-8ff4-caee0c56691d",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-14",
-      "name": "Movilidad + Recuperación Casa — J70",
+      "name": "🔵 Descanso Total + Crioterapia",
       "type": "Core / Movilidad",
-      "duration_min": 35,
-      "tss_planned": 12,
-      "coach_note": "Recuperación activa último día J70. 20min movilidad articular (hombros, caderas, tobillo) + 10min respiración y visualización. Mañana regresa al plan normal.",
+      "duration_min": 30,
+      "tss_planned": 10,
+      "coach_note": "SEMANA 1 | Adaptación 🟡 | DÍA AZUL. Descanso completo. Estiramientos, foam roller, baño frío si posible. Hidratación ++.",
       "segments": [
         {
-          "name": "Foam rolling",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Foam Roller — Cuádriceps + IT Band + Isquios",
+          "sets": "1",
+          "reps": "10min"
         },
         {
-          "name": "Core suave",
-          "duration": "20 min",
-          "zone": "Fuerza"
+          "exercise": "Estiramientos Estáticos Cadena Posterior",
+          "sets": "1",
+          "reps": "15min"
         },
         {
-          "name": "Movilidad + respiración",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Respiración diafragmática",
+          "sets": "1",
+          "reps": "5min"
         }
       ],
       "status": "PENDING",
@@ -410,38 +440,43 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S1 · 🟡 Adaptación",
+      "phase": "F1"
     },
     {
       "id": "5b4aaaa0-14da-4272-9cab-cb6906a4f897",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-15",
-      "name": "Ciclismo 60'",
+      "name": "🔴 Test Esfuerzo + DÍA C Core",
       "type": "Ciclismo",
-      "duration_min": 60,
-      "tss_planned": 68,
-      "coach_note": "Progresión: 35 min Z2 + 15 min Z3. Mantener cadencia 90 rpm.",
+      "duration_min": 80,
+      "tss_planned": 72,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | Mañana: Test de esfuerzo cardio — 20min al límite para calibrar zonas reales. Tarde (misma sesión): DÍA C core base.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1-Z2",
+          "duration": "10min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Z2 base",
-          "duration": "35 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Test Esfuerzo: 20min ritmo máximo sostenible",
+          "duration": "20min",
+          "zone": "Z3-Z4",
+          "reps": "Mide FC promedio y máxima. Registra en Garmin."
         },
         {
-          "name": "Z3 umbral",
-          "duration": "10 min",
-          "zone": "Z3 — Táctico"
+          "name": "DÍA C — Core (tarde / misma sesión)",
+          "duration": "30min",
+          "zone": "Z2",
+          "reps": "Body Saw 4×45s + Pallof 3×12 + V-Ups 4×20"
         },
         {
           "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "duration": "8min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -453,39 +488,60 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "6c4daf94-04f7-4f80-afb0-0495fc88df6d",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-16",
-      "name": "Fuerza + Core",
+      "name": "🔴 DÍA A — Fuerza Piernas Hiking",
       "type": "Fuerza / Gym",
-      "duration_min": 65,
-      "tss_planned": 52,
-      "coach_note": "Segunda semana: incremento carga 5%. Técnica limpia primero.",
+      "duration_min": 70,
+      "tss_planned": 65,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | DÍA A Fuerza Resistencia. Mismo protocolo que S1 pero más controlado: ahora ya conoces el movimiento.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Sentadilla + Press + Remo",
-          "duration": "35 min",
-          "reps": "4×10",
-          "zone": "Fuerza — Z3"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "4",
+          "reps": "12",
+          "logged_kg": 60,
+          "note": "Tempo 3-0-1 (3s bajada lenta). 65% 1RM. Espalda neutra, cadera hacia atrás."
         },
         {
-          "name": "Core dinámico",
-          "duration": "15 min",
-          "zone": "Fuerza"
+          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
+          "sets": "4",
+          "reps": "75s / 12 reps",
+          "logged_kg": 15,
+          "note": "Silla 75s — PROGRESIÓN desde 60s semana anterior. Pico de isometría."
         },
         {
-          "name": "Estiramiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Desplantes Búlgaros con Mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "logged_kg": 20,
+          "note": "Pie trasero elevado en banco. Rodilla delantera alineada con pie."
+        },
+        {
+          "exercise": "Hamstring Curls en Fitball",
+          "sets": "3",
+          "reps": "12",
+          "note": "Cadena posterior. Controlado. Pelvis neutra todo el recorrido."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -497,39 +553,43 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "b6db4445-cb20-4ffb-9d04-36aa37c5618b",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-17",
-      "name": "Ciclismo F2 60'",
+      "name": "🟡 HIIT Ciclismo — 6×3' Z4/5",
       "type": "Ciclismo",
       "duration_min": 60,
       "tss_planned": 72,
-      "coach_note": "4×5 min Z3-Z4. Primera exposición a ritmo de umbral. Recuperación 3 min entre intervalos.",
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | 6 intervalos de 3min en Z4/5 × 2min recuperación Z2. Cuenta cadencia y FC. Objectivo lactato.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1-Z2",
+          "duration": "10min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Z2 base",
-          "duration": "20 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Intervalo 1: Z4/5 3min",
+          "duration": "3min",
+          "zone": "Z4-Z5",
+          "reps": "×6 (c/2min rec Z2)"
         },
         {
-          "name": "4×5 min Z3-Z4",
-          "duration": "22 min",
-          "reps": "4×5min",
-          "zone": "Z4 — Alta intensidad"
+          "name": "Recuperación activa Z2 entre intervalos",
+          "duration": "2min",
+          "zone": "Z2",
+          "reps": "×6"
         },
         {
-          "name": "Enfriamiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -541,34 +601,41 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "f3b49f24-a994-4361-930d-676c88b23dbd",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-18",
-      "name": "Fuerza General",
-      "type": "Fuerza / Gym",
-      "duration_min": 55,
-      "tss_planned": 48,
-      "coach_note": "Circuito potencia: kettlebell swing, TRX, box jumps.",
+      "name": "🔵 Descanso Activo — Movilidad Articular",
+      "type": "Core / Movilidad",
+      "duration_min": 35,
+      "tss_planned": 12,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | DÍA AZUL obligatorio. El bloque duro necesita este día. Movilidad articular + masaje si posible. Sin pesas.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Movilidad de Cadera (90-90 + Mariposa)",
+          "sets": "3",
+          "reps": "60s/posición"
         },
         {
-          "name": "Circuito potencia x3",
-          "duration": "35 min",
-          "reps": "3 rondas",
-          "zone": "Fuerza — Z3"
+          "exercise": "Movilidad Torácica con Foam Roller",
+          "sets": "3",
+          "reps": "10 reps"
         },
         {
-          "name": "Movilidad",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Estiramiento Psoas (Kneeling Hip Flexor)",
+          "sets": "2",
+          "reps": "60s/lado"
+        },
+        {
+          "exercise": "Descanso activo: caminata suave 20min (opcional)",
+          "sets": "1",
+          "reps": "20min"
         }
       ],
       "status": "PENDING",
@@ -580,33 +647,58 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "fef05bbe-0fbb-4dc8-9429-5d25a0232441",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-19",
-      "name": "Ciclismo Z2 55' — Mantener Base",
-      "type": "Ciclismo",
-      "duration_min": 55,
-      "tss_planned": 44,
-      "coach_note": "Viernes — bici Z2 para cerrar la semana aeróbica. Cadencia 85-95 rpm, FC 130-145. El sábado es el largo de 80min, así que guarda piernas.",
+      "name": "🔴 DÍA B — Tracción + Agarre",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 62,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | DÍA B: dorsales, bíceps, antebrazos. Para mantener escota con viento duro sin perder agarre.",
       "segments": [
         {
-          "name": "Foam rolling",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Core + estabilidad",
-          "duration": "25 min",
-          "zone": "Fuerza"
+          "exercise": "Dominadas Agarre Supino / Neutro (Chin-ups)",
+          "sets": "4",
+          "reps": "8-10",
+          "note": "Añadir lastre si completas 10 reps limpias. Rango completo — no media dominada."
         },
         {
-          "name": "Movilidad",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Remo con Barra (Barbell Row)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tracción horizontal. Espalda plana, codos al cuerpo. Simula cobrar escota."
+        },
+        {
+          "exercise": "Paseo del Granjero — Farmer's Walk",
+          "sets": "4",
+          "reps": "50m",
+          "logged_kg": 30,
+          "note": "Peso que haga fallar el AGARRE cerca del final. Crucial para manos en viento duro."
+        },
+        {
+          "exercise": "Press Militar con Barra (OHP)",
+          "sets": "3",
+          "reps": "8",
+          "note": "Estabilidad escapular para las popas. No arquear lumbar."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -618,33 +710,37 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "6de1f1c1-1bb0-47fc-9212-2ab4b1ed0a2f",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-20",
-      "name": "Ciclismo Z2 Largo 80'",
+      "name": "🟡 Cardio Z2 Largo — 80'",
       "type": "Ciclismo",
       "duration_min": 80,
-      "tss_planned": 92,
-      "coach_note": "Largo de base. Ritmo Z2 constante. Come plátano + gel a los 40 min.",
+      "tss_planned": 88,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | Cardio aeróbico largo. Base de resistencia. FC 130-145 bpm. No superar Z3. Sustituto día de agua.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         },
         {
-          "name": "Z2 largo continuo",
-          "duration": "65 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Ciclismo Z2 Sostenido",
+          "duration": "60min",
+          "zone": "Z2",
+          "reps": "FC 130-145 bpm"
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -656,53 +752,89 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "ac100404-88e9-46fa-a926-369cb622f2a3",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "status": "PENDING",
-      "segments": [],
+      "segments": [
+        {
+          "exercise": "Foam Roller full body",
+          "sets": "1",
+          "reps": "15min"
+        },
+        {
+          "exercise": "Check HRV + notas de recovery",
+          "sets": "1",
+          "reps": "5min"
+        }
+      ],
       "created_at": "2026-06-09T20:27:17.181Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-06-21",
-      "name": "Recuperación Activa — Cierre F1",
+      "name": "🔵 Descanso Total — Check HRV",
       "type": "Core / Movilidad",
-      "duration_min": 40,
-      "tss_planned": 15,
-      "coach_note": "Cierre F1. Movilidad general + foam roller. La semana que viene empieza F2 con más carga — llega descansado."
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "SEMANA 2 | Bloque Duro 🔴 | DÍA AZUL. Revisa HRV en WHOOP — debe estar en verde. Si está en rojo, añadir 1 día extra de descanso antes del Lun.",
+      "zone": "BLUE",
+      "week_label": "S2 · 🔴 Bloque Duro",
+      "phase": "F1"
     },
     {
       "id": "d75f7849-f6ed-43d2-9aaa-d027a8baf088",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-22",
-      "name": "Ciclismo Z2-Z3 70'",
-      "type": "Ciclismo",
-      "duration_min": 70,
-      "tss_planned": 78,
-      "coach_note": "Inicio F2 CARGA. 40 min Z2 + 20 min Z3. Primer bloque de carga.",
+      "name": "🔴 DÍA A — Piernas Hiking (Wall Sit 75s)",
+      "type": "Fuerza / Gym",
+      "duration_min": 75,
+      "tss_planned": 68,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA A progresivo: silla estática sube de 60s → 75s. Máxima fatiga muscular controlada.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Z2 base",
-          "duration": "40 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "4",
+          "reps": "12",
+          "logged_kg": 60,
+          "note": "Tempo 3-0-1 (3s bajada lenta). 65% 1RM. Espalda neutra, cadera hacia atrás."
         },
         {
-          "name": "Z3 umbral",
-          "duration": "15 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
+          "sets": "4",
+          "reps": "75s / 12 reps",
+          "logged_kg": 15,
+          "note": "Silla 75s — PROGRESIÓN desde 60s semana anterior. Pico de isometría."
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Desplantes Búlgaros con Mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "logged_kg": 20,
+          "note": "Pie trasero elevado en banco. Rodilla delantera alineada con pie."
+        },
+        {
+          "exercise": "Hamstring Curls en Fitball",
+          "sets": "3",
+          "reps": "12",
+          "note": "Cadena posterior. Controlado. Pelvis neutra todo el recorrido."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -714,40 +846,37 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "9a88f29a-0d6b-43bd-9b4f-e968fbc65c56",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-23",
-      "name": "Fuerza Máxima",
-      "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 58,
-      "coach_note": "F2: cargas máximas (85-90% RM). Sentadilla pesada, Press inclinado, Peso muerto.",
+      "name": "🟡 Cardio Z2 + Técnica 50'",
+      "type": "Carrera / Movilidad",
+      "duration_min": 50,
+      "tss_planned": 55,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | Cardio suave Z2 post-DÍA A. Recuperación activa. Sustituto día de agua técnico.",
       "segments": [
         {
-          "name": "Activación específica",
-          "duration": "12 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1",
+          "duration": "5min",
+          "zone": "Z1"
         },
         {
-          "name": "Sentadilla + Press inclinado",
-          "duration": "30 min",
-          "reps": "5×5",
-          "zone": "Fuerza — Z3"
+          "name": "Cardio Z2 Técnico (carrera o ciclismo)",
+          "duration": "40min",
+          "zone": "Z2",
+          "reps": "FC 130-145 bpm"
         },
         {
-          "name": "Peso muerto + Remo pesado",
-          "duration": "20 min",
-          "reps": "4×6",
-          "zone": "Fuerza — Z3"
-        },
-        {
-          "name": "Estiramiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento + Movilidad",
+          "duration": "5min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -759,34 +888,70 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "cde62cb0-998c-4b1c-a80c-4dffbf812ef8",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-24",
-      "name": "Intervalos Z4 6×3'",
-      "type": "Ciclismo",
-      "duration_min": 65,
-      "tss_planned": 92,
-      "coach_note": "6 repeticiones de 3 min a FC máx-3 (Z4). Recuperación 3 min Z1 entre cada una.",
+      "name": "🔴 DÍA B — Tracción + Antebrazos Extra",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 72,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA B + bloque extra de antebrazos al final. Agarre es el límite en viento duro.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "12 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "6×3 min Z4 — Recuperación 3 min",
-          "duration": "36 min",
-          "reps": "6×3min",
-          "zone": "Z4 — Alta intensidad"
+          "exercise": "Dominadas Agarre Supino / Neutro (Chin-ups)",
+          "sets": "4",
+          "reps": "8-10",
+          "note": "Añadir lastre si completas 10 reps limpias. Rango completo — no media dominada."
         },
         {
-          "name": "Enfriamiento",
-          "duration": "17 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Remo con Barra (Barbell Row)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tracción horizontal. Espalda plana, codos al cuerpo. Simula cobrar escota."
+        },
+        {
+          "exercise": "Paseo del Granjero — Farmer's Walk",
+          "sets": "4",
+          "reps": "50m",
+          "logged_kg": 30,
+          "note": "Peso que haga fallar el AGARRE cerca del final. Crucial para manos en viento duro."
+        },
+        {
+          "exercise": "Press Militar con Barra (OHP)",
+          "sets": "3",
+          "reps": "8",
+          "note": "Estabilidad escapular para las popas. No arquear lumbar."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        },
+        {
+          "exercise": "Curl de Muñeca / Bloque Antebrazos",
+          "sets": "3",
+          "reps": "20",
+          "note": "Agarre pronado + supino. Fatiga total de antebrazo."
+        },
+        {
+          "exercise": "Barra Colgada — Dead Hang",
+          "sets": "3",
+          "reps": "30-45s",
+          "note": "Aguanta hasta fallo de agarre."
         }
       ],
       "status": "PENDING",
@@ -798,39 +963,32 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "f75cba34-9b2f-47ca-b6c3-dfea0158ef3e",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-25",
-      "name": "Fuerza + Core Pesado",
-      "type": "Fuerza / Gym",
-      "duration_min": 75,
-      "tss_planned": 62,
-      "coach_note": "Volumen alto. Hip thrust pesado, jalón con peso, core estabilizador.",
+      "name": "🔵 Descanso Activo — Natación Suave",
+      "type": "Core / Movilidad",
+      "duration_min": 40,
+      "tss_planned": 15,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA AZUL en mitad del pico. Natación suave 30min o caminata. Sin impacto.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "12 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Natación suave (o caminata 30min)",
+          "sets": "1",
+          "reps": "30min",
+          "note": "Sin esfuerzo. FC < 120 bpm."
         },
         {
-          "name": "Hip thrust + Jalón pesado",
-          "duration": "35 min",
-          "reps": "5×8",
-          "zone": "Fuerza — Z3"
-        },
-        {
-          "name": "Core avanzado con carga",
-          "duration": "18 min",
-          "zone": "Fuerza"
-        },
-        {
-          "name": "Movilidad",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Estiramientos activos generales",
+          "sets": "1",
+          "reps": "10min"
         }
       ],
       "status": "PENDING",
@@ -842,33 +1000,55 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "e11d89c7-9bce-4ed5-bf17-6815b0dafbbe",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-26",
-      "name": "Ciclismo Z2 Rec. 60'",
-      "type": "Ciclismo",
-      "duration_min": 60,
-      "tss_planned": 65,
-      "coach_note": "Recuperación activa entre días de carga. Mantener Z2 estricto < 140 bpm.",
+      "name": "🔴 DÍA C + Metcon Cardiovascular",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 68,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA C integrado con metcon. Combina core con potencia aeróbica: los dos sistemas que se usan en regata simultáneamente.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento + Activación Core",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Z2 aeróbico suave",
-          "duration": "45 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Body Saw TRX / Deslizadores",
+          "sets": "4",
+          "reps": "45s"
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Press Pallof",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "2s hold al extender."
+        },
+        {
+          "exercise": "V-Ups / Dead Bug",
+          "sets": "4",
+          "reps": "20"
+        },
+        {
+          "exercise": "Metcon Cardiovascular — 4 Rondas",
+          "sets": "4",
+          "reps": "10 Burpees + 15 KB Swings + 200m",
+          "note": "Poca pausa entre rondas. Combina potencia aeróbica con core activado. Zona 4-5."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -880,39 +1060,37 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "83af1e8b-3520-47d7-8e56-f704328a3b24",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-27",
-      "name": "Ciclismo Largo 90'",
+      "name": "🟡 Cardio Largo Z2-Z3 — 90'",
       "type": "Ciclismo",
       "duration_min": 90,
       "tss_planned": 105,
-      "coach_note": "Largo de la semana. Z2 todo + 2 subidas Z3 de 5 min. Gel cada 30 min.",
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | El día más largo del ciclo. Ciclismo aeróbico base. Sustituto regatas práctica. Simula duración de una jornada.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1-Z2",
+          "duration": "15min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Z2 aeróbico",
-          "duration": "60 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Ciclismo Z2-Z3 Sostenido",
+          "duration": "65min",
+          "zone": "Z2-Z3",
+          "reps": "FC 130-160 bpm"
         },
         {
-          "name": "2 × 5 min subida Z3",
-          "duration": "14 min",
-          "reps": "2×5min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Enfriamiento",
-          "duration": "6 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -924,7 +1102,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "a1467cae-a18e-4c06-9f06-323fe3bbc9db",
@@ -935,37 +1116,64 @@
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-06-28",
-      "name": "Recuperación Activa — Mitad F2",
+      "name": "🔵 Descanso Absoluto",
       "type": "Core / Movilidad",
-      "duration_min": 35,
-      "tss_planned": 12,
-      "coach_note": "Dom recuperación F2. Stretching caderas y espalda. El martes es Fuerza Máxima — presenta fresco."
+      "duration_min": 15,
+      "tss_planned": 8,
+      "coach_note": "SEMANA 3 | Pico Volumen 🔴 | DÍA AZUL ABSOLUTO. Nada de ejercicio. Come bien, duerme, hidratación. El cuerpo construye fuerza en el descanso.",
+      "zone": "BLUE",
+      "week_label": "S3 · 🔴 Pico Volumen",
+      "phase": "F1"
     },
     {
       "id": "092cb601-6760-4984-8160-5309ba41049a",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-29",
-      "name": "Ciclismo + Fuerza Mixto",
-      "type": "Ciclismo",
+      "name": "🔴 DÍA A Explosivo — F2 Potencia",
+      "type": "Fuerza / Gym",
       "duration_min": 70,
       "tss_planned": 72,
-      "coach_note": "Bloque combinado: 40 min bici Z2 + 30 min fuerza funcional.",
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | FASE 2 COMIENZA. DÍA A cambia tempo: bajada 1s, subida EXPLOSIVA. Menos reps, más peso. El objetivo ya no es resistencia sino potencia.",
       "segments": [
         {
-          "name": "Ciclismo Z2",
-          "duration": "40 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Fuerza funcional",
-          "duration": "25 min",
-          "zone": "Fuerza — Z3"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "4",
+          "reps": "6",
+          "logged_kg": 80,
+          "note": "80% 1RM. Bajada 1s — SUBIDA EXPLOSIVA. Menos reps, más potencia."
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
+          "sets": "4",
+          "reps": "75s / 12 reps",
+          "logged_kg": 20,
+          "note": "Silla 75s (aumento F2) → inmediato 12 tuck jumps. Máxima fatiga isométrica."
+        },
+        {
+          "exercise": "Desplantes Búlgaros con Mancuernas",
+          "sets": "3",
+          "reps": "8/pierna",
+          "logged_kg": 26,
+          "note": "Más carga que F1. Subida explosiva. Controla la bajada."
+        },
+        {
+          "exercise": "Hamstring Curls en Fitball",
+          "sets": "3",
+          "reps": "10",
+          "note": "Aumenta dificultad: pausa 1s arriba."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -977,40 +1185,43 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "3e6aa3b1-0848-4c14-9800-d4ff66155251",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-30",
-      "name": "Fuerza Máxima",
-      "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 58,
-      "coach_note": "Última sesión de fuerza máxima antes de transición. Máximos en sentadilla.",
+      "name": "🟡 Sprint HIIT — 10×30' Z5",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 60,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | Sprints cortos máximos. Potencia anaeróbica. 10 sprints de 30s a todo lo que puedas × 60s descanso Z1.",
       "segments": [
         {
-          "name": "Activación específica",
-          "duration": "12 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento progresivo Z1-Z2",
+          "duration": "10min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Sentadilla pesada + Press",
-          "duration": "32 min",
-          "reps": "5×5",
-          "zone": "Fuerza — Z3"
+          "name": "Sprint Z5 máximo",
+          "duration": "30s",
+          "zone": "Z5",
+          "reps": "×10 (c/60s rec Z1)"
         },
         {
-          "name": "Accesorios + Core",
-          "duration": "18 min",
-          "reps": "3×10",
-          "zone": "Fuerza"
+          "name": "Recuperación Z1 entre sprints",
+          "duration": "60s",
+          "zone": "Z1",
+          "reps": "×10"
         },
         {
-          "name": "Estiramiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1-Z2",
+          "duration": "10min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -1022,39 +1233,58 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "520a9f94-82e5-4b5d-80aa-1c28d225cc97",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-01",
-      "name": "Intervalos Z4 Peak",
-      "type": "Ciclismo",
+      "name": "🔴 DÍA B — Dominadas Pesadas F2",
+      "type": "Fuerza / Gym",
       "duration_min": 65,
-      "tss_planned": 98,
-      "coach_note": "Sesión crítica. 4×5 min Z4 pico. Estos esfuerzos construyen el techo aeróbico para CAC.",
+      "tss_planned": 68,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA B Fase 2: 5 series de 4-6 reps con lastre. Fuerza pura de tracción. La escota en 20 nudos no espera.",
       "segments": [
         {
-          "name": "Calentamiento largo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "4×5 min Z4 pico",
-          "duration": "32 min",
-          "reps": "4×5min",
-          "zone": "Z4 — Alta intensidad"
+          "exercise": "Dominadas con Lastre (Weighted Chin-ups)",
+          "sets": "5",
+          "reps": "4-6",
+          "note": "F2: FUERZA PURA. Menos reps, más lastre. Baja controlado — sube explosivo."
         },
         {
-          "name": "Z2 suave",
-          "duration": "10 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Remo con Barra (Barbell Row)",
+          "sets": "4",
+          "reps": "8",
+          "logged_kg": 75,
+          "note": "Más peso que F1. Explosivo en la tracción."
         },
         {
-          "name": "Enfriamiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Paseo del Granjero — Farmer's Walk",
+          "sets": "4",
+          "reps": "50m",
+          "logged_kg": 38,
+          "note": "Aumentar peso. Grip máximo."
+        },
+        {
+          "exercise": "Press Militar con Barra (OHP)",
+          "sets": "3",
+          "reps": "8"
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1066,39 +1296,31 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "62fdd1ee-9886-4bc9-8332-8988bdfed90e",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-02",
-      "name": "Fuerza + Core",
-      "type": "Fuerza / Gym",
-      "duration_min": 65,
-      "tss_planned": 55,
-      "coach_note": "Mantenimiento de fuerza. Volumen moderado antes de transición a F3.",
+      "name": "🔵 Descanso Activo",
+      "type": "Core / Movilidad",
+      "duration_min": 30,
+      "tss_planned": 12,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA AZUL. Descanso activo. Movilidad suave. Sin pesas.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Movilidad de cadera y hombros",
+          "sets": "1",
+          "reps": "15min"
         },
         {
-          "name": "Sentadilla + Remo + Press",
-          "duration": "35 min",
-          "reps": "3×10",
-          "zone": "Fuerza — Z3"
-        },
-        {
-          "name": "Core funcional",
-          "duration": "15 min",
-          "zone": "Fuerza"
-        },
-        {
-          "name": "Movilidad",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Caminata suave (opcional)",
+          "sets": "1",
+          "reps": "20min"
         }
       ],
       "status": "PENDING",
@@ -1110,33 +1332,55 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "91a2f90b-edd1-4c6b-8a11-aee4effd408c",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-03",
-      "name": "Ciclismo Z2 60'",
-      "type": "Ciclismo",
-      "duration_min": 60,
-      "tss_planned": 68,
-      "coach_note": "Recuperación activa. Preparar cuerpo para F3 en agua.",
+      "name": "🔴 DÍA C + Med Ball Pliométrico",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 65,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA C con lanzamientos pliométricos. El core ya no solo estabiliza: genera potencia rotacional para las popas explosivas.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento + Activación Core",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Z2 aeróbico",
-          "duration": "45 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Body Saw TRX / Deslizadores",
+          "sets": "4",
+          "reps": "45s"
         },
         {
-          "name": "Enfriamiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Press Pallof",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "2s hold."
+        },
+        {
+          "exercise": "V-Ups / Dead Bug",
+          "sets": "4",
+          "reps": "20"
+        },
+        {
+          "exercise": "Lanzamiento Med Ball Rotacional contra Pared",
+          "sets": "3",
+          "reps": "10/lado",
+          "note": "F2 PLIOMÉTRICO. Máxima velocidad de rotación. Transfiere potencia de tronco al barco."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1148,39 +1392,37 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "ed1a8fa1-ab82-4aa4-bae3-fe8faf3ff9bd",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-04",
-      "name": "Ciclismo Largo 90'",
+      "name": "🟡 Cardio Técnico Z2-Z3 — 60'",
       "type": "Ciclismo",
-      "duration_min": 90,
-      "tss_planned": 110,
-      "coach_note": "Último largo de F2. Esfuerzo sostenido. Carga máxima antes de taper.",
+      "duration_min": 60,
+      "tss_planned": 68,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | Cardio técnico. Sustituto día de agua. Mantener base aeróbica sin acumular fatiga.",
       "segments": [
         {
-          "name": "Calentamiento",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         },
         {
-          "name": "Z2 largo",
-          "duration": "58 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Ciclismo Z2-Z3",
+          "duration": "40min",
+          "zone": "Z2-Z3",
+          "reps": "FC 130-160 bpm"
         },
         {
-          "name": "2×8 min Z3",
-          "duration": "18 min",
-          "reps": "2×8min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Enfriamiento",
-          "duration": "4 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1",
+          "duration": "10min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -1192,7 +1434,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "62fec212-3903-4171-b959-334b6108a0e2",
@@ -1203,47 +1448,92 @@
       "created_at": "2026-06-09T20:27:17.182Z",
       "updated_at": "2026-06-09T20:27:17.182Z",
       "date": "2026-07-05",
-      "name": "Recuperación Activa — Cierre F2",
+      "name": "🔵 Descanso Total",
       "type": "Core / Movilidad",
-      "duration_min": 40,
-      "tss_planned": 15,
-      "coach_note": "Cierre F2. Movilidad completa. Semana siguiente empieza F3 con vela específica. Revisa sensaciones."
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA AZUL. El bloque más pesado termina aquí. Descanso + sueño de calidad.",
+      "zone": "BLUE",
+      "week_label": "S4 · 🔴 Fuerza Explosiva",
+      "phase": "F2"
     },
     {
       "id": "bfaffb3c-5c87-480c-9515-4f4f66b89e93",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-06",
-      "name": "Vela ILCA 7 — Maniobras Básicas",
-      "type": "En Agua",
-      "duration_min": 120,
-      "tss_planned": 82,
-      "coach_note": "Primera sesión intensiva en agua. Foco: viradas, trasluchadas, salidas. Viento 8-12 kts ideal.",
+      "name": "🔴 DÍA A + DÍA C — Sesión Combinada",
+      "type": "Fuerza / Gym",
+      "duration_min": 95,
+      "tss_planned": 90,
+      "coach_note": "SEMANA 5 | Pico Intensidad 🔴 | El día de gimnasio más pesado del ciclo. DÍA A completo + DÍA C completo en la misma sesión. Simula fatiga acumulada de regata.",
       "segments": [
         {
-          "name": "Calentamiento en tierra + revisión de equipo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Viradas y trasluchadas básicas",
-          "duration": "45 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "4",
+          "reps": "6",
+          "logged_kg": 80,
+          "note": "80% 1RM. Bajada 1s — SUBIDA EXPLOSIVA. Menos reps, más potencia."
         },
         {
-          "name": "Salidas simuladas",
-          "duration": "30 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Súper-Serie: Silla Estática con Disco + Tuck Springs",
+          "sets": "4",
+          "reps": "75s / 12 reps",
+          "logged_kg": 20,
+          "note": "Silla 75s (aumento F2) → inmediato 12 tuck jumps. Máxima fatiga isométrica."
         },
         {
-          "name": "Sesión libre + navegación",
-          "duration": "25 min",
-          "zone": "Z2 — Base aeróbica"
+          "exercise": "Desplantes Búlgaros con Mancuernas",
+          "sets": "3",
+          "reps": "8/pierna",
+          "logged_kg": 26,
+          "note": "Más carga que F1. Subida explosiva. Controla la bajada."
         },
         {
-          "name": "Guindola y revisión",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Hamstring Curls en Fitball",
+          "sets": "3",
+          "reps": "10",
+          "note": "Aumenta dificultad: pausa 1s arriba."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        },
+        {
+          "exercise": "Body Saw TRX / Deslizadores",
+          "sets": "4",
+          "reps": "45s"
+        },
+        {
+          "exercise": "Press Pallof",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "2s hold."
+        },
+        {
+          "exercise": "V-Ups / Dead Bug",
+          "sets": "4",
+          "reps": "20"
+        },
+        {
+          "exercise": "Lanzamiento Med Ball Rotacional contra Pared",
+          "sets": "3",
+          "reps": "10/lado",
+          "note": "F2 PLIOMÉTRICO. Máxima velocidad de rotación. Transfiere potencia de tronco al barco."
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1255,39 +1545,27 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S5 · 🔴 Pico Intensidad",
+      "phase": "F2"
     },
     {
       "id": "d2784460-bfee-4cd6-911e-8b60ff5adcd9",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-07",
-      "name": "Fuerza + Core — Vela",
-      "type": "Fuerza / Gym",
-      "duration_min": 60,
+      "name": "🟡 Cardio Z2 — Recuperación Activa 50'",
+      "type": "Carrera / Movilidad",
+      "duration_min": 50,
       "tss_planned": 50,
-      "coach_note": "Fuerza específica de vela: sentadilla isométrica, trapecio, rotación de tronco.",
+      "coach_note": "SEMANA 5 | Pico Intensidad 🔴 | Cardio suave de recuperación activa. FC < 145 bpm. Sustituto día de agua popas.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Sentadilla isométrica + trapecio",
-          "duration": "30 min",
-          "reps": "4×8",
-          "zone": "Fuerza — Z3"
-        },
-        {
-          "name": "Core rotacional de vela",
-          "duration": "15 min",
-          "zone": "Fuerza"
-        },
-        {
-          "name": "Estiramiento",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Cardio Z2 suave",
+          "duration": "50min",
+          "zone": "Z2",
+          "reps": "FC < 145 bpm"
         }
       ],
       "status": "PENDING",
@@ -1299,43 +1577,58 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S5 · 🔴 Pico Intensidad",
+      "phase": "F2"
     },
     {
       "id": "00d9380f-be16-476e-9b06-5d4e7060e435",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-08",
-      "name": "Vela — Regata Entrenamiento",
-      "type": "En Agua",
-      "duration_min": 150,
-      "tss_planned": 98,
-      "coach_note": "Regata simulada completa. Salidas, barlovento, sotavento. Tomar tiempos.",
+      "name": "🔴 DÍA B — Tracción Máxima F2",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 75,
+      "coach_note": "SEMANA 5 | Pico Intensidad 🔴 | DÍA B Fuerza Máxima. El mayor peso del ciclo en dominadas y remo. Tu agarre tiene que aguantar 3 regatas seguidas.",
       "segments": [
         {
-          "name": "Preparación y salida al agua",
-          "duration": "20 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Regata 1 barlovento",
-          "duration": "40 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Dominadas con Lastre (Weighted Chin-ups)",
+          "sets": "5",
+          "reps": "4-6",
+          "note": "F2: FUERZA PURA. Menos reps, más lastre. Baja controlado — sube explosivo."
         },
         {
-          "name": "Pausa y ajuste",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Remo con Barra (Barbell Row)",
+          "sets": "4",
+          "reps": "8",
+          "logged_kg": 75,
+          "note": "Más peso que F1. Explosivo en la tracción."
         },
         {
-          "name": "Regata 2 completa",
-          "duration": "60 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Paseo del Granjero — Farmer's Walk",
+          "sets": "4",
+          "reps": "50m",
+          "logged_kg": 38,
+          "note": "Aumentar peso. Grip máximo."
         },
         {
-          "name": "Guindola + análisis",
-          "duration": "20 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Press Militar con Barra (OHP)",
+          "sets": "3",
+          "reps": "8"
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1347,7 +1640,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S5 · 🔴 Pico Intensidad",
+      "phase": "F2"
     },
     {
       "id": "91f7aabe-79db-4c1d-bb21-671b709fdf91",
@@ -1382,36 +1678,27 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-10",
-      "name": "Vela — Viradas y Salidas",
-      "type": "En Agua",
-      "duration_min": 120,
+      "name": "🔴 Simulación: Ciclismo Z4 + Isometría",
+      "type": "Ciclismo",
+      "duration_min": 80,
       "tss_planned": 85,
-      "coach_note": "Perfeccionar salidas de regata. Cronometrar primeros 50 metros.",
+      "coach_note": "SEMANA 5 | Pico Intensidad 🔴 | Simulación de fatiga en seco. 5 bloques: 10min Ciclismo Z4 → parar → Silla Isométrica 60s → repetir. Replica el estrés cardio+muscular de una regata larga.",
       "segments": [
         {
-          "name": "Salida al agua",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento Z2",
+          "duration": "8min",
+          "zone": "Z2"
         },
         {
-          "name": "Técnica de viradas × 20",
-          "duration": "45 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Ciclismo Z4 + Isometría (×5 bloques)",
+          "duration": "10min",
+          "zone": "Z4",
+          "reps": "5 bloques: 10min Z4 → parar → Silla isométrica 60s → continuar"
         },
         {
-          "name": "Simulación de salidas × 10",
-          "duration": "40 min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Navegación libre",
-          "duration": "15 min",
-          "zone": "Z2 — Base aeróbica"
-        },
-        {
-          "name": "Guindola",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Enfriamiento Z1",
+          "duration": "8min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -1423,7 +1710,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "RED",
+      "week_label": "S5 · 🔴 Pico Intensidad",
+      "phase": "F2"
     },
     {
       "id": "7fea3e07-8293-4f28-a8ca-cc0fd61241cd",
@@ -1526,36 +1816,39 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-13",
-      "name": "Vela — Táctica de Regata",
-      "type": "En Agua",
-      "duration_min": 120,
-      "tss_planned": 88,
-      "coach_note": "Simulación táctica. Viento de popa y ceñida. Toma de decisiones en tiempo real.",
+      "name": "🟡 Test Recovery + DÍA C Suave",
+      "type": "Core / Movilidad",
+      "duration_min": 50,
+      "tss_planned": 40,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | FASE 3 COMIENZA. Test control: mide con qué rapidez baja tu FC tras 3min de esfuerzo al 80%. Luego: DÍA C suave — solo 2 series por ejercicio.",
       "segments": [
         {
-          "name": "Preparación",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento + Activación Core",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Navegación táctica — viento popa",
-          "duration": "40 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Body Saw TRX",
+          "sets": "2",
+          "reps": "45s",
+          "note": "TAPERING: 2 series suaves."
         },
         {
-          "name": "Navegación táctica — ceñida",
-          "duration": "40 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Press Pallof",
+          "sets": "2",
+          "reps": "10/lado"
         },
         {
-          "name": "Salidas cronometradas × 8",
-          "duration": "20 min",
-          "zone": "Z4 — Alta intensidad"
+          "exercise": "Dead Bug",
+          "sets": "2",
+          "reps": "15"
         },
         {
-          "name": "Guindola",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1567,39 +1860,53 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "2ef3bc1f-05a6-4809-9b91-9a0a7060140a",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-14",
-      "name": "Fuerza Mantenimiento",
+      "name": "🟡 DÍA A Modificado — Mitad Volumen F3",
       "type": "Fuerza / Gym",
-      "duration_min": 55,
-      "tss_planned": 45,
-      "coach_note": "Mantenimiento. Volumen bajo, técnica perfecta. No acumular fatiga.",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA A con el MISMO peso de la semana pasada pero MITAD de series. No buscas fatiga — buscas mantener el estímulo neuromuscular.",
       "segments": [
         {
-          "name": "Activación",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Sentadilla + Press + Remo",
-          "duration": "30 min",
-          "reps": "3×8",
-          "zone": "Fuerza — Z3"
+          "exercise": "Peso Muerto Rumano con Barra (RDL)",
+          "sets": "2",
+          "reps": "6",
+          "logged_kg": 75,
+          "note": "TAPERING: mismo peso F2, mitad de series. Enfoque en técnica perfecta."
         },
         {
-          "name": "Core específico vela",
-          "duration": "10 min",
-          "zone": "Fuerza"
+          "exercise": "Silla Estática con Disco + Tuck Springs",
+          "sets": "2",
+          "reps": "60s / 10 reps",
+          "logged_kg": 20,
+          "note": "Mantener estímulo neuromuscular sin acumular fatiga."
         },
         {
-          "name": "Movilidad",
-          "duration": "5 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Desplantes Búlgaros",
+          "sets": "2",
+          "reps": "8/pierna",
+          "logged_kg": 24
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1611,38 +1918,27 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "cc12d49d-2752-457f-b5c5-92f3609378a1",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-15",
-      "name": "Vela — Regata Completa",
-      "type": "Regata Completa",
-      "duration_min": 150,
-      "tss_planned": 98,
-      "coach_note": "Regata de preparación completa. Todas las marcas activas.",
+      "name": "🔵 Cardio Z2 Suave — 40'",
+      "type": "Ciclismo",
+      "duration_min": 40,
+      "tss_planned": 35,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA AZUL. Cardio suave Z2, sin picos de FC. El cuerpo empieza la supercompensación. NO superar 140 bpm.",
       "segments": [
         {
-          "name": "Preparación y meteorología",
-          "duration": "20 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Regata barlovento-sotavento × 2",
-          "duration": "90 min",
-          "zone": "Z4 — Alta intensidad"
-        },
-        {
-          "name": "Navegación libre post-regata",
-          "duration": "25 min",
-          "zone": "Z2 — Base aeróbica"
-        },
-        {
-          "name": "Guindola + análisis de datos",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Cardio Z2 suave sin picos",
+          "duration": "40min",
+          "zone": "Z2",
+          "reps": "FC < 140 bpm"
         }
       ],
       "status": "PENDING",
@@ -1654,7 +1950,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "a2dcb3f5-b9c3-4f37-95b8-ad4340de22fc",
@@ -1689,31 +1988,46 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-17",
-      "name": "Vela — Salidas y Maniobras",
-      "type": "En Agua",
-      "duration_min": 120,
-      "tss_planned": 85,
-      "coach_note": "Último bloque de perfeccionamiento técnico. Salidas y maniobras de alta velocidad.",
+      "name": "🟡 DÍA B Modificado — 2 Series F3",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 35,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA B reducido: solo 2 series por ejercicio. Peso moderado, técnica perfecta. Mantener conexión neuromuscular.",
       "segments": [
         {
-          "name": "Preparación",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Salidas cronometradas × 15",
-          "duration": "45 min",
-          "zone": "Z4 — Alta intensidad"
+          "exercise": "Dominadas (técnica)",
+          "sets": "2",
+          "reps": "5",
+          "note": "TAPERING: 2 series. Enfoque en técnica, no fatiga."
         },
         {
-          "name": "Maniobras técnicas",
-          "duration": "45 min",
-          "zone": "Z3 — Táctico"
+          "exercise": "Remo con Barra",
+          "sets": "2",
+          "reps": "8",
+          "note": "Peso moderado, técnica perfecta."
         },
         {
-          "name": "Análisis y guindola",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Farmer's Walk",
+          "sets": "2",
+          "reps": "50m",
+          "logged_kg": 32
+        },
+        {
+          "exercise": "Press Militar",
+          "sets": "2",
+          "reps": "6"
+        },
+        {
+          "exercise": "Enfriamiento + Movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -1725,43 +2039,27 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "3b2492e0-5788-44d3-90eb-2cc119725ba7",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-18",
-      "name": "Vela — Match Race Final",
-      "type": "Regata Completa",
-      "duration_min": 180,
-      "tss_planned": 118,
-      "coach_note": "Última competencia simulada antes del CAC. Máximo compromiso.",
+      "name": "🟡 Cardio Técnico Ligero — 45'",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 42,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | Cardio técnico ligero. Sustituto día de agua calibración. Mantén el ritmo aeróbico sin acumular fatiga.",
       "segments": [
         {
-          "name": "Preparación completa",
-          "duration": "25 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Match Race 1 + análisis",
-          "duration": "55 min",
-          "zone": "Z4 — Alta intensidad"
-        },
-        {
-          "name": "Match Race 2 + análisis",
-          "duration": "55 min",
-          "zone": "Z4 — Alta intensidad"
-        },
-        {
-          "name": "Match Race 3",
-          "duration": "35 min",
-          "zone": "Z3 — Táctico"
-        },
-        {
-          "name": "Guindola + debriefing final",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Cardio Técnico Z2",
+          "duration": "45min",
+          "zone": "Z2",
+          "reps": "FC 125-140 bpm"
         }
       ],
       "status": "PENDING",
@@ -1773,30 +2071,22 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "YELLOW",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "78ca3828-c110-4fc0-b491-2426afc0dcaf",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-19",
-      "name": "Recuperación Activa Pre-Taper",
+      "name": "🔵 Descanso Absoluto Pre-Taper",
       "type": "Core / Movilidad",
-      "duration_min": 30,
-      "tss_planned": 20,
-      "coach_note": "Inicio del taper. Solo movilidad y relajación. Mente tranquila.",
-      "segments": [
-        {
-          "name": "Caminata + respiración",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Movilidad + estiramientos suaves",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        }
-      ],
+      "duration_min": 20,
+      "tss_planned": 12,
+      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA AZUL. Descanso total. El trabajo duro ya está hecho. Ahora llenas el tanque.",
+      "segments": [],
       "status": "PENDING",
       "rpe": null,
       "athlete_note": null,
@@ -1806,7 +2096,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z"
+      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "zone": "BLUE",
+      "week_label": "S6 · 🟡 Tapering",
+      "phase": "F3"
     },
     {
       "id": "b5a80aca-6215-493b-9ae5-d313c8551e8f",
@@ -2228,7 +2521,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-11T14:44:38.725Z",
+    "built_at": "2026-06-11T14:54:10.511Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -34273,6 +34566,41 @@
         "calories": 438,
         "tss_actual": 53,
         "synced_at": "2026-06-11T14:40:10.187Z"
+      }
+    },
+    {
+      "id": "08c3f5a4-8093-4d6e-a09b-6bac10332668",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-11T14:54:10.451Z",
+      "data": {
+        "activity_id": 23201883258,
+        "activity_name": "Fuerza",
+        "activity_type": "strength_training",
+        "duration_min": 73,
+        "hr_avg": 112,
+        "hr_max": 148,
+        "calories": 438,
+        "tss_actual": 53,
+        "synced_at": "2026-06-11T14:54:10.451Z"
+      }
+    },
+    {
+      "id": "07d49fd2-b619-41fb-9141-d3f07957a946",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T14:54:11.164Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-11T14:54:11.164Z"
       }
     }
   ],
