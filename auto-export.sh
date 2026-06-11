@@ -108,6 +108,10 @@ console.log(view.workouts.length + ' workouts (' + done + ' done) | ' + view.gar
 
 if [ $? -eq 0 ]; then
   log "✅ $EXPORT_OUT"
+  # Recargar DB en servidor local sin reiniciar
+  if $SERVER_RUNNING && [ -n "$TOKEN" ]; then
+    curl -s -X POST "$SERVER/api/reload-db" -H "Authorization: Bearer $TOKEN" > /dev/null 2>&1 && log "🔄 DB recargada en servidor"
+  fi
 else
   log "❌ Export falló: $EXPORT_OUT"
   exit 1
