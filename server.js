@@ -1841,6 +1841,18 @@ app.get('/health', (_req, res) => {
   res.json({ ok: true, db: 'json-store', file: DB_FILE, workouts: DB.workouts.length, ts: now() })
 })
 
+// Recarga DB desde disco sin reiniciar el servidor
+app.post('/api/reload-db', (_req, res) => {
+  try {
+    const fresh = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'))
+    Object.assign(DB, fresh)
+    console.log('[DB] Recargado desde disco —', DB.workouts.length, 'workouts')
+    res.json({ ok: true, workouts: DB.workouts.length, ts: now() })
+  } catch (e) {
+    res.status(500).json({ ok: false, error: e.message })
+  }
+})
+
 // ── CRON DE MEDIANOCHE — sincronización automática diaria ─────────────────────
 let _lastAutoSyncDate = ''
 
