@@ -2613,7 +2613,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-11T16:23:27.695Z",
+    "built_at": "2026-06-12T14:56:13.228Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31804,6 +31804,13 @@
         "ctl": 23.8,
         "atl": 50.9,
         "tsb": -27.1
+      },
+      {
+        "date": "2026-06-12",
+        "tss": 0,
+        "ctl": 23.2,
+        "atl": 43.6,
+        "tsb": -20.4
       }
     ]
   },
@@ -34744,6 +34751,77 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-06-11T16:18:26.012Z"
+      }
+    },
+    {
+      "id": "b965f50f-4988-48df-8214-4709d3bc101b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T16:30:09.753Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-11T16:30:09.753Z"
+      }
+    },
+    {
+      "id": "026fd52a-bf8e-4192-bacd-d49a038c9665",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T16:36:35.572Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-11T16:36:35.572Z"
+      }
+    },
+    {
+      "id": "08458cff-1af5-46ab-b7e9-17cc1017a92b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T16:48:50.000Z",
+      "data": {
+        "recovery_score": 23,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-11T16:48:50.000Z",
+        "_manual": true,
+        "_note": "Entrada manual — token expirado el Jun 11. Recovery 23% confirmado en app Whoop"
+      }
+    },
+    {
+      "id": "68107655-3003-42b5-ba3e-715878058bff",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-12T14:56:12.838Z",
+      "data": {
+        "activity_id": 23218039965,
+        "activity_name": "Bahía de Banderas Carrera",
+        "activity_type": "running",
+        "duration_min": 48,
+        "hr_avg": 125,
+        "hr_max": 161,
+        "calories": 375,
+        "tss_actual": 39,
+        "synced_at": "2026-06-12T14:56:12.838Z"
       }
     }
   ],
