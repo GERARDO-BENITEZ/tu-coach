@@ -2651,7 +2651,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-15T19:37:21.950Z",
+    "built_at": "2026-06-15T19:50:29.418Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -34916,6 +34916,93 @@
         "weight_kg": null,
         "synced_at": "2026-06-15T19:26:08.638Z"
       }
+    },
+    {
+      "id": "14c69573-0732-4ed0-981d-5326be691f9e",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-15T19:50:19.158Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-15T19:50:19.158Z"
+      }
+    },
+    {
+      "id": "c3fbe22c-6210-4235-b0cd-d2135714a6a2",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-15T19:50:22.025Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-15T19:50:22.025Z"
+      }
+    },
+    {
+      "id": "9d4d0e26-dd6a-40a6-846f-7cbdd71c6fdd",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-15T19:50:24.988Z",
+      "data": {
+        "activity_id": 23227832966,
+        "activity_name": "Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 60,
+        "hr_avg": 94,
+        "hr_max": 149,
+        "calories": 244,
+        "tss_actual": 23,
+        "synced_at": "2026-06-15T19:50:24.988Z"
+      }
+    },
+    {
+      "id": "fef7b4df-8505-4e67-bfca-efe357fcfb54",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-15T19:50:29.375Z",
+      "data": {
+        "activity_id": 23227832966,
+        "activity_name": "Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 60,
+        "hr_avg": 94,
+        "hr_max": 149,
+        "calories": 244,
+        "tss_actual": 23,
+        "synced_at": "2026-06-15T19:50:29.375Z"
+      }
+    },
+    {
+      "id": "a9e35331-77b0-419d-8aab-32209e0579e1",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-15T19:50:29.640Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-15T19:50:29.640Z"
+      }
     }
   ],
   "wellness": [
@@ -34979,6 +35066,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-12T15:56:13.992Z"
+    },
+    {
+      "id": "e5d47a6f-28f4-4772-88f7-f7dec2bb1738",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-15",
+      "sleepHours": 7.5,
+      "sleepQuality": 5,
+      "energy": 10,
+      "muscleSoreness": 10,
+      "mentalReadiness": 10,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-15T19:50:12.778Z"
     }
   ],
   "whoop_history": [],
