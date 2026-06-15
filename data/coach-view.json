@@ -230,16 +230,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
-      "actual_tss": null,
+      "actual_tss": 60,
       "completed_at": null,
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T20:42:20.992Z"
+      "updated_at": "2026-06-15T19:37:11.000Z"
     },
     {
       "id": "5efeba73-e43e-4ac4-aaf8-f59534e33e98",
@@ -316,16 +316,16 @@
           "reps": "FC 130–145 bpm"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
-      "actual_tss": null,
+      "actual_tss": 40,
       "completed_at": null,
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-15T19:37:11.000Z",
       "zone": "YELLOW",
       "week_label": "S1 · 🟡 Adaptación",
       "phase": "F1"
@@ -348,16 +348,16 @@
           "note": "En el auto/aeropuerto si hay oportunidad."
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
-      "actual_tss": null,
+      "actual_tss": 0,
       "completed_at": null,
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-15T19:37:11.000Z",
       "zone": "BLUE",
       "week_label": "S1 · 🟡 Adaptación",
       "phase": "F1"
@@ -389,16 +389,16 @@
           "reps": "5min"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
-      "actual_tss": null,
+      "actual_tss": 10,
       "completed_at": null,
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-15T19:37:11.000Z",
       "zone": "BLUE",
       "week_label": "S1 · 🟡 Adaptación",
       "phase": "F1"
@@ -2613,7 +2613,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-15T19:26:09.496Z",
+    "built_at": "2026-06-15T19:37:21.950Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31793,45 +31793,45 @@
       },
       {
         "date": "2026-06-10",
-        "tss": 43,
-        "ctl": 23.1,
-        "atl": 50.6,
-        "tsb": -27.5
+        "tss": 60,
+        "ctl": 23.5,
+        "atl": 53,
+        "tsb": -29.5
       },
       {
         "date": "2026-06-11",
         "tss": 53,
-        "ctl": 23.8,
-        "atl": 50.9,
-        "tsb": -27.1
+        "ctl": 24.2,
+        "atl": 53,
+        "tsb": -28.8
       },
       {
         "date": "2026-06-12",
-        "tss": 0,
-        "ctl": 23.2,
-        "atl": 43.6,
-        "tsb": -20.4
+        "tss": 40,
+        "ctl": 24.5,
+        "atl": 51.1,
+        "tsb": -26.6
       },
       {
         "date": "2026-06-13",
         "tss": 0,
-        "ctl": 22.6,
-        "atl": 37.4,
-        "tsb": -14.8
+        "ctl": 24,
+        "atl": 43.8,
+        "tsb": -19.9
       },
       {
         "date": "2026-06-14",
-        "tss": 0,
-        "ctl": 22.1,
-        "atl": 32.1,
-        "tsb": -10
+        "tss": 10,
+        "ctl": 23.6,
+        "atl": 39,
+        "tsb": -15.4
       },
       {
         "date": "2026-06-15",
         "tss": 0,
-        "ctl": 21.6,
-        "atl": 27.5,
-        "tsb": -5.9
+        "ctl": 23.1,
+        "atl": 33.4,
+        "tsb": -10.4
       }
     ]
   },
