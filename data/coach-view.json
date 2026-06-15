@@ -2650,8 +2650,8 @@
     }
   ],
   "pmc_cache": {
-    "athlete_id": "athlete-al-001",
-    "built_at": "2026-06-15T19:53:30.610Z",
+    "athlete_id": "athlete-gb-001",
+    "built_at": "2026-06-15T20:08:09.658Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31810,66 +31810,66 @@
       },
       {
         "date": "2026-06-07",
-        "tss": 0,
-        "ctl": 19,
-        "atl": 36.7,
-        "tsb": -17.8
+        "tss": 41,
+        "ctl": 19.9,
+        "atl": 42.6,
+        "tsb": -22.7
       },
       {
         "date": "2026-06-08",
         "tss": 51,
-        "ctl": 19.7,
-        "atl": 38.8,
-        "tsb": -19
+        "ctl": 20.7,
+        "atl": 43.8,
+        "tsb": -23.1
       },
       {
         "date": "2026-06-09",
-        "tss": 0,
-        "ctl": 19.3,
-        "atl": 33.2,
-        "tsb": -14
+        "tss": 100,
+        "ctl": 22.6,
+        "atl": 51.8,
+        "tsb": -29.3
       },
       {
         "date": "2026-06-10",
-        "tss": 43,
-        "ctl": 19.8,
-        "atl": 34.6,
-        "tsb": -14.8
+        "tss": 60,
+        "ctl": 23.5,
+        "atl": 53,
+        "tsb": -29.5
       },
       {
         "date": "2026-06-11",
         "tss": 53,
-        "ctl": 20.6,
-        "atl": 37.3,
-        "tsb": -16.6
+        "ctl": 24.2,
+        "atl": 53,
+        "tsb": -28.8
       },
       {
         "date": "2026-06-12",
-        "tss": 0,
-        "ctl": 20.1,
-        "atl": 31.9,
-        "tsb": -11.8
+        "tss": 40,
+        "ctl": 24.5,
+        "atl": 51.1,
+        "tsb": -26.6
       },
       {
         "date": "2026-06-13",
         "tss": 0,
-        "ctl": 19.6,
-        "atl": 27.4,
-        "tsb": -7.7
+        "ctl": 24,
+        "atl": 43.8,
+        "tsb": -19.9
       },
       {
         "date": "2026-06-14",
-        "tss": 0,
-        "ctl": 19.2,
-        "atl": 23.5,
-        "tsb": -4.3
+        "tss": 10,
+        "ctl": 23.6,
+        "atl": 39,
+        "tsb": -15.4
       },
       {
         "date": "2026-06-15",
         "tss": 0,
-        "ctl": 18.7,
-        "atl": 20.1,
-        "tsb": -1.4
+        "ctl": 23.1,
+        "atl": 33.4,
+        "tsb": -10.4
       }
     ]
   },
@@ -34261,54 +34261,6 @@
       }
     },
     {
-      "id": "5366fb43-d3a3-4eb8-a3f4-000b6dbbe948",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": "541bdfb9-fa18-4aff-883d-299a4e770458",
-      "device": "whoop",
-      "synced_at": "2026-06-08T02:14:27.018Z",
-      "data": {
-        "strain": 9.8,
-        "recovery_score": 51,
-        "hrv_ms": 51,
-        "rhr_bpm": 43,
-        "sleep_hours": 7.8
-      }
-    },
-    {
-      "id": "b30f2ce2-0fba-40a3-b842-6faa410ddd50",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-08T20:27:37.827Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-08T20:27:37.827Z"
-      }
-    },
-    {
-      "id": "0f384651-0c17-46a2-b963-6b86e269461e",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-08T20:30:07.681Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-08T20:30:07.680Z"
-      }
-    },
-    {
       "id": "dd03764c-8d15-4814-b72b-de70dd82104c",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34324,23 +34276,6 @@
         "calories": 492,
         "tss_actual": 36,
         "synced_at": "2026-06-08T22:26:24.904Z"
-      }
-    },
-    {
-      "id": "841795b7-092c-4d4f-a8ca-441cb0bcc3f2",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-08T23:55:45.144Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-08T23:55:45.143Z"
       }
     },
     {
@@ -34380,57 +34315,6 @@
       }
     },
     {
-      "id": "7b7a245f-0015-456c-8ae8-d5028e01e2bb",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-08T23:56:15.982Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-08T23:56:15.982Z"
-      }
-    },
-    {
-      "id": "8b029636-641c-46cf-b89c-22972275e56b",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T03:03:11.345Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T03:03:11.344Z"
-      }
-    },
-    {
-      "id": "9676a7f4-7250-49f8-acfc-ae0b6bd5c3c6",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T03:03:12.530Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T03:03:12.530Z"
-      }
-    },
-    {
       "id": "fb63d7fa-97b3-492d-b281-9b2507691bde",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34464,40 +34348,6 @@
         "calories": 537,
         "tss_actual": 51,
         "synced_at": "2026-06-09T03:06:20.386Z"
-      }
-    },
-    {
-      "id": "ab5a574a-c3e2-4d20-9ff9-1d08ce5e80f8",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T03:06:21.307Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T03:06:21.307Z"
-      }
-    },
-    {
-      "id": "740d8070-a27d-457c-a776-b7591b99a3c1",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T03:55:15.307Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T03:55:15.307Z"
       }
     },
     {
@@ -34537,23 +34387,6 @@
       }
     },
     {
-      "id": "b6e8f11e-6f0b-4978-b559-5d53fa8ed73c",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T14:45:00.648Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T14:45:00.648Z"
-      }
-    },
-    {
       "id": "4618cf94-d0ec-48ad-9e09-3c1319ade727",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34569,23 +34402,6 @@
         "calories": 537,
         "tss_actual": 51,
         "synced_at": "2026-06-09T14:45:05.738Z"
-      }
-    },
-    {
-      "id": "24bbbdec-a856-4f60-b93c-0b10791de488",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T14:45:08.044Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T14:45:08.044Z"
       }
     },
     {
@@ -34607,38 +34423,6 @@
       }
     },
     {
-      "id": "5b93c7d2-3a37-4de6-a095-0a2d52a7fcfa",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T14:45:33.335Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-09T14:45:33.335Z"
-      }
-    },
-    {
-      "id": "b6adeb57-c076-45dc-8652-5138544ab089",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-09T06:30:00.000Z",
-      "data": {
-        "strain": 10.2,
-        "recovery_score": 83,
-        "hrv_ms": 65,
-        "rhr_bpm": 41,
-        "sleep_hours": 8.5,
-        "sleep_performance": 97
-      }
-    },
-    {
       "id": "d19ef344-6db1-464e-a0a6-675b93fe876b",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34657,23 +34441,6 @@
       }
     },
     {
-      "id": "8f0bea24-b603-403f-8d5d-fc691ba009f0",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-10T14:19:45.181Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-10T14:19:45.181Z"
-      }
-    },
-    {
       "id": "79a31c11-9267-4cda-967a-c91159268ff8",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34689,23 +34456,6 @@
         "calories": 553,
         "tss_actual": 43,
         "synced_at": "2026-06-10T14:19:48.486Z"
-      }
-    },
-    {
-      "id": "28bce80f-cf93-41f2-8fcf-a934db7b8982",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T14:40:08.655Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-11T14:40:08.654Z"
       }
     },
     {
@@ -34745,127 +34495,6 @@
       }
     },
     {
-      "id": "07d49fd2-b619-41fb-9141-d3f07957a946",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T14:54:11.164Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-11T14:54:11.164Z"
-      }
-    },
-    {
-      "id": "6806d293-01c1-4f62-a413-a8b46eabc0b1",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:07:29.851Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-11T16:07:29.850Z"
-      }
-    },
-    {
-      "id": "0dc618fb-de2e-4439-bced-a43303dd1ad0",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:08:14.715Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-11T16:08:14.715Z"
-      }
-    },
-    {
-      "id": "fe329e69-1150-4c34-8c68-0745a3f802ae",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:18:26.012Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-11T16:18:26.012Z"
-      }
-    },
-    {
-      "id": "b965f50f-4988-48df-8214-4709d3bc101b",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:30:09.753Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-11T16:30:09.753Z"
-      }
-    },
-    {
-      "id": "026fd52a-bf8e-4192-bacd-d49a038c9665",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:36:35.572Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-11T16:36:35.572Z"
-      }
-    },
-    {
-      "id": "08458cff-1af5-46ab-b7e9-17cc1017a92b",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-11T16:48:50.000Z",
-      "data": {
-        "recovery_score": 23,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": 197,
-        "weight_kg": 90,
-        "synced_at": "2026-06-11T16:48:50.000Z",
-        "_manual": true,
-        "_note": "Entrada manual — token expirado el Jun 11. Recovery 23% confirmado en app Whoop"
-      }
-    },
-    {
       "id": "68107655-3003-42b5-ba3e-715878058bff",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
@@ -34881,74 +34510,6 @@
         "calories": 375,
         "tss_actual": 39,
         "synced_at": "2026-06-12T14:56:12.838Z"
-      }
-    },
-    {
-      "id": "f351dd17-5faa-4fab-ae67-a0fe393b7570",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-12T15:00:05.660Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-12T15:00:05.660Z"
-      }
-    },
-    {
-      "id": "5aba6275-2162-4418-bf32-4ed098d7d083",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-15T19:26:08.638Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-15T19:26:08.638Z"
-      }
-    },
-    {
-      "id": "14c69573-0732-4ed0-981d-5326be691f9e",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-15T19:50:19.158Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-15T19:50:19.158Z"
-      }
-    },
-    {
-      "id": "c3fbe22c-6210-4235-b0cd-d2135714a6a2",
-      "athlete_id": "athlete-gb-001",
-      "workout_id": null,
-      "device": "whoop",
-      "synced_at": "2026-06-15T19:50:22.025Z",
-      "data": {
-        "recovery_score": null,
-        "hrv_ms": null,
-        "rhr_bpm": null,
-        "sleep_hours": null,
-        "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-15T19:50:22.025Z"
       }
     },
     {
@@ -34988,20 +34549,70 @@
       }
     },
     {
-      "id": "a9e35331-77b0-419d-8aab-32209e0579e1",
+      "id": "5366fb43-d3a3-4eb8-a3f4-000b6dbbe948",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": "541bdfb9-fa18-4aff-883d-299a4e770458",
+      "device": "whoop",
+      "synced_at": "2026-06-08T02:14:27.018Z",
+      "data": {
+        "strain": 9.8,
+        "recovery_score": 51,
+        "hrv_ms": 51,
+        "rhr_bpm": 43,
+        "sleep_hours": 7.8
+      }
+    },
+    {
+      "id": "b6adeb57-c076-45dc-8652-5138544ab089",
       "athlete_id": "athlete-gb-001",
       "workout_id": null,
       "device": "whoop",
-      "synced_at": "2026-06-15T19:50:29.640Z",
+      "synced_at": "2026-06-09T06:30:00.000Z",
       "data": {
-        "recovery_score": null,
+        "strain": 10.2,
+        "recovery_score": 83,
+        "hrv_ms": 65,
+        "rhr_bpm": 41,
+        "sleep_hours": 8.5,
+        "sleep_performance": 97
+      }
+    },
+    {
+      "id": "08458cff-1af5-46ab-b7e9-17cc1017a92b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-11T16:48:50.000Z",
+      "data": {
+        "recovery_score": 23,
         "hrv_ms": null,
         "rhr_bpm": null,
         "sleep_hours": null,
         "strain": null,
-        "max_heart_rate": null,
-        "weight_kg": null,
-        "synced_at": "2026-06-15T19:50:29.640Z"
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-11T16:48:50.000Z",
+        "_manual": true,
+        "_note": "Entrada manual Jun 11 — Recovery 23% confirmado en app Whoop"
+      }
+    },
+    {
+      "id": "7d59f8bd-e42d-4ab2-a3b9-68e8cea3a040",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-15T19:58:28.000Z",
+      "data": {
+        "recovery_score": 87,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-06-15T19:58:28.000Z",
+        "_manual": true,
+        "_note": "Entrada manual Jun 15 — Recovery 87% confirmado en app Whoop"
       }
     }
   ],
