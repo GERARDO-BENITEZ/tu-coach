@@ -1853,6 +1853,59 @@ app.post('/api/reload-db', (_req, res) => {
   }
 })
 
+// Exporta coach-view.json y hace git push (para LaunchAgents fuera del Desktop)
+app.post('/api/export-and-push', auth, async (req, res) => {
+  const { execFile } = require('child_process')
+  const appDir = __dirname
+  const coachViewPath = path.join(DATA_DIR, 'coach-view.json')
+
+  // 1. Escribir coach-view.json
+  try {
+    const view = {
+      users:             DB.users             || [],
+      coach_athletes:    DB.coach_athletes    || [],
+      workouts:          DB.workouts          || [],
+      pmc_cache:         DB.pmc_cache         || [],
+      nutrition_plans:   DB.nutrition_plans   || [],
+      strength_logs:     DB.strength_logs     || [],
+      garmin_activities: DB.garmin_activities || [],
+      device_syncs:      DB.device_syncs      || [],
+      wellness:          DB.wellness          || [],
+      whoop_history:     DB.whoop_history     || [],
+      body_composition:  DB.body_composition  || []
+    }
+    fs.writeFileSync(coachViewPath, JSON.stringify(view, null, 2))
+    console.log('[Export] coach-view.json escrito —', view.workouts.length, 'workouts')
+  } catch (e) {
+    return res.status(500).json({ ok: false, step: 'export', error: e.message })
+  }
+
+  // 2. Git add + commit + push (no-op si no hay cambios)
+  const run = (cmd, args, opts = {}) => new Promise((resolve, reject) => {
+    const child = execFile(cmd, args, { cwd: appDir, timeout: 20000, ...opts }, (err, stdout, stderr) => {
+      if (err) reject(Object.assign(err, { stdout, stderr }))
+      else resolve((stdout || '').trim())
+    })
+    void child
+  })
+
+  try {
+    await run('git', ['add', 'data/coach-view.json'])
+    const diff = await run('git', ['diff', '--staged', '--stat'])
+    if (!diff) return res.json({ ok: true, pushed: false, msg: 'Sin cambios — ya actualizado' })
+
+    const label = `night-sync ${now().slice(0,16)}`
+    await run('git', ['commit', '-m', label])
+    const pushOut = await run('git', ['push'])
+    console.log('[Export] Push OK —', label)
+    return res.json({ ok: true, pushed: true, msg: label, detail: pushOut })
+  } catch (e) {
+    const msg = e.stderr || e.stdout || e.message
+    console.error('[Export] Git error:', msg)
+    return res.json({ ok: true, pushed: false, msg: 'export OK pero git falló: ' + msg.slice(0, 200) })
+  }
+})
+
 // ── CRON DE MEDIANOCHE — sincronización automática diaria ─────────────────────
 let _lastAutoSyncDate = ''
 
