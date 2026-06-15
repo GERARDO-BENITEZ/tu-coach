@@ -2650,8 +2650,8 @@
     }
   ],
   "pmc_cache": {
-    "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-15T19:50:29.418Z",
+    "athlete_id": "athlete-al-001",
+    "built_at": "2026-06-15T19:53:30.610Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31810,66 +31810,66 @@
       },
       {
         "date": "2026-06-07",
-        "tss": 41,
-        "ctl": 19.9,
-        "atl": 42.6,
-        "tsb": -22.7
+        "tss": 0,
+        "ctl": 19,
+        "atl": 36.7,
+        "tsb": -17.8
       },
       {
         "date": "2026-06-08",
         "tss": 51,
-        "ctl": 20.7,
-        "atl": 43.8,
-        "tsb": -23.1
+        "ctl": 19.7,
+        "atl": 38.8,
+        "tsb": -19
       },
       {
         "date": "2026-06-09",
-        "tss": 100,
-        "ctl": 22.6,
-        "atl": 51.8,
-        "tsb": -29.3
+        "tss": 0,
+        "ctl": 19.3,
+        "atl": 33.2,
+        "tsb": -14
       },
       {
         "date": "2026-06-10",
-        "tss": 60,
-        "ctl": 23.5,
-        "atl": 53,
-        "tsb": -29.5
+        "tss": 43,
+        "ctl": 19.8,
+        "atl": 34.6,
+        "tsb": -14.8
       },
       {
         "date": "2026-06-11",
         "tss": 53,
-        "ctl": 24.2,
-        "atl": 53,
-        "tsb": -28.8
+        "ctl": 20.6,
+        "atl": 37.3,
+        "tsb": -16.6
       },
       {
         "date": "2026-06-12",
-        "tss": 40,
-        "ctl": 24.5,
-        "atl": 51.1,
-        "tsb": -26.6
+        "tss": 0,
+        "ctl": 20.1,
+        "atl": 31.9,
+        "tsb": -11.8
       },
       {
         "date": "2026-06-13",
         "tss": 0,
-        "ctl": 24,
-        "atl": 43.8,
-        "tsb": -19.9
+        "ctl": 19.6,
+        "atl": 27.4,
+        "tsb": -7.7
       },
       {
         "date": "2026-06-14",
-        "tss": 10,
-        "ctl": 23.6,
-        "atl": 39,
-        "tsb": -15.4
+        "tss": 0,
+        "ctl": 19.2,
+        "atl": 23.5,
+        "tsb": -4.3
       },
       {
         "date": "2026-06-15",
         "tss": 0,
-        "ctl": 23.1,
-        "atl": 33.4,
-        "tsb": -10.4
+        "ctl": 18.7,
+        "atl": 20.1,
+        "tsb": -1.4
       }
     ]
   },
@@ -35084,5 +35084,30 @@
     }
   ],
   "whoop_history": [],
-  "body_composition": []
+  "body_composition": [
+    {
+      "id": "bc-gb-2026-06-07",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-07",
+      "weight_kg": 90,
+      "height_cm": 178,
+      "bodyfat_pct": 22.8,
+      "muscle_kg": 40,
+      "goal_weight_kg": 86,
+      "recorded_by": "nutri-001",
+      "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
+      "created_at": "2026-06-08T02:30:20.249Z",
+      "updated_at": "2026-06-11T16:36:35.572Z"
+    },
+    {
+      "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-08",
+      "weight_kg": 90,
+      "bodyfat_pct": 22.8,
+      "muscle_kg": 40,
+      "source": "screening_bullshark_lab",
+      "created_at": "2026-06-08T21:31:02.480385Z"
+    }
+  ]
 }
