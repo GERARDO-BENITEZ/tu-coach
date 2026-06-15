@@ -611,7 +611,10 @@ app.get('/api/athlete/executive-summary', auth, (req, res) => {
 
   // ── Rendimiento ──────────────────────────────────────────────────────────
   // Bug fix: usar pmc_cache (construido con datos reales) en vez de computePMC que incluye workouts planeados futuros
-  const pmcCacheArr = Array.isArray(DB.pmc_cache) ? DB.pmc_cache : (DB.pmc_cache?.data || [])
+  const pmcCacheArr = (() => {
+    const c = DB.pmc_cache_by_athlete?.[aid] || DB.pmc_cache
+    return Array.isArray(c) ? c : (c?.data || [])
+  })()
   const lastPMC = pmcCacheArr[pmcCacheArr.length - 1] || {}
   const ctl = lastPMC.ctl || 0
   const atl = lastPMC.atl || 0
@@ -1350,13 +1353,19 @@ app.get('/api/athlete/garmin/activities', auth, (req, res) => {
 
 async function rebuildPMCForAthlete(athleteId) {
   // En modo COACH_VIEW, el PMC viene del export — no recalcular
-  if (COACH_VIEW) return DB.pmc_cache
-  // Combinar TSS: Garmin activities base + workouts completados con TSS real (mayor prioridad)
+  if (COACH_VIEW) return (DB.pmc_cache_by_athlete?.[athleteId] || DB.pmc_cache)
+
   const tssByDate = {}
 
-  for (const act of (DB.garmin_activities || []).filter(a => a.date?.length === 10)) {
-    tssByDate[act.date] = (tssByDate[act.date] || 0) + (act.tss_actual || 0)
+  // Garmin activities no tienen athlete_id — se asignan al atleta primario (primer ATHLETE del DB)
+  const primaryAthleteId = (DB.users || []).find(u => u.role === 'ATHLETE')?.id
+  if (athleteId === primaryAthleteId) {
+    for (const act of (DB.garmin_activities || []).filter(a => a.date?.length === 10)) {
+      tssByDate[act.date] = (tssByDate[act.date] || 0) + (act.tss_actual || 0)
+    }
   }
+
+  // Workouts completados con TSS real — siempre tienen prioridad sobre Garmin
   for (const w of (DB.workouts || []).filter(w => w.athlete_id === athleteId && w.actual_tss && w.date)) {
     tssByDate[w.date] = Math.max(tssByDate[w.date] || 0, w.actual_tss)
   }
@@ -1392,7 +1401,13 @@ async function rebuildPMCForAthlete(athleteId) {
     })
   }
 
-  DB.pmc_cache = { athlete_id: athleteId, built_at: now(), data: pmcData }
+  // Guardar por atleta para que el auto-sync de múltiples atletas no se sobrescriba
+  if (!DB.pmc_cache_by_athlete) DB.pmc_cache_by_athlete = {}
+  DB.pmc_cache_by_athlete[athleteId] = { athlete_id: athleteId, built_at: now(), data: pmcData }
+  // Mantener DB.pmc_cache apuntando al atleta primario (backwards compat)
+  if (athleteId === primaryAthleteId) {
+    DB.pmc_cache = DB.pmc_cache_by_athlete[athleteId]
+  }
   save()
 
   const last = pmcData[pmcData.length - 1] || {}
@@ -1402,7 +1417,7 @@ async function rebuildPMCForAthlete(athleteId) {
 app.get('/api/athlete/pmc/rebuild', auth, async (req, res) => {
   const result = await rebuildPMCForAthlete(req.user.id)
   if (!result) return res.json({ ok: false, message: 'Sin actividades importadas. Ejecuta import-history primero.' })
-  const cache = DB.pmc_cache
+  const cache = DB.pmc_cache_by_athlete?.[req.user.id] || DB.pmc_cache
   res.json({
     ok: true,
     data: cache.data,
@@ -1417,7 +1432,7 @@ app.get('/api/athlete/pmc/rebuild', auth, async (req, res) => {
 
 // PMC cacheado (para cargas rápidas sin recalcular)
 app.get('/api/athlete/pmc/data', auth, (req, res) => {
-  const cache = DB.pmc_cache
+  const cache = DB.pmc_cache_by_athlete?.[req.user.id] || DB.pmc_cache
   if (!cache) return res.json({ ok: false, message: 'Sin datos PMC. Ejecuta /rebuild primero.' })
   // Devolver solo los últimos N días para no saturar el cliente
   const days = parseInt(req.query.days || '180')
@@ -1872,7 +1887,7 @@ app.post('/api/export-and-push', auth, async (req, res) => {
       device_syncs:      DB.device_syncs      || [],
       wellness:          DB.wellness          || [],
       whoop_history:     DB.whoop_history     || [],
-      body_composition:  DB.body_composition  || []
+      body_composition:  DB.body_compositions || []
     }
     fs.writeFileSync(coachViewPath, JSON.stringify(view, null, 2))
     console.log('[Export] coach-view.json escrito —', view.workouts.length, 'workouts')
