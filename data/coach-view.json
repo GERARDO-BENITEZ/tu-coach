@@ -2613,7 +2613,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-12T14:56:13.228Z",
+    "built_at": "2026-06-15T19:26:09.496Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31811,6 +31811,27 @@
         "ctl": 23.2,
         "atl": 43.6,
         "tsb": -20.4
+      },
+      {
+        "date": "2026-06-13",
+        "tss": 0,
+        "ctl": 22.6,
+        "atl": 37.4,
+        "tsb": -14.8
+      },
+      {
+        "date": "2026-06-14",
+        "tss": 0,
+        "ctl": 22.1,
+        "atl": 32.1,
+        "tsb": -10
+      },
+      {
+        "date": "2026-06-15",
+        "tss": 0,
+        "ctl": 21.6,
+        "atl": 27.5,
+        "tsb": -5.9
       }
     ]
   },
@@ -34823,6 +34844,40 @@
         "tss_actual": 39,
         "synced_at": "2026-06-12T14:56:12.838Z"
       }
+    },
+    {
+      "id": "f351dd17-5faa-4fab-ae67-a0fe393b7570",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-12T15:00:05.660Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-12T15:00:05.660Z"
+      }
+    },
+    {
+      "id": "5aba6275-2162-4418-bf32-4ed098d7d083",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-15T19:26:08.638Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-15T19:26:08.638Z"
+      }
     }
   ],
   "wellness": [
@@ -34871,6 +34926,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-11T14:30:41.787Z"
+    },
+    {
+      "id": "b4add85d-e7ef-4d71-b2ac-5d4d1bb05f9f",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-12",
+      "sleepHours": 7.5,
+      "sleepQuality": 4,
+      "energy": 7,
+      "muscleSoreness": 6,
+      "mentalReadiness": 8,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-12T15:56:13.992Z"
     }
   ],
   "whoop_history": [],
