@@ -191,6 +191,11 @@ app.use(cors({ origin: '*', methods: ['GET','POST','PUT','DELETE','PATCH','OPTIO
 app.use(express.json({ limit: '4mb' }))
 app.use(express.static(__dirname))   // sirve login.html, athlete-dashboard.html, etc.
 
+// En modo COACH_VIEW (Render), la raíz redirige al dashboard completo
+if (COACH_VIEW) {
+  app.get('/', (req, res) => res.redirect('/athlete-dashboard.html'))
+}
+
 // ── AUTH ──────────────────────────────────────────────────────────────────────
 function makeToken(u) {
   return jwt.sign({ id: u.id, email: u.email, role: u.role, name: u.name }, JWT_SECRET, { expiresIn: '7d' })
