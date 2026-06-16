@@ -1880,18 +1880,32 @@ app.post('/api/export-and-push', auth, async (req, res) => {
 
   // 1. Escribir coach-view.json
   try {
+    // Recortar PMC a últimos 730 días para no saturar Render
+    const pmcRaw   = DB.pmc_cache || {}
+    const pmcData  = Array.isArray(pmcRaw) ? pmcRaw : (pmcRaw.data || [])
+    const pmcSlice = pmcData.slice(-730)
+    const pmcExport = { ...pmcRaw, data: pmcSlice }
+
+    // pmc_cache_by_athlete — incluir solo atleta primario, también recortado
+    const pmcByAthlete = {}
+    for (const [aid, cache] of Object.entries(DB.pmc_cache_by_athlete || {})) {
+      const d = Array.isArray(cache) ? cache : (cache?.data || [])
+      pmcByAthlete[aid] = { ...cache, data: d.slice(-730) }
+    }
+
     const view = {
-      users:             DB.users             || [],
-      coach_athletes:    DB.coach_athletes    || [],
-      workouts:          DB.workouts          || [],
-      pmc_cache:         DB.pmc_cache         || [],
-      nutrition_plans:   DB.nutrition_plans   || [],
-      strength_logs:     DB.strength_logs     || [],
-      garmin_activities: DB.garmin_activities || [],
-      device_syncs:      DB.device_syncs      || [],
-      wellness:          DB.wellness          || [],
-      whoop_history:     DB.whoop_history     || [],
-      body_composition:  DB.body_compositions || []
+      users:                 DB.users             || [],
+      coach_athletes:        DB.coach_athletes    || [],
+      workouts:              DB.workouts          || [],
+      pmc_cache:             pmcExport,
+      pmc_cache_by_athlete:  pmcByAthlete,
+      nutrition_plans:       DB.nutrition_plans   || [],
+      strength_logs:         DB.strength_logs     || [],
+      garmin_activities:     DB.garmin_activities || [],
+      device_syncs:          DB.device_syncs      || [],
+      wellness:              DB.wellness          || [],
+      whoop_history:         DB.whoop_history     || [],
+      body_composition:      DB.body_compositions || []
     }
     fs.writeFileSync(coachViewPath, JSON.stringify(view, null, 2))
     console.log('[Export] coach-view.json escrito —', view.workouts.length, 'workouts')
