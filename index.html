@@ -342,7 +342,7 @@ async function init(){
   try{
     renderCountdown()
     renderPhases()
-    const res=await fetch('./data/tucoach.seed.json')
+    const res=await fetch('./data/coach-view.json')
     if(!res.ok)throw new Error('No se pudo cargar el plan')
     const db=await res.json()
     const workouts=(db.workouts||[]).filter(w=>w.athlete_id==='athlete-gb-001')
