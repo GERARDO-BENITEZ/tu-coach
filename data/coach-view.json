@@ -2651,7 +2651,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-15T20:08:09.658Z",
+    "built_at": "2026-06-16T15:59:09.633Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31870,6 +31870,13 @@
         "ctl": 23.1,
         "atl": 33.4,
         "tsb": -10.4
+      },
+      {
+        "date": "2026-06-16",
+        "tss": 0,
+        "ctl": 22.5,
+        "atl": 28.7,
+        "tsb": -6.1
       }
     ]
   },
@@ -34613,6 +34620,41 @@
         "synced_at": "2026-06-15T19:58:28.000Z",
         "_manual": true,
         "_note": "Entrada manual Jun 15 — Recovery 87% confirmado en app Whoop"
+      }
+    },
+    {
+      "id": "8a3eb232-42c5-4837-a7c4-3c792e589e3b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-16T15:58:54.785Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-16T15:58:54.785Z"
+      }
+    },
+    {
+      "id": "088d9e3f-70c0-41d9-9934-45f37b525a9a",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-16T15:59:09.188Z",
+      "data": {
+        "activity_id": 23264748431,
+        "activity_name": "Ciclismo en sala",
+        "activity_type": "indoor_cycling",
+        "duration_min": 45,
+        "hr_avg": 114,
+        "hr_max": 142,
+        "calories": 372,
+        "tss_actual": 39,
+        "synced_at": "2026-06-16T15:59:09.188Z"
       }
     }
   ],
