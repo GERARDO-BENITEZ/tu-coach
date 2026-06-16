@@ -459,16 +459,16 @@
           "reps": "FC < 145 bpm, sin picos"
         }
       ],
-      "status": "PENDING",
-      "rpe": null,
+      "status": "COMPLETED",
+      "rpe": 2,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 45,
+      "actual_tss": 90,
+      "completed_at": "2026-06-16T16:04:03.500Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-16T16:04:03.500Z",
       "zone": "BLUE",
       "week_label": "S2 · 🔴 Bloque Duro",
       "phase": "F1"
@@ -2651,7 +2651,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-16T15:59:09.633Z",
+    "built_at": "2026-06-16T16:07:00.350Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31866,17 +31866,17 @@
       },
       {
         "date": "2026-06-15",
-        "tss": 0,
-        "ctl": 23.1,
-        "atl": 33.4,
-        "tsb": -10.4
+        "tss": 90,
+        "ctl": 25.2,
+        "atl": 46.3,
+        "tsb": -21.1
       },
       {
         "date": "2026-06-16",
         "tss": 0,
-        "ctl": 22.5,
-        "atl": 28.7,
-        "tsb": -6.1
+        "ctl": 24.6,
+        "atl": 39.7,
+        "tsb": -15.1
       }
     ]
   },
