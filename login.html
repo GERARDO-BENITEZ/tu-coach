@@ -165,13 +165,19 @@ async function doLogin() {
     'ana@tucoach.app':       { name: 'Ana López', role: 'ATHLETE' },
   }
 
-  // Intentar con la API real; si falla, usar modo demo
+  // En Render el servidor puede tardar ~15s en arrancar — timeout generoso
+  const isRemote = window.location.hostname !== 'localhost'
+  const TIMEOUT_MS = isRemote ? 20000 : 5000
+
+  if (isRemote) btn.textContent = 'Conectando… (puede tardar ~15s la primera vez)'
+
+  // Intentar con la API real; si falla en localhost, usar modo demo
   try {
     const res = await fetch(`${API}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
-      signal: AbortSignal.timeout(3000),   // 3 s de timeout
+      signal: AbortSignal.timeout(TIMEOUT_MS),
     })
 
     const data = await res.json()
@@ -189,8 +195,15 @@ async function doLogin() {
 
     redirect(data.user.role)
 
-  } catch {
-    // API no disponible → modo demo
+  } catch (err) {
+    // Modo demo solo en localhost — en Render mostrar error real
+    if (isRemote) {
+      errEl.textContent = 'El servidor tardó demasiado. Espera 30s y vuelve a intentar.'
+      errEl.classList.add('show')
+      btn.disabled = false
+      btn.textContent = 'Entrar'
+      return
+    }
     const demo = DEMO[email]
     if (demo && password === 'TuCoach2026!') {
       localStorage.setItem('tc_token',   'demo-token')
