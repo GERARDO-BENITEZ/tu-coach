@@ -127,7 +127,7 @@ h1{font-size:22px;font-weight:800;margin-bottom:6px}
 </div>
 
 <script>
-const API = 'http://localhost:3001'
+const API = window.location.hostname === 'localhost' ? 'http://localhost:3001' : window.location.origin
 
 function fillDemo(email) {
   document.getElementById('email').value = email
