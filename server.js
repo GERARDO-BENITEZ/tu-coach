@@ -189,12 +189,11 @@ const resolve = id => ALIAS_MAP[id] || id
 const app = express()
 app.use(cors({ origin: '*', methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'] }))
 app.use(express.json({ limit: '4mb' }))
-app.use(express.static(__dirname))   // sirve login.html, athlete-dashboard.html, etc.
-
-// En modo COACH_VIEW (Render), la raíz redirige al dashboard completo
+// En modo COACH_VIEW (Render), la raíz redirige al dashboard completo ANTES del static
 if (COACH_VIEW) {
   app.get('/', (req, res) => res.redirect('/athlete-dashboard.html'))
 }
+app.use(express.static(__dirname))   // sirve login.html, athlete-dashboard.html, etc.
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
 function makeToken(u) {
