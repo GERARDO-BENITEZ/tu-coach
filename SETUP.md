@@ -1,4 +1,4 @@
-# Tu Coach — Setup para desarrollo
+      # Tu Coach — Setup para desarrollo
 
 ## Requisitos previos
 - Node.js 20+
@@ -22,7 +22,7 @@ docker run --name tu-coach-db \
 ### Opción B — PostgreSQL local
 Crear la BD manualmente en psql:
 ```sql
-CREATE DATABASE tu_coach_dev;
+CREATE DATABASE tu_coach_dev;Listo
 CREATE USER tucoach WITH PASSWORD 'tucoach123';
 GRANT ALL PRIVILEGES ON DATABASE tu_coach_dev TO tucoach;
 ```
