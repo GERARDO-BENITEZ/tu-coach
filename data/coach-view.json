@@ -582,16 +582,16 @@
           "zone": "Z1"
         }
       ],
-      "status": "PENDING",
-      "rpe": null,
+      "status": "COMPLETED",
+      "rpe": 5,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 60,
+      "actual_tss": 300,
+      "completed_at": "2026-06-18T01:57:28.220Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-18T01:57:28.220Z",
       "zone": "YELLOW",
       "week_label": "S2 · 🔴 Bloque Duro",
       "phase": "F1"
@@ -2661,7 +2661,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-17T05:50:01.442Z",
+    "built_at": "2026-06-18T13:22:54.755Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -31887,6 +31887,20 @@
         "ctl": 25.7,
         "atl": 46.4,
         "tsb": -20.7
+      },
+      {
+        "date": "2026-06-17",
+        "tss": 300,
+        "ctl": 32.3,
+        "atl": 82.6,
+        "tsb": -50.4
+      },
+      {
+        "date": "2026-06-18",
+        "tss": 0,
+        "ctl": 31.5,
+        "atl": 70.8,
+        "tsb": -39.3
       }
     ]
   },
@@ -34718,6 +34732,41 @@
         "calories": 486,
         "tss_actual": 47,
         "synced_at": "2026-06-17T05:50:01.054Z"
+      }
+    },
+    {
+      "id": "cc966032-99e0-4c72-b958-df0b3b152beb",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-17T15:16:13.523Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-17T15:16:13.523Z"
+      }
+    },
+    {
+      "id": "500f8d68-516c-434a-b552-d3a7dfc9bbc6",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-18T13:22:54.491Z",
+      "data": {
+        "activity_id": 23289197842,
+        "activity_name": "Ciclismo en sala",
+        "activity_type": "indoor_cycling",
+        "duration_min": 55,
+        "hr_avg": 137,
+        "hr_max": 180,
+        "calories": 513,
+        "tss_actual": 43,
+        "synced_at": "2026-06-18T13:22:54.491Z"
       }
     }
   ],
