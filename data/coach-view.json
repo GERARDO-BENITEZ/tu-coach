@@ -751,7 +751,7 @@
       "id": "ac100404-88e9-46fa-a926-369cb622f2a3",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
-      "status": "PENDING",
+      "status": "COMPLETED",
       "segments": [
         {
           "exercise": "Foam Roller full body",
@@ -765,7 +765,7 @@
         }
       ],
       "created_at": "2026-06-09T20:27:17.181Z",
-      "updated_at": "2026-06-09T20:27:17.182Z",
+      "updated_at": "2026-06-22T05:50:04.374Z",
       "date": "2026-06-21",
       "name": "🔵 Descanso",
       "type": "Core / Movilidad",
@@ -774,7 +774,23 @@
       "coach_note": "SEMANA 2 | Bloque Duro 🔴 | DÍA AZUL. Revisa HRV en WHOOP — debe estar en verde. Si está en rojo, añadir 1 día extra de descanso antes del Lun.",
       "zone": "BLUE",
       "week_label": "S2 · 🔴 Bloque Duro",
-      "phase": "F1"
+      "phase": "F1",
+      "rpe": 1,
+      "athlete_note": null,
+      "actual_duration_min": 20,
+      "actual_tss": 57,
+      "completed_at": "2026-06-22T02:59:02.203Z",
+      "garmin_data": {
+        "activity_id": 23318698898,
+        "activity_name": "Ciclismo en sala",
+        "activity_type": "indoor_cycling",
+        "duration_min": 68,
+        "hr_avg": 119,
+        "hr_max": 150,
+        "calories": 550,
+        "tss_actual": 57,
+        "synced_at": "2026-06-22T05:50:04.374Z"
+      }
     },
     {
       "id": "d75f7849-f6ed-43d2-9aaa-d027a8baf088",
@@ -2661,7 +2677,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-21T09:15:55.172Z",
+    "built_at": "2026-06-22T05:50:04.635Z",
     "data": [
       {
         "date": "2024-06-22",
@@ -7768,17 +7784,17 @@
       },
       {
         "date": "2026-06-21",
-        "tss": 0,
-        "ctl": 25,
-        "atl": 30.2,
-        "tsb": -5.2
+        "tss": 57,
+        "ctl": 26.4,
+        "atl": 38.3,
+        "tsb": -12
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-21T09:15:55.172Z",
+      "built_at": "2026-06-22T05:50:04.635Z",
       "data": [
         {
           "date": "2024-06-22",
@@ -12885,10 +12901,10 @@
         },
         {
           "date": "2026-06-21",
-          "tss": 0,
-          "ctl": 25,
-          "atl": 30.2,
-          "tsb": -5.2
+          "tss": 57,
+          "ctl": 26.4,
+          "atl": 38.3,
+          "tsb": -12
         }
       ]
     }
@@ -16084,6 +16100,41 @@
         "tss_actual": 57,
         "synced_at": "2026-06-21T09:15:54.720Z"
       }
+    },
+    {
+      "id": "a7c03f1b-cc66-410f-bff7-4f643fe96c90",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-22T02:07:19.987Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-22T02:07:19.987Z"
+      }
+    },
+    {
+      "id": "f11d313e-8c7b-4437-8111-bc5e9cd3de16",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-22T05:50:04.374Z",
+      "data": {
+        "activity_id": 23318698898,
+        "activity_name": "Ciclismo en sala",
+        "activity_type": "indoor_cycling",
+        "duration_min": 68,
+        "hr_avg": 119,
+        "hr_max": 150,
+        "calories": 550,
+        "tss_actual": 57,
+        "synced_at": "2026-06-22T05:50:04.374Z"
+      }
     }
   ],
   "wellness": [
@@ -16177,6 +16228,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-19T17:04:04.359Z"
+    },
+    {
+      "id": "e9dba6a8-39f8-4e6d-aa9e-dbd4f62637b4",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-21",
+      "sleepHours": 7.5,
+      "sleepQuality": 4,
+      "energy": 9,
+      "muscleSoreness": 9,
+      "mentalReadiness": 9,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-22T02:58:43.660Z"
     }
   ],
   "whoop_history": [],
