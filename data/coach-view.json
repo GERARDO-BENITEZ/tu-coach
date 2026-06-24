@@ -2677,15 +2677,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-23T14:47:24.809Z",
+    "built_at": "2026-06-24T15:47:26.245Z",
     "data": [
-      {
-        "date": "2024-06-24",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-06-25",
         "tss": 0,
@@ -7788,21 +7781,21 @@
         "ctl": 25.1,
         "atl": 28.2,
         "tsb": -3.1
+      },
+      {
+        "date": "2026-06-24",
+        "tss": 0,
+        "ctl": 24.5,
+        "atl": 24.1,
+        "tsb": 0.4
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-23T14:47:24.809Z",
+      "built_at": "2026-06-24T15:47:26.245Z",
       "data": [
-        {
-          "date": "2024-06-24",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-06-25",
           "tss": 0,
@@ -12905,6 +12898,13 @@
           "ctl": 25.1,
           "atl": 28.2,
           "tsb": -3.1
+        },
+        {
+          "date": "2026-06-24",
+          "tss": 0,
+          "ctl": 24.5,
+          "atl": 24.1,
+          "tsb": 0.4
         }
       ]
     }
@@ -16169,6 +16169,58 @@
         "calories": 736,
         "tss_actual": 83,
         "synced_at": "2026-06-23T14:47:24.310Z"
+      }
+    },
+    {
+      "id": "d459f56e-7e38-42d0-925c-51f4a538e2f1",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-23T15:00:00.688Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-23T15:00:00.688Z"
+      }
+    },
+    {
+      "id": "9ade61b9-93bd-4c90-b384-095a3dcc334d",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-24T15:47:25.651Z",
+      "data": {
+        "activity_id": 23358559985,
+        "activity_name": "Cardio",
+        "activity_type": "indoor_cardio",
+        "duration_min": 55,
+        "hr_avg": 154,
+        "hr_max": 179,
+        "calories": 603,
+        "tss_actual": 61,
+        "synced_at": "2026-06-24T15:47:25.651Z"
+      }
+    },
+    {
+      "id": "6e3292bd-c469-4f06-8e79-d398cd8285cb",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-24T15:47:26.156Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-24T15:47:26.156Z"
       }
     }
   ],
