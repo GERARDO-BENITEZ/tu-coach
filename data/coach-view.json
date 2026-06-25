@@ -2677,15 +2677,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-24T15:47:26.245Z",
+    "built_at": "2026-06-25T14:09:50.943Z",
     "data": [
-      {
-        "date": "2024-06-25",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-06-26",
         "tss": 0,
@@ -7788,21 +7781,21 @@
         "ctl": 24.5,
         "atl": 24.1,
         "tsb": 0.4
+      },
+      {
+        "date": "2026-06-25",
+        "tss": 0,
+        "ctl": 23.9,
+        "atl": 20.7,
+        "tsb": 3.2
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-24T15:47:26.245Z",
+      "built_at": "2026-06-25T14:09:50.943Z",
       "data": [
-        {
-          "date": "2024-06-25",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-06-26",
           "tss": 0,
@@ -12905,6 +12898,13 @@
           "ctl": 24.5,
           "atl": 24.1,
           "tsb": 0.4
+        },
+        {
+          "date": "2026-06-25",
+          "tss": 0,
+          "ctl": 23.9,
+          "atl": 20.7,
+          "tsb": 3.2
         }
       ]
     }
@@ -16221,6 +16221,24 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-06-24T15:47:26.156Z"
+      }
+    },
+    {
+      "id": "fa3fbc9d-8fd7-408e-a27b-380cb7886cc7",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-25T14:09:50.002Z",
+      "data": {
+        "activity_id": 23370358334,
+        "activity_name": "Fuerza",
+        "activity_type": "strength_training",
+        "duration_min": 105,
+        "hr_avg": 110,
+        "hr_max": 159,
+        "calories": 566,
+        "tss_actual": 58,
+        "synced_at": "2026-06-25T14:09:50.002Z"
       }
     }
   ],
