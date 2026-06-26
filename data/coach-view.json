@@ -997,16 +997,16 @@
           "reps": "10 min"
         }
       ],
-      "status": "PENDING",
-      "rpe": null,
+      "status": "COMPLETED",
+      "rpe": 4,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 40,
+      "actual_tss": 160,
+      "completed_at": "2026-06-25T14:10:36.675Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-25T14:10:36.675Z",
       "zone": "BLUE",
       "week_label": "S3 · 🔴 Pico Volumen",
       "phase": "F1"
@@ -2677,15 +2677,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-25T14:09:50.943Z",
+    "built_at": "2026-06-26T15:58:48.760Z",
     "data": [
-      {
-        "date": "2024-06-26",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-06-27",
         "tss": 0,
@@ -7784,25 +7777,25 @@
       },
       {
         "date": "2026-06-25",
+        "tss": 160,
+        "ctl": 27.7,
+        "atl": 43.5,
+        "tsb": -15.8
+      },
+      {
+        "date": "2026-06-26",
         "tss": 0,
-        "ctl": 23.9,
-        "atl": 20.7,
-        "tsb": 3.2
+        "ctl": 27.1,
+        "atl": 37.3,
+        "tsb": -10.2
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-25T14:09:50.943Z",
+      "built_at": "2026-06-26T15:58:48.760Z",
       "data": [
-        {
-          "date": "2024-06-26",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-06-27",
           "tss": 0,
@@ -12901,10 +12894,17 @@
         },
         {
           "date": "2026-06-25",
+          "tss": 160,
+          "ctl": 27.7,
+          "atl": 43.5,
+          "tsb": -15.8
+        },
+        {
+          "date": "2026-06-26",
           "tss": 0,
-          "ctl": 23.9,
-          "atl": 20.7,
-          "tsb": 3.2
+          "ctl": 27.1,
+          "atl": 37.3,
+          "tsb": -10.2
         }
       ]
     }
@@ -16240,6 +16240,58 @@
         "tss_actual": 58,
         "synced_at": "2026-06-25T14:09:50.002Z"
       }
+    },
+    {
+      "id": "45b418d2-8e1d-4bc7-b972-8175a19a79e9",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-25T15:00:07.723Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-25T15:00:07.723Z"
+      }
+    },
+    {
+      "id": "65798c28-38ef-46ea-a80e-541f6fe014da",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-26T15:58:45.441Z",
+      "data": {
+        "activity_id": 23381353573,
+        "activity_name": "Cardio",
+        "activity_type": "indoor_cardio",
+        "duration_min": 90,
+        "hr_avg": 138,
+        "hr_max": 173,
+        "calories": 766,
+        "tss_actual": 80,
+        "synced_at": "2026-06-26T15:58:45.441Z"
+      }
+    },
+    {
+      "id": "fc9b9b1a-dd78-4a21-82cf-b2fe9fd77028",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-26T15:58:46.298Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-26T15:58:46.297Z"
+      }
     }
   ],
   "wellness": [
@@ -16348,6 +16400,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-22T02:58:43.660Z"
+    },
+    {
+      "id": "0c4a69fe-b389-4fe6-9318-7241bd154b56",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-25",
+      "sleepHours": 7.5,
+      "sleepQuality": 4,
+      "energy": 7,
+      "muscleSoreness": 6,
+      "mentalReadiness": 8,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-25T14:10:18.852Z"
     }
   ],
   "whoop_history": [],
