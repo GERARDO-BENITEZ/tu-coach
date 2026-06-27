@@ -2677,15 +2677,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-26T15:58:48.760Z",
+    "built_at": "2026-06-27T23:17:21.273Z",
     "data": [
-      {
-        "date": "2024-06-27",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-06-28",
         "tss": 0,
@@ -7788,21 +7781,21 @@
         "ctl": 27.1,
         "atl": 37.3,
         "tsb": -10.2
+      },
+      {
+        "date": "2026-06-27",
+        "tss": 0,
+        "ctl": 26.4,
+        "atl": 32,
+        "tsb": -5.6
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-26T15:58:48.760Z",
+      "built_at": "2026-06-27T23:17:21.273Z",
       "data": [
-        {
-          "date": "2024-06-27",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-06-28",
           "tss": 0,
@@ -12905,6 +12898,13 @@
           "ctl": 27.1,
           "atl": 37.3,
           "tsb": -10.2
+        },
+        {
+          "date": "2026-06-27",
+          "tss": 0,
+          "ctl": 26.4,
+          "atl": 32,
+          "tsb": -5.6
         }
       ]
     }
@@ -16291,6 +16291,41 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-06-26T15:58:46.297Z"
+      }
+    },
+    {
+      "id": "c41f92d5-8a01-404d-88ea-c17e1e94c77f",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-27T23:17:20.551Z",
+      "data": {
+        "activity_id": 23399381497,
+        "activity_name": "Valle de Bravo Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 203,
+        "hr_avg": 87,
+        "hr_max": 131,
+        "calories": 694,
+        "tss_actual": 85,
+        "synced_at": "2026-06-27T23:17:20.551Z"
+      }
+    },
+    {
+      "id": "d97795d4-2728-4093-848d-071910f40b79",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-27T23:17:20.878Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-27T23:17:20.878Z"
       }
     }
   ],
