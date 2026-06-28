@@ -2677,15 +2677,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-27T23:17:21.273Z",
+    "built_at": "2026-06-28T12:44:37.280Z",
     "data": [
-      {
-        "date": "2024-06-28",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-06-29",
         "tss": 0,
@@ -7788,21 +7781,21 @@
         "ctl": 26.4,
         "atl": 32,
         "tsb": -5.6
+      },
+      {
+        "date": "2026-06-28",
+        "tss": 0,
+        "ctl": 25.8,
+        "atl": 27.4,
+        "tsb": -1.6
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-27T23:17:21.273Z",
+      "built_at": "2026-06-28T12:44:37.280Z",
       "data": [
-        {
-          "date": "2024-06-28",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-06-29",
           "tss": 0,
@@ -12905,6 +12898,13 @@
           "ctl": 26.4,
           "atl": 32,
           "tsb": -5.6
+        },
+        {
+          "date": "2026-06-28",
+          "tss": 0,
+          "ctl": 25.8,
+          "atl": 27.4,
+          "tsb": -1.6
         }
       ]
     }
@@ -16450,6 +16450,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-06-25T14:10:18.852Z"
+    },
+    {
+      "id": "ee8d0824-9cac-4b7f-b59d-8241983b2f61",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-06-27",
+      "sleepHours": 7.5,
+      "sleepQuality": 3,
+      "energy": 7,
+      "muscleSoreness": 6,
+      "mentalReadiness": 8,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-06-28T01:31:51.683Z"
     }
   ],
   "whoop_history": [],
