@@ -765,7 +765,7 @@
         }
       ],
       "created_at": "2026-06-09T20:27:17.181Z",
-      "updated_at": "2026-06-22T05:50:04.374Z",
+      "updated_at": "2026-06-29T04:12:02.296Z",
       "date": "2026-06-21",
       "name": "🔵 Descanso",
       "type": "Core / Movilidad",
@@ -778,7 +778,7 @@
       "rpe": 1,
       "athlete_note": null,
       "actual_duration_min": 20,
-      "actual_tss": 57,
+      "actual_tss": null,
       "completed_at": "2026-06-22T02:59:02.203Z",
       "garmin_data": {
         "activity_id": 23318698898,
@@ -790,7 +790,8 @@
         "calories": 550,
         "tss_actual": 57,
         "synced_at": "2026-06-22T05:50:04.374Z"
-      }
+      },
+      "note_data_fix": "ajustado a Garmin real (57→null) 2026-06-29"
     },
     {
       "id": "d75f7849-f6ed-43d2-9aaa-d027a8baf088",
@@ -1001,15 +1002,16 @@
       "rpe": 4,
       "athlete_note": null,
       "actual_duration_min": 40,
-      "actual_tss": 160,
+      "actual_tss": 80,
       "completed_at": "2026-06-25T14:10:36.675Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-25T14:10:36.675Z",
+      "updated_at": "2026-06-29T04:12:02.289Z",
       "zone": "BLUE",
       "week_label": "S3 · 🔴 Pico Volumen",
-      "phase": "F1"
+      "phase": "F1",
+      "note_data_fix": "ajustado a Garmin real (160→80) 2026-06-29"
     },
     {
       "id": "e11d89c7-9bce-4ed5-bf17-6815b0dafbbe",
@@ -2677,7 +2679,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-29T04:01:06.881Z",
+    "built_at": "2026-06-29T04:12:18.115Z",
     "data": [
       {
         "date": "2024-06-29",
@@ -7728,73 +7730,73 @@
       },
       {
         "date": "2026-06-20",
-        "tss": 0,
-        "ctl": 25.6,
-        "atl": 35.2,
-        "tsb": -9.6
+        "tss": 32,
+        "ctl": 26.4,
+        "atl": 39.8,
+        "tsb": -13.4
       },
       {
         "date": "2026-06-21",
-        "tss": 57,
-        "ctl": 26.4,
-        "atl": 38.3,
-        "tsb": -12
+        "tss": 0,
+        "ctl": 25.7,
+        "atl": 34.1,
+        "tsb": -8.4
       },
       {
         "date": "2026-06-22",
-        "tss": 0,
-        "ctl": 25.7,
-        "atl": 32.9,
-        "tsb": -7.1
+        "tss": 83,
+        "ctl": 27.1,
+        "atl": 41.1,
+        "tsb": -14
       },
       {
         "date": "2026-06-23",
-        "tss": 0,
-        "ctl": 25.1,
-        "atl": 28.2,
-        "tsb": -3.1
+        "tss": 122,
+        "ctl": 29.4,
+        "atl": 52.7,
+        "tsb": -23.3
       },
       {
         "date": "2026-06-24",
-        "tss": 0,
-        "ctl": 24.5,
-        "atl": 24.1,
-        "tsb": 0.4
+        "tss": 84,
+        "ctl": 30.7,
+        "atl": 57.1,
+        "tsb": -26.5
       },
       {
         "date": "2026-06-25",
-        "tss": 160,
-        "ctl": 27.7,
-        "atl": 43.5,
-        "tsb": -15.8
+        "tss": 80,
+        "ctl": 31.8,
+        "atl": 60.4,
+        "tsb": -28.6
       },
       {
         "date": "2026-06-26",
-        "tss": 0,
-        "ctl": 27.1,
-        "atl": 37.3,
-        "tsb": -10.2
+        "tss": 85,
+        "ctl": 33.1,
+        "atl": 63.9,
+        "tsb": -30.8
       },
       {
         "date": "2026-06-27",
         "tss": 0,
-        "ctl": 26.4,
-        "atl": 32,
-        "tsb": -5.6
+        "ctl": 32.3,
+        "atl": 54.8,
+        "tsb": -22.5
       },
       {
         "date": "2026-06-28",
         "tss": 0,
-        "ctl": 25.8,
-        "atl": 27.4,
-        "tsb": -1.6
+        "ctl": 31.5,
+        "atl": 47,
+        "tsb": -15.4
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-29T04:01:06.881Z",
+      "built_at": "2026-06-29T04:12:18.115Z",
       "data": [
         {
           "date": "2024-06-29",
@@ -12845,66 +12847,66 @@
         },
         {
           "date": "2026-06-20",
-          "tss": 0,
-          "ctl": 25.6,
-          "atl": 35.2,
-          "tsb": -9.6
+          "tss": 32,
+          "ctl": 26.4,
+          "atl": 39.8,
+          "tsb": -13.4
         },
         {
           "date": "2026-06-21",
-          "tss": 57,
-          "ctl": 26.4,
-          "atl": 38.3,
-          "tsb": -12
+          "tss": 0,
+          "ctl": 25.7,
+          "atl": 34.1,
+          "tsb": -8.4
         },
         {
           "date": "2026-06-22",
-          "tss": 0,
-          "ctl": 25.7,
-          "atl": 32.9,
-          "tsb": -7.1
+          "tss": 83,
+          "ctl": 27.1,
+          "atl": 41.1,
+          "tsb": -14
         },
         {
           "date": "2026-06-23",
-          "tss": 0,
-          "ctl": 25.1,
-          "atl": 28.2,
-          "tsb": -3.1
+          "tss": 122,
+          "ctl": 29.4,
+          "atl": 52.7,
+          "tsb": -23.3
         },
         {
           "date": "2026-06-24",
-          "tss": 0,
-          "ctl": 24.5,
-          "atl": 24.1,
-          "tsb": 0.4
+          "tss": 84,
+          "ctl": 30.7,
+          "atl": 57.1,
+          "tsb": -26.5
         },
         {
           "date": "2026-06-25",
-          "tss": 160,
-          "ctl": 27.7,
-          "atl": 43.5,
-          "tsb": -15.8
+          "tss": 80,
+          "ctl": 31.8,
+          "atl": 60.4,
+          "tsb": -28.6
         },
         {
           "date": "2026-06-26",
-          "tss": 0,
-          "ctl": 27.1,
-          "atl": 37.3,
-          "tsb": -10.2
+          "tss": 85,
+          "ctl": 33.1,
+          "atl": 63.9,
+          "tsb": -30.8
         },
         {
           "date": "2026-06-27",
           "tss": 0,
-          "ctl": 26.4,
-          "atl": 32,
-          "tsb": -5.6
+          "ctl": 32.3,
+          "atl": 54.8,
+          "tsb": -22.5
         },
         {
           "date": "2026-06-28",
           "tss": 0,
-          "ctl": 25.8,
-          "atl": 27.4,
-          "tsb": -1.6
+          "ctl": 31.5,
+          "atl": 47,
+          "tsb": -15.4
         }
       ]
     }
@@ -12977,6 +12979,234 @@
   "strength_logs": [],
   "garmin_activities": [
     {
+      "activity_id": "csv-20260626-sailing-203",
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-26",
+      "duration_min": 203,
+      "hr_avg": 87,
+      "hr_max": 131,
+      "calories": 694,
+      "distance_m": 13760,
+      "elevation_m": 0,
+      "tss_actual": 85,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260625-indoor_cardio-90",
+      "activity_name": "Cardio",
+      "activity_type": "indoor_cardio",
+      "date": "2026-06-25",
+      "duration_min": 90,
+      "hr_avg": 138,
+      "hr_max": 173,
+      "calories": 766,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 80,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260624-sailing-164",
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-24",
+      "duration_min": 164,
+      "hr_avg": 80,
+      "hr_max": 162,
+      "calories": 459,
+      "distance_m": 6790,
+      "elevation_m": 0,
+      "tss_actual": 26,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260624-strength_training-105",
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-06-24",
+      "duration_min": 105,
+      "hr_avg": 110,
+      "hr_max": 159,
+      "calories": 566,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 58,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260623-sailing-158",
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-23",
+      "duration_min": 158,
+      "hr_avg": 96,
+      "hr_max": 153,
+      "calories": 661,
+      "distance_m": 10540,
+      "elevation_m": 0,
+      "tss_actual": 61,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260623-indoor_cardio-55",
+      "activity_name": "Cardio",
+      "activity_type": "indoor_cardio",
+      "date": "2026-06-23",
+      "duration_min": 55,
+      "hr_avg": 154,
+      "hr_max": 179,
+      "calories": 603,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 61,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260622-sailing-154",
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-22",
+      "duration_min": 154,
+      "hr_avg": 102,
+      "hr_max": 147,
+      "calories": 736,
+      "distance_m": 12810,
+      "elevation_m": 0,
+      "tss_actual": 83,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": "csv-20260620-indoor_cycling-68",
+      "activity_name": "Ciclismo en sala",
+      "activity_type": "indoor_cycling",
+      "date": "2026-06-20",
+      "duration_min": 68,
+      "hr_avg": 119,
+      "hr_max": 150,
+      "calories": 550,
+      "distance_m": 9840,
+      "elevation_m": 0,
+      "tss_actual": 32,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_id": 23289197842,
+      "activity_name": "Ciclismo en sala",
+      "activity_type": "indoor_cycling",
+      "date": "2026-06-17",
+      "duration_min": 55,
+      "hr_avg": 137,
+      "hr_max": 180,
+      "calories": 513,
+      "distance_m": 14700,
+      "elevation_m": 0,
+      "tss_actual": 59,
+      "np_w": 199,
+      "avg_power_w": 131,
+      "max_power_w": 479
+    },
+    {
+      "activity_id": 23289197843,
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-17",
+      "duration_min": 86,
+      "hr_avg": 70,
+      "hr_max": 106,
+      "calories": 174,
+      "distance_m": 8390,
+      "elevation_m": 0,
+      "tss_actual": 24,
+      "speed_avg_kts": 3.2
+    },
+    {
+      "activity_id": 23265001001,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-06-16",
+      "duration_min": 68,
+      "hr_avg": 120,
+      "hr_max": 163,
+      "calories": 486,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 57,
+      "series_total": 15
+    },
+    {
+      "activity_id": 23265001002,
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-16",
+      "duration_min": 126,
+      "hr_avg": 97,
+      "hr_max": 139,
+      "calories": 553,
+      "distance_m": 19335,
+      "elevation_m": 0,
+      "tss_actual": 69,
+      "speed_avg_kts": 5
+    },
+    {
+      "activity_id": 23255001001,
+      "activity_name": "Ciclismo en sala",
+      "activity_type": "indoor_cycling",
+      "date": "2026-06-15",
+      "duration_min": 45,
+      "hr_avg": 114,
+      "hr_max": 142,
+      "calories": 372,
+      "distance_m": 10970,
+      "elevation_m": 0,
+      "tss_actual": 20,
+      "np_w": 129,
+      "avg_power_w": 111,
+      "max_power_w": 227
+    },
+    {
+      "activity_id": 23215001001,
+      "activity_name": "Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-12",
+      "duration_min": 60,
+      "hr_avg": 94,
+      "hr_max": 149,
+      "calories": 244,
+      "distance_m": 10667,
+      "elevation_m": 0,
+      "tss_actual": 31,
+      "speed_avg_kts": 5.7
+    },
+    {
+      "activity_id": 23215001002,
+      "activity_name": "Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-12",
+      "duration_min": 59,
+      "hr_avg": 100,
+      "hr_max": 131,
+      "calories": 283,
+      "distance_m": 12612,
+      "elevation_m": 0,
+      "tss_actual": 34,
+      "speed_avg_kts": 7
+    },
+    {
+      "activity_id": 23215001003,
+      "activity_name": "Vela",
+      "activity_type": "sailing",
+      "date": "2026-06-12",
+      "duration_min": 21,
+      "hr_avg": 89,
+      "hr_max": 113,
+      "calories": 86,
+      "distance_m": 3926,
+      "elevation_m": 0,
+      "tss_actual": 10,
+      "speed_avg_kts": 5.9
+    },
+    {
       "activity_id": 23201883258,
       "activity_name": "Fuerza",
       "activity_type": "strength_training",
@@ -12988,6 +13218,19 @@
       "distance_m": 0,
       "elevation_m": 0,
       "tss_actual": 53
+    },
+    {
+      "activity_id": 23205112001,
+      "activity_name": "Bahía de Banderas Carrera",
+      "activity_type": "running",
+      "date": "2026-06-11",
+      "duration_min": 48,
+      "hr_avg": 125,
+      "hr_max": 161,
+      "calories": 375,
+      "distance_m": 4780,
+      "elevation_m": 16,
+      "tss_actual": 44
     },
     {
       "activity_id": 23194876178,
@@ -15284,135 +15527,6 @@
       "distance_m": 3796,
       "elevation_m": 67,
       "tss_actual": 0
-    },
-    {
-      "activity_id": 23205112001,
-      "activity_name": "Bahía de Banderas Carrera",
-      "activity_type": "running",
-      "date": "2026-06-11",
-      "duration_min": 48,
-      "hr_avg": 125,
-      "hr_max": 161,
-      "calories": 375,
-      "distance_m": 4780,
-      "elevation_m": 16,
-      "tss_actual": 44
-    },
-    {
-      "activity_id": 23215001001,
-      "activity_name": "Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-12",
-      "duration_min": 60,
-      "hr_avg": 94,
-      "hr_max": 149,
-      "calories": 244,
-      "distance_m": 10667,
-      "elevation_m": 0,
-      "tss_actual": 31,
-      "speed_avg_kts": 5.7
-    },
-    {
-      "activity_id": 23215001002,
-      "activity_name": "Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-12",
-      "duration_min": 59,
-      "hr_avg": 100,
-      "hr_max": 131,
-      "calories": 283,
-      "distance_m": 12612,
-      "elevation_m": 0,
-      "tss_actual": 34,
-      "speed_avg_kts": 7
-    },
-    {
-      "activity_id": 23215001003,
-      "activity_name": "Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-12",
-      "duration_min": 21,
-      "hr_avg": 89,
-      "hr_max": 113,
-      "calories": 86,
-      "distance_m": 3926,
-      "elevation_m": 0,
-      "tss_actual": 10,
-      "speed_avg_kts": 5.9
-    },
-    {
-      "activity_id": 23255001001,
-      "activity_name": "Ciclismo en sala",
-      "activity_type": "indoor_cycling",
-      "date": "2026-06-15",
-      "duration_min": 45,
-      "hr_avg": 114,
-      "hr_max": 142,
-      "calories": 372,
-      "distance_m": 10970,
-      "elevation_m": 0,
-      "tss_actual": 20,
-      "np_w": 129,
-      "avg_power_w": 111,
-      "max_power_w": 227
-    },
-    {
-      "activity_id": 23265001001,
-      "activity_name": "Fuerza",
-      "activity_type": "strength_training",
-      "date": "2026-06-16",
-      "duration_min": 68,
-      "hr_avg": 120,
-      "hr_max": 163,
-      "calories": 486,
-      "distance_m": 0,
-      "elevation_m": 0,
-      "tss_actual": 57,
-      "series_total": 15
-    },
-    {
-      "activity_id": 23265001002,
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-16",
-      "duration_min": 126,
-      "hr_avg": 97,
-      "hr_max": 139,
-      "calories": 553,
-      "distance_m": 19335,
-      "elevation_m": 0,
-      "tss_actual": 69,
-      "speed_avg_kts": 5
-    },
-    {
-      "activity_id": 23289197842,
-      "activity_name": "Ciclismo en sala",
-      "activity_type": "indoor_cycling",
-      "date": "2026-06-17",
-      "duration_min": 55,
-      "hr_avg": 137,
-      "hr_max": 180,
-      "calories": 513,
-      "distance_m": 14700,
-      "elevation_m": 0,
-      "tss_actual": 59,
-      "np_w": 199,
-      "avg_power_w": 131,
-      "max_power_w": 479
-    },
-    {
-      "activity_id": 23289197843,
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-17",
-      "duration_min": 86,
-      "hr_avg": 70,
-      "hr_max": 106,
-      "calories": 174,
-      "distance_m": 8390,
-      "elevation_m": 0,
-      "tss_actual": 24,
-      "speed_avg_kts": 3.2
     }
   ],
   "device_syncs": [
