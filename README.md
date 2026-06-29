@@ -25,7 +25,7 @@ Base datos: JSON file store  (./data/tucoach.json — generado localmente, fuera
 Frontend:  HTML + CSS + JS vanilla (sin frameworks)
 Auth:      JWT
 Wearables: Garmin Connect API + Whoop Developer API
-IA:        5 agentes locales JS puro (sin OpenAI / sin Anthropic)
+IA:        5 agentes locales JS puro (sin APIs externas)
 ```
 
 ## Inicio rápido
@@ -134,4 +134,4 @@ Un solo comando para sincronizar cambios:
 
 ---
 
-Desarrollado con [Claude Code](https://claude.ai/code) · Plan CAC Games 2026 · ILCA 7 · Coach Erick
+Desarrollado por Gerardo Benítez · Plan CAC Games 2026 · ILCA 7 · Coach Erick

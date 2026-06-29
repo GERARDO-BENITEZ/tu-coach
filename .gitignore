@@ -17,7 +17,7 @@ data/tucoach.json
 Thumbs.db
 desktop.ini
 
-# ── Memoria de Claude Code (configuración local del IDE) ──────────────────────
+# ── Configuración local del editor ────────────────────────────────────────────
 .claude/
 
 # ── Logs ──────────────────────────────────────────────────────────────────────
