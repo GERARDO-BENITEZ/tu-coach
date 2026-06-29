@@ -2677,7 +2677,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-28T12:44:37.280Z",
+    "built_at": "2026-06-29T04:01:06.881Z",
     "data": [
       {
         "date": "2024-06-29",
@@ -7794,7 +7794,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-28T12:44:37.280Z",
+      "built_at": "2026-06-29T04:01:06.881Z",
       "data": [
         {
           "date": "2024-06-29",
@@ -16326,6 +16326,41 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-06-27T23:17:20.878Z"
+      }
+    },
+    {
+      "id": "0d4097ca-a492-4788-951e-5fa84fe97fcb",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-06-28T22:49:54.115Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-06-28T22:49:54.115Z"
+      }
+    },
+    {
+      "id": "279a2a4b-aeed-45a2-9570-dc75a6e047c9",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-06-29T04:01:06.791Z",
+      "data": {
+        "activity_id": 23399381497,
+        "activity_name": "Valle de Bravo Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 203,
+        "hr_avg": 87,
+        "hr_max": 131,
+        "calories": 694,
+        "tss_actual": 85,
+        "synced_at": "2026-06-29T04:01:06.791Z"
       }
     }
   ],
