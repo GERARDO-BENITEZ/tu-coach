@@ -1156,11 +1156,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-29",
-      "name": "🔴 DÍA A Explosivo — F2 Potencia",
+      "name": "🤒 Recuperación Gripa — Descanso (o movilidad 20-30 si amaneces SIN fiebre)",
       "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 72,
-      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | FASE 2 COMIENZA. DÍA A cambia tempo: bajada 1s, subida EXPLOSIVA. Menos reps, más peso. El objetivo ya no es resistencia sino potencia.",
+      "duration_min": 0,
+      "tss_planned": 0,
+      "coach_note": "Gripa activa Jun 27-28. REGLA DEL CUELLO: síntomas SOLO arriba del cuello (nariz/garganta leve) y SIN fiebre → opcional caminata Z1 o movilidad suave 20-30. Fiebre / cuerpo cortado / tos de pecho / malestar general → DESCANSO TOTAL. Cero explosivo/HIIT. La sesión Explosiva F2 se reprograma cuando estés recuperado.",
       "segments": [
         {
           "exercise": "Calentamiento articular",
@@ -1211,21 +1211,26 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-29T04:14:03.458Z",
       "zone": "RED",
       "week_label": "S4 · 🔴 Fuerza Explosiva",
-      "phase": "F2"
+      "phase": "F2",
+      "_original_plan": {
+        "name": "🔴 DÍA A Explosivo — F2 Potencia",
+        "tss_planned": 72,
+        "duration_min": 70
+      }
     },
     {
       "id": "3e6aa3b1-0848-4c14-9800-d4ff66155251",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-06-30",
-      "name": "🟡 Sprint HIIT — 10×30s Z5 (Ski Erg / Bici)",
+      "name": "🤒 Descanso / Z2 muy suave 30 (NADA de HIIT — solo si 48h sin síntomas)",
       "type": "Cardio Máquina",
-      "duration_min": 55,
-      "tss_planned": 60,
-      "coach_note": "S27 F2 · 🟡 MODERADA. HIIT en Ski Ergometer o Bici. 10 sprints ×30s al máximo, 60s recuperación Z1. Total ~25 min. Ski Erg preferido — activa todo el tren superior sin cargar espalda.",
+      "duration_min": 0,
+      "tss_planned": 0,
+      "coach_note": "No hacer Sprint HIIT Z5 estando convaleciente: la alta intensidad es lo que más prolonga una infección. Solo si llevas >=48h sin síntomas: Z2 muy suave 30-40 a conversación. Si no, descanso. El estímulo de potencia espera.",
       "segments": [
         {
           "name": "Calentamiento progresivo",
@@ -1259,21 +1264,26 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-29T04:14:03.459Z",
       "zone": "YELLOW",
       "week_label": "S4 · 🔴 Fuerza Explosiva",
-      "phase": "F2"
+      "phase": "F2",
+      "_original_plan": {
+        "name": "🟡 Sprint HIIT — 10×30s Z5 (Ski Erg / Bici)",
+        "tss_planned": 60,
+        "duration_min": 55
+      }
     },
     {
       "id": "520a9f94-82e5-4b5d-80aa-1c28d225cc97",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-01",
-      "name": "🔴 DÍA B — Dominadas Pesadas F2",
+      "name": "🟢 Reentrada Suave — Fuerza técnica RIR 3-4 (~60% volumen)",
       "type": "Fuerza / Gym",
-      "duration_min": 65,
-      "tss_planned": 68,
-      "coach_note": "SEMANA 4 | Fuerza Explosiva 🔴 | DÍA B Fase 2: 5 series de 4-6 reps con lastre. Fuerza pura de tracción. La escota en 20 nudos no espera.",
+      "duration_min": 50,
+      "tss_planned": 40,
+      "coach_note": "Primera sesión real de vuelta = MODERADA. Fuerza técnica a RIR 3-4, ~60% del volumen normal (no dominadas pesadas todavía). Solo si llevas 24h sin síntomas. Si toleras bien, retomamos progresión F2 normal el Jul 3.",
       "segments": [
         {
           "exercise": "Calentamiento articular",
@@ -1322,10 +1332,15 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-06-29T04:14:03.459Z",
       "zone": "RED",
       "week_label": "S4 · 🔴 Fuerza Explosiva",
-      "phase": "F2"
+      "phase": "F2",
+      "_original_plan": {
+        "name": "🔴 DÍA B — Dominadas Pesadas F2",
+        "tss_planned": 68,
+        "duration_min": 65
+      }
     },
     {
       "id": "62fdd1ee-9886-4bc9-8332-8988bdfed90e",
@@ -2679,7 +2694,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-06-29T04:12:18.115Z",
+    "built_at": "2026-06-29T04:14:17.804Z",
     "data": [
       {
         "date": "2024-06-29",
@@ -7796,7 +7811,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-06-29T04:12:18.115Z",
+      "built_at": "2026-06-29T04:14:17.804Z",
       "data": [
         {
           "date": "2024-06-29",
