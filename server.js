@@ -1136,7 +1136,7 @@ app.get('/api/auth/whoop', authBrowser, (req, res) => {
     response_type: 'code',
     client_id:     WHOOP_CLIENT_ID,
     redirect_uri:  WHOOP_REDIRECT_URI,
-    scope:         'read:recovery read:sleep read:body_measurement read:workout offline',
+    scope:         'read:recovery read:sleep read:cycles read:body_measurement read:workout offline',
     state:         req.user.id,
   })
   res.redirect(`https://api.prod.whoop.com/oauth/oauth2/auth?${params}`)
@@ -1223,10 +1223,10 @@ app.get('/api/athlete/whoop/sync', auth, async (req, res) => {
 
   // Llamadas en paralelo — cada una falla de forma independiente
   const [bodyData, recovData, sleepData, cycleData] = await Promise.all([
-    whoopFetch('https://api.prod.whoop.com/developer/v1/user/measurement/body'),
-    whoopFetch('https://api.prod.whoop.com/developer/v1/recovery?limit=1'),
-    whoopFetch('https://api.prod.whoop.com/developer/v1/activity/sleep?limit=1'),
-    whoopFetch('https://api.prod.whoop.com/developer/v1/cycle?limit=1'),
+    whoopFetch('https://api.prod.whoop.com/developer/v2/user/measurement/body'),
+    whoopFetch('https://api.prod.whoop.com/developer/v2/recovery?limit=1'),
+    whoopFetch('https://api.prod.whoop.com/developer/v2/activity/sleep?limit=1'),
+    whoopFetch('https://api.prod.whoop.com/developer/v2/cycle?limit=1'),
   ])
 
   const rec   = recovData?.records?.[0]
@@ -1498,7 +1498,7 @@ app.get('/api/athlete/whoop/import-history', auth, async (req, res) => {
     while (attempts < 50) {
       attempts++
       const qs  = nextToken ? `?limit=25&nextToken=${encodeURIComponent(nextToken)}` : '?limit=25'
-      const url = `https://api.prod.whoop.com/developer/v1/${endpoint}${qs}`
+      const url = `https://api.prod.whoop.com/developer/v2/${endpoint}${qs}`
       try {
         const r    = await fetch(url, { headers: h })
         const text = await r.text()

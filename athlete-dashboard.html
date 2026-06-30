@@ -1091,7 +1091,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;heigh
         </div>
         <div style="display:flex;gap:16px">
           <div style="text-align:center"><div style="font-size:26px;font-weight:900;color:var(--orange)" id="cac-days">48</div><div style="font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.5px">Días</div></div>
-          <div style="text-align:center"><div style="font-size:26px;font-weight:900;color:var(--accent)">F1</div><div style="font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.5px">Fase actual</div></div>
+          <div style="text-align:center"><div style="font-size:26px;font-weight:900;color:var(--accent)" id="cac-phase">F1</div><div style="font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.5px">Fase actual</div></div>
           <div style="text-align:center"><div style="font-size:20px;font-weight:900;color:var(--green)">90→86<span style="font-size:13px">kg</span></div><div style="font-size:9px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.5px">Objetivo</div></div>
         </div>
       </div>
@@ -4269,9 +4269,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const calDaysEl = document.getElementById('cal-cac-days')
   if (calDaysEl) calDaysEl.textContent = Math.max(0, daysLeft)
   const todayISOStr = today.toISOString().slice(0,10)
-  const phase = todayISOStr <= '2026-06-21' ? 'F1' : todayISOStr <= '2026-07-12' ? 'F2' : todayISOStr <= '2026-07-26' ? 'F3' : todayISOStr <= '2026-08-01' ? 'F4' : '🏁'
+  // Fases del plan (deben coincidir con las tarjetas del plan CAC):
+  // F1 BASE Jun 7–21 · F2 CARGA Jun 22–Jul 5 · F3 PICO Jul 6–19 · F4 TAPER Jul 20–25 · 🏁 CAC
+  const phase = todayISOStr <= '2026-06-21' ? 'F1' : todayISOStr <= '2026-07-05' ? 'F2' : todayISOStr <= '2026-07-19' ? 'F3' : todayISOStr <= '2026-07-25' ? 'F4' : '🏁'
   const calPhaseEl = document.getElementById('cal-cac-phase')
   if (calPhaseEl) calPhaseEl.textContent = phase
+  const phaseEl = document.getElementById('cac-phase')
+  if (phaseEl) phaseEl.textContent = phase
 
   // Barra de progreso de peso (90 → 86 kg, hoy en 90)
   setTimeout(() => {
