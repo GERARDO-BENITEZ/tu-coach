@@ -2512,22 +2512,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-07-02T06:34:44.944Z",
+    "built_at": "2026-07-05T00:28:38.539Z",
     "data": [
-      {
-        "date": "2024-07-03",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-07-04",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-07-05",
         "tss": 0,
@@ -7623,28 +7609,28 @@
         "ctl": 43.2,
         "atl": 48.6,
         "tsb": -5.4
+      },
+      {
+        "date": "2026-07-03",
+        "tss": 0,
+        "ctl": 42.1,
+        "atl": 41.7,
+        "tsb": 0.5
+      },
+      {
+        "date": "2026-07-04",
+        "tss": 0,
+        "ctl": 41.1,
+        "atl": 35.7,
+        "tsb": 5.4
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-07-02T06:34:44.944Z",
+      "built_at": "2026-07-05T00:28:38.539Z",
       "data": [
-        {
-          "date": "2024-07-03",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-07-04",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-07-05",
           "tss": 0,
@@ -12740,6 +12726,20 @@
           "ctl": 43.2,
           "atl": 48.6,
           "tsb": -5.4
+        },
+        {
+          "date": "2026-07-03",
+          "tss": 0,
+          "ctl": 42.1,
+          "atl": 41.7,
+          "tsb": 0.5
+        },
+        {
+          "date": "2026-07-04",
+          "tss": 0,
+          "ctl": 41.1,
+          "atl": 35.7,
+          "tsb": 5.4
         }
       ]
     }
@@ -16760,6 +16760,144 @@
         "tss_actual": 85,
         "synced_at": "2026-07-02T06:34:42.454Z"
       }
+    },
+    {
+      "id": "3f02a463-9124-4f89-9947-86f21ad1fc55",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-02T14:54:01.611Z",
+      "data": {
+        "recovery_score": 88,
+        "hrv_ms": 67,
+        "rhr_bpm": 41,
+        "sleep_hours": 6.3,
+        "strain": 0,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-02T14:54:01.611Z"
+      }
+    },
+    {
+      "id": "a7553551-7a44-478d-8301-24a1a34bf4df",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-02T16:07:30.010Z",
+      "data": {
+        "recovery_score": 95,
+        "hrv_ms": 72,
+        "rhr_bpm": 41,
+        "sleep_hours": 8.4,
+        "strain": 0,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-02T16:07:30.010Z"
+      }
+    },
+    {
+      "id": "1230082e-e50b-42b1-b8aa-0591d1823545",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-07-03T02:08:09.616Z",
+      "data": {
+        "activity_id": 23399381497,
+        "activity_name": "Valle de Bravo Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 203,
+        "hr_avg": 87,
+        "hr_max": 131,
+        "calories": 694,
+        "tss_actual": 85,
+        "synced_at": "2026-07-03T02:08:09.616Z"
+      }
+    },
+    {
+      "id": "09e31a76-62ff-4d16-bc4a-b2c50d333bd0",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-03T02:08:10.087Z",
+      "data": {
+        "recovery_score": 95,
+        "hrv_ms": 72,
+        "rhr_bpm": 41,
+        "sleep_hours": 8.4,
+        "strain": 0.6,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-03T02:08:10.087Z"
+      }
+    },
+    {
+      "id": "866efdae-a99f-441b-8ecd-1cc7e6d35ab9",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-03T15:28:42.321Z",
+      "data": {
+        "recovery_score": 97,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 9.4,
+        "strain": 0,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-03T15:28:42.321Z"
+      }
+    },
+    {
+      "id": "948c9858-d1aa-426c-8e5e-58d2cc717a70",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-03T16:00:10.269Z",
+      "data": {
+        "recovery_score": 97,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 9.4,
+        "strain": 0.1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-03T16:00:10.269Z"
+      }
+    },
+    {
+      "id": "19668494-d4c0-4ebb-86d7-e62630a5c7b2",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-05T00:28:31.940Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-07-05T00:28:31.939Z"
+      }
+    },
+    {
+      "id": "04b0f472-e0a5-450a-a34e-8618aa141c9c",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-07-05T00:28:38.383Z",
+      "data": {
+        "activity_id": 23399381497,
+        "activity_name": "Valle de Bravo Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 203,
+        "hr_avg": 87,
+        "hr_max": 131,
+        "calories": 694,
+        "tss_actual": 85,
+        "synced_at": "2026-07-05T00:28:38.383Z"
+      }
     }
   ],
   "wellness": [
@@ -16928,6 +17066,21 @@
       "hasPain": false,
       "note": "",
       "created_at": "2026-07-02T01:13:21.400Z"
+    },
+    {
+      "id": "981ff006-ecea-462e-baa2-fca53b17f8d8",
+      "athlete_id": "athlete-gb-001",
+      "date": "2026-07-02",
+      "sleepHours": 7.5,
+      "sleepQuality": 3,
+      "energy": 7,
+      "muscleSoreness": 6,
+      "mentalReadiness": 8,
+      "stressLevel": 1,
+      "readyToTrain": true,
+      "hasPain": false,
+      "note": "",
+      "created_at": "2026-07-03T02:07:52.462Z"
     }
   ],
   "whoop_history": [
@@ -25687,7 +25840,33 @@
       "strain": 4.7,
       "avg_hr": 52,
       "max_hr": 127,
-      "kilojoules": 6235.573
+      "kilojoules": 8790.249
+    },
+    {
+      "date": "2026-07-02",
+      "recovery_score": 95,
+      "hrv_ms": 72,
+      "rhr_bpm": 41,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 90.31251,
+      "sleep_performance": 81,
+      "strain": 5.9,
+      "avg_hr": 51,
+      "max_hr": 131,
+      "kilojoules": 8275.31
+    },
+    {
+      "date": "2026-07-03",
+      "recovery_score": 97,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "sleep_hours": 9.4,
+      "sleep_efficiency": 93.27888,
+      "sleep_performance": 88,
+      "strain": 0.1,
+      "avg_hr": 44,
+      "max_hr": 84,
+      "kilojoules": 3832.804
     }
   ],
   "body_composition": [
@@ -25703,7 +25882,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-07-01T23:38:54.839Z"
+      "updated_at": "2026-07-03T16:00:10.269Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
