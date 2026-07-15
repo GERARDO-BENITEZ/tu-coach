@@ -1710,33 +1710,36 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-13",
-      "name": "🟡 Test Recovery + DÍA C Suave",
-      "type": "Core / Movilidad",
-      "duration_min": 50,
-      "tss_planned": 40,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | FASE 3 COMIENZA. Test control: mide con qué rapidez baja tu FC tras 3min de esfuerzo al 80%. Luego: DÍA C suave — solo 2 series por ejercicio.",
+      "name": "🔴 DÍA A — Test Recovery + Activación Explosiva F3",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 68,
+      "coach_note": "SEMANA F3 (día 1/14) — Especificidad ILCA 7. Estabas fresco (TSB +5.2, recovery 66%) y con CTL bajando cuando necesita subir a 55 en 18 días — subimos la carga real de esta semana en vez de seguir en modo 'mitad volumen'. Mantengo el test de recovery (es buen diagnóstico), pero agrego trabajo explosivo real después. RIR 1 hoy — mañana ya es RIR 0.",
       "segments": [
         {
-          "exercise": "Calentamiento + Activación Core",
+          "exercise": "Calentamiento + Test Recovery HR",
           "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
+          "reps": "10min",
+          "isWarmup": true,
+          "note": "3min esfuerzo al 80% + cronometra cuánto tarda tu FC en bajar 30bpm. Anótalo — es tu marcador de forma."
         },
         {
-          "exercise": "Body Saw TRX",
-          "sets": "2",
-          "reps": "45s",
-          "note": "TAPERING: 2 series suaves."
+          "exercise": "Squat Jump con banda (explosividad)",
+          "sets": "4",
+          "reps": "5",
+          "note": "RIR 1. Velocidad máxima en la fase concéntrica, aterrizaje suave."
         },
         {
-          "exercise": "Press Pallof",
-          "sets": "2",
-          "reps": "10/lado"
+          "exercise": "Chin-up explosivo (jalón máximo)",
+          "sets": "4",
+          "reps": "4",
+          "note": "RIR 1. Sube explosivo, baja controlado 3s."
         },
         {
-          "exercise": "Dead Bug",
-          "sets": "2",
-          "reps": "15"
+          "exercise": "Med Ball Rotational Slam (core específico vela)",
+          "sets": "3",
+          "reps": "10/lado",
+          "note": "Simula la potencia rotacional de trimado/hiking."
         },
         {
           "exercise": "Enfriamiento + Movilidad",
@@ -1754,7 +1757,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-13T16:30:36.389Z",
       "zone": "YELLOW",
       "week_label": "S6 · 🟡 Tapering",
       "phase": "F3"
@@ -1764,37 +1767,47 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-14",
-      "name": "🟡 DÍA A Modificado — Mitad Volumen F3",
+      "name": "🔴 DÍA B — Potencia Máxima ILCA 7 (F3 completo)",
       "type": "Fuerza / Gym",
-      "duration_min": 50,
-      "tss_planned": 38,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA A con el MISMO peso de la semana pasada pero MITAD de series. No buscas fatiga — buscas mantener el estímulo neuromuscular.",
+      "duration_min": 75,
+      "tss_planned": 90,
+      "coach_note": "Volumen completo de F3 (ya no 'mitad volumen') — RIR 0-1, complejos de potencia específica para hiking/trimado. Es la sesión más dura de la semana, ponla con tu mejor recovery.",
       "segments": [
         {
-          "exercise": "Calentamiento articular",
+          "exercise": "Calentamiento articular + activación",
           "sets": "1",
           "reps": "10min",
           "isWarmup": true
         },
         {
-          "exercise": "Peso Muerto Rumano con Barra (RDL)",
-          "sets": "2",
-          "reps": "6",
-          "logged_kg": 75,
-          "note": "TAPERING: mismo peso F2, mitad de series. Enfoque en técnica perfecta."
+          "exercise": "Sentadilla Squat Jump 30%RM (velocidad máxima)",
+          "sets": "5",
+          "reps": "3",
+          "note": "RIR 0. Máxima velocidad concéntrica — si baja la velocidad, para la serie."
         },
         {
-          "exercise": "Silla Estática con Disco + Tuck Springs",
-          "sets": "2",
-          "reps": "60s / 10 reps",
-          "logged_kg": 20,
-          "note": "Mantener estímulo neuromuscular sin acumular fatiga."
+          "exercise": "Drop Jump Reactivo",
+          "sets": "4",
+          "reps": "4",
+          "note": "Contacto en el piso <200ms — calidad sobre cantidad."
         },
         {
-          "exercise": "Desplantes Búlgaros",
-          "sets": "2",
-          "reps": "8/pierna",
-          "logged_kg": 24
+          "exercise": "Weighted Chin-up (intento de PR)",
+          "sets": "5",
+          "reps": "3",
+          "note": "RIR 0. Si hoy se siente bien, intenta superar tu marca."
+        },
+        {
+          "exercise": "Landmine Rotation Explosiva",
+          "sets": "3",
+          "reps": "8/lado",
+          "note": "Potencia rotacional — simula la escota en ráfaga."
+        },
+        {
+          "exercise": "Sissy Squat con carga + Nordic Curl",
+          "sets": "3",
+          "reps": "8",
+          "note": "RIR 0. Excéntrico controlado — clave para hiking prolongado."
         },
         {
           "exercise": "Enfriamiento + Movilidad",
@@ -1812,7 +1825,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-13T16:30:36.508Z",
       "zone": "YELLOW",
       "week_label": "S6 · 🟡 Tapering",
       "phase": "F3"
@@ -1822,17 +1835,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-15",
-      "name": "🔵 Cardio Z2 Suave — 40'",
+      "name": "🟡 Cardio Z3 Específico — Intervalos",
       "type": "Ciclismo",
-      "duration_min": 40,
-      "tss_planned": 35,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA AZUL. Cardio suave Z2, sin picos de FC. El cuerpo empieza la supercompensación. NO superar 140 bpm.",
+      "duration_min": 50,
+      "tss_planned": 65,
+      "coach_note": "Subido de Z2 suave a Z3 con intervalos — necesitas estímulo aeróbico real esta semana para mover el CTL. Al día siguiente de tu día más duro (DÍA B), así que si amaneces con recovery bajo, baja a Z2 y avísame.",
       "segments": [
         {
-          "name": "Cardio Z2 suave sin picos",
-          "duration": "40min",
-          "zone": "Z2",
-          "reps": "FC < 140 bpm"
+          "name": "Calentamiento Z1-Z2",
+          "duration": "10 min",
+          "zone": "Z1-Z2"
+        },
+        {
+          "name": "6x3min Z3 / 2min Z1 recuperación",
+          "duration": "30 min",
+          "zone": "Z3 — Intervalos"
+        },
+        {
+          "name": "Enfriamiento Z1",
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -1844,7 +1866,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-13T16:30:36.644Z",
       "zone": "BLUE",
       "week_label": "S6 · 🟡 Tapering",
       "phase": "F3"
@@ -1882,40 +1904,47 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-17",
-      "name": "🟡 DÍA B Modificado — 2 Series F3",
+      "name": "🔴 DÍA C — Potencia Tren Superior + Core Específico F3",
       "type": "Fuerza / Gym",
-      "duration_min": 45,
-      "tss_planned": 35,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | DÍA B reducido: solo 2 series por ejercicio. Peso moderado, técnica perfecta. Mantener conexión neuromuscular.",
+      "duration_min": 65,
+      "tss_planned": 70,
+      "coach_note": "Volumen completo (ya no '2 series') — tracción explosiva + core rotacional específico de vela. Segunda sesión fuerte de la semana.",
       "segments": [
         {
-          "exercise": "Calentamiento articular",
+          "exercise": "Calentamiento articular + activación hombro",
           "sets": "1",
           "reps": "10min",
           "isWarmup": true
         },
         {
-          "exercise": "Dominadas (técnica)",
-          "sets": "2",
-          "reps": "5",
-          "note": "TAPERING: 2 series. Enfoque en técnica, no fatiga."
+          "exercise": "Remo Pendlay explosivo",
+          "sets": "5",
+          "reps": "4",
+          "note": "RIR 0-1. Explosivo en la tracción, controlado en la bajada."
         },
         {
-          "exercise": "Remo con Barra",
-          "sets": "2",
-          "reps": "8",
-          "note": "Peso moderado, técnica perfecta."
+          "exercise": "Face Pull manguito rotador",
+          "sets": "3",
+          "reps": "15",
+          "note": "Salud de hombro — no sacrificar por peso."
         },
         {
-          "exercise": "Farmer's Walk",
-          "sets": "2",
-          "reps": "50m",
-          "logged_kg": 32
+          "exercise": "Copenhagen Plank",
+          "sets": "3",
+          "reps": "30s/lado",
+          "note": "Estabilidad lateral — clave para hiking."
         },
         {
-          "exercise": "Press Militar",
-          "sets": "2",
-          "reps": "6"
+          "exercise": "Pallof Press anti-rotación",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Farmer's Walk pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Grip máximo — simula 3 regatas seguidas."
         },
         {
           "exercise": "Enfriamiento + Movilidad",
@@ -1933,7 +1962,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-13T16:30:36.776Z",
       "zone": "YELLOW",
       "week_label": "S6 · 🟡 Tapering",
       "phase": "F3"
@@ -1943,17 +1972,26 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-18",
-      "name": "🟡 Cardio Técnico Ligero — 45'",
+      "name": "🟡 Cardio Técnico + Simulación Ritmo Regata",
       "type": "Ciclismo",
-      "duration_min": 45,
-      "tss_planned": 42,
-      "coach_note": "SEMANA 6 | Tapering 🟡 | Cardio técnico ligero. Sustituto día de agua calibración. Mantén el ritmo aeróbico sin acumular fatiga.",
+      "duration_min": 55,
+      "tss_planned": 60,
+      "coach_note": "Subido de 'ligero' a técnico con bloques de ritmo — simula la variabilidad de una regata (esfuerzos cortos intensos + navegación sostenida). Último estímulo fuerte antes del descanso del domingo.",
       "segments": [
         {
-          "name": "Cardio Técnico Z2",
-          "duration": "45min",
-          "zone": "Z2",
-          "reps": "FC 125-140 bpm"
+          "name": "Calentamiento Z1-Z2",
+          "duration": "12 min",
+          "zone": "Z1-Z2"
+        },
+        {
+          "name": "4x4min Z3-Z4 (simulación ceñida) / 3min Z1",
+          "duration": "28 min",
+          "zone": "Z3-Z4 — Simulación"
+        },
+        {
+          "name": "Enfriamiento Z1",
+          "duration": "15 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -1965,7 +2003,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-13T16:30:36.936Z",
       "zone": "YELLOW",
       "week_label": "S6 · 🟡 Tapering",
       "phase": "F3"
@@ -2548,22 +2586,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-07-13T15:37:52.131Z",
+    "built_at": "2026-07-15T23:37:12.206Z",
     "data": [
-      {
-        "date": "2024-07-14",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-07-15",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-07-16",
         "tss": 0,
@@ -7494,193 +7518,193 @@
       },
       {
         "date": "2026-06-20",
-        "tss": 89,
-        "ctl": 33.9,
-        "atl": 66.2,
-        "tsb": -32.4
+        "tss": 57,
+        "ctl": 33.1,
+        "atl": 61.7,
+        "tsb": -28.6
       },
       {
         "date": "2026-06-21",
         "tss": 0,
-        "ctl": 33.1,
-        "atl": 56.8,
-        "tsb": -23.7
+        "ctl": 32.3,
+        "atl": 52.9,
+        "tsb": -20.6
       },
       {
         "date": "2026-06-22",
-        "tss": 166,
-        "ctl": 36.2,
-        "atl": 72.4,
-        "tsb": -36.2
+        "tss": 83,
+        "ctl": 33.5,
+        "atl": 57.2,
+        "tsb": -23.6
       },
       {
         "date": "2026-06-23",
-        "tss": 244,
-        "ctl": 41.2,
-        "atl": 96.9,
-        "tsb": -55.7
+        "tss": 122,
+        "ctl": 35.6,
+        "atl": 66.4,
+        "tsb": -30.8
       },
       {
         "date": "2026-06-24",
-        "tss": 168,
-        "ctl": 44.2,
-        "atl": 107.1,
-        "tsb": -62.9
+        "tss": 84,
+        "ctl": 36.8,
+        "atl": 68.9,
+        "tsb": -32.2
       },
       {
         "date": "2026-06-25",
-        "tss": 160,
-        "ctl": 46.9,
-        "atl": 114.6,
-        "tsb": -67.7
+        "tss": 80,
+        "ctl": 37.8,
+        "atl": 70.5,
+        "tsb": -32.7
       },
       {
         "date": "2026-06-26",
-        "tss": 170,
-        "ctl": 49.9,
-        "atl": 122.5,
-        "tsb": -72.7
+        "tss": 85,
+        "ctl": 38.9,
+        "atl": 72.6,
+        "tsb": -33.7
       },
       {
         "date": "2026-06-27",
         "tss": 0,
-        "ctl": 48.7,
-        "atl": 105,
-        "tsb": -56.3
+        "ctl": 38,
+        "atl": 62.2,
+        "tsb": -24.2
       },
       {
         "date": "2026-06-28",
         "tss": 0,
-        "ctl": 47.5,
-        "atl": 90,
-        "tsb": -42.5
+        "ctl": 37.1,
+        "atl": 53.3,
+        "tsb": -16.2
       },
       {
         "date": "2026-06-29",
         "tss": 0,
-        "ctl": 46.4,
-        "atl": 77.2,
-        "tsb": -30.8
+        "ctl": 36.2,
+        "atl": 45.7,
+        "tsb": -9.5
       },
       {
         "date": "2026-06-30",
         "tss": 0,
-        "ctl": 45.3,
-        "atl": 66.1,
-        "tsb": -20.8
+        "ctl": 35.4,
+        "atl": 39.2,
+        "tsb": -3.8
       },
       {
         "date": "2026-07-01",
         "tss": 0,
-        "ctl": 44.2,
-        "atl": 56.7,
-        "tsb": -12.5
+        "ctl": 34.5,
+        "atl": 33.6,
+        "tsb": 0.9
       },
       {
         "date": "2026-07-02",
         "tss": 41,
-        "ctl": 44.1,
-        "atl": 54.5,
-        "tsb": -10.3
+        "ctl": 34.7,
+        "atl": 34.6,
+        "tsb": 0
       },
       {
         "date": "2026-07-03",
         "tss": 41,
-        "ctl": 44.1,
-        "atl": 52.5,
-        "tsb": -8.5
+        "ctl": 34.8,
+        "atl": 35.6,
+        "tsb": -0.7
       },
       {
         "date": "2026-07-04",
         "tss": 60,
-        "ctl": 44.4,
-        "atl": 53.6,
-        "tsb": -9.2
+        "ctl": 35.4,
+        "atl": 39,
+        "tsb": -3.6
       },
       {
         "date": "2026-07-05",
         "tss": 0,
-        "ctl": 43.4,
-        "atl": 45.9,
-        "tsb": -2.6
+        "ctl": 34.6,
+        "atl": 33.5,
+        "tsb": 1.1
       },
       {
         "date": "2026-07-06",
         "tss": 83,
-        "ctl": 44.3,
-        "atl": 51.2,
-        "tsb": -6.9
+        "ctl": 35.7,
+        "atl": 40.5,
+        "tsb": -4.8
       },
       {
         "date": "2026-07-07",
-        "tss": 77,
-        "ctl": 45.1,
-        "atl": 54.9,
-        "tsb": -9.8
+        "tss": 36,
+        "ctl": 35.7,
+        "atl": 39.9,
+        "tsb": -4.2
       },
       {
         "date": "2026-07-08",
         "tss": 37,
-        "ctl": 44.9,
-        "atl": 52.4,
-        "tsb": -7.4
+        "ctl": 35.8,
+        "atl": 39.5,
+        "tsb": -3.7
       },
       {
         "date": "2026-07-09",
         "tss": 61,
-        "ctl": 45.3,
-        "atl": 53.6,
-        "tsb": -8.3
+        "ctl": 36.4,
+        "atl": 42.6,
+        "tsb": -6.2
       },
       {
         "date": "2026-07-10",
         "tss": 72,
-        "ctl": 45.9,
-        "atl": 56.2,
-        "tsb": -10.3
+        "ctl": 37.2,
+        "atl": 46.8,
+        "tsb": -9.5
       },
       {
         "date": "2026-07-11",
         "tss": 0,
-        "ctl": 44.8,
-        "atl": 48.2,
-        "tsb": -3.3
+        "ctl": 36.3,
+        "atl": 40.1,
+        "tsb": -3.8
       },
       {
         "date": "2026-07-12",
         "tss": 0,
-        "ctl": 43.8,
-        "atl": 41.3,
-        "tsb": 2.5
+        "ctl": 35.5,
+        "atl": 34.4,
+        "tsb": 1.1
       },
       {
         "date": "2026-07-13",
         "tss": 0,
-        "ctl": 42.7,
-        "atl": 35.4,
-        "tsb": 7.3
+        "ctl": 34.6,
+        "atl": 29.4,
+        "tsb": 5.2
+      },
+      {
+        "date": "2026-07-14",
+        "tss": 0,
+        "ctl": 33.8,
+        "atl": 25.2,
+        "tsb": 8.6
+      },
+      {
+        "date": "2026-07-15",
+        "tss": 0,
+        "ctl": 33,
+        "atl": 21.6,
+        "tsb": 11.4
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-07-13T15:37:52.131Z",
+      "built_at": "2026-07-15T23:37:12.206Z",
       "data": [
-        {
-          "date": "2024-07-14",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-07-15",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-07-16",
           "tss": 0,
@@ -12611,171 +12635,185 @@
         },
         {
           "date": "2026-06-20",
-          "tss": 89,
-          "ctl": 33.9,
-          "atl": 66.2,
-          "tsb": -32.4
+          "tss": 57,
+          "ctl": 33.1,
+          "atl": 61.7,
+          "tsb": -28.6
         },
         {
           "date": "2026-06-21",
           "tss": 0,
-          "ctl": 33.1,
-          "atl": 56.8,
-          "tsb": -23.7
+          "ctl": 32.3,
+          "atl": 52.9,
+          "tsb": -20.6
         },
         {
           "date": "2026-06-22",
-          "tss": 166,
-          "ctl": 36.2,
-          "atl": 72.4,
-          "tsb": -36.2
+          "tss": 83,
+          "ctl": 33.5,
+          "atl": 57.2,
+          "tsb": -23.6
         },
         {
           "date": "2026-06-23",
-          "tss": 244,
-          "ctl": 41.2,
-          "atl": 96.9,
-          "tsb": -55.7
+          "tss": 122,
+          "ctl": 35.6,
+          "atl": 66.4,
+          "tsb": -30.8
         },
         {
           "date": "2026-06-24",
-          "tss": 168,
-          "ctl": 44.2,
-          "atl": 107.1,
-          "tsb": -62.9
+          "tss": 84,
+          "ctl": 36.8,
+          "atl": 68.9,
+          "tsb": -32.2
         },
         {
           "date": "2026-06-25",
-          "tss": 160,
-          "ctl": 46.9,
-          "atl": 114.6,
-          "tsb": -67.7
+          "tss": 80,
+          "ctl": 37.8,
+          "atl": 70.5,
+          "tsb": -32.7
         },
         {
           "date": "2026-06-26",
-          "tss": 170,
-          "ctl": 49.9,
-          "atl": 122.5,
-          "tsb": -72.7
+          "tss": 85,
+          "ctl": 38.9,
+          "atl": 72.6,
+          "tsb": -33.7
         },
         {
           "date": "2026-06-27",
           "tss": 0,
-          "ctl": 48.7,
-          "atl": 105,
-          "tsb": -56.3
+          "ctl": 38,
+          "atl": 62.2,
+          "tsb": -24.2
         },
         {
           "date": "2026-06-28",
           "tss": 0,
-          "ctl": 47.5,
-          "atl": 90,
-          "tsb": -42.5
+          "ctl": 37.1,
+          "atl": 53.3,
+          "tsb": -16.2
         },
         {
           "date": "2026-06-29",
           "tss": 0,
-          "ctl": 46.4,
-          "atl": 77.2,
-          "tsb": -30.8
+          "ctl": 36.2,
+          "atl": 45.7,
+          "tsb": -9.5
         },
         {
           "date": "2026-06-30",
           "tss": 0,
-          "ctl": 45.3,
-          "atl": 66.1,
-          "tsb": -20.8
+          "ctl": 35.4,
+          "atl": 39.2,
+          "tsb": -3.8
         },
         {
           "date": "2026-07-01",
           "tss": 0,
-          "ctl": 44.2,
-          "atl": 56.7,
-          "tsb": -12.5
+          "ctl": 34.5,
+          "atl": 33.6,
+          "tsb": 0.9
         },
         {
           "date": "2026-07-02",
           "tss": 41,
-          "ctl": 44.1,
-          "atl": 54.5,
-          "tsb": -10.3
+          "ctl": 34.7,
+          "atl": 34.6,
+          "tsb": 0
         },
         {
           "date": "2026-07-03",
           "tss": 41,
-          "ctl": 44.1,
-          "atl": 52.5,
-          "tsb": -8.5
+          "ctl": 34.8,
+          "atl": 35.6,
+          "tsb": -0.7
         },
         {
           "date": "2026-07-04",
           "tss": 60,
-          "ctl": 44.4,
-          "atl": 53.6,
-          "tsb": -9.2
+          "ctl": 35.4,
+          "atl": 39,
+          "tsb": -3.6
         },
         {
           "date": "2026-07-05",
           "tss": 0,
-          "ctl": 43.4,
-          "atl": 45.9,
-          "tsb": -2.6
+          "ctl": 34.6,
+          "atl": 33.5,
+          "tsb": 1.1
         },
         {
           "date": "2026-07-06",
           "tss": 83,
-          "ctl": 44.3,
-          "atl": 51.2,
-          "tsb": -6.9
+          "ctl": 35.7,
+          "atl": 40.5,
+          "tsb": -4.8
         },
         {
           "date": "2026-07-07",
-          "tss": 77,
-          "ctl": 45.1,
-          "atl": 54.9,
-          "tsb": -9.8
+          "tss": 36,
+          "ctl": 35.7,
+          "atl": 39.9,
+          "tsb": -4.2
         },
         {
           "date": "2026-07-08",
           "tss": 37,
-          "ctl": 44.9,
-          "atl": 52.4,
-          "tsb": -7.4
+          "ctl": 35.8,
+          "atl": 39.5,
+          "tsb": -3.7
         },
         {
           "date": "2026-07-09",
           "tss": 61,
-          "ctl": 45.3,
-          "atl": 53.6,
-          "tsb": -8.3
+          "ctl": 36.4,
+          "atl": 42.6,
+          "tsb": -6.2
         },
         {
           "date": "2026-07-10",
           "tss": 72,
-          "ctl": 45.9,
-          "atl": 56.2,
-          "tsb": -10.3
+          "ctl": 37.2,
+          "atl": 46.8,
+          "tsb": -9.5
         },
         {
           "date": "2026-07-11",
           "tss": 0,
-          "ctl": 44.8,
-          "atl": 48.2,
-          "tsb": -3.3
+          "ctl": 36.3,
+          "atl": 40.1,
+          "tsb": -3.8
         },
         {
           "date": "2026-07-12",
           "tss": 0,
-          "ctl": 43.8,
-          "atl": 41.3,
-          "tsb": 2.5
+          "ctl": 35.5,
+          "atl": 34.4,
+          "tsb": 1.1
         },
         {
           "date": "2026-07-13",
           "tss": 0,
-          "ctl": 42.7,
-          "atl": 35.4,
-          "tsb": 7.3
+          "ctl": 34.6,
+          "atl": 29.4,
+          "tsb": 5.2
+        },
+        {
+          "date": "2026-07-14",
+          "tss": 0,
+          "ctl": 33.8,
+          "atl": 25.2,
+          "tsb": 8.6
+        },
+        {
+          "date": "2026-07-15",
+          "tss": 0,
+          "ctl": 33,
+          "atl": 21.6,
+          "tsb": 11.4
         }
       ]
     }
@@ -12887,20 +12925,6 @@
       "tss_actual": 37
     },
     {
-      "activity_id": "csv-20260707-indoor_cardio-67",
-      "activity_name": "Cardio",
-      "activity_type": "indoor_cardio",
-      "date": "2026-07-07",
-      "duration_min": 67,
-      "hr_avg": 115,
-      "hr_max": 169,
-      "calories": 474,
-      "distance_m": 0,
-      "elevation_m": 0,
-      "tss_actual": 41,
-      "source": "garmin-csv-import"
-    },
-    {
       "activity_id": 23522633774,
       "activity_name": "Cardio",
       "activity_type": "indoor_cardio",
@@ -12966,20 +12990,6 @@
       "tss_actual": 41
     },
     {
-      "activity_id": "csv-20260626-sailing-203",
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-26",
-      "duration_min": 203,
-      "hr_avg": 87,
-      "hr_max": 131,
-      "calories": 694,
-      "distance_m": 13760,
-      "elevation_m": 0,
-      "tss_actual": 85,
-      "source": "garmin-csv-import"
-    },
-    {
       "activity_id": 23399381497,
       "activity_name": "Valle de Bravo Vela",
       "activity_type": "sailing_v2",
@@ -12993,20 +13003,6 @@
       "tss_actual": 85
     },
     {
-      "activity_id": "csv-20260625-indoor_cardio-90",
-      "activity_name": "Cardio",
-      "activity_type": "indoor_cardio",
-      "date": "2026-06-25",
-      "duration_min": 90,
-      "hr_avg": 138,
-      "hr_max": 173,
-      "calories": 766,
-      "distance_m": 0,
-      "elevation_m": 0,
-      "tss_actual": 80,
-      "source": "garmin-csv-import"
-    },
-    {
       "activity_id": 23381353573,
       "activity_name": "Cardio",
       "activity_type": "indoor_cardio",
@@ -13018,34 +13014,6 @@
       "distance_m": 0,
       "elevation_m": 0,
       "tss_actual": 80
-    },
-    {
-      "activity_id": "csv-20260624-sailing-164",
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-24",
-      "duration_min": 164,
-      "hr_avg": 80,
-      "hr_max": 162,
-      "calories": 459,
-      "distance_m": 6790,
-      "elevation_m": 0,
-      "tss_actual": 26,
-      "source": "garmin-csv-import"
-    },
-    {
-      "activity_id": "csv-20260624-strength_training-105",
-      "activity_name": "Fuerza",
-      "activity_type": "strength_training",
-      "date": "2026-06-24",
-      "duration_min": 105,
-      "hr_avg": 110,
-      "hr_max": 159,
-      "calories": 566,
-      "distance_m": 0,
-      "elevation_m": 0,
-      "tss_actual": 58,
-      "source": "garmin-csv-import"
     },
     {
       "activity_id": 23370358334,
@@ -13074,34 +13042,6 @@
       "tss_actual": 26
     },
     {
-      "activity_id": "csv-20260623-sailing-158",
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-23",
-      "duration_min": 158,
-      "hr_avg": 96,
-      "hr_max": 153,
-      "calories": 661,
-      "distance_m": 10540,
-      "elevation_m": 0,
-      "tss_actual": 61,
-      "source": "garmin-csv-import"
-    },
-    {
-      "activity_id": "csv-20260623-indoor_cardio-55",
-      "activity_name": "Cardio",
-      "activity_type": "indoor_cardio",
-      "date": "2026-06-23",
-      "duration_min": 55,
-      "hr_avg": 154,
-      "hr_max": 179,
-      "calories": 603,
-      "distance_m": 0,
-      "elevation_m": 0,
-      "tss_actual": 61,
-      "source": "garmin-csv-import"
-    },
-    {
       "activity_id": 23358559985,
       "activity_name": "Cardio",
       "activity_type": "indoor_cardio",
@@ -13128,20 +13068,6 @@
       "tss_actual": 61
     },
     {
-      "activity_id": "csv-20260622-sailing-154",
-      "activity_name": "Valle de Bravo Vela",
-      "activity_type": "sailing",
-      "date": "2026-06-22",
-      "duration_min": 154,
-      "hr_avg": 102,
-      "hr_max": 147,
-      "calories": 736,
-      "distance_m": 12810,
-      "elevation_m": 0,
-      "tss_actual": 83,
-      "source": "garmin-csv-import"
-    },
-    {
       "activity_id": 23344518990,
       "activity_name": "Valle de Bravo Vela",
       "activity_type": "sailing_v2",
@@ -13153,20 +13079,6 @@
       "distance_m": 23715,
       "elevation_m": 4002,
       "tss_actual": 83
-    },
-    {
-      "activity_id": "csv-20260620-indoor_cycling-68",
-      "activity_name": "Ciclismo en sala",
-      "activity_type": "indoor_cycling",
-      "date": "2026-06-20",
-      "duration_min": 68,
-      "hr_avg": 119,
-      "hr_max": 150,
-      "calories": 550,
-      "distance_m": 9840,
-      "elevation_m": 0,
-      "tss_actual": 32,
-      "source": "garmin-csv-import"
     },
     {
       "activity_id": 23318698898,
@@ -17210,6 +17122,90 @@
         "tss_actual": 72,
         "synced_at": "2026-07-13T15:37:51.124Z"
       }
+    },
+    {
+      "id": "f53daffa-1132-4f5e-b5a8-212c4ee1e940",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-13T16:00:01.234Z",
+      "data": {
+        "recovery_score": 66,
+        "hrv_ms": 61,
+        "rhr_bpm": 44,
+        "sleep_hours": 8.7,
+        "sleep_light_h": 4.4,
+        "sleep_rem_h": 1.9,
+        "sleep_deep_h": 2,
+        "sleep_awake_h": 0.4,
+        "sleep_disturbances": 7,
+        "strain": 0.3,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-13T16:00:01.234Z"
+      }
+    },
+    {
+      "id": "b7a55e86-e508-4a4f-bb1e-0d6cfb1569b0",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-14T18:22:53.974Z",
+      "data": {
+        "recovery_score": 95,
+        "hrv_ms": 73,
+        "rhr_bpm": 42,
+        "sleep_hours": 7.7,
+        "sleep_light_h": 4.2,
+        "sleep_rem_h": 1.5,
+        "sleep_deep_h": 1.8,
+        "sleep_awake_h": 0.2,
+        "sleep_disturbances": 11,
+        "strain": 0.2,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-14T18:22:53.974Z"
+      }
+    },
+    {
+      "id": "7928ce3c-c7e5-4a71-8fcb-b55a958817e1",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-15T23:37:11.872Z",
+      "data": {
+        "recovery_score": 17,
+        "hrv_ms": 38,
+        "rhr_bpm": 58,
+        "sleep_hours": 4.8,
+        "sleep_light_h": 0.9,
+        "sleep_rem_h": 2.3,
+        "sleep_deep_h": 1.5,
+        "sleep_awake_h": 0,
+        "sleep_disturbances": 0,
+        "strain": 4.5,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-15T23:37:11.872Z"
+      }
+    },
+    {
+      "id": "fab7f848-60ee-4f5b-ae65-9cc0e0cfd2ae",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-07-15T23:37:12.017Z",
+      "data": {
+        "activity_id": 23588822190,
+        "activity_name": "Fuerza",
+        "activity_type": "strength_training",
+        "duration_min": 67,
+        "hr_avg": 94,
+        "hr_max": 136,
+        "calories": 305,
+        "tss_actual": 34,
+        "synced_at": "2026-07-15T23:37:12.017Z"
+      }
     }
   ],
   "wellness": [
@@ -17427,14 +17423,6281 @@
   ],
   "whoop_history": [
     {
+      "date": "2024-11-21",
+      "strain": 5.9,
+      "avg_hr": 66,
+      "max_hr": 123,
+      "kilojoules": 7715.038
+    },
+    {
+      "date": "2024-11-22",
+      "strain": 5.7,
+      "avg_hr": 59,
+      "max_hr": 132,
+      "kilojoules": 8662.41
+    },
+    {
+      "date": "2024-11-23",
+      "strain": 6.2,
+      "avg_hr": 60,
+      "max_hr": 153,
+      "kilojoules": 8180.1807
+    },
+    {
+      "date": "2024-11-24",
+      "strain": 8.1,
+      "avg_hr": 61,
+      "max_hr": 139,
+      "kilojoules": 9071.128
+    },
+    {
+      "date": "2024-11-25",
+      "strain": 5.6,
+      "avg_hr": 58,
+      "max_hr": 129,
+      "kilojoules": 8394.649
+    },
+    {
+      "date": "2024-11-26",
+      "strain": 6.6,
+      "avg_hr": 61,
+      "max_hr": 144,
+      "kilojoules": 9316.926
+    },
+    {
+      "date": "2024-11-27",
+      "strain": 6,
+      "avg_hr": 60,
+      "max_hr": 132,
+      "kilojoules": 8546.175
+    },
+    {
+      "date": "2024-11-28",
+      "strain": 8.4,
+      "avg_hr": 61,
+      "max_hr": 146,
+      "kilojoules": 9176.677
+    },
+    {
+      "date": "2024-11-29",
+      "strain": 15.2,
+      "avg_hr": 71,
+      "max_hr": 173,
+      "kilojoules": 12621.601
+    },
+    {
+      "date": "2024-11-30",
+      "strain": 18.8,
+      "avg_hr": 74,
+      "max_hr": 192,
+      "kilojoules": 14308.236
+    },
+    {
+      "date": "2024-12-01",
+      "strain": 12.4,
+      "avg_hr": 69,
+      "max_hr": 147,
+      "kilojoules": 10203.14
+    },
+    {
+      "date": "2024-12-02",
+      "strain": 6.8,
+      "avg_hr": 60,
+      "max_hr": 152,
+      "kilojoules": 8869.878
+    },
+    {
+      "date": "2024-12-03",
+      "strain": 5.2,
+      "avg_hr": 56,
+      "max_hr": 136,
+      "kilojoules": 8862.704
+    },
+    {
+      "date": "2024-12-04",
+      "strain": 6.4,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 8707.232
+    },
+    {
+      "date": "2024-12-05",
+      "strain": 7.9,
+      "avg_hr": 67,
+      "max_hr": 137,
+      "kilojoules": 9550.472
+    },
+    {
+      "date": "2024-12-06",
+      "strain": 18.4,
+      "avg_hr": 85,
+      "max_hr": 159,
+      "kilojoules": 17698.873
+    },
+    {
+      "date": "2024-12-07",
+      "strain": 20.5,
+      "avg_hr": 98,
+      "max_hr": 183,
+      "kilojoules": 21203.578
+    },
+    {
+      "date": "2024-12-08",
+      "strain": 20.5,
+      "avg_hr": 73,
+      "max_hr": 187,
+      "kilojoules": 17009.582
+    },
+    {
+      "date": "2024-12-09",
+      "strain": 7.3,
+      "avg_hr": 62,
+      "max_hr": 138,
+      "kilojoules": 10311.563
+    },
+    {
+      "date": "2024-12-10",
+      "strain": 5.7,
+      "avg_hr": 63,
+      "max_hr": 144,
+      "kilojoules": 7063.123
+    },
+    {
+      "date": "2024-12-11",
+      "strain": 5,
+      "avg_hr": 61,
+      "max_hr": 135,
+      "kilojoules": 8839.515
+    },
+    {
+      "date": "2024-12-12",
+      "strain": 9.2,
+      "avg_hr": 62,
+      "max_hr": 159,
+      "kilojoules": 9813.955
+    },
+    {
+      "date": "2024-12-13",
+      "strain": 11.6,
+      "avg_hr": 68,
+      "max_hr": 156,
+      "kilojoules": 11555.466
+    },
+    {
+      "date": "2024-12-14",
+      "strain": 12.4,
+      "avg_hr": 78,
+      "max_hr": 167,
+      "kilojoules": 9680.68
+    },
+    {
+      "date": "2024-12-15",
+      "strain": 6.8,
+      "avg_hr": 62,
+      "max_hr": 141,
+      "kilojoules": 8407.619
+    },
+    {
+      "date": "2024-12-16",
+      "strain": 7.5,
+      "avg_hr": 63,
+      "max_hr": 155,
+      "kilojoules": 8862.848
+    },
+    {
+      "date": "2024-12-17",
+      "strain": 5.4,
+      "avg_hr": 57,
+      "max_hr": 143,
+      "kilojoules": 8211.169
+    },
+    {
+      "date": "2024-12-18",
+      "strain": 14.4,
+      "avg_hr": 64,
+      "max_hr": 173,
+      "kilojoules": 12106.1875
+    },
+    {
+      "date": "2024-12-19",
+      "strain": 14.2,
+      "avg_hr": 69,
+      "max_hr": 179,
+      "kilojoules": 11827.794
+    },
+    {
+      "date": "2024-12-20",
+      "strain": 14.4,
+      "avg_hr": 77,
+      "max_hr": 189,
+      "kilojoules": 11408.946
+    },
+    {
+      "date": "2024-12-21",
+      "strain": 16.5,
+      "avg_hr": 82,
+      "max_hr": 167,
+      "kilojoules": 13371.18
+    },
+    {
+      "date": "2024-12-22",
+      "strain": 11.2,
+      "avg_hr": 69,
+      "max_hr": 162,
+      "kilojoules": 11088.237
+    },
+    {
+      "date": "2024-12-23",
+      "strain": 5.7,
+      "avg_hr": 67,
+      "max_hr": 145,
+      "kilojoules": 7741.6245
+    },
+    {
+      "date": "2024-12-24",
+      "strain": 19.2,
+      "avg_hr": 79,
+      "max_hr": 183,
+      "kilojoules": 18287.123
+    },
+    {
+      "date": "2024-12-25",
+      "strain": 11,
+      "avg_hr": 75,
+      "max_hr": 169,
+      "kilojoules": 7982.591
+    },
+    {
+      "date": "2024-12-26",
+      "strain": 17.6,
+      "avg_hr": 70,
+      "max_hr": 183,
+      "kilojoules": 13502.402
+    },
+    {
+      "date": "2024-12-27",
+      "strain": 12.4,
+      "avg_hr": 73,
+      "max_hr": 154,
+      "kilojoules": 10493.867
+    },
+    {
+      "date": "2024-12-28",
+      "strain": 19,
+      "avg_hr": 81,
+      "max_hr": 186,
+      "kilojoules": 16142.288
+    },
+    {
+      "date": "2024-12-29",
+      "strain": 18,
+      "avg_hr": 79,
+      "max_hr": 177,
+      "kilojoules": 16089.723
+    },
+    {
+      "date": "2024-12-30",
+      "strain": 6.8,
+      "avg_hr": 61,
+      "max_hr": 153,
+      "kilojoules": 8978.963
+    },
+    {
+      "date": "2024-12-31",
+      "strain": 18.6,
+      "avg_hr": 81,
+      "max_hr": 188,
+      "kilojoules": 17198.686
+    },
+    {
+      "date": "2025-01-01",
+      "strain": 10.9,
+      "avg_hr": 74,
+      "max_hr": 150,
+      "kilojoules": 9317.76
+    },
+    {
+      "date": "2025-01-02",
+      "strain": 14,
+      "avg_hr": 65,
+      "max_hr": 170,
+      "kilojoules": 11594.461
+    },
+    {
+      "date": "2025-01-03",
+      "strain": 9.5,
+      "avg_hr": 65,
+      "max_hr": 153,
+      "kilojoules": 9419.053
+    },
+    {
+      "date": "2025-01-04",
+      "strain": 7.3,
+      "avg_hr": 66,
+      "max_hr": 141,
+      "kilojoules": 8641.274
+    },
+    {
+      "date": "2025-01-05",
+      "strain": 19.5,
+      "avg_hr": 81,
+      "max_hr": 191,
+      "kilojoules": 18153.67
+    },
+    {
+      "date": "2025-01-06",
+      "strain": 5.8,
+      "avg_hr": 64,
+      "max_hr": 161,
+      "kilojoules": 8414.514
+    },
+    {
+      "date": "2025-01-07",
+      "strain": 10.7,
+      "avg_hr": 62,
+      "max_hr": 164,
+      "kilojoules": 9721.708
+    },
+    {
+      "date": "2025-01-08",
+      "strain": 13.1,
+      "avg_hr": 65,
+      "max_hr": 181,
+      "kilojoules": 10189.432
+    },
+    {
+      "date": "2025-01-09",
+      "strain": 4.6,
+      "avg_hr": 56,
+      "max_hr": 134,
+      "kilojoules": 8219.718
+    },
+    {
+      "date": "2025-01-10",
+      "strain": 12.5,
+      "avg_hr": 61,
+      "max_hr": 173,
+      "kilojoules": 10876.061
+    },
+    {
+      "date": "2025-01-11",
+      "strain": 11.1,
+      "avg_hr": 70,
+      "max_hr": 170,
+      "kilojoules": 10013.835
+    },
+    {
+      "date": "2025-01-12",
+      "strain": 20.4,
+      "avg_hr": 71,
+      "max_hr": 194,
+      "kilojoules": 16495.438
+    },
+    {
+      "date": "2025-01-13",
+      "strain": 5.3,
+      "avg_hr": 59,
+      "max_hr": 122,
+      "kilojoules": 8960.273
+    },
+    {
+      "date": "2025-01-14",
+      "strain": 6.1,
+      "avg_hr": 56,
+      "max_hr": 151,
+      "kilojoules": 8729.116
+    },
+    {
+      "date": "2025-01-15",
+      "strain": 8.7,
+      "avg_hr": 61,
+      "max_hr": 189,
+      "kilojoules": 9013.748
+    },
+    {
+      "date": "2025-01-16",
+      "strain": 15.1,
+      "avg_hr": 69,
+      "max_hr": 189,
+      "kilojoules": 11484.713
+    },
+    {
+      "date": "2025-01-17",
+      "strain": 8.9,
+      "avg_hr": 64,
+      "max_hr": 145,
+      "kilojoules": 9274.541
+    },
+    {
+      "date": "2025-01-18",
+      "strain": 10.6,
+      "avg_hr": 64,
+      "max_hr": 153,
+      "kilojoules": 9722.579
+    },
+    {
+      "date": "2025-01-19",
+      "strain": 12.2,
+      "avg_hr": 66,
+      "max_hr": 187,
+      "kilojoules": 11155.39
+    },
+    {
+      "date": "2025-01-20",
+      "strain": 6,
+      "avg_hr": 59,
+      "max_hr": 139,
+      "kilojoules": 8066.121
+    },
+    {
+      "date": "2025-01-21",
+      "strain": 6.7,
+      "avg_hr": 62,
+      "max_hr": 167,
+      "kilojoules": 8898.603
+    },
+    {
+      "date": "2025-01-22",
+      "strain": 13.1,
+      "avg_hr": 65,
+      "max_hr": 167,
+      "kilojoules": 11415.758
+    },
+    {
+      "date": "2025-01-23",
+      "strain": 14.3,
+      "avg_hr": 67,
+      "max_hr": 175,
+      "kilojoules": 11454.291
+    },
+    {
+      "date": "2025-01-24",
+      "strain": 5.7,
+      "avg_hr": 60,
+      "max_hr": 126,
+      "kilojoules": 8176.9214
+    },
+    {
+      "date": "2025-01-25",
+      "strain": 12.1,
+      "avg_hr": 64,
+      "max_hr": 176,
+      "kilojoules": 10341.521
+    },
+    {
+      "date": "2025-01-26",
+      "strain": 8.4,
+      "avg_hr": 60,
+      "max_hr": 166,
+      "kilojoules": 9234.04
+    },
+    {
+      "date": "2025-01-27",
+      "strain": 6.5,
+      "avg_hr": 58,
+      "max_hr": 145,
+      "kilojoules": 8803.364
+    },
+    {
+      "date": "2025-01-28",
+      "strain": 19.9,
+      "avg_hr": 68,
+      "max_hr": 187,
+      "kilojoules": 15617.301
+    },
+    {
+      "date": "2025-01-29",
+      "strain": 5.6,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 8750.266
+    },
+    {
+      "date": "2025-01-30",
+      "strain": 6.3,
+      "avg_hr": 58,
+      "max_hr": 160,
+      "kilojoules": 8128.0854
+    },
+    {
+      "date": "2025-01-31",
+      "strain": 8.1,
+      "avg_hr": 61,
+      "max_hr": 152,
+      "kilojoules": 8853.685
+    },
+    {
+      "date": "2025-02-01",
+      "strain": 17,
+      "avg_hr": 77,
+      "max_hr": 189,
+      "kilojoules": 14193.697
+    },
+    {
+      "date": "2025-02-02",
+      "strain": 11.5,
+      "avg_hr": 72,
+      "max_hr": 166,
+      "kilojoules": 10146.066
+    },
+    {
+      "date": "2025-02-03",
+      "strain": 14.9,
+      "avg_hr": 71,
+      "max_hr": 189,
+      "kilojoules": 11017.251
+    },
+    {
+      "date": "2025-02-04",
+      "strain": 15.9,
+      "avg_hr": 68,
+      "max_hr": 167,
+      "kilojoules": 12446.127
+    },
+    {
+      "date": "2025-02-05",
+      "strain": 5.4,
+      "avg_hr": 61,
+      "max_hr": 128,
+      "kilojoules": 8310.202
+    },
+    {
+      "date": "2025-02-06",
+      "strain": 6.7,
+      "avg_hr": 59,
+      "max_hr": 151,
+      "kilojoules": 8494.071
+    },
+    {
+      "date": "2025-02-07",
+      "strain": 17.8,
+      "avg_hr": 73,
+      "max_hr": 195,
+      "kilojoules": 14836.821
+    },
+    {
+      "date": "2025-02-08",
+      "strain": 10.3,
+      "avg_hr": 65,
+      "max_hr": 157,
+      "kilojoules": 9836.904
+    },
+    {
+      "date": "2025-02-09",
+      "strain": 8.7,
+      "avg_hr": 62,
+      "max_hr": 150,
+      "kilojoules": 9511.284
+    },
+    {
+      "date": "2025-02-10",
+      "strain": 11,
+      "avg_hr": 63,
+      "max_hr": 167,
+      "kilojoules": 10055.413
+    },
+    {
+      "date": "2025-02-11",
+      "strain": 5.8,
+      "avg_hr": 61,
+      "max_hr": 148,
+      "kilojoules": 8713.137
+    },
+    {
+      "date": "2025-02-12",
+      "strain": 5.9,
+      "avg_hr": 63,
+      "max_hr": 139,
+      "kilojoules": 9595.056
+    },
+    {
+      "date": "2025-02-13",
+      "strain": 9.8,
+      "avg_hr": 69,
+      "max_hr": 191,
+      "kilojoules": 9180.883
+    },
+    {
+      "date": "2025-02-14",
+      "strain": 6.6,
+      "avg_hr": 60,
+      "max_hr": 153,
+      "kilojoules": 8612.994
+    },
+    {
+      "date": "2025-02-15",
+      "strain": 13.5,
+      "avg_hr": 67,
+      "max_hr": 159,
+      "kilojoules": 11952.542
+    },
+    {
+      "date": "2025-02-16",
+      "strain": 14.1,
+      "avg_hr": 69,
+      "max_hr": 161,
+      "kilojoules": 12749.769
+    },
+    {
+      "date": "2025-02-17",
+      "strain": 6.4,
+      "avg_hr": 60,
+      "max_hr": 156,
+      "kilojoules": 7755.6924
+    },
+    {
+      "date": "2025-02-18",
+      "strain": 4.8,
+      "avg_hr": 57,
+      "max_hr": 132,
+      "kilojoules": 8025.5566
+    },
+    {
+      "date": "2025-02-19",
+      "strain": 6.7,
+      "avg_hr": 58,
+      "max_hr": 141,
+      "kilojoules": 9290.191
+    },
+    {
+      "date": "2025-02-20",
+      "strain": 8.6,
+      "avg_hr": 63,
+      "max_hr": 157,
+      "kilojoules": 10270.114
+    },
+    {
+      "date": "2025-02-21",
+      "strain": 16,
+      "avg_hr": 72,
+      "max_hr": 200,
+      "kilojoules": 11883.9
+    },
+    {
+      "date": "2025-02-22",
+      "strain": 13.2,
+      "avg_hr": 71,
+      "max_hr": 168,
+      "kilojoules": 10870.664
+    },
+    {
+      "date": "2025-02-23",
+      "strain": 13.2,
+      "avg_hr": 70,
+      "max_hr": 159,
+      "kilojoules": 12675.164
+    },
+    {
+      "date": "2025-02-24",
+      "strain": 5.7,
+      "avg_hr": 60,
+      "max_hr": 155,
+      "kilojoules": 8077.0596
+    },
+    {
+      "date": "2025-02-25",
+      "strain": 6.5,
+      "avg_hr": 63,
+      "max_hr": 145,
+      "kilojoules": 7589.7764
+    },
+    {
+      "date": "2025-02-26",
+      "strain": 8.2,
+      "avg_hr": 61,
+      "max_hr": 152,
+      "kilojoules": 9835.586
+    },
+    {
+      "date": "2025-02-27",
+      "strain": 15.3,
+      "avg_hr": 71,
+      "max_hr": 166,
+      "kilojoules": 13627.014
+    },
+    {
+      "date": "2025-02-28",
+      "strain": 10.7,
+      "avg_hr": 66,
+      "max_hr": 146,
+      "kilojoules": 10105.119
+    },
+    {
+      "date": "2025-03-01",
+      "strain": 12.1,
+      "avg_hr": 68,
+      "max_hr": 188,
+      "kilojoules": 10579.167
+    },
+    {
+      "date": "2025-03-02",
+      "strain": 13.8,
+      "avg_hr": 71,
+      "max_hr": 180,
+      "kilojoules": 11035.9795
+    },
+    {
+      "date": "2025-03-03",
+      "strain": 13.6,
+      "avg_hr": 63,
+      "max_hr": 169,
+      "kilojoules": 12142.971
+    },
+    {
+      "date": "2025-03-04",
+      "strain": 6.5,
+      "avg_hr": 62,
+      "max_hr": 160,
+      "kilojoules": 8549.752
+    },
+    {
+      "date": "2025-03-05",
+      "strain": 12.8,
+      "avg_hr": 60,
+      "max_hr": 175,
+      "kilojoules": 11049.656
+    },
+    {
+      "date": "2025-03-06",
+      "strain": 9.5,
+      "avg_hr": 65,
+      "max_hr": 169,
+      "kilojoules": 8938.2295
+    },
+    {
+      "date": "2025-03-07",
+      "strain": 15.6,
+      "avg_hr": 68,
+      "max_hr": 186,
+      "kilojoules": 14144.404
+    },
+    {
+      "date": "2025-03-08",
+      "recovery_score": 94,
+      "hrv_ms": 74,
+      "rhr_bpm": 55,
+      "strain": 17.5,
+      "avg_hr": 77,
+      "max_hr": 196,
+      "kilojoules": 20180.527
+    },
+    {
+      "date": "2025-03-09",
+      "strain": 17.1,
+      "avg_hr": 70,
+      "max_hr": 177,
+      "kilojoules": 16928.883
+    },
+    {
+      "date": "2025-03-10",
+      "recovery_score": 9,
+      "hrv_ms": 57,
+      "rhr_bpm": 66
+    },
+    {
+      "date": "2025-03-11",
+      "recovery_score": 98,
+      "hrv_ms": 80,
+      "rhr_bpm": 55,
+      "strain": 9.3,
+      "avg_hr": 65,
+      "max_hr": 173,
+      "kilojoules": 9074.258
+    },
+    {
+      "date": "2025-03-12",
+      "recovery_score": 75,
+      "hrv_ms": 62,
+      "rhr_bpm": 48,
+      "strain": 6.7,
+      "avg_hr": 59,
+      "max_hr": 152,
+      "kilojoules": 9309.017
+    },
+    {
+      "date": "2025-03-13",
+      "recovery_score": 69,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "strain": 13.5,
+      "avg_hr": 63,
+      "max_hr": 173,
+      "kilojoules": 10931.099
+    },
+    {
+      "date": "2025-03-14",
+      "recovery_score": 91,
+      "hrv_ms": 74,
+      "rhr_bpm": 50,
+      "strain": 16.3,
+      "avg_hr": 68,
+      "max_hr": 194,
+      "kilojoules": 12485.888
+    },
+    {
+      "date": "2025-03-15",
+      "recovery_score": 78,
+      "hrv_ms": 72,
+      "rhr_bpm": 47,
+      "strain": 16.9,
+      "avg_hr": 73,
+      "max_hr": 182,
+      "kilojoules": 15049.553
+    },
+    {
+      "date": "2025-03-16",
+      "recovery_score": 28,
+      "hrv_ms": 46,
+      "rhr_bpm": 63,
+      "strain": 13.5,
+      "avg_hr": 75,
+      "max_hr": 176,
+      "kilojoules": 9772.265
+    },
+    {
+      "date": "2025-03-17",
+      "recovery_score": 60,
+      "hrv_ms": 60,
+      "rhr_bpm": 48,
+      "strain": 15.5,
+      "avg_hr": 69,
+      "max_hr": 166,
+      "kilojoules": 14013.656
+    },
+    {
+      "date": "2025-03-18",
+      "recovery_score": 63,
+      "hrv_ms": 61,
+      "rhr_bpm": 49,
+      "strain": 5.9,
+      "avg_hr": 56,
+      "max_hr": 159,
+      "kilojoules": 8869.906
+    },
+    {
+      "date": "2025-03-19",
+      "recovery_score": 77,
+      "hrv_ms": 68,
+      "rhr_bpm": 47,
+      "strain": 6.2,
+      "avg_hr": 62,
+      "max_hr": 146,
+      "kilojoules": 8883.611
+    },
+    {
+      "date": "2025-03-20",
+      "recovery_score": 83,
+      "hrv_ms": 71,
+      "rhr_bpm": 50,
+      "strain": 11.4,
+      "avg_hr": 60,
+      "max_hr": 184,
+      "kilojoules": 9812.139
+    },
+    {
+      "date": "2025-03-21",
+      "recovery_score": 79,
+      "hrv_ms": 70,
+      "rhr_bpm": 48,
+      "strain": 15.5,
+      "avg_hr": 68,
+      "max_hr": 192,
+      "kilojoules": 13087.663
+    },
+    {
+      "date": "2025-03-22",
+      "recovery_score": 78,
+      "hrv_ms": 71,
+      "rhr_bpm": 46,
+      "strain": 20.5,
+      "avg_hr": 74,
+      "max_hr": 193,
+      "kilojoules": 17192.451
+    },
+    {
+      "date": "2025-03-23",
+      "recovery_score": 44,
+      "hrv_ms": 55,
+      "rhr_bpm": 52,
+      "strain": 6.2,
+      "avg_hr": 62,
+      "max_hr": 144,
+      "kilojoules": 8697.632
+    },
+    {
+      "date": "2025-03-24",
+      "recovery_score": 55,
+      "hrv_ms": 62,
+      "rhr_bpm": 52,
+      "strain": 10.7,
+      "avg_hr": 64,
+      "max_hr": 153,
+      "kilojoules": 10305.751
+    },
+    {
+      "date": "2025-03-25",
+      "recovery_score": 49,
+      "hrv_ms": 58,
+      "rhr_bpm": 48,
+      "strain": 13.2,
+      "avg_hr": 61,
+      "max_hr": 178,
+      "kilojoules": 10791.847
+    },
+    {
+      "date": "2025-03-26",
+      "recovery_score": 75,
+      "hrv_ms": 68,
+      "rhr_bpm": 45,
+      "strain": 13.1,
+      "avg_hr": 59,
+      "max_hr": 181,
+      "kilojoules": 11036.557
+    },
+    {
+      "date": "2025-03-27",
+      "recovery_score": 62,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "strain": 5.9,
+      "avg_hr": 58,
+      "max_hr": 145,
+      "kilojoules": 8901.011
+    },
+    {
+      "date": "2025-03-28",
+      "recovery_score": 68,
+      "hrv_ms": 64,
+      "rhr_bpm": 50,
+      "strain": 19.1,
+      "avg_hr": 68,
+      "max_hr": 184,
+      "kilojoules": 13984.945
+    },
+    {
+      "date": "2025-03-29",
+      "recovery_score": 58,
+      "hrv_ms": 61,
+      "rhr_bpm": 52,
+      "strain": 14.8,
+      "avg_hr": 70,
+      "max_hr": 159,
+      "kilojoules": 13021.633
+    },
+    {
+      "date": "2025-03-30",
+      "recovery_score": 69,
+      "hrv_ms": 63,
+      "rhr_bpm": 49,
+      "strain": 4.9,
+      "avg_hr": 60,
+      "max_hr": 139,
+      "kilojoules": 8098.751
+    },
+    {
+      "date": "2025-03-31",
+      "recovery_score": 74,
+      "hrv_ms": 65,
+      "rhr_bpm": 47,
+      "strain": 14.5,
+      "avg_hr": 62,
+      "max_hr": 164,
+      "kilojoules": 12487.509
+    },
+    {
+      "date": "2025-04-01",
+      "recovery_score": 38,
+      "hrv_ms": 53,
+      "rhr_bpm": 51,
+      "strain": 14.3,
+      "avg_hr": 65,
+      "max_hr": 168,
+      "kilojoules": 11555.02
+    },
+    {
+      "date": "2025-04-02",
+      "recovery_score": 59,
+      "hrv_ms": 60,
+      "rhr_bpm": 50,
+      "strain": 16.6,
+      "avg_hr": 69,
+      "max_hr": 164,
+      "kilojoules": 14495.631
+    },
+    {
+      "date": "2025-04-03",
+      "recovery_score": 65,
+      "hrv_ms": 64,
+      "rhr_bpm": 56,
+      "strain": 14.4,
+      "avg_hr": 67,
+      "max_hr": 166,
+      "kilojoules": 12295.944
+    },
+    {
+      "date": "2025-04-04",
+      "recovery_score": 84,
+      "hrv_ms": 68,
+      "rhr_bpm": 48,
+      "strain": 11.1,
+      "avg_hr": 60,
+      "max_hr": 162,
+      "kilojoules": 9822.245
+    },
+    {
+      "date": "2025-04-05",
+      "recovery_score": 76,
+      "hrv_ms": 65,
+      "rhr_bpm": 47,
+      "strain": 19.1,
+      "avg_hr": 71,
+      "max_hr": 202,
+      "kilojoules": 16745.9
+    },
+    {
+      "date": "2025-04-06",
+      "recovery_score": 61,
+      "hrv_ms": 61,
+      "rhr_bpm": 51,
+      "strain": 7.8,
+      "avg_hr": 61,
+      "max_hr": 165,
+      "kilojoules": 9040.112
+    },
+    {
+      "date": "2025-04-07",
+      "recovery_score": 73,
+      "hrv_ms": 66,
+      "rhr_bpm": 44,
+      "strain": 4.3,
+      "avg_hr": 55,
+      "max_hr": 120,
+      "kilojoules": 8847.312
+    },
+    {
+      "date": "2025-04-08",
+      "recovery_score": 59,
+      "hrv_ms": 62,
+      "rhr_bpm": 50,
+      "strain": 6,
+      "avg_hr": 56,
+      "max_hr": 147,
+      "kilojoules": 8609.94
+    },
+    {
+      "date": "2025-04-09",
+      "recovery_score": 57,
+      "hrv_ms": 61,
+      "rhr_bpm": 49,
+      "strain": 6.7,
+      "avg_hr": 57,
+      "max_hr": 164,
+      "kilojoules": 9081.3545
+    },
+    {
+      "date": "2025-04-10",
+      "recovery_score": 83,
+      "hrv_ms": 67,
+      "rhr_bpm": 46,
+      "strain": 13.7,
+      "avg_hr": 61,
+      "max_hr": 165,
+      "kilojoules": 12045.153
+    },
+    {
+      "date": "2025-04-11",
+      "recovery_score": 87,
+      "hrv_ms": 68,
+      "rhr_bpm": 49,
+      "strain": 10.4,
+      "avg_hr": 62,
+      "max_hr": 159,
+      "kilojoules": 10179.235
+    },
+    {
+      "date": "2025-04-12",
+      "strain": 14,
+      "avg_hr": 64,
+      "max_hr": 177,
+      "kilojoules": 12207.12
+    },
+    {
+      "date": "2025-04-13",
+      "recovery_score": 51,
+      "hrv_ms": 57,
+      "rhr_bpm": 48,
+      "strain": 7.3,
+      "avg_hr": 61,
+      "max_hr": 151,
+      "kilojoules": 8424.151
+    },
+    {
+      "date": "2025-04-14",
+      "recovery_score": 83,
+      "hrv_ms": 66,
+      "rhr_bpm": 48,
+      "strain": 13.7,
+      "avg_hr": 62,
+      "max_hr": 184,
+      "kilojoules": 11467.153
+    },
+    {
+      "date": "2025-04-15",
+      "recovery_score": 78,
+      "hrv_ms": 64,
+      "rhr_bpm": 47,
+      "strain": 15.5,
+      "avg_hr": 65,
+      "max_hr": 167,
+      "kilojoules": 13764.353
+    },
+    {
+      "date": "2025-04-16",
+      "recovery_score": 82,
+      "hrv_ms": 67,
+      "rhr_bpm": 48,
+      "strain": 16.1,
+      "avg_hr": 68,
+      "max_hr": 168,
+      "kilojoules": 13577.931
+    },
+    {
+      "date": "2025-04-17",
+      "recovery_score": 64,
+      "hrv_ms": 64,
+      "rhr_bpm": 53,
+      "strain": 7.8,
+      "avg_hr": 62,
+      "max_hr": 148,
+      "kilojoules": 9087.443
+    },
+    {
+      "date": "2025-04-18",
+      "recovery_score": 96,
+      "hrv_ms": 71,
+      "rhr_bpm": 46,
+      "strain": 10.7,
+      "avg_hr": 64,
+      "max_hr": 160,
+      "kilojoules": 10570.711
+    },
+    {
+      "date": "2025-04-19",
+      "recovery_score": 54,
+      "hrv_ms": 60,
+      "rhr_bpm": 53,
+      "strain": 13.8,
+      "avg_hr": 71,
+      "max_hr": 190,
+      "kilojoules": 11064.692
+    },
+    {
+      "date": "2025-04-20",
+      "strain": 13,
+      "avg_hr": 70,
+      "max_hr": 168,
+      "kilojoules": 11161.976
+    },
+    {
+      "date": "2025-04-21",
+      "recovery_score": 60,
+      "hrv_ms": 62,
+      "rhr_bpm": 53,
+      "strain": 14.3,
+      "avg_hr": 62,
+      "max_hr": 170,
+      "kilojoules": 11570.011
+    },
+    {
+      "date": "2025-04-22",
+      "recovery_score": 57,
+      "hrv_ms": 62,
+      "rhr_bpm": 49,
+      "strain": 13.6,
+      "avg_hr": 64,
+      "max_hr": 181,
+      "kilojoules": 11418.334
+    },
+    {
+      "date": "2025-04-23",
+      "recovery_score": 53,
+      "hrv_ms": 58,
+      "rhr_bpm": 51,
+      "strain": 6.1,
+      "avg_hr": 59,
+      "max_hr": 141,
+      "kilojoules": 9030.928
+    },
+    {
+      "date": "2025-04-24",
+      "recovery_score": 92,
+      "hrv_ms": 67,
+      "rhr_bpm": 47,
+      "strain": 13.1,
+      "avg_hr": 62,
+      "max_hr": 163,
+      "kilojoules": 11469.087
+    },
+    {
+      "date": "2025-04-25",
+      "recovery_score": 73,
+      "hrv_ms": 63,
+      "rhr_bpm": 51,
+      "strain": 12.1,
+      "avg_hr": 64,
+      "max_hr": 168,
+      "kilojoules": 10485.262
+    },
+    {
+      "date": "2025-04-26",
+      "recovery_score": 96,
+      "hrv_ms": 73,
+      "rhr_bpm": 46,
+      "strain": 8.9,
+      "avg_hr": 64,
+      "max_hr": 157,
+      "kilojoules": 9302.512
+    },
+    {
+      "date": "2025-04-27",
+      "recovery_score": 69,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "strain": 12.8,
+      "avg_hr": 67,
+      "max_hr": 196,
+      "kilojoules": 10760.484
+    },
+    {
+      "date": "2025-04-28",
+      "recovery_score": 60,
+      "hrv_ms": 59,
+      "rhr_bpm": 52,
+      "strain": 15,
+      "avg_hr": 64,
+      "max_hr": 163,
+      "kilojoules": 12981.47
+    },
+    {
+      "date": "2025-04-29",
+      "recovery_score": 73,
+      "hrv_ms": 63,
+      "rhr_bpm": 52,
+      "strain": 7.2,
+      "avg_hr": 63,
+      "max_hr": 142,
+      "kilojoules": 9298.651
+    },
+    {
+      "date": "2025-04-30",
+      "recovery_score": 59,
+      "hrv_ms": 58,
+      "rhr_bpm": 49,
+      "strain": 15.7,
+      "avg_hr": 68,
+      "max_hr": 186,
+      "kilojoules": 11770.833
+    },
+    {
+      "date": "2025-05-01",
+      "recovery_score": 28,
+      "hrv_ms": 58,
+      "rhr_bpm": 49,
+      "strain": 13.5,
+      "avg_hr": 73,
+      "max_hr": 178,
+      "kilojoules": 10882.902
+    },
+    {
+      "date": "2025-05-02",
+      "recovery_score": 79,
+      "hrv_ms": 63,
+      "rhr_bpm": 49,
+      "strain": 11.6,
+      "avg_hr": 64,
+      "max_hr": 162,
+      "kilojoules": 11236.608
+    },
+    {
+      "date": "2025-05-03",
+      "recovery_score": 93,
+      "hrv_ms": 78,
+      "rhr_bpm": 46,
+      "strain": 12.9,
+      "avg_hr": 69,
+      "max_hr": 172,
+      "kilojoules": 11717.4795
+    },
+    {
+      "date": "2025-05-04",
+      "recovery_score": 18,
+      "hrv_ms": 52,
+      "rhr_bpm": 57,
+      "strain": 9.2,
+      "avg_hr": 67,
+      "max_hr": 172,
+      "kilojoules": 7983.898
+    },
+    {
+      "date": "2025-05-05",
+      "recovery_score": 71,
+      "hrv_ms": 64,
+      "rhr_bpm": 55,
+      "strain": 12.6,
+      "avg_hr": 64,
+      "max_hr": 187,
+      "kilojoules": 10482.932
+    },
+    {
+      "date": "2025-05-06",
+      "recovery_score": 70,
+      "hrv_ms": 70,
+      "rhr_bpm": 53,
+      "strain": 7.4,
+      "avg_hr": 58,
+      "max_hr": 173,
+      "kilojoules": 8537.3
+    },
+    {
+      "date": "2025-05-07",
+      "recovery_score": 71,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "strain": 5.8,
+      "avg_hr": 58,
+      "max_hr": 133,
+      "kilojoules": 8798.929
+    },
+    {
+      "date": "2025-05-08",
+      "recovery_score": 83,
+      "hrv_ms": 70,
+      "rhr_bpm": 47,
+      "strain": 16.9,
+      "avg_hr": 68,
+      "max_hr": 184,
+      "kilojoules": 12875.197
+    },
+    {
+      "date": "2025-05-09",
+      "recovery_score": 45,
+      "hrv_ms": 60,
+      "rhr_bpm": 54,
+      "strain": 19,
+      "avg_hr": 81,
+      "max_hr": 182,
+      "kilojoules": 14998.631
+    },
+    {
+      "date": "2025-05-10",
+      "recovery_score": 36,
+      "hrv_ms": 49,
+      "rhr_bpm": 55,
+      "strain": 20.7,
+      "avg_hr": 85,
+      "max_hr": 192,
+      "kilojoules": 19944.07
+    },
+    {
+      "date": "2025-05-11",
+      "recovery_score": 54,
+      "hrv_ms": 58,
+      "rhr_bpm": 55,
+      "strain": 6.5,
+      "avg_hr": 63,
+      "max_hr": 157,
+      "kilojoules": 8466.597
+    },
+    {
+      "date": "2025-05-12",
+      "recovery_score": 69,
+      "hrv_ms": 63,
+      "rhr_bpm": 49,
+      "strain": 11.6,
+      "avg_hr": 59,
+      "max_hr": 158,
+      "kilojoules": 11028.264
+    },
+    {
+      "date": "2025-05-13",
+      "recovery_score": 75,
+      "hrv_ms": 65,
+      "rhr_bpm": 51,
+      "strain": 10.3,
+      "avg_hr": 59,
+      "max_hr": 169,
+      "kilojoules": 10017.451
+    },
+    {
+      "date": "2025-05-14",
+      "recovery_score": 73,
+      "hrv_ms": 69,
+      "rhr_bpm": 49,
+      "strain": 6.6,
+      "avg_hr": 58,
+      "max_hr": 160,
+      "kilojoules": 9142.97
+    },
+    {
+      "date": "2025-05-15",
+      "recovery_score": 89,
+      "hrv_ms": 77,
+      "rhr_bpm": 42,
+      "strain": 9.6,
+      "avg_hr": 62,
+      "max_hr": 160,
+      "kilojoules": 8686.252
+    },
+    {
+      "date": "2025-05-16",
+      "recovery_score": 72,
+      "hrv_ms": 66,
+      "rhr_bpm": 47,
+      "strain": 13.2,
+      "avg_hr": 66,
+      "max_hr": 164,
+      "kilojoules": 11827.222
+    },
+    {
+      "date": "2025-05-17",
+      "recovery_score": 57,
+      "hrv_ms": 60,
+      "rhr_bpm": 48,
+      "strain": 15,
+      "avg_hr": 71,
+      "max_hr": 177,
+      "kilojoules": 12714.289
+    },
+    {
+      "date": "2025-05-18",
+      "recovery_score": 64,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "strain": 10.6,
+      "avg_hr": 63,
+      "max_hr": 162,
+      "kilojoules": 11067.721
+    },
+    {
+      "date": "2025-05-19",
+      "recovery_score": 51,
+      "hrv_ms": 61,
+      "rhr_bpm": 52,
+      "strain": 6.7,
+      "avg_hr": 62,
+      "max_hr": 143,
+      "kilojoules": 7889.9033
+    },
+    {
+      "date": "2025-05-20",
+      "recovery_score": 47,
+      "hrv_ms": 57,
+      "rhr_bpm": 53,
+      "strain": 14.5,
+      "avg_hr": 63,
+      "max_hr": 185,
+      "kilojoules": 11268.492
+    },
+    {
+      "date": "2025-05-21",
+      "recovery_score": 89,
+      "hrv_ms": 74,
+      "rhr_bpm": 47,
+      "strain": 9.8,
+      "avg_hr": 62,
+      "max_hr": 172,
+      "kilojoules": 9189.655
+    },
+    {
+      "date": "2025-05-22",
+      "recovery_score": 68,
+      "hrv_ms": 64,
+      "rhr_bpm": 51,
+      "strain": 5.7,
+      "avg_hr": 57,
+      "max_hr": 145,
+      "kilojoules": 8768.778
+    },
+    {
+      "date": "2025-05-23",
+      "recovery_score": 85,
+      "hrv_ms": 70,
+      "rhr_bpm": 47,
+      "strain": 11.2,
+      "avg_hr": 63,
+      "max_hr": 148,
+      "kilojoules": 10425.843
+    },
+    {
+      "date": "2025-05-24",
+      "strain": 9,
+      "avg_hr": 64,
+      "max_hr": 148,
+      "kilojoules": 8908.58
+    },
+    {
+      "date": "2025-05-25",
+      "recovery_score": 89,
+      "hrv_ms": 72,
+      "rhr_bpm": 46,
+      "strain": 5.2,
+      "avg_hr": 50,
+      "max_hr": 142,
+      "kilojoules": 7352.177
+    },
+    {
+      "date": "2025-05-26",
+      "strain": 5.2,
+      "avg_hr": 54,
+      "max_hr": 150,
+      "kilojoules": 6851.1465
+    },
+    {
+      "date": "2025-05-27",
+      "recovery_score": 96,
+      "hrv_ms": 79,
+      "rhr_bpm": 44,
+      "strain": 5.5,
+      "avg_hr": 60,
+      "max_hr": 134,
+      "kilojoules": 9426.262
+    },
+    {
+      "date": "2025-05-28",
+      "strain": 8,
+      "avg_hr": 62,
+      "max_hr": 159,
+      "kilojoules": 8210.697
+    },
+    {
+      "date": "2025-05-29",
+      "recovery_score": 67,
+      "hrv_ms": 63,
+      "rhr_bpm": 50,
+      "strain": 5.7,
+      "avg_hr": 58,
+      "max_hr": 141,
+      "kilojoules": 8322.18
+    },
+    {
+      "date": "2025-05-30",
+      "recovery_score": 84,
+      "hrv_ms": 72,
+      "rhr_bpm": 44,
+      "strain": 14.2,
+      "avg_hr": 65,
+      "max_hr": 183,
+      "kilojoules": 10658.108
+    },
+    {
+      "date": "2025-05-31",
+      "recovery_score": 73,
+      "hrv_ms": 64,
+      "rhr_bpm": 54,
+      "strain": 15.8,
+      "avg_hr": 69,
+      "max_hr": 167,
+      "kilojoules": 13547.635
+    },
+    {
+      "date": "2025-06-01",
+      "recovery_score": 70,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "strain": 12.8,
+      "avg_hr": 73,
+      "max_hr": 152,
+      "kilojoules": 11500.462
+    },
+    {
+      "date": "2025-06-02",
+      "strain": 14,
+      "avg_hr": 85,
+      "max_hr": 181,
+      "kilojoules": 8775.085
+    },
+    {
+      "date": "2025-06-03",
+      "recovery_score": 68,
+      "hrv_ms": 60,
+      "rhr_bpm": 50,
+      "strain": 17.3,
+      "avg_hr": 77,
+      "max_hr": 191,
+      "kilojoules": 15634.593
+    },
+    {
+      "date": "2025-06-04",
+      "strain": 8.5,
+      "avg_hr": 75,
+      "max_hr": 152,
+      "kilojoules": 8149.202
+    },
+    {
+      "date": "2025-06-05",
+      "strain": 7.9,
+      "avg_hr": 65,
+      "max_hr": 161,
+      "kilojoules": 9306.607
+    },
+    {
+      "date": "2025-06-06",
+      "recovery_score": 26,
+      "hrv_ms": 41,
+      "rhr_bpm": 72,
+      "strain": 19,
+      "avg_hr": 66,
+      "max_hr": 188,
+      "kilojoules": 15022.695
+    },
+    {
+      "date": "2025-06-07",
+      "recovery_score": 61,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "strain": 9.8,
+      "avg_hr": 64,
+      "max_hr": 161,
+      "kilojoules": 9392.679
+    },
+    {
+      "date": "2025-06-08",
+      "recovery_score": 81,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "strain": 11.3,
+      "avg_hr": 63,
+      "max_hr": 159,
+      "kilojoules": 10965.498
+    },
+    {
+      "date": "2025-06-09",
+      "strain": 17.6,
+      "avg_hr": 76,
+      "max_hr": 185,
+      "kilojoules": 13961.924
+    },
+    {
+      "date": "2025-06-10",
+      "strain": 6.3,
+      "avg_hr": 70,
+      "max_hr": 152,
+      "kilojoules": 6867.372
+    },
+    {
+      "date": "2025-06-11",
+      "recovery_score": 65,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "strain": 13.8,
+      "avg_hr": 66,
+      "max_hr": 161,
+      "kilojoules": 11902.348
+    },
+    {
+      "date": "2025-06-12",
+      "recovery_score": 88,
+      "hrv_ms": 72,
+      "rhr_bpm": 44,
+      "strain": 12.2,
+      "avg_hr": 63,
+      "max_hr": 176,
+      "kilojoules": 11153.424
+    },
+    {
+      "date": "2025-06-13",
+      "strain": 20.6,
+      "avg_hr": 76,
+      "max_hr": 192,
+      "kilojoules": 15084.932
+    },
+    {
+      "date": "2025-06-14",
+      "recovery_score": 71,
+      "hrv_ms": 61,
+      "rhr_bpm": 53,
+      "strain": 19.6,
+      "avg_hr": 75,
+      "max_hr": 173,
+      "kilojoules": 19590.426
+    },
+    {
+      "date": "2025-06-15",
+      "recovery_score": 57,
+      "hrv_ms": 53,
+      "rhr_bpm": 51,
+      "strain": 16.8,
+      "avg_hr": 72,
+      "max_hr": 175,
+      "kilojoules": 14316.873
+    },
+    {
+      "date": "2025-06-16",
+      "recovery_score": 59,
+      "hrv_ms": 69,
+      "rhr_bpm": 45,
+      "strain": 16.6,
+      "avg_hr": 74,
+      "max_hr": 185,
+      "kilojoules": 14256.396
+    },
+    {
+      "date": "2025-06-17",
+      "recovery_score": 90,
+      "hrv_ms": 73,
+      "rhr_bpm": 45,
+      "strain": 17.8,
+      "avg_hr": 69,
+      "max_hr": 190,
+      "kilojoules": 15286.703
+    },
+    {
+      "date": "2025-06-18",
+      "recovery_score": 74,
+      "hrv_ms": 69,
+      "rhr_bpm": 54,
+      "strain": 13.3,
+      "avg_hr": 67,
+      "max_hr": 168,
+      "kilojoules": 11595.969
+    },
+    {
+      "date": "2025-06-19",
+      "recovery_score": 80,
+      "hrv_ms": 70,
+      "rhr_bpm": 47,
+      "strain": 14.8,
+      "avg_hr": 70,
+      "max_hr": 169,
+      "kilojoules": 12106.363
+    },
+    {
+      "date": "2025-06-20",
+      "recovery_score": 54,
+      "hrv_ms": 60,
+      "rhr_bpm": 50,
+      "strain": 20.5,
+      "avg_hr": 69,
+      "max_hr": 185,
+      "kilojoules": 16953.492
+    },
+    {
+      "date": "2025-06-21",
+      "recovery_score": 57,
+      "hrv_ms": 62,
+      "rhr_bpm": 50,
+      "strain": 14,
+      "avg_hr": 65,
+      "max_hr": 171,
+      "kilojoules": 12306.441
+    },
+    {
+      "date": "2025-06-22",
+      "recovery_score": 90,
+      "hrv_ms": 82,
+      "rhr_bpm": 41,
+      "strain": 19.3,
+      "avg_hr": 73,
+      "max_hr": 177,
+      "kilojoules": 19775.48
+    },
+    {
+      "date": "2025-06-23",
+      "recovery_score": 65,
+      "hrv_ms": 66,
+      "rhr_bpm": 46,
+      "strain": 6.9,
+      "avg_hr": 58,
+      "max_hr": 148,
+      "kilojoules": 8791.926
+    },
+    {
+      "date": "2025-06-24",
+      "recovery_score": 74,
+      "hrv_ms": 70,
+      "rhr_bpm": 44,
+      "strain": 13.3,
+      "avg_hr": 61,
+      "max_hr": 184,
+      "kilojoules": 10951.559
+    },
+    {
+      "date": "2025-06-25",
+      "recovery_score": 68,
+      "hrv_ms": 67,
+      "rhr_bpm": 48,
+      "strain": 14.9,
+      "avg_hr": 64,
+      "max_hr": 170,
+      "kilojoules": 12487.448
+    },
+    {
+      "date": "2025-06-26",
+      "recovery_score": 61,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "strain": 9.5,
+      "avg_hr": 59,
+      "max_hr": 155,
+      "kilojoules": 9641.644
+    },
+    {
+      "date": "2025-06-27",
+      "recovery_score": 86,
+      "hrv_ms": 72,
+      "rhr_bpm": 45,
+      "strain": 18.6,
+      "avg_hr": 66,
+      "max_hr": 168,
+      "kilojoules": 16716.602
+    },
+    {
+      "date": "2025-06-28",
+      "recovery_score": 85,
+      "hrv_ms": 71,
+      "rhr_bpm": 47,
+      "strain": 8.1,
+      "avg_hr": 60,
+      "max_hr": 160,
+      "kilojoules": 8615.201
+    },
+    {
+      "date": "2025-06-29",
+      "recovery_score": 93,
+      "hrv_ms": 78,
+      "rhr_bpm": 44,
+      "strain": 18,
+      "avg_hr": 73,
+      "max_hr": 171,
+      "kilojoules": 17444.045
+    },
+    {
+      "date": "2025-06-30",
+      "recovery_score": 67,
+      "hrv_ms": 69,
+      "rhr_bpm": 48,
+      "strain": 16.6,
+      "avg_hr": 71,
+      "max_hr": 169,
+      "kilojoules": 14231.48
+    },
+    {
+      "date": "2025-07-01",
+      "recovery_score": 75,
+      "hrv_ms": 71,
+      "rhr_bpm": 46,
+      "strain": 11.4,
+      "avg_hr": 60,
+      "max_hr": 179,
+      "kilojoules": 10146.764
+    },
+    {
+      "date": "2025-07-02",
+      "recovery_score": 52,
+      "hrv_ms": 64,
+      "rhr_bpm": 47,
+      "strain": 8.7,
+      "avg_hr": 58,
+      "max_hr": 168,
+      "kilojoules": 9164.871
+    },
+    {
+      "date": "2025-07-03",
+      "recovery_score": 48,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "strain": 15.1,
+      "avg_hr": 66,
+      "max_hr": 164,
+      "kilojoules": 12583.989
+    },
+    {
+      "date": "2025-07-04",
+      "recovery_score": 52,
+      "hrv_ms": 61,
+      "rhr_bpm": 45,
+      "strain": 19.4,
+      "avg_hr": 75,
+      "max_hr": 179,
+      "kilojoules": 17748.541
+    },
+    {
+      "date": "2025-07-05",
+      "recovery_score": 73,
+      "hrv_ms": 71,
+      "rhr_bpm": 54,
+      "strain": 20.3,
+      "avg_hr": 80,
+      "max_hr": 175,
+      "kilojoules": 21052.873
+    },
+    {
+      "date": "2025-07-06",
+      "recovery_score": 68,
+      "hrv_ms": 67,
+      "rhr_bpm": 47,
+      "strain": 11.9,
+      "avg_hr": 61,
+      "max_hr": 192,
+      "kilojoules": 10412.626
+    },
+    {
+      "date": "2025-07-07",
+      "recovery_score": 94,
+      "hrv_ms": 84,
+      "rhr_bpm": 45,
+      "strain": 15.6,
+      "avg_hr": 62,
+      "max_hr": 177,
+      "kilojoules": 13099.881
+    },
+    {
+      "date": "2025-07-08",
+      "recovery_score": 68,
+      "hrv_ms": 70,
+      "rhr_bpm": 51,
+      "strain": 14.9,
+      "avg_hr": 64,
+      "max_hr": 168,
+      "kilojoules": 12067.886
+    },
+    {
+      "date": "2025-07-09",
+      "recovery_score": 77,
+      "hrv_ms": 73,
+      "rhr_bpm": 49,
+      "strain": 14,
+      "avg_hr": 62,
+      "max_hr": 190,
+      "kilojoules": 11156.731
+    },
+    {
+      "date": "2025-07-10",
+      "recovery_score": 56,
+      "hrv_ms": 67,
+      "rhr_bpm": 51,
+      "strain": 6.5,
+      "avg_hr": 57,
+      "max_hr": 143,
+      "kilojoules": 8050.255
+    },
+    {
+      "date": "2025-07-11",
+      "recovery_score": 80,
+      "hrv_ms": 73,
+      "rhr_bpm": 45,
+      "strain": 17.2,
+      "avg_hr": 67,
+      "max_hr": 201,
+      "kilojoules": 14330.785
+    },
+    {
+      "date": "2025-07-12",
+      "recovery_score": 63,
+      "hrv_ms": 68,
+      "rhr_bpm": 49,
+      "strain": 10.2,
+      "avg_hr": 61,
+      "max_hr": 152,
+      "kilojoules": 10003.116
+    },
+    {
+      "date": "2025-07-13",
+      "recovery_score": 82,
+      "hrv_ms": 75,
+      "rhr_bpm": 43,
+      "strain": 11.6,
+      "avg_hr": 63,
+      "max_hr": 157,
+      "kilojoules": 9757.037
+    },
+    {
+      "date": "2025-07-14",
+      "recovery_score": 80,
+      "hrv_ms": 74,
+      "rhr_bpm": 43,
+      "strain": 8.7,
+      "avg_hr": 57,
+      "max_hr": 156,
+      "kilojoules": 9457.372
+    },
+    {
+      "date": "2025-07-15",
+      "recovery_score": 98,
+      "hrv_ms": 85,
+      "rhr_bpm": 40,
+      "strain": 8.4,
+      "avg_hr": 59,
+      "max_hr": 154,
+      "kilojoules": 8716.587
+    },
+    {
+      "date": "2025-07-16",
+      "recovery_score": 77,
+      "hrv_ms": 75,
+      "rhr_bpm": 42,
+      "strain": 9.7,
+      "avg_hr": 58,
+      "max_hr": 184,
+      "kilojoules": 9291.695
+    },
+    {
+      "date": "2025-07-17",
+      "recovery_score": 61,
+      "hrv_ms": 70,
+      "rhr_bpm": 44,
+      "strain": 19.9,
+      "avg_hr": 76,
+      "max_hr": 198,
+      "kilojoules": 18451.986
+    },
+    {
+      "date": "2025-07-18",
+      "recovery_score": 91,
+      "hrv_ms": 82,
+      "rhr_bpm": 42,
+      "strain": 17.7,
+      "avg_hr": 70,
+      "max_hr": 180,
+      "kilojoules": 15561.564
+    },
+    {
+      "date": "2025-07-19",
+      "recovery_score": 84,
+      "hrv_ms": 80,
+      "rhr_bpm": 42,
+      "strain": 13.6,
+      "avg_hr": 65,
+      "max_hr": 159,
+      "kilojoules": 11027.934
+    },
+    {
+      "date": "2025-07-20",
+      "recovery_score": 77,
+      "hrv_ms": 76,
+      "rhr_bpm": 43,
+      "strain": 13.5,
+      "avg_hr": 58,
+      "max_hr": 181,
+      "kilojoules": 11939.097
+    },
+    {
+      "date": "2025-07-21",
+      "recovery_score": 75,
+      "hrv_ms": 76,
+      "rhr_bpm": 42,
+      "strain": 19.2,
+      "avg_hr": 68,
+      "max_hr": 185,
+      "kilojoules": 16357.179
+    },
+    {
+      "date": "2025-07-22",
+      "recovery_score": 48,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "strain": 17.7,
+      "avg_hr": 72,
+      "max_hr": 184,
+      "kilojoules": 15684.7705
+    },
+    {
+      "date": "2025-07-23",
+      "recovery_score": 91,
+      "hrv_ms": 88,
+      "rhr_bpm": 38,
+      "strain": 17.2,
+      "avg_hr": 67,
+      "max_hr": 175,
+      "kilojoules": 14725.685
+    },
+    {
+      "date": "2025-07-24",
+      "recovery_score": 69,
+      "hrv_ms": 75,
+      "rhr_bpm": 41,
+      "strain": 20,
+      "avg_hr": 73,
+      "max_hr": 187,
+      "kilojoules": 19983.012
+    },
+    {
+      "date": "2025-07-25",
+      "recovery_score": 35,
+      "hrv_ms": 57,
+      "rhr_bpm": 54,
+      "strain": 17.2,
+      "avg_hr": 72,
+      "max_hr": 188,
+      "kilojoules": 13339.784
+    },
+    {
+      "date": "2025-07-26",
+      "recovery_score": 48,
+      "hrv_ms": 65,
+      "rhr_bpm": 51,
+      "strain": 20.6,
+      "avg_hr": 82,
+      "max_hr": 190,
+      "kilojoules": 20604.857
+    },
+    {
+      "date": "2025-07-27",
+      "recovery_score": 46,
+      "hrv_ms": 61,
+      "rhr_bpm": 55,
+      "strain": 10.7,
+      "avg_hr": 64,
+      "max_hr": 147,
+      "kilojoules": 9787.227
+    },
+    {
+      "date": "2025-07-28",
+      "recovery_score": 69,
+      "hrv_ms": 69,
+      "rhr_bpm": 46,
+      "strain": 17.6,
+      "avg_hr": 67,
+      "max_hr": 178,
+      "kilojoules": 14838.068
+    },
+    {
+      "date": "2025-07-29",
+      "recovery_score": 30,
+      "hrv_ms": 49,
+      "rhr_bpm": 53,
+      "strain": 10.2,
+      "avg_hr": 63,
+      "max_hr": 149,
+      "kilojoules": 9745.486
+    },
+    {
+      "date": "2025-07-30",
+      "recovery_score": 49,
+      "hrv_ms": 57,
+      "rhr_bpm": 48,
+      "strain": 11.1,
+      "avg_hr": 60,
+      "max_hr": 171,
+      "kilojoules": 9641.179
+    },
+    {
+      "date": "2025-07-31",
+      "recovery_score": 41,
+      "hrv_ms": 54,
+      "rhr_bpm": 52,
+      "strain": 13.8,
+      "avg_hr": 64,
+      "max_hr": 184,
+      "kilojoules": 11485.782
+    },
+    {
+      "date": "2025-08-01",
+      "recovery_score": 91,
+      "hrv_ms": 78,
+      "rhr_bpm": 45,
+      "strain": 17.2,
+      "avg_hr": 69,
+      "max_hr": 170,
+      "kilojoules": 14857.628
+    },
+    {
+      "date": "2025-08-02",
+      "recovery_score": 53,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "strain": 18.5,
+      "avg_hr": 78,
+      "max_hr": 166,
+      "kilojoules": 17590.002
+    },
+    {
+      "date": "2025-08-03",
+      "recovery_score": 40,
+      "hrv_ms": 53,
+      "rhr_bpm": 58,
+      "strain": 15.6,
+      "avg_hr": 75,
+      "max_hr": 158,
+      "kilojoules": 13020.177
+    },
+    {
+      "date": "2025-08-04",
+      "recovery_score": 52,
+      "hrv_ms": 60,
+      "rhr_bpm": 53,
+      "strain": 11.1,
+      "avg_hr": 63,
+      "max_hr": 155,
+      "kilojoules": 11963.834
+    },
+    {
+      "date": "2025-08-05",
+      "recovery_score": 14,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "strain": 9.4,
+      "avg_hr": 99,
+      "max_hr": 178,
+      "kilojoules": 5604.238
+    },
+    {
+      "date": "2025-08-06",
+      "recovery_score": 37,
+      "hrv_ms": 45,
+      "rhr_bpm": 120,
+      "strain": 10.7,
+      "avg_hr": 80,
+      "max_hr": 195,
+      "kilojoules": 6862.0576
+    },
+    {
+      "date": "2025-08-07",
+      "strain": 16.4,
+      "avg_hr": 101,
+      "max_hr": 198,
+      "kilojoules": 9845.842
+    },
+    {
+      "date": "2025-08-08",
+      "strain": 14.1,
+      "avg_hr": 90,
+      "max_hr": 163,
+      "kilojoules": 7818.9585
+    },
+    {
+      "date": "2025-08-09",
+      "recovery_score": 66,
+      "hrv_ms": 64,
+      "rhr_bpm": 49,
+      "strain": 10.8,
+      "avg_hr": 66,
+      "max_hr": 159,
+      "kilojoules": 9473.039
+    },
+    {
+      "date": "2025-08-10",
+      "recovery_score": 48,
+      "hrv_ms": 52,
+      "rhr_bpm": 49,
+      "strain": 20.6,
+      "avg_hr": 77,
+      "max_hr": 192,
+      "kilojoules": 19680.754
+    },
+    {
+      "date": "2025-08-11",
+      "recovery_score": 38,
+      "hrv_ms": 47,
+      "rhr_bpm": 54,
+      "strain": 10.7,
+      "avg_hr": 64,
+      "max_hr": 153,
+      "kilojoules": 9895.676
+    },
+    {
+      "date": "2025-08-12",
+      "strain": 13.4,
+      "avg_hr": 66,
+      "max_hr": 170,
+      "kilojoules": 9787.51
+    },
+    {
+      "date": "2025-08-13",
+      "strain": 15.7,
+      "avg_hr": 66,
+      "max_hr": 185,
+      "kilojoules": 11560.774
+    },
+    {
+      "date": "2025-08-14",
+      "recovery_score": 51,
+      "hrv_ms": 55,
+      "rhr_bpm": 52,
+      "strain": 4.7,
+      "avg_hr": 59,
+      "max_hr": 134,
+      "kilojoules": 7929.767
+    },
+    {
+      "date": "2025-08-15",
+      "recovery_score": 93,
+      "hrv_ms": 80,
+      "rhr_bpm": 42,
+      "strain": 18.8,
+      "avg_hr": 63,
+      "max_hr": 187,
+      "kilojoules": 12863.91
+    },
+    {
+      "date": "2025-08-16",
+      "recovery_score": 67,
+      "hrv_ms": 63,
+      "rhr_bpm": 48,
+      "strain": 5.3,
+      "avg_hr": 60,
+      "max_hr": 149,
+      "kilojoules": 8622.085
+    },
+    {
+      "date": "2025-08-17",
+      "recovery_score": 64,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "strain": 11.1,
+      "avg_hr": 64,
+      "max_hr": 164,
+      "kilojoules": 9193.803
+    },
+    {
+      "date": "2025-08-18",
+      "recovery_score": 69,
+      "hrv_ms": 62,
+      "rhr_bpm": 47,
+      "strain": 9.6,
+      "avg_hr": 59,
+      "max_hr": 163,
+      "kilojoules": 9902.14
+    },
+    {
+      "date": "2025-08-19",
+      "recovery_score": 63,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "strain": 4.6,
+      "avg_hr": 55,
+      "max_hr": 120,
+      "kilojoules": 8219.4795
+    },
+    {
+      "date": "2025-08-20",
+      "recovery_score": 63,
+      "hrv_ms": 59,
+      "rhr_bpm": 48,
+      "strain": 6.2,
+      "avg_hr": 59,
+      "max_hr": 130,
+      "kilojoules": 8311.835
+    },
+    {
+      "date": "2025-08-21",
+      "recovery_score": 89,
+      "hrv_ms": 73,
+      "rhr_bpm": 44,
+      "strain": 5.3,
+      "avg_hr": 55,
+      "max_hr": 143,
+      "kilojoules": 8461.954
+    },
+    {
+      "date": "2025-08-22",
+      "recovery_score": 64,
+      "hrv_ms": 60,
+      "rhr_bpm": 46,
+      "strain": 19,
+      "avg_hr": 69,
+      "max_hr": 179,
+      "kilojoules": 15096.996
+    },
+    {
+      "date": "2025-08-23",
+      "recovery_score": 49,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "strain": 14.1,
+      "avg_hr": 66,
+      "max_hr": 159,
+      "kilojoules": 12565.574
+    },
+    {
+      "date": "2025-08-24",
+      "recovery_score": 71,
+      "hrv_ms": 62,
+      "rhr_bpm": 45,
+      "strain": 15.5,
+      "avg_hr": 69,
+      "max_hr": 181,
+      "kilojoules": 12550.595
+    },
+    {
+      "date": "2025-08-25",
+      "recovery_score": 45,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "strain": 4,
+      "avg_hr": 57,
+      "max_hr": 112,
+      "kilojoules": 7774.834
+    },
+    {
+      "date": "2025-08-26",
+      "recovery_score": 69,
+      "hrv_ms": 62,
+      "rhr_bpm": 46,
+      "strain": 4.8,
+      "avg_hr": 55,
+      "max_hr": 145,
+      "kilojoules": 9436.542
+    },
+    {
+      "date": "2025-08-27",
+      "recovery_score": 30,
+      "hrv_ms": 47,
+      "rhr_bpm": 53,
+      "strain": 10.8,
+      "avg_hr": 64,
+      "max_hr": 172,
+      "kilojoules": 9058.19
+    },
+    {
+      "date": "2025-08-28",
+      "recovery_score": 70,
+      "hrv_ms": 64,
+      "rhr_bpm": 49,
+      "strain": 5.6,
+      "avg_hr": 61,
+      "max_hr": 134,
+      "kilojoules": 8408.997
+    },
+    {
+      "date": "2025-08-29",
+      "recovery_score": 66,
+      "hrv_ms": 62,
+      "rhr_bpm": 49,
+      "strain": 14.5,
+      "avg_hr": 61,
+      "max_hr": 174,
+      "kilojoules": 10796.057
+    },
+    {
+      "date": "2025-08-30",
+      "recovery_score": 66,
+      "hrv_ms": 62,
+      "rhr_bpm": 48,
+      "strain": 16.7,
+      "avg_hr": 68,
+      "max_hr": 182,
+      "kilojoules": 13973.643
+    },
+    {
+      "date": "2025-08-31",
+      "recovery_score": 58,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "strain": 15.9,
+      "avg_hr": 69,
+      "max_hr": 171,
+      "kilojoules": 13664.719
+    },
+    {
+      "date": "2025-09-01",
+      "recovery_score": 84,
+      "hrv_ms": 68,
+      "rhr_bpm": 47,
+      "strain": 4.1,
+      "avg_hr": 54,
+      "max_hr": 112,
+      "kilojoules": 7559.282
+    },
+    {
+      "date": "2025-09-02",
+      "recovery_score": 96,
+      "hrv_ms": 74,
+      "rhr_bpm": 42,
+      "strain": 5.4,
+      "avg_hr": 52,
+      "max_hr": 129,
+      "kilojoules": 9430.66
+    },
+    {
+      "date": "2025-09-03",
+      "recovery_score": 90,
+      "hrv_ms": 73,
+      "rhr_bpm": 44,
+      "strain": 4.7,
+      "avg_hr": 59,
+      "max_hr": 127,
+      "kilojoules": 9147.026
+    },
+    {
+      "date": "2025-09-04",
+      "recovery_score": 12,
+      "hrv_ms": 33,
+      "rhr_bpm": 70,
+      "strain": 13.8,
+      "avg_hr": 71,
+      "max_hr": 179,
+      "kilojoules": 9833.286
+    },
+    {
+      "date": "2025-09-05",
+      "recovery_score": 80,
+      "hrv_ms": 69,
+      "rhr_bpm": 46,
+      "strain": 14.2,
+      "avg_hr": 62,
+      "max_hr": 165,
+      "kilojoules": 11740.084
+    },
+    {
+      "date": "2025-09-06",
+      "recovery_score": 70,
+      "hrv_ms": 66,
+      "rhr_bpm": 47,
+      "strain": 14.7,
+      "avg_hr": 73,
+      "max_hr": 144,
+      "kilojoules": 14615.648
+    },
+    {
+      "date": "2025-09-07",
+      "recovery_score": 3,
+      "hrv_ms": 14,
+      "rhr_bpm": 86,
+      "strain": 13,
+      "avg_hr": 87,
+      "max_hr": 153,
+      "kilojoules": 7674.4663
+    },
+    {
+      "date": "2025-09-08",
+      "recovery_score": 61,
+      "hrv_ms": 58,
+      "rhr_bpm": 50,
+      "strain": 4.3,
+      "avg_hr": 54,
+      "max_hr": 121,
+      "kilojoules": 8989.262
+    },
+    {
+      "date": "2025-09-09",
+      "recovery_score": 63,
+      "hrv_ms": 59,
+      "rhr_bpm": 47,
+      "strain": 10.3,
+      "avg_hr": 58,
+      "max_hr": 172,
+      "kilojoules": 9505.154
+    },
+    {
+      "date": "2025-09-10",
+      "recovery_score": 70,
+      "hrv_ms": 62,
+      "rhr_bpm": 48,
+      "strain": 10.4,
+      "avg_hr": 57,
+      "max_hr": 176,
+      "kilojoules": 9511.745
+    },
+    {
+      "date": "2025-09-11",
+      "recovery_score": 64,
+      "hrv_ms": 59,
+      "rhr_bpm": 51,
+      "strain": 5.1,
+      "avg_hr": 57,
+      "max_hr": 169,
+      "kilojoules": 8419.601
+    },
+    {
+      "date": "2025-09-12",
+      "recovery_score": 64,
+      "hrv_ms": 58,
+      "rhr_bpm": 49,
+      "strain": 12.7,
+      "avg_hr": 68,
+      "max_hr": 164,
+      "kilojoules": 10241.735
+    },
+    {
+      "date": "2025-09-13",
+      "recovery_score": 61,
+      "hrv_ms": 59,
+      "rhr_bpm": 48,
+      "strain": 8,
+      "avg_hr": 63,
+      "max_hr": 162,
+      "kilojoules": 8777.247
+    },
+    {
+      "date": "2025-09-14",
+      "recovery_score": 62,
+      "hrv_ms": 58,
+      "rhr_bpm": 49,
+      "strain": 11.5,
+      "avg_hr": 66,
+      "max_hr": 150,
+      "kilojoules": 10241.311
+    },
+    {
+      "date": "2025-09-15",
+      "recovery_score": 72,
+      "hrv_ms": 59,
+      "rhr_bpm": 50,
+      "strain": 6.3,
+      "avg_hr": 64,
+      "max_hr": 137,
+      "kilojoules": 9670.113
+    },
+    {
+      "date": "2025-09-16",
+      "recovery_score": 44,
+      "hrv_ms": 53,
+      "rhr_bpm": 56,
+      "strain": 17.5,
+      "avg_hr": 74,
+      "max_hr": 186,
+      "kilojoules": 13041.322
+    },
+    {
+      "date": "2025-09-17",
+      "recovery_score": 84,
+      "hrv_ms": 65,
+      "rhr_bpm": 50,
+      "strain": 5.4,
+      "avg_hr": 57,
+      "max_hr": 151,
+      "kilojoules": 8943.351
+    },
+    {
+      "date": "2025-09-18",
+      "recovery_score": 47,
+      "hrv_ms": 52,
+      "rhr_bpm": 48,
+      "strain": 7.4,
+      "avg_hr": 59,
+      "max_hr": 171,
+      "kilojoules": 8607.326
+    },
+    {
+      "date": "2025-09-19",
+      "recovery_score": 78,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "strain": 19.7,
+      "avg_hr": 67,
+      "max_hr": 191,
+      "kilojoules": 13518.519
+    },
+    {
+      "date": "2025-09-20",
+      "recovery_score": 77,
+      "hrv_ms": 62,
+      "rhr_bpm": 47,
+      "strain": 16.7,
+      "avg_hr": 70,
+      "max_hr": 165,
+      "kilojoules": 14565.423
+    },
+    {
+      "date": "2025-09-21",
+      "recovery_score": 61,
+      "hrv_ms": 57,
+      "rhr_bpm": 52,
+      "strain": 11.5,
+      "avg_hr": 62,
+      "max_hr": 203,
+      "kilojoules": 9318.029
+    },
+    {
+      "date": "2025-09-22",
+      "recovery_score": 76,
+      "hrv_ms": 63,
+      "rhr_bpm": 48,
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 128,
+      "kilojoules": 7719.927
+    },
+    {
+      "date": "2025-09-23",
+      "recovery_score": 87,
+      "hrv_ms": 67,
+      "rhr_bpm": 46,
+      "strain": 9.1,
+      "avg_hr": 55,
+      "max_hr": 167,
+      "kilojoules": 10278.442
+    },
+    {
+      "date": "2025-09-24",
+      "recovery_score": 49,
+      "hrv_ms": 55,
+      "rhr_bpm": 52,
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 123,
+      "kilojoules": 8795.022
+    },
+    {
+      "date": "2025-09-25",
+      "recovery_score": 65,
+      "hrv_ms": 66,
+      "rhr_bpm": 46,
+      "strain": 4,
+      "avg_hr": 54,
+      "max_hr": 111,
+      "kilojoules": 7380.741
+    },
+    {
+      "date": "2025-09-26",
+      "recovery_score": 81,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "strain": 11.6,
+      "avg_hr": 58,
+      "max_hr": 203,
+      "kilojoules": 9689.695
+    },
+    {
+      "date": "2025-09-27",
+      "recovery_score": 79,
+      "hrv_ms": 65,
+      "rhr_bpm": 46,
+      "strain": 5.7,
+      "avg_hr": 59,
+      "max_hr": 126,
+      "kilojoules": 8441.155
+    },
+    {
+      "date": "2025-09-28",
+      "recovery_score": 80,
+      "hrv_ms": 67,
+      "rhr_bpm": 44,
+      "strain": 8.8,
+      "avg_hr": 58,
+      "max_hr": 171,
+      "kilojoules": 9357.066
+    },
+    {
+      "date": "2025-09-29",
+      "recovery_score": 58,
+      "hrv_ms": 61,
+      "rhr_bpm": 45,
+      "strain": 3.6,
+      "avg_hr": 55,
+      "max_hr": 101,
+      "kilojoules": 7878.0493
+    },
+    {
+      "date": "2025-09-30",
+      "recovery_score": 47,
+      "hrv_ms": 53,
+      "rhr_bpm": 49,
+      "strain": 6.1,
+      "avg_hr": 55,
+      "max_hr": 149,
+      "kilojoules": 8417.231
+    },
+    {
+      "date": "2025-10-01",
+      "recovery_score": 54,
+      "hrv_ms": 57,
+      "rhr_bpm": 47,
+      "strain": 15.5,
+      "avg_hr": 64,
+      "max_hr": 172,
+      "kilojoules": 13944.252
+    },
+    {
+      "date": "2025-10-02",
+      "recovery_score": 47,
+      "hrv_ms": 57,
+      "rhr_bpm": 57,
+      "strain": 4.2,
+      "avg_hr": 59,
+      "max_hr": 116,
+      "kilojoules": 7066.952
+    },
+    {
+      "date": "2025-10-03",
+      "strain": 13.3,
+      "avg_hr": 76,
+      "max_hr": 138,
+      "kilojoules": 10572.501
+    },
+    {
+      "date": "2025-10-04",
+      "recovery_score": 86,
+      "hrv_ms": 60,
+      "rhr_bpm": 46,
+      "strain": 13.1,
+      "avg_hr": 64,
+      "max_hr": 154,
+      "kilojoules": 12512.486
+    },
+    {
+      "date": "2025-10-05",
+      "strain": 7.2,
+      "avg_hr": 68,
+      "max_hr": 132,
+      "kilojoules": 7234.9966
+    },
+    {
+      "date": "2025-10-06",
+      "recovery_score": 93,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "strain": 19.5,
+      "avg_hr": 76,
+      "max_hr": 176,
+      "kilojoules": 16888.559
+    },
+    {
+      "date": "2025-10-07",
+      "recovery_score": 79,
+      "hrv_ms": 58,
+      "rhr_bpm": 48,
+      "strain": 4.8,
+      "avg_hr": 55,
+      "max_hr": 141,
+      "kilojoules": 8178.137
+    },
+    {
+      "date": "2025-10-08",
+      "recovery_score": 81,
+      "hrv_ms": 60,
+      "rhr_bpm": 48,
+      "strain": 4.1,
+      "avg_hr": 53,
+      "max_hr": 105,
+      "kilojoules": 8024.443
+    },
+    {
+      "date": "2025-10-09",
+      "recovery_score": 83,
+      "hrv_ms": 60,
+      "rhr_bpm": 48,
+      "strain": 5,
+      "avg_hr": 54,
+      "max_hr": 136,
+      "kilojoules": 8364.487
+    },
+    {
+      "date": "2025-10-10",
+      "recovery_score": 98,
+      "hrv_ms": 68,
+      "rhr_bpm": 44,
+      "strain": 4,
+      "avg_hr": 51,
+      "max_hr": 109,
+      "kilojoules": 8158.866
+    },
+    {
+      "date": "2025-10-11",
+      "recovery_score": 98,
+      "hrv_ms": 67,
+      "rhr_bpm": 44,
+      "strain": 11.6,
+      "avg_hr": 63,
+      "max_hr": 153,
+      "kilojoules": 10387.849
+    },
+    {
+      "date": "2025-10-12",
+      "recovery_score": 78,
+      "hrv_ms": 59,
+      "rhr_bpm": 48,
+      "strain": 18.9,
+      "avg_hr": 76,
+      "max_hr": 188,
+      "kilojoules": 15587.501
+    },
+    {
+      "date": "2025-10-13",
+      "recovery_score": 54,
+      "hrv_ms": 53,
+      "rhr_bpm": 49,
+      "strain": 4.7,
+      "avg_hr": 60,
+      "max_hr": 127,
+      "kilojoules": 9410.346
+    },
+    {
+      "date": "2025-10-14",
+      "strain": 5.1,
+      "avg_hr": 63,
+      "max_hr": 132,
+      "kilojoules": 6336.467
+    },
+    {
+      "date": "2025-10-15",
+      "recovery_score": 95,
+      "hrv_ms": 70,
+      "rhr_bpm": 45,
+      "strain": 6.9,
+      "avg_hr": 58,
+      "max_hr": 150,
+      "kilojoules": 8516.492
+    },
+    {
+      "date": "2025-10-16",
+      "recovery_score": 87,
+      "hrv_ms": 63,
+      "rhr_bpm": 46,
+      "strain": 10.3,
+      "avg_hr": 57,
+      "max_hr": 170,
+      "kilojoules": 9679.975
+    },
+    {
+      "date": "2025-10-17",
+      "recovery_score": 86,
+      "hrv_ms": 63,
+      "rhr_bpm": 45,
+      "strain": 15.5,
+      "avg_hr": 68,
+      "max_hr": 164,
+      "kilojoules": 13341.565
+    },
+    {
+      "date": "2025-10-18",
+      "recovery_score": 53,
+      "hrv_ms": 48,
+      "rhr_bpm": 57,
+      "strain": 15.4,
+      "avg_hr": 73,
+      "max_hr": 173,
+      "kilojoules": 12291.322
+    },
+    {
+      "date": "2025-10-19",
+      "recovery_score": 67,
+      "hrv_ms": 54,
+      "rhr_bpm": 52,
+      "strain": 13.2,
+      "avg_hr": 67,
+      "max_hr": 156,
+      "kilojoules": 11580.655
+    },
+    {
+      "date": "2025-10-20",
+      "recovery_score": 77,
+      "hrv_ms": 60,
+      "rhr_bpm": 46,
+      "strain": 7.9,
+      "avg_hr": 57,
+      "max_hr": 167,
+      "kilojoules": 9196.567
+    },
+    {
+      "date": "2025-10-21",
+      "recovery_score": 85,
+      "hrv_ms": 63,
+      "rhr_bpm": 49,
+      "strain": 7,
+      "avg_hr": 56,
+      "max_hr": 172,
+      "kilojoules": 8887.867
+    },
+    {
+      "date": "2025-10-22",
+      "recovery_score": 80,
+      "hrv_ms": 66,
+      "rhr_bpm": 52,
+      "strain": 4.5,
+      "avg_hr": 57,
+      "max_hr": 110,
+      "kilojoules": 7897.585
+    },
+    {
+      "date": "2025-10-23",
+      "recovery_score": 92,
+      "hrv_ms": 71,
+      "rhr_bpm": 44,
+      "strain": 5.1,
+      "avg_hr": 56,
+      "max_hr": 133,
+      "kilojoules": 8052.187
+    },
+    {
+      "date": "2025-10-24",
+      "recovery_score": 94,
+      "hrv_ms": 77,
+      "rhr_bpm": 44,
+      "strain": 16,
+      "avg_hr": 66,
+      "max_hr": 180,
+      "kilojoules": 12602.081
+    },
+    {
+      "date": "2025-10-25",
+      "recovery_score": 48,
+      "hrv_ms": 54,
+      "rhr_bpm": 50,
+      "strain": 18.5,
+      "avg_hr": 66,
+      "max_hr": 188,
+      "kilojoules": 13064.201
+    },
+    {
+      "date": "2025-10-26",
+      "strain": 12.7,
+      "avg_hr": 65,
+      "max_hr": 160,
+      "kilojoules": 10783.749
+    },
+    {
+      "date": "2025-10-27",
+      "recovery_score": 76,
+      "hrv_ms": 62,
+      "rhr_bpm": 49,
+      "strain": 4.2,
+      "avg_hr": 54,
+      "max_hr": 115,
+      "kilojoules": 8295.098
+    },
+    {
+      "date": "2025-10-28",
+      "recovery_score": 95,
+      "hrv_ms": 71,
+      "rhr_bpm": 42,
+      "strain": 4.4,
+      "avg_hr": 52,
+      "max_hr": 127,
+      "kilojoules": 8107.8716
+    },
+    {
+      "date": "2025-10-29",
+      "recovery_score": 86,
+      "hrv_ms": 66,
+      "rhr_bpm": 44,
+      "strain": 4.7,
+      "avg_hr": 53,
+      "max_hr": 123,
+      "kilojoules": 8425.359
+    },
+    {
+      "date": "2025-10-30",
+      "recovery_score": 95,
+      "hrv_ms": 81,
+      "rhr_bpm": 40,
+      "strain": 4.4,
+      "avg_hr": 52,
+      "max_hr": 125,
+      "kilojoules": 7948.873
+    },
+    {
+      "date": "2025-10-31",
+      "recovery_score": 77,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "strain": 14.8,
+      "avg_hr": 58,
+      "max_hr": 185,
+      "kilojoules": 10575.463
+    },
+    {
+      "date": "2025-11-01",
+      "recovery_score": 74,
+      "hrv_ms": 63,
+      "rhr_bpm": 46,
+      "strain": 6.6,
+      "avg_hr": 61,
+      "max_hr": 130,
+      "kilojoules": 8908.111
+    },
+    {
+      "date": "2025-11-02",
+      "recovery_score": 61,
+      "hrv_ms": 55,
+      "rhr_bpm": 54,
+      "strain": 7.2,
+      "avg_hr": 65,
+      "max_hr": 126,
+      "kilojoules": 8596.224
+    },
+    {
+      "date": "2025-11-03",
+      "recovery_score": 61,
+      "hrv_ms": 61,
+      "rhr_bpm": 46,
+      "strain": 4.1,
+      "avg_hr": 53,
+      "max_hr": 113,
+      "kilojoules": 8200.433
+    },
+    {
+      "date": "2025-11-04",
+      "recovery_score": 71,
+      "hrv_ms": 64,
+      "rhr_bpm": 43,
+      "strain": 19.3,
+      "avg_hr": 68,
+      "max_hr": 194,
+      "kilojoules": 13695.156
+    },
+    {
+      "date": "2025-11-05",
+      "recovery_score": 42,
+      "hrv_ms": 52,
+      "rhr_bpm": 51,
+      "strain": 4.9,
+      "avg_hr": 58,
+      "max_hr": 136,
+      "kilojoules": 8476.625
+    },
+    {
+      "date": "2025-11-06",
+      "recovery_score": 42,
+      "hrv_ms": 53,
+      "rhr_bpm": 56,
+      "strain": 10.3,
+      "avg_hr": 70,
+      "max_hr": 135,
+      "kilojoules": 9065.15
+    },
+    {
+      "date": "2025-11-07",
+      "recovery_score": 58,
+      "hrv_ms": 58,
+      "rhr_bpm": 49,
+      "strain": 14,
+      "avg_hr": 70,
+      "max_hr": 155,
+      "kilojoules": 11795.771
+    },
+    {
+      "date": "2025-11-08",
+      "recovery_score": 39,
+      "hrv_ms": 49,
+      "rhr_bpm": 51,
+      "strain": 7.6,
+      "avg_hr": 65,
+      "max_hr": 126,
+      "kilojoules": 9358.65
+    },
+    {
+      "date": "2025-11-09",
+      "recovery_score": 55,
+      "hrv_ms": 54,
+      "rhr_bpm": 57,
+      "strain": 11.3,
+      "avg_hr": 72,
+      "max_hr": 157,
+      "kilojoules": 9979.161
+    },
+    {
+      "date": "2025-11-10",
+      "recovery_score": 77,
+      "hrv_ms": 62,
+      "rhr_bpm": 52,
+      "strain": 6.4,
+      "avg_hr": 62,
+      "max_hr": 152,
+      "kilojoules": 8265.629
+    },
+    {
+      "date": "2025-11-11",
+      "recovery_score": 60,
+      "hrv_ms": 56,
+      "rhr_bpm": 51,
+      "strain": 4.5,
+      "avg_hr": 56,
+      "max_hr": 122,
+      "kilojoules": 7768.6167
+    },
+    {
+      "date": "2025-11-12",
+      "recovery_score": 51,
+      "hrv_ms": 53,
+      "rhr_bpm": 50,
+      "strain": 3.1,
+      "avg_hr": 56,
+      "max_hr": 110,
+      "kilojoules": 8384.689
+    },
+    {
+      "date": "2025-11-13",
+      "recovery_score": 64,
+      "hrv_ms": 56,
+      "rhr_bpm": 51,
+      "strain": 4.1,
+      "avg_hr": 55,
+      "max_hr": 121,
+      "kilojoules": 8059.155
+    },
+    {
+      "date": "2025-11-14",
+      "recovery_score": 93,
+      "hrv_ms": 75,
+      "rhr_bpm": 43,
+      "strain": 16.5,
+      "avg_hr": 69,
+      "max_hr": 188,
+      "kilojoules": 12720.089
+    },
+    {
+      "date": "2025-11-15",
+      "recovery_score": 41,
+      "hrv_ms": 49,
+      "rhr_bpm": 54,
+      "strain": 16,
+      "avg_hr": 68,
+      "max_hr": 183,
+      "kilojoules": 12080.4795
+    },
+    {
+      "date": "2025-11-16",
+      "recovery_score": 72,
+      "hrv_ms": 63,
+      "rhr_bpm": 53,
+      "strain": 11.7,
+      "avg_hr": 69,
+      "max_hr": 159,
+      "kilojoules": 10727.477
+    },
+    {
+      "date": "2025-11-17",
+      "recovery_score": 34,
+      "hrv_ms": 47,
+      "rhr_bpm": 59,
+      "strain": 10.4,
+      "avg_hr": 71,
+      "max_hr": 161,
+      "kilojoules": 9204.297
+    },
+    {
+      "date": "2025-11-18",
+      "recovery_score": 59,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "strain": 16.3,
+      "avg_hr": 66,
+      "max_hr": 178,
+      "kilojoules": 12137.702
+    },
+    {
+      "date": "2025-11-19",
+      "strain": 4.1,
+      "avg_hr": 56,
+      "max_hr": 119,
+      "kilojoules": 7988.425
+    },
+    {
+      "date": "2025-11-20",
+      "recovery_score": 72,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "strain": 2.3,
+      "avg_hr": 53,
+      "max_hr": 103,
+      "kilojoules": 8282.735
+    },
+    {
+      "date": "2025-11-21",
+      "recovery_score": 59,
+      "hrv_ms": 56,
+      "rhr_bpm": 48,
+      "strain": 6.1,
+      "avg_hr": 60,
+      "max_hr": 143,
+      "kilojoules": 7760.891
+    },
+    {
+      "date": "2025-11-22",
+      "recovery_score": 69,
+      "hrv_ms": 59,
+      "rhr_bpm": 48,
+      "strain": 14.1,
+      "avg_hr": 67,
+      "max_hr": 164,
+      "kilojoules": 12052.575
+    },
+    {
+      "date": "2025-11-23",
+      "recovery_score": 71,
+      "hrv_ms": 62,
+      "rhr_bpm": 45,
+      "strain": 4.1,
+      "avg_hr": 61,
+      "max_hr": 126,
+      "kilojoules": 8239.136
+    },
+    {
+      "date": "2025-11-24",
+      "recovery_score": 47,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "strain": 18.3,
+      "avg_hr": 66,
+      "max_hr": 193,
+      "kilojoules": 11970.856
+    },
+    {
+      "date": "2025-11-25",
+      "recovery_score": 48,
+      "hrv_ms": 47,
+      "rhr_bpm": 59,
+      "strain": 17.9,
+      "avg_hr": 64,
+      "max_hr": 194,
+      "kilojoules": 12051.725
+    },
+    {
+      "date": "2025-11-26",
+      "recovery_score": 49,
+      "hrv_ms": 49,
+      "rhr_bpm": 62,
+      "strain": 20.2,
+      "avg_hr": 71,
+      "max_hr": 195,
+      "kilojoules": 13324.572
+    },
+    {
+      "date": "2025-11-27",
+      "recovery_score": 28,
+      "hrv_ms": 43,
+      "rhr_bpm": 68,
+      "strain": 3.3,
+      "avg_hr": 63,
+      "max_hr": 108,
+      "kilojoules": 7559.951
+    },
+    {
+      "date": "2025-11-28",
+      "recovery_score": 76,
+      "hrv_ms": 60,
+      "rhr_bpm": 48,
+      "strain": 6,
+      "avg_hr": 62,
+      "max_hr": 140,
+      "kilojoules": 8788.644
+    },
+    {
+      "date": "2025-11-29",
+      "recovery_score": 68,
+      "hrv_ms": 58,
+      "rhr_bpm": 48,
+      "strain": 9.5,
+      "avg_hr": 62,
+      "max_hr": 156,
+      "kilojoules": 9744.455
+    },
+    {
+      "date": "2025-11-30",
+      "recovery_score": 39,
+      "hrv_ms": 43,
+      "rhr_bpm": 60,
+      "strain": 5.1,
+      "avg_hr": 67,
+      "max_hr": 131,
+      "kilojoules": 8615.985
+    },
+    {
+      "date": "2025-12-01",
+      "recovery_score": 45,
+      "hrv_ms": 44,
+      "rhr_bpm": 63,
+      "strain": 5.4,
+      "avg_hr": 66,
+      "max_hr": 123,
+      "kilojoules": 7356.6177
+    },
+    {
+      "date": "2025-12-02",
+      "recovery_score": 89,
+      "hrv_ms": 58,
+      "rhr_bpm": 47,
+      "strain": 4.3,
+      "avg_hr": 54,
+      "max_hr": 148,
+      "kilojoules": 8664.251
+    },
+    {
+      "date": "2025-12-03",
+      "recovery_score": 97,
+      "hrv_ms": 65,
+      "rhr_bpm": 44,
+      "strain": 4.9,
+      "avg_hr": 54,
+      "max_hr": 125,
+      "kilojoules": 8515.166
+    },
+    {
+      "date": "2025-12-04",
+      "recovery_score": 73,
+      "hrv_ms": 60,
+      "rhr_bpm": 45,
+      "strain": 4.7,
+      "avg_hr": 61,
+      "max_hr": 113,
+      "kilojoules": 7885.732
+    },
+    {
+      "date": "2025-12-05",
+      "recovery_score": 67,
+      "hrv_ms": 55,
+      "rhr_bpm": 47,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 95.98327,
+      "sleep_performance": 84,
+      "strain": 13.5,
+      "avg_hr": 65,
+      "max_hr": 165,
+      "kilojoules": 11151.663
+    },
+    {
+      "date": "2025-12-06",
+      "recovery_score": 66,
+      "hrv_ms": 56,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.9,
+      "sleep_efficiency": 93.44933,
+      "sleep_performance": 86,
+      "strain": 12.5,
+      "avg_hr": 69,
+      "max_hr": 178,
+      "kilojoules": 10927.174
+    },
+    {
+      "date": "2025-12-07",
+      "recovery_score": 22,
+      "hrv_ms": 34,
+      "rhr_bpm": 67,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 77.380295,
+      "sleep_performance": 37,
+      "strain": 7.6,
+      "avg_hr": 70,
+      "max_hr": 178,
+      "kilojoules": 7779.317
+    },
+    {
+      "date": "2025-12-08",
+      "recovery_score": 70,
+      "hrv_ms": 55,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 95.12686,
+      "sleep_performance": 81,
+      "strain": 17.5,
+      "avg_hr": 60,
+      "max_hr": 186,
+      "kilojoules": 11767.838
+    },
+    {
+      "date": "2025-12-09",
+      "recovery_score": 83,
+      "hrv_ms": 61,
+      "rhr_bpm": 56,
+      "sleep_hours": 8,
+      "sleep_efficiency": 98.435715,
+      "sleep_performance": 81,
+      "strain": 19,
+      "avg_hr": 62,
+      "max_hr": 199,
+      "kilojoules": 12360.661
+    },
+    {
+      "date": "2025-12-10",
+      "recovery_score": 89,
+      "hrv_ms": 70,
+      "rhr_bpm": 55,
+      "sleep_hours": 6.6,
+      "sleep_efficiency": 98.86043,
+      "sleep_performance": 79,
+      "strain": 5.2,
+      "avg_hr": 59,
+      "max_hr": 132,
+      "kilojoules": 8017.328
+    },
+    {
+      "date": "2025-12-11",
+      "recovery_score": 70,
+      "hrv_ms": 58,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 91.92661,
+      "sleep_performance": 83,
+      "strain": 4.1,
+      "avg_hr": 55,
+      "max_hr": 119,
+      "kilojoules": 9221.859
+    },
+    {
+      "date": "2025-12-12",
+      "recovery_score": 76,
+      "hrv_ms": 86,
+      "rhr_bpm": 41,
+      "sleep_hours": 5.1,
+      "sleep_efficiency": 96.05745,
+      "sleep_performance": 65,
+      "strain": 15,
+      "avg_hr": 65,
+      "max_hr": 205,
+      "kilojoules": 10257.989
+    },
+    {
+      "date": "2025-12-13",
+      "recovery_score": 52,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "sleep_hours": 6.6,
+      "sleep_efficiency": 94.776764,
+      "sleep_performance": 73,
+      "strain": 10.3,
+      "avg_hr": 69,
+      "max_hr": 159,
+      "kilojoules": 9953.276
+    },
+    {
+      "date": "2025-12-14",
+      "recovery_score": 60,
+      "hrv_ms": 57,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 97.35209,
+      "sleep_performance": 80,
+      "strain": 5.8,
+      "avg_hr": 58,
+      "max_hr": 173,
+      "kilojoules": 7582.862
+    },
+    {
+      "date": "2025-12-15",
+      "recovery_score": 89,
+      "hrv_ms": 69,
+      "rhr_bpm": 45,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 93.91994,
+      "sleep_performance": 77,
+      "strain": 11.6,
+      "avg_hr": 56,
+      "max_hr": 165,
+      "kilojoules": 10835.878
+    },
+    {
+      "date": "2025-12-16",
+      "recovery_score": 66,
+      "hrv_ms": 70,
+      "rhr_bpm": 45,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 74.53986,
+      "sleep_performance": 51,
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 128,
+      "kilojoules": 8999.37
+    },
+    {
+      "date": "2025-12-17",
+      "recovery_score": 37,
+      "hrv_ms": 57,
+      "rhr_bpm": 49,
+      "sleep_hours": 4.9,
+      "sleep_efficiency": 96.768326,
+      "sleep_performance": 55,
+      "strain": 3.3,
+      "avg_hr": 58,
+      "max_hr": 119,
+      "kilojoules": 6867.9805
+    },
+    {
+      "date": "2025-12-18",
+      "recovery_score": 77,
+      "hrv_ms": 61,
+      "rhr_bpm": 49,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 92.82184,
+      "sleep_performance": 81,
+      "strain": 10.5,
+      "avg_hr": 64,
+      "max_hr": 192,
+      "kilojoules": 9732.529
+    },
+    {
+      "date": "2025-12-19",
+      "recovery_score": 42,
+      "hrv_ms": 47,
+      "rhr_bpm": 57,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 90.7606,
+      "sleep_performance": 80,
+      "strain": 9.2,
+      "avg_hr": 63,
+      "max_hr": 164,
+      "kilojoules": 9049.381
+    },
+    {
+      "date": "2025-12-20",
+      "recovery_score": 76,
+      "hrv_ms": 62,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.2,
+      "sleep_efficiency": 97.804794,
+      "sleep_performance": 80,
+      "strain": 20,
+      "avg_hr": 79,
+      "max_hr": 191,
+      "kilojoules": 16792.096
+    },
+    {
+      "date": "2025-12-21",
+      "recovery_score": 40,
+      "hrv_ms": 47,
+      "rhr_bpm": 62,
+      "sleep_hours": 9.6,
+      "sleep_efficiency": 96.71041,
+      "sleep_performance": 73,
+      "strain": 7.1,
+      "avg_hr": 67,
+      "max_hr": 162,
+      "kilojoules": 10267.691
+    },
+    {
+      "date": "2025-12-22",
+      "recovery_score": 52,
+      "hrv_ms": 52,
+      "rhr_bpm": 51,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 93.24505,
+      "sleep_performance": 75,
+      "strain": 4.9,
+      "avg_hr": 58,
+      "max_hr": 139,
+      "kilojoules": 7380.083
+    },
+    {
+      "date": "2025-12-23",
+      "recovery_score": 64,
+      "hrv_ms": 55,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 98.79336,
+      "sleep_performance": 83,
+      "strain": 7.4,
+      "avg_hr": 59,
+      "max_hr": 163,
+      "kilojoules": 8536.063
+    },
+    {
+      "date": "2025-12-24",
+      "recovery_score": 76,
+      "hrv_ms": 58,
+      "rhr_bpm": 51,
+      "sleep_hours": 9.5,
+      "sleep_efficiency": 97.530304,
+      "sleep_performance": 87,
+      "strain": 4.8,
+      "avg_hr": 60,
+      "max_hr": 141,
+      "kilojoules": 9760.329
+    },
+    {
+      "date": "2025-12-25",
+      "recovery_score": 70,
+      "hrv_ms": 58,
+      "rhr_bpm": 54,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 92.19892,
+      "sleep_performance": 77,
+      "strain": 17.2,
+      "avg_hr": 69,
+      "max_hr": 204,
+      "kilojoules": 10351.322
+    },
+    {
+      "date": "2025-12-26",
+      "recovery_score": 68,
+      "hrv_ms": 56,
+      "rhr_bpm": 51,
+      "sleep_hours": 10.2,
+      "sleep_efficiency": 97.298065,
+      "sleep_performance": 81,
+      "strain": 4.1,
+      "avg_hr": 59,
+      "max_hr": 114,
+      "kilojoules": 9114.394
+    },
+    {
+      "date": "2025-12-27",
+      "recovery_score": 47,
+      "hrv_ms": 50,
+      "rhr_bpm": 50,
+      "sleep_hours": 6.2,
+      "sleep_efficiency": 96.483025,
+      "sleep_performance": 78,
+      "strain": 7.9,
+      "avg_hr": 65,
+      "max_hr": 168,
+      "kilojoules": 8830.797
+    },
+    {
+      "date": "2025-12-28",
+      "recovery_score": 6,
+      "hrv_ms": 47,
+      "rhr_bpm": 56,
+      "sleep_hours": 1.2,
+      "sleep_efficiency": 95.27039,
+      "sleep_performance": 26,
+      "strain": 4.2,
+      "avg_hr": 62,
+      "max_hr": 114,
+      "kilojoules": 7241.0376
+    },
+    {
+      "date": "2025-12-29",
+      "recovery_score": 75,
+      "hrv_ms": 57,
+      "rhr_bpm": 51,
+      "sleep_hours": 10.1,
+      "sleep_efficiency": 96.60613,
+      "sleep_performance": 79,
+      "strain": 9.7,
+      "avg_hr": 59,
+      "max_hr": 180,
+      "kilojoules": 9484.341
+    },
+    {
+      "date": "2025-12-30",
+      "recovery_score": 91,
+      "hrv_ms": 65,
+      "rhr_bpm": 49,
+      "sleep_hours": 9.4,
+      "sleep_efficiency": 97.876,
+      "sleep_performance": 81,
+      "strain": 10.3,
+      "avg_hr": 65,
+      "max_hr": 172,
+      "kilojoules": 9927.742
+    },
+    {
+      "date": "2025-12-31",
+      "recovery_score": 81,
+      "hrv_ms": 61,
+      "rhr_bpm": 53,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 95.75564,
+      "sleep_performance": 82,
+      "strain": 5.9,
+      "avg_hr": 66,
+      "max_hr": 135,
+      "kilojoules": 8838.337
+    },
+    {
+      "date": "2026-01-01",
+      "recovery_score": 65,
+      "hrv_ms": 53,
+      "rhr_bpm": 56,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 96.31308,
+      "sleep_performance": 82,
+      "strain": 13.1,
+      "avg_hr": 70,
+      "max_hr": 177,
+      "kilojoules": 10795.221
+    },
+    {
+      "date": "2026-01-02",
+      "recovery_score": 72,
+      "hrv_ms": 56,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 97.06142,
+      "sleep_performance": 91,
+      "strain": 4.7,
+      "avg_hr": 60,
+      "max_hr": 131,
+      "kilojoules": 8466.144
+    },
+    {
+      "date": "2026-01-03",
+      "recovery_score": 87,
+      "hrv_ms": 64,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 95.622574,
+      "sleep_performance": 92,
+      "strain": 7.3,
+      "avg_hr": 62,
+      "max_hr": 154,
+      "kilojoules": 8570.579
+    },
+    {
+      "date": "2026-01-04",
+      "recovery_score": 87,
+      "hrv_ms": 64,
+      "rhr_bpm": 54,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 95.38685,
+      "sleep_performance": 94,
+      "strain": 13.6,
+      "avg_hr": 67,
+      "max_hr": 173,
+      "kilojoules": 11336.464
+    },
+    {
+      "date": "2026-01-05",
+      "recovery_score": 80,
+      "hrv_ms": 65,
+      "rhr_bpm": 51,
+      "sleep_hours": 6.2,
+      "sleep_efficiency": 97.01561,
+      "sleep_performance": 78,
+      "strain": 4.6,
+      "avg_hr": 56,
+      "max_hr": 161,
+      "kilojoules": 8518.753
+    },
+    {
+      "date": "2026-01-06",
+      "recovery_score": 40,
+      "hrv_ms": 50,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 95.15195,
+      "sleep_performance": 83,
+      "strain": 8.9,
+      "avg_hr": 59,
+      "max_hr": 176,
+      "kilojoules": 9121.585
+    },
+    {
+      "date": "2026-01-07",
+      "recovery_score": 50,
+      "hrv_ms": 54,
+      "rhr_bpm": 56,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 98.074814,
+      "sleep_performance": 86,
+      "strain": 10.4,
+      "avg_hr": 60,
+      "max_hr": 180,
+      "kilojoules": 9411.416
+    },
+    {
+      "date": "2026-01-08",
+      "recovery_score": 74,
+      "hrv_ms": 62,
+      "rhr_bpm": 57,
+      "sleep_hours": 8.1,
+      "sleep_efficiency": 96.897285,
+      "sleep_performance": 89,
+      "strain": 2.3,
+      "avg_hr": 58,
+      "max_hr": 104,
+      "kilojoules": 7864.332
+    },
+    {
+      "date": "2026-01-09",
+      "recovery_score": 95,
+      "hrv_ms": 72,
+      "rhr_bpm": 44,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 95.32696,
+      "sleep_performance": 93,
+      "strain": 10.1,
+      "avg_hr": 61,
+      "max_hr": 157,
+      "kilojoules": 10323.857
+    },
+    {
+      "date": "2026-01-10",
+      "recovery_score": 37,
+      "hrv_ms": 46,
+      "rhr_bpm": 53,
+      "sleep_hours": 7,
+      "sleep_efficiency": 94.74522,
+      "sleep_performance": 86,
+      "strain": 13,
+      "avg_hr": 73,
+      "max_hr": 155,
+      "kilojoules": 10767.524
+    },
+    {
+      "date": "2026-01-11",
+      "recovery_score": 46,
+      "hrv_ms": 49,
+      "rhr_bpm": 56,
+      "sleep_hours": 9.9,
+      "sleep_efficiency": 96.22524,
+      "sleep_performance": 86,
+      "strain": 7.7,
+      "avg_hr": 64,
+      "max_hr": 146,
+      "kilojoules": 8985.883
+    },
+    {
+      "date": "2026-01-12",
+      "recovery_score": 74,
+      "hrv_ms": 58,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 97.08866,
+      "sleep_performance": 85,
+      "strain": 5.1,
+      "avg_hr": 55,
+      "max_hr": 141,
+      "kilojoules": 8708.084
+    },
+    {
+      "date": "2026-01-13",
+      "recovery_score": 76,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "sleep_hours": 7.2,
+      "sleep_efficiency": 96.988205,
+      "sleep_performance": 85,
+      "strain": 9.5,
+      "avg_hr": 57,
+      "max_hr": 176,
+      "kilojoules": 9484.585
+    },
+    {
+      "date": "2026-01-14",
+      "recovery_score": 69,
+      "hrv_ms": 59,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 98.52408,
+      "sleep_performance": 85,
+      "strain": 12.6,
+      "avg_hr": 63,
+      "max_hr": 164,
+      "kilojoules": 10803.471
+    },
+    {
+      "date": "2026-01-15",
+      "strain": 12.7,
+      "avg_hr": 75,
+      "max_hr": 183,
+      "kilojoules": 9787.49
+    },
+    {
+      "date": "2026-01-16",
+      "recovery_score": 73,
+      "hrv_ms": 56,
+      "rhr_bpm": 53,
+      "sleep_hours": 5.8,
+      "sleep_efficiency": 99.13258,
+      "sleep_performance": 79,
+      "strain": 6.8,
+      "avg_hr": 59,
+      "max_hr": 136,
+      "kilojoules": 8269.158
+    },
+    {
+      "date": "2026-01-17",
+      "recovery_score": 83,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 95.08418,
+      "sleep_performance": 84,
+      "strain": 10.7,
+      "avg_hr": 66,
+      "max_hr": 155,
+      "kilojoules": 9976.717
+    },
+    {
+      "date": "2026-01-18",
+      "recovery_score": 86,
+      "hrv_ms": 59,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 98.95151,
+      "sleep_performance": 95,
+      "strain": 6.4,
+      "avg_hr": 63,
+      "max_hr": 154,
+      "kilojoules": 8087.8545
+    },
+    {
+      "date": "2026-01-19",
+      "recovery_score": 98,
+      "hrv_ms": 73,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 92.341324,
+      "sleep_performance": 82,
+      "strain": 3.9,
+      "avg_hr": 58,
+      "max_hr": 108,
+      "kilojoules": 8072.0938
+    },
+    {
+      "date": "2026-01-20",
+      "recovery_score": 70,
+      "hrv_ms": 55,
+      "rhr_bpm": 53,
+      "sleep_hours": 9.6,
+      "sleep_efficiency": 85.88058,
+      "sleep_performance": 83,
+      "strain": 6.1,
+      "avg_hr": 65,
+      "max_hr": 139,
+      "kilojoules": 8353.796
+    },
+    {
+      "date": "2026-01-21",
+      "recovery_score": 44,
+      "hrv_ms": 43,
+      "rhr_bpm": 61,
+      "sleep_hours": 11.4,
+      "sleep_efficiency": 84.238686,
+      "sleep_performance": 76,
+      "strain": 4.2,
+      "avg_hr": 64,
+      "max_hr": 110,
+      "kilojoules": 8616.676
+    },
+    {
+      "date": "2026-01-22",
+      "recovery_score": 47,
+      "hrv_ms": 45,
+      "rhr_bpm": 55,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 98.39046,
+      "sleep_performance": 86,
+      "strain": 4,
+      "avg_hr": 61,
+      "max_hr": 108,
+      "kilojoules": 7837.776
+    },
+    {
+      "date": "2026-01-23",
+      "recovery_score": 58,
+      "hrv_ms": 52,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 97.39658,
+      "sleep_performance": 88,
+      "strain": 6.6,
+      "avg_hr": 58,
+      "max_hr": 139,
+      "kilojoules": 8805.667
+    },
+    {
+      "date": "2026-01-24",
+      "recovery_score": 62,
+      "hrv_ms": 53,
+      "rhr_bpm": 51,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 88.4808,
+      "sleep_performance": 87,
+      "strain": 4.4,
+      "avg_hr": 58,
+      "max_hr": 125,
+      "kilojoules": 8078.303
+    },
+    {
+      "date": "2026-01-25",
+      "recovery_score": 90,
+      "hrv_ms": 64,
+      "rhr_bpm": 44,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 88.61836,
+      "sleep_performance": 94,
+      "strain": 7.3,
+      "avg_hr": 60,
+      "max_hr": 156,
+      "kilojoules": 9057.137
+    },
+    {
+      "date": "2026-01-26",
+      "recovery_score": 65,
+      "hrv_ms": 53,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 91.624466,
+      "sleep_performance": 91,
+      "strain": 5.1,
+      "avg_hr": 56,
+      "max_hr": 157,
+      "kilojoules": 8799.679
+    },
+    {
+      "date": "2026-01-27",
+      "recovery_score": 66,
+      "hrv_ms": 56,
+      "rhr_bpm": 49,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 98.23923,
+      "sleep_performance": 82,
+      "strain": 6.6,
+      "avg_hr": 55,
+      "max_hr": 166,
+      "kilojoules": 10915.255
+    },
+    {
+      "date": "2026-01-28",
+      "strain": 8,
+      "avg_hr": 64,
+      "max_hr": 141,
+      "kilojoules": 7037.8965
+    },
+    {
+      "date": "2026-01-29",
+      "recovery_score": 85,
+      "hrv_ms": 65,
+      "rhr_bpm": 56,
+      "sleep_hours": 5.9,
+      "sleep_efficiency": 98.86998,
+      "sleep_performance": 81,
+      "strain": 4.2,
+      "avg_hr": 61,
+      "max_hr": 127,
+      "kilojoules": 7612.908
+    },
+    {
+      "date": "2026-01-30",
+      "recovery_score": 88,
+      "hrv_ms": 64,
+      "rhr_bpm": 44,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 94.41741,
+      "sleep_performance": 84,
+      "strain": 7.1,
+      "avg_hr": 56,
+      "max_hr": 141,
+      "kilojoules": 8893.829
+    },
+    {
+      "date": "2026-01-31",
+      "recovery_score": 75,
+      "hrv_ms": 57,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 97.00463,
+      "sleep_performance": 92,
+      "strain": 5.5,
+      "avg_hr": 59,
+      "max_hr": 130,
+      "kilojoules": 8966.16
+    },
+    {
+      "date": "2026-02-01",
+      "recovery_score": 92,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "sleep_hours": 8,
+      "sleep_efficiency": 89.58688,
+      "sleep_performance": 84,
+      "strain": 12.1,
+      "avg_hr": 63,
+      "max_hr": 178,
+      "kilojoules": 9807.065
+    },
+    {
+      "date": "2026-02-02",
+      "recovery_score": 69,
+      "hrv_ms": 54,
+      "rhr_bpm": 49,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 93.785385,
+      "sleep_performance": 89,
+      "strain": 14.8,
+      "avg_hr": 70,
+      "max_hr": 173,
+      "kilojoules": 12307.351
+    },
+    {
+      "date": "2026-02-03",
+      "recovery_score": 85,
+      "hrv_ms": 62,
+      "rhr_bpm": 54,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 96.43835,
+      "sleep_performance": 88,
+      "strain": 11.4,
+      "avg_hr": 67,
+      "max_hr": 170,
+      "kilojoules": 10615.168
+    },
+    {
+      "date": "2026-02-04",
+      "recovery_score": 75,
+      "hrv_ms": 59,
+      "rhr_bpm": 52,
+      "sleep_hours": 6.2,
+      "sleep_efficiency": 98.10421,
+      "sleep_performance": 80,
+      "strain": 4.3,
+      "avg_hr": 58,
+      "max_hr": 121,
+      "kilojoules": 8501.809
+    },
+    {
+      "date": "2026-02-05",
+      "recovery_score": 45,
+      "hrv_ms": 53,
+      "rhr_bpm": 57,
+      "sleep_hours": 6.1,
+      "sleep_efficiency": 97.69366,
+      "sleep_performance": 79,
+      "strain": 4.6,
+      "avg_hr": 60,
+      "max_hr": 142,
+      "kilojoules": 7806.1865
+    },
+    {
+      "date": "2026-02-06",
+      "recovery_score": 87,
+      "hrv_ms": 66,
+      "rhr_bpm": 45,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 90.24526,
+      "sleep_performance": 84,
+      "strain": 17.1,
+      "avg_hr": 67,
+      "max_hr": 186,
+      "kilojoules": 11956.478
+    },
+    {
+      "date": "2026-02-07",
+      "recovery_score": 47,
+      "hrv_ms": 51,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 97.24962,
+      "sleep_performance": 83,
+      "strain": 12.5,
+      "avg_hr": 71,
+      "max_hr": 147,
+      "kilojoules": 11164.934
+    },
+    {
+      "date": "2026-02-08",
+      "recovery_score": 57,
+      "hrv_ms": 55,
+      "rhr_bpm": 53,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 79.34603,
+      "sleep_performance": 73,
+      "strain": 8,
+      "avg_hr": 67,
+      "max_hr": 152,
+      "kilojoules": 9664.88
+    },
+    {
+      "date": "2026-02-09",
+      "recovery_score": 87,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "sleep_hours": 6.1,
+      "sleep_efficiency": 96.68973,
+      "sleep_performance": 76,
+      "strain": 4,
+      "avg_hr": 57,
+      "max_hr": 112,
+      "kilojoules": 7704.446
+    },
+    {
+      "date": "2026-02-10",
+      "recovery_score": 44,
+      "hrv_ms": 49,
+      "rhr_bpm": 51,
+      "sleep_hours": 6.1,
+      "sleep_efficiency": 98.76092,
+      "sleep_performance": 77,
+      "strain": 4.2,
+      "avg_hr": 54,
+      "max_hr": 114,
+      "kilojoules": 8286.045
+    },
+    {
+      "date": "2026-02-11",
+      "recovery_score": 21,
+      "hrv_ms": 71,
+      "rhr_bpm": 45,
+      "sleep_hours": 2.4,
+      "sleep_efficiency": 99.30495,
+      "sleep_performance": 31,
+      "strain": 4.5,
+      "avg_hr": 59,
+      "max_hr": 124,
+      "kilojoules": 7051.2163
+    },
+    {
+      "date": "2026-02-12",
+      "recovery_score": 98,
+      "hrv_ms": 72,
+      "rhr_bpm": 43,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 99.52099,
+      "sleep_performance": 80,
+      "strain": 11.9,
+      "avg_hr": 65,
+      "max_hr": 192,
+      "kilojoules": 10188.223
+    },
+    {
+      "date": "2026-02-13",
+      "recovery_score": 90,
+      "hrv_ms": 65,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.9,
+      "sleep_efficiency": 95.29928,
+      "sleep_performance": 83,
+      "strain": 15.7,
+      "avg_hr": 70,
+      "max_hr": 184,
+      "kilojoules": 11959.915
+    },
+    {
+      "date": "2026-02-14",
+      "recovery_score": 67,
+      "hrv_ms": 54,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 89.48959,
+      "sleep_performance": 80,
+      "strain": 16.7,
+      "avg_hr": 75,
+      "max_hr": 187,
+      "kilojoules": 13894.282
+    },
+    {
+      "date": "2026-02-15",
+      "recovery_score": 67,
+      "hrv_ms": 54,
+      "rhr_bpm": 54,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 96.45009,
+      "sleep_performance": 83,
+      "strain": 18.8,
+      "avg_hr": 78,
+      "max_hr": 195,
+      "kilojoules": 16979.082
+    },
+    {
+      "date": "2026-02-16",
+      "recovery_score": 66,
+      "hrv_ms": 55,
+      "rhr_bpm": 54,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 84.31805,
+      "sleep_performance": 76,
+      "strain": 17.7,
+      "avg_hr": 81,
+      "max_hr": 183,
+      "kilojoules": 14963.777
+    },
+    {
+      "date": "2026-02-17",
+      "recovery_score": 15,
+      "hrv_ms": 54,
+      "rhr_bpm": 55,
+      "sleep_hours": 2.8,
+      "sleep_efficiency": 98.197556,
+      "sleep_performance": 32,
+      "strain": 8.3,
+      "avg_hr": 67,
+      "max_hr": 178,
+      "kilojoules": 9713.129
+    },
+    {
+      "date": "2026-02-18",
+      "recovery_score": 90,
+      "hrv_ms": 65,
+      "rhr_bpm": 55,
+      "sleep_hours": 7,
+      "sleep_efficiency": 93.76729,
+      "sleep_performance": 75,
+      "strain": 13.3,
+      "avg_hr": 70,
+      "max_hr": 168,
+      "kilojoules": 11337.585
+    },
+    {
+      "date": "2026-02-19",
+      "recovery_score": 70,
+      "hrv_ms": 54,
+      "rhr_bpm": 53,
+      "sleep_hours": 7.1,
+      "sleep_efficiency": 96.102844,
+      "sleep_performance": 79,
+      "strain": 4.3,
+      "avg_hr": 60,
+      "max_hr": 125,
+      "kilojoules": 8070.2793
+    },
+    {
+      "date": "2026-02-20",
+      "recovery_score": 92,
+      "hrv_ms": 64,
+      "rhr_bpm": 48,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 94.33678,
+      "sleep_performance": 82,
+      "strain": 8,
+      "avg_hr": 61,
+      "max_hr": 156,
+      "kilojoules": 9144.158
+    },
+    {
+      "date": "2026-02-21",
+      "recovery_score": 83,
+      "hrv_ms": 59,
+      "rhr_bpm": 52,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 92.22006,
+      "sleep_performance": 86,
+      "strain": 5.7,
+      "avg_hr": 65,
+      "max_hr": 131,
+      "kilojoules": 8441.093
+    },
+    {
+      "date": "2026-02-22",
+      "recovery_score": 98,
+      "hrv_ms": 66,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 97.877975,
+      "sleep_performance": 94,
+      "strain": 4.7,
+      "avg_hr": 61,
+      "max_hr": 124,
+      "kilojoules": 9417.348
+    },
+    {
+      "date": "2026-02-23",
+      "strain": 4.8,
+      "avg_hr": 64,
+      "max_hr": 125,
+      "kilojoules": 7220.4297
+    },
+    {
+      "date": "2026-02-24",
+      "recovery_score": 76,
+      "hrv_ms": 57,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 97.19471,
+      "sleep_performance": 92,
+      "strain": 4.7,
+      "avg_hr": 53,
+      "max_hr": 140,
+      "kilojoules": 7944.82
+    },
+    {
+      "date": "2026-02-25",
+      "recovery_score": 88,
+      "hrv_ms": 62,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 99.31981,
+      "sleep_performance": 81,
+      "strain": 4.4,
+      "avg_hr": 57,
+      "max_hr": 123,
+      "kilojoules": 8307.178
+    },
+    {
+      "date": "2026-02-26",
+      "recovery_score": 72,
+      "hrv_ms": 55,
+      "rhr_bpm": 49,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 97.07985,
+      "sleep_performance": 87,
+      "strain": 4,
+      "avg_hr": 57,
+      "max_hr": 116,
+      "kilojoules": 7595.226
+    },
+    {
+      "date": "2026-02-27",
+      "recovery_score": 77,
+      "hrv_ms": 57,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 97.77358,
+      "sleep_performance": 85,
+      "strain": 17.9,
+      "avg_hr": 64,
+      "max_hr": 193,
+      "kilojoules": 13147.743
+    },
+    {
+      "date": "2026-02-28",
+      "recovery_score": 77,
+      "hrv_ms": 57,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 97.44774,
+      "sleep_performance": 84,
+      "strain": 5.1,
+      "avg_hr": 63,
+      "max_hr": 121,
+      "kilojoules": 7914.2954
+    },
+    {
+      "date": "2026-03-01",
+      "recovery_score": 84,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "sleep_hours": 9,
+      "sleep_efficiency": 96.19583,
+      "sleep_performance": 92,
+      "strain": 3.1,
+      "avg_hr": 55,
+      "max_hr": 112,
+      "kilojoules": 8258.247
+    },
+    {
+      "date": "2026-03-02",
+      "recovery_score": 81,
+      "hrv_ms": 59,
+      "rhr_bpm": 47,
+      "sleep_hours": 7,
+      "sleep_efficiency": 98.55953,
+      "sleep_performance": 87,
+      "strain": 12.7,
+      "avg_hr": 57,
+      "max_hr": 164,
+      "kilojoules": 9518.729
+    },
+    {
+      "date": "2026-03-03",
+      "recovery_score": 84,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "sleep_hours": 6.3,
+      "sleep_efficiency": 97.75114,
+      "sleep_performance": 80,
+      "strain": 11.5,
+      "avg_hr": 56,
+      "max_hr": 173,
+      "kilojoules": 8303.931
+    },
+    {
+      "date": "2026-03-04",
+      "recovery_score": 37,
+      "hrv_ms": 50,
+      "rhr_bpm": 51,
+      "sleep_hours": 5.4,
+      "sleep_efficiency": 97.99076,
+      "sleep_performance": 69,
+      "strain": 17.1,
+      "avg_hr": 71,
+      "max_hr": 197,
+      "kilojoules": 11031.6045
+    },
+    {
+      "date": "2026-03-05",
+      "recovery_score": 22,
+      "hrv_ms": 42,
+      "rhr_bpm": 53,
+      "sleep_hours": 5.1,
+      "sleep_efficiency": 98.036095,
+      "sleep_performance": 52,
+      "strain": 4.8,
+      "avg_hr": 59,
+      "max_hr": 121,
+      "kilojoules": 8683.77
+    },
+    {
+      "date": "2026-03-06",
+      "recovery_score": 62,
+      "hrv_ms": 55,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 96.670654,
+      "sleep_performance": 79,
+      "strain": 10.9,
+      "avg_hr": 63,
+      "max_hr": 164,
+      "kilojoules": 9853.964
+    },
+    {
+      "date": "2026-03-07",
+      "recovery_score": 73,
+      "hrv_ms": 58,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 96.509674,
+      "sleep_performance": 81,
+      "strain": 18.7,
+      "avg_hr": 75,
+      "max_hr": 193,
+      "kilojoules": 16659.926
+    },
+    {
+      "date": "2026-03-08",
+      "recovery_score": 56,
+      "hrv_ms": 53,
+      "rhr_bpm": 48,
+      "sleep_hours": 8.1,
+      "sleep_efficiency": 99.28019,
+      "sleep_performance": 83,
+      "strain": 17.5,
+      "avg_hr": 74,
+      "max_hr": 174,
+      "kilojoules": 14430.639
+    },
+    {
+      "date": "2026-03-09",
+      "recovery_score": 34,
+      "hrv_ms": 41,
+      "rhr_bpm": 48,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 96.58494,
+      "sleep_performance": 83,
+      "strain": 17.7,
+      "avg_hr": 75,
+      "max_hr": 179,
+      "kilojoules": 15009.845
+    },
+    {
+      "date": "2026-03-10",
+      "recovery_score": 37,
+      "hrv_ms": 57,
+      "rhr_bpm": 58,
+      "sleep_hours": 4.5,
+      "sleep_efficiency": 98.51416,
+      "sleep_performance": 46,
+      "strain": 4.3,
+      "avg_hr": 63,
+      "max_hr": 120,
+      "kilojoules": 6296.236
+    },
+    {
+      "date": "2026-03-11",
+      "recovery_score": 56,
+      "hrv_ms": 51,
+      "rhr_bpm": 51,
+      "sleep_hours": 10.2,
+      "sleep_efficiency": 84.09262,
+      "sleep_performance": 73,
+      "strain": 4.1,
+      "avg_hr": 59,
+      "max_hr": 117,
+      "kilojoules": 8818.834
+    },
+    {
+      "date": "2026-03-12",
+      "recovery_score": 53,
+      "hrv_ms": 50,
+      "rhr_bpm": 50,
+      "sleep_hours": 7,
+      "sleep_efficiency": 97.493904,
+      "sleep_performance": 80,
+      "strain": 17,
+      "avg_hr": 64,
+      "max_hr": 192,
+      "kilojoules": 11866.038
+    },
+    {
+      "date": "2026-03-13",
+      "recovery_score": 56,
+      "hrv_ms": 50,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 94.80444,
+      "sleep_performance": 79,
+      "strain": 4.6,
+      "avg_hr": 57,
+      "max_hr": 136,
+      "kilojoules": 8125.6787
+    },
+    {
+      "date": "2026-03-14",
+      "recovery_score": 56,
+      "hrv_ms": 49,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 93.352486,
+      "sleep_performance": 82,
+      "strain": 12.5,
+      "avg_hr": 71,
+      "max_hr": 172,
+      "kilojoules": 10071.752
+    },
+    {
+      "date": "2026-03-15",
+      "recovery_score": 56,
+      "hrv_ms": 51,
+      "rhr_bpm": 59,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 96.1892,
+      "sleep_performance": 84,
+      "strain": 4.3,
+      "avg_hr": 63,
+      "max_hr": 122,
+      "kilojoules": 8523.098
+    },
+    {
+      "date": "2026-03-16",
+      "recovery_score": 80,
+      "hrv_ms": 56,
+      "rhr_bpm": 52,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 96.97787,
+      "sleep_performance": 83,
+      "strain": 18.2,
+      "avg_hr": 70,
+      "max_hr": 192,
+      "kilojoules": 11867.662
+    },
+    {
+      "date": "2026-03-17",
+      "recovery_score": 83,
+      "hrv_ms": 58,
+      "rhr_bpm": 55,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 95.05971,
+      "sleep_performance": 85,
+      "strain": 5.1,
+      "avg_hr": 59,
+      "max_hr": 132,
+      "kilojoules": 8730.942
+    },
+    {
+      "date": "2026-03-18",
+      "recovery_score": 67,
+      "hrv_ms": 56,
+      "rhr_bpm": 48,
+      "sleep_hours": 5,
+      "sleep_efficiency": 95.17488,
+      "sleep_performance": 67,
+      "strain": 4,
+      "avg_hr": 58,
+      "max_hr": 111,
+      "kilojoules": 8299.949
+    },
+    {
+      "date": "2026-03-19",
+      "recovery_score": 58,
+      "hrv_ms": 51,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.1,
+      "sleep_efficiency": 98.46457,
+      "sleep_performance": 80,
+      "strain": 13.2,
+      "avg_hr": 61,
+      "max_hr": 182,
+      "kilojoules": 9623.042
+    },
+    {
+      "date": "2026-03-20",
+      "recovery_score": 66,
+      "hrv_ms": 53,
+      "rhr_bpm": 51,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 93.59041,
+      "sleep_performance": 83,
+      "strain": 11.8,
+      "avg_hr": 64,
+      "max_hr": 172,
+      "kilojoules": 10200.119
+    },
+    {
+      "date": "2026-03-21",
+      "recovery_score": 78,
+      "hrv_ms": 56,
+      "rhr_bpm": 52,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 96.2485,
+      "sleep_performance": 87,
+      "strain": 4.8,
+      "avg_hr": 61,
+      "max_hr": 128,
+      "kilojoules": 8272.72
+    },
+    {
+      "date": "2026-03-22",
+      "recovery_score": 83,
+      "hrv_ms": 59,
+      "rhr_bpm": 47,
+      "sleep_hours": 8,
+      "sleep_efficiency": 93.86633,
+      "sleep_performance": 91,
+      "strain": 4.8,
+      "avg_hr": 60,
+      "max_hr": 134,
+      "kilojoules": 8140.3945
+    },
+    {
+      "date": "2026-03-23",
+      "recovery_score": 74,
+      "hrv_ms": 56,
+      "rhr_bpm": 47,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 96.551674,
+      "sleep_performance": 83,
+      "strain": 14.6,
+      "avg_hr": 62,
+      "max_hr": 164,
+      "kilojoules": 10786.195
+    },
+    {
+      "date": "2026-03-24",
+      "recovery_score": 62,
+      "hrv_ms": 56,
+      "rhr_bpm": 54,
+      "sleep_hours": 5.6,
+      "sleep_efficiency": 98.22494,
+      "sleep_performance": 73,
+      "strain": 19.1,
+      "avg_hr": 70,
+      "max_hr": 198,
+      "kilojoules": 13501.255
+    },
+    {
+      "date": "2026-03-25",
+      "recovery_score": 55,
+      "hrv_ms": 53,
+      "rhr_bpm": 52,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 98.28946,
+      "sleep_performance": 77,
+      "strain": 1.5,
+      "avg_hr": 55,
+      "max_hr": 110,
+      "kilojoules": 8308.936
+    },
+    {
+      "date": "2026-03-26",
+      "recovery_score": 81,
+      "hrv_ms": 58,
+      "rhr_bpm": 47,
+      "sleep_hours": 6.9,
+      "sleep_efficiency": 95.14925,
+      "sleep_performance": 79,
+      "strain": 14.1,
+      "avg_hr": 58,
+      "max_hr": 180,
+      "kilojoules": 9673.929
+    },
+    {
+      "date": "2026-03-27",
+      "recovery_score": 94,
+      "hrv_ms": 64,
+      "rhr_bpm": 48,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 98.75332,
+      "sleep_performance": 84,
+      "strain": 5.6,
+      "avg_hr": 58,
+      "max_hr": 152,
+      "kilojoules": 8422.302
+    },
+    {
+      "date": "2026-03-28",
+      "recovery_score": 66,
+      "hrv_ms": 55,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 96.81069,
+      "sleep_performance": 85,
+      "strain": 4.4,
+      "avg_hr": 62,
+      "max_hr": 136,
+      "kilojoules": 8465.105
+    },
+    {
+      "date": "2026-03-29",
+      "recovery_score": 69,
+      "hrv_ms": 56,
+      "rhr_bpm": 59,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 84.30112,
+      "sleep_performance": 73,
+      "strain": 4.6,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 7287.761
+    },
+    {
+      "date": "2026-03-30",
+      "recovery_score": 97,
+      "hrv_ms": 65,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 97.91529,
+      "sleep_performance": 80,
+      "strain": 1,
+      "avg_hr": 53,
+      "max_hr": 101,
+      "kilojoules": 8310.422
+    },
+    {
+      "date": "2026-03-31",
+      "recovery_score": 64,
+      "hrv_ms": 54,
+      "rhr_bpm": 48,
+      "sleep_hours": 6.5,
+      "sleep_efficiency": 97.156746,
+      "sleep_performance": 79,
+      "strain": 14.3,
+      "avg_hr": 62,
+      "max_hr": 171,
+      "kilojoules": 10314.122
+    },
+    {
+      "date": "2026-04-01",
+      "recovery_score": 81,
+      "hrv_ms": 59,
+      "rhr_bpm": 48,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 93.55845,
+      "sleep_performance": 81,
+      "strain": 7.2,
+      "avg_hr": 62,
+      "max_hr": 139,
+      "kilojoules": 8979.51
+    },
+    {
+      "date": "2026-04-02",
+      "recovery_score": 85,
+      "hrv_ms": 61,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 95.22912,
+      "sleep_performance": 80,
+      "strain": 6,
+      "avg_hr": 62,
+      "max_hr": 140,
+      "kilojoules": 8030.7817
+    },
+    {
+      "date": "2026-04-03",
+      "recovery_score": 65,
+      "hrv_ms": 57,
+      "rhr_bpm": 62,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 87.57453,
+      "sleep_performance": 73,
+      "strain": 20.5,
+      "avg_hr": 79,
+      "max_hr": 191,
+      "kilojoules": 16805.865
+    },
+    {
+      "date": "2026-04-04",
+      "recovery_score": 59,
+      "hrv_ms": 54,
+      "rhr_bpm": 53,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 96.903595,
+      "sleep_performance": 85,
+      "strain": 8.4,
+      "avg_hr": 67,
+      "max_hr": 157,
+      "kilojoules": 9120.002
+    },
+    {
+      "date": "2026-04-05",
+      "recovery_score": 94,
+      "hrv_ms": 65,
+      "rhr_bpm": 47,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 94.95288,
+      "sleep_performance": 88,
+      "strain": 8.1,
+      "avg_hr": 62,
+      "max_hr": 153,
+      "kilojoules": 8878.991
+    },
+    {
+      "date": "2026-04-06",
+      "recovery_score": 72,
+      "hrv_ms": 64,
+      "rhr_bpm": 48,
+      "sleep_hours": 5.3,
+      "sleep_efficiency": 94.773445,
+      "sleep_performance": 65,
+      "strain": 3.4,
+      "avg_hr": 52,
+      "max_hr": 141,
+      "kilojoules": 8147.484
+    },
+    {
+      "date": "2026-04-07",
+      "recovery_score": 82,
+      "hrv_ms": 65,
+      "rhr_bpm": 45,
+      "sleep_hours": 6.2,
+      "sleep_efficiency": 97.95779,
+      "sleep_performance": 75,
+      "strain": 14.6,
+      "avg_hr": 59,
+      "max_hr": 187,
+      "kilojoules": 9697.864
+    },
+    {
+      "date": "2026-04-08",
+      "recovery_score": 74,
+      "hrv_ms": 61,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 97.82906,
+      "sleep_performance": 82,
+      "strain": 16.5,
+      "avg_hr": 61,
+      "max_hr": 197,
+      "kilojoules": 11815.815
+    },
+    {
+      "date": "2026-04-09",
+      "sleep_hours": 7.1,
+      "sleep_efficiency": 83.11319,
+      "sleep_performance": 72,
+      "strain": 0.7,
+      "avg_hr": 52,
+      "max_hr": 98,
+      "kilojoules": 4622.2646
+    },
+    {
+      "date": "2026-04-10",
+      "recovery_score": 61,
+      "hrv_ms": 59,
+      "rhr_bpm": 55,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 95.95085,
+      "sleep_performance": 76,
+      "strain": 14.1,
+      "avg_hr": 60,
+      "max_hr": 182,
+      "kilojoules": 10218.684
+    },
+    {
+      "date": "2026-04-11",
+      "recovery_score": 58,
+      "hrv_ms": 57,
+      "rhr_bpm": 53,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 98.542915,
+      "sleep_performance": 83,
+      "strain": 4.1,
+      "avg_hr": 58,
+      "max_hr": 127,
+      "kilojoules": 8849.802
+    },
+    {
+      "date": "2026-04-12",
+      "recovery_score": 53,
+      "hrv_ms": 54,
+      "rhr_bpm": 53,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 94.46156,
+      "sleep_performance": 83,
+      "strain": 7,
+      "avg_hr": 62,
+      "max_hr": 149,
+      "kilojoules": 8611.235
+    },
+    {
+      "date": "2026-04-13",
+      "recovery_score": 77,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "sleep_hours": 6,
+      "sleep_efficiency": 98.4606,
+      "sleep_performance": 78,
+      "strain": 1.7,
+      "avg_hr": 54,
+      "max_hr": 103,
+      "kilojoules": 8086.267
+    },
+    {
+      "date": "2026-04-14",
+      "recovery_score": 48,
+      "hrv_ms": 52,
+      "rhr_bpm": 49,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 99.37514,
+      "sleep_performance": 82,
+      "strain": 14.2,
+      "avg_hr": 61,
+      "max_hr": 187,
+      "kilojoules": 10155.598
+    },
+    {
+      "date": "2026-04-15",
+      "recovery_score": 72,
+      "hrv_ms": 59,
+      "rhr_bpm": 47,
+      "sleep_hours": 7,
+      "sleep_efficiency": 98.68947,
+      "sleep_performance": 82,
+      "strain": 12.9,
+      "avg_hr": 63,
+      "max_hr": 184,
+      "kilojoules": 10090.851
+    },
+    {
+      "date": "2026-04-16",
+      "recovery_score": 58,
+      "hrv_ms": 55,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 96.692184,
+      "sleep_performance": 83,
+      "strain": 13.2,
+      "avg_hr": 60,
+      "max_hr": 175,
+      "kilojoules": 10216.754
+    },
+    {
+      "date": "2026-04-17",
+      "recovery_score": 45,
+      "hrv_ms": 49,
+      "rhr_bpm": 52,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 95.992004,
+      "sleep_performance": 85,
+      "strain": 15.2,
+      "avg_hr": 69,
+      "max_hr": 177,
+      "kilojoules": 12547.864
+    },
+    {
+      "date": "2026-04-18",
+      "recovery_score": 79,
+      "hrv_ms": 59,
+      "rhr_bpm": 49,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 94.40462,
+      "sleep_performance": 85,
+      "strain": 4,
+      "avg_hr": 56,
+      "max_hr": 111,
+      "kilojoules": 9063.617
+    },
+    {
+      "date": "2026-04-19",
+      "recovery_score": 96,
+      "hrv_ms": 77,
+      "rhr_bpm": 42,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 94.27443,
+      "sleep_performance": 78,
+      "strain": 3.9,
+      "avg_hr": 53,
+      "max_hr": 110,
+      "kilojoules": 7291.796
+    },
+    {
+      "date": "2026-04-20",
+      "recovery_score": 86,
+      "hrv_ms": 65,
+      "rhr_bpm": 44,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 95.066734,
+      "sleep_performance": 78,
+      "strain": 2.3,
+      "avg_hr": 55,
+      "max_hr": 105,
+      "kilojoules": 8309.506
+    },
+    {
+      "date": "2026-04-21",
+      "recovery_score": 44,
+      "hrv_ms": 47,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 97.19215,
+      "sleep_performance": 83,
+      "strain": 4.9,
+      "avg_hr": 58,
+      "max_hr": 132,
+      "kilojoules": 8244.848
+    },
+    {
+      "date": "2026-04-22",
+      "recovery_score": 56,
+      "hrv_ms": 52,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 96.212296,
+      "sleep_performance": 85,
+      "strain": 4.4,
+      "avg_hr": 55,
+      "max_hr": 136,
+      "kilojoules": 8088.124
+    },
+    {
+      "date": "2026-04-23",
+      "recovery_score": 53,
+      "hrv_ms": 50,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 97.04286,
+      "sleep_performance": 89,
+      "strain": 3.5,
+      "avg_hr": 53,
+      "max_hr": 115,
+      "kilojoules": 8200.005
+    },
+    {
+      "date": "2026-04-24",
+      "recovery_score": 46,
+      "hrv_ms": 53,
+      "rhr_bpm": 51,
+      "sleep_hours": 4.6,
+      "sleep_efficiency": 97.653175,
+      "sleep_performance": 62,
+      "strain": 11.5,
+      "avg_hr": 66,
+      "max_hr": 164,
+      "kilojoules": 10002.517
+    },
+    {
+      "date": "2026-04-25",
+      "recovery_score": 67,
+      "hrv_ms": 53,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.9,
+      "sleep_efficiency": 96.358154,
+      "sleep_performance": 83,
+      "strain": 10.3,
+      "avg_hr": 61,
+      "max_hr": 150,
+      "kilojoules": 10080.325
+    },
+    {
+      "date": "2026-04-26",
+      "recovery_score": 92,
+      "hrv_ms": 64,
+      "rhr_bpm": 44,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 94.47688,
+      "sleep_performance": 86,
+      "strain": 14.7,
+      "avg_hr": 66,
+      "max_hr": 165,
+      "kilojoules": 13039.418
+    },
+    {
+      "date": "2026-04-27",
+      "recovery_score": 63,
+      "hrv_ms": 57,
+      "rhr_bpm": 46,
+      "sleep_hours": 5.1,
+      "sleep_efficiency": 98.04493,
+      "sleep_performance": 67,
+      "strain": 4.1,
+      "avg_hr": 58,
+      "max_hr": 118,
+      "kilojoules": 7759.2383
+    },
+    {
+      "date": "2026-04-28",
+      "recovery_score": 42,
+      "hrv_ms": 46,
+      "rhr_bpm": 53,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 97.40065,
+      "sleep_performance": 84,
+      "strain": 9.8,
+      "avg_hr": 61,
+      "max_hr": 160,
+      "kilojoules": 9878.269
+    },
+    {
+      "date": "2026-04-29",
+      "recovery_score": 86,
+      "hrv_ms": 62,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 96.1326,
+      "sleep_performance": 85,
+      "strain": 11.2,
+      "avg_hr": 59,
+      "max_hr": 173,
+      "kilojoules": 9670.262
+    },
+    {
+      "date": "2026-04-30",
+      "recovery_score": 89,
+      "hrv_ms": 64,
+      "rhr_bpm": 49,
+      "sleep_hours": 7.3,
+      "sleep_efficiency": 94.8842,
+      "sleep_performance": 86,
+      "strain": 13.5,
+      "avg_hr": 63,
+      "max_hr": 178,
+      "kilojoules": 10636.151
+    },
+    {
+      "date": "2026-05-01",
+      "recovery_score": 63,
+      "hrv_ms": 57,
+      "rhr_bpm": 55,
+      "sleep_hours": 8.1,
+      "sleep_efficiency": 94.881584,
+      "sleep_performance": 87,
+      "strain": 7.3,
+      "avg_hr": 68,
+      "max_hr": 131,
+      "kilojoules": 8376.741
+    },
+    {
+      "date": "2026-05-02",
+      "recovery_score": 83,
+      "hrv_ms": 63,
+      "rhr_bpm": 54,
+      "sleep_hours": 9,
+      "sleep_efficiency": 91.32814,
+      "sleep_performance": 89,
+      "strain": 5.3,
+      "avg_hr": 62,
+      "max_hr": 144,
+      "kilojoules": 8226.754
+    },
+    {
+      "date": "2026-05-03",
+      "recovery_score": 77,
+      "hrv_ms": 62,
+      "rhr_bpm": 48,
+      "sleep_hours": 9.3,
+      "sleep_efficiency": 85.24978,
+      "sleep_performance": 85,
+      "strain": 5.8,
+      "avg_hr": 61,
+      "max_hr": 136,
+      "kilojoules": 9601.071
+    },
+    {
+      "date": "2026-05-04",
+      "recovery_score": 72,
+      "hrv_ms": 61,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.2,
+      "sleep_efficiency": 98.61278,
+      "sleep_performance": 79,
+      "strain": 1,
+      "avg_hr": 51,
+      "max_hr": 99,
+      "kilojoules": 7304.2935
+    },
+    {
+      "date": "2026-05-05",
+      "recovery_score": 91,
+      "hrv_ms": 71,
+      "rhr_bpm": 42,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 91.72785,
+      "sleep_performance": 83,
+      "strain": 4,
+      "avg_hr": 58,
+      "max_hr": 115,
+      "kilojoules": 8428.424
+    },
+    {
+      "date": "2026-05-06",
+      "recovery_score": 48,
+      "hrv_ms": 55,
+      "rhr_bpm": 54,
+      "sleep_hours": 6.4,
+      "sleep_efficiency": 97.53642,
+      "sleep_performance": 80,
+      "strain": 4.4,
+      "avg_hr": 59,
+      "max_hr": 136,
+      "kilojoules": 7855.357
+    },
+    {
+      "date": "2026-05-07",
+      "recovery_score": 69,
+      "hrv_ms": 61,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 88.44133,
+      "sleep_performance": 83,
+      "strain": 12.5,
+      "avg_hr": 58,
+      "max_hr": 171,
+      "kilojoules": 9926.196
+    },
+    {
+      "date": "2026-05-08",
+      "recovery_score": 58,
+      "hrv_ms": 57,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 95.23466,
+      "sleep_performance": 87,
+      "strain": 15,
+      "avg_hr": 61,
+      "max_hr": 181,
+      "kilojoules": 11003.401
+    },
+    {
+      "date": "2026-05-09",
+      "recovery_score": 68,
+      "hrv_ms": 59,
+      "rhr_bpm": 51,
+      "sleep_hours": 9.4,
+      "sleep_efficiency": 94.611206,
+      "sleep_performance": 92,
+      "strain": 4.3,
+      "avg_hr": 59,
+      "max_hr": 132,
+      "kilojoules": 8405.94
+    },
+    {
+      "date": "2026-05-10",
+      "recovery_score": 87,
+      "hrv_ms": 66,
+      "rhr_bpm": 44,
+      "sleep_hours": 8.9,
+      "sleep_efficiency": 96.330666,
+      "sleep_performance": 97,
+      "strain": 2.9,
+      "avg_hr": 55,
+      "max_hr": 113,
+      "kilojoules": 8363.549
+    },
+    {
+      "date": "2026-05-11",
+      "recovery_score": 73,
+      "hrv_ms": 61,
+      "rhr_bpm": 45,
+      "sleep_hours": 6.4,
+      "sleep_efficiency": 97.9297,
+      "sleep_performance": 82,
+      "strain": 1,
+      "avg_hr": 52,
+      "max_hr": 98,
+      "kilojoules": 8140.3843
+    },
+    {
+      "date": "2026-05-12",
+      "recovery_score": 84,
+      "hrv_ms": 65,
+      "rhr_bpm": 44,
+      "sleep_hours": 8,
+      "sleep_efficiency": 91.562,
+      "sleep_performance": 85,
+      "strain": 3.9,
+      "avg_hr": 54,
+      "max_hr": 109,
+      "kilojoules": 8146.3486
+    },
+    {
+      "date": "2026-05-13",
+      "recovery_score": 71,
+      "hrv_ms": 61,
+      "rhr_bpm": 44,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 98.2576,
+      "sleep_performance": 84,
+      "strain": 6.6,
+      "avg_hr": 56,
+      "max_hr": 168,
+      "kilojoules": 7744.9233
+    },
+    {
+      "date": "2026-05-14",
+      "recovery_score": 53,
+      "hrv_ms": 55,
+      "rhr_bpm": 47,
+      "sleep_hours": 10.1,
+      "sleep_efficiency": 93.8064,
+      "sleep_performance": 84,
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 136,
+      "kilojoules": 8892.35
+    },
+    {
+      "date": "2026-05-15",
+      "recovery_score": 65,
+      "hrv_ms": 60,
+      "rhr_bpm": 45,
+      "sleep_hours": 6.3,
+      "sleep_efficiency": 93.82201,
+      "sleep_performance": 82,
+      "strain": 20.5,
+      "avg_hr": 77,
+      "max_hr": 196,
+      "kilojoules": 16548.383
+    },
+    {
+      "date": "2026-05-16",
+      "recovery_score": 41,
+      "hrv_ms": 48,
+      "rhr_bpm": 53,
+      "sleep_hours": 9.5,
+      "sleep_efficiency": 97.27934,
+      "sleep_performance": 82,
+      "strain": 4,
+      "avg_hr": 57,
+      "max_hr": 119,
+      "kilojoules": 8706.897
+    },
+    {
+      "date": "2026-05-17",
+      "recovery_score": 89,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 94.88719,
+      "sleep_performance": 87,
+      "strain": 4.3,
+      "avg_hr": 56,
+      "max_hr": 119,
+      "kilojoules": 7796.7266
+    },
+    {
+      "date": "2026-05-18",
+      "recovery_score": 78,
+      "hrv_ms": 62,
+      "rhr_bpm": 46,
+      "sleep_hours": 10,
+      "sleep_efficiency": 82.54053,
+      "sleep_performance": 81,
+      "strain": 2.7,
+      "avg_hr": 53,
+      "max_hr": 112,
+      "kilojoules": 8475.963
+    },
+    {
+      "date": "2026-05-19",
+      "recovery_score": 52,
+      "hrv_ms": 54,
+      "rhr_bpm": 47,
+      "sleep_hours": 6,
+      "sleep_efficiency": 96.662346,
+      "sleep_performance": 80,
+      "strain": 20.7,
+      "avg_hr": 86,
+      "max_hr": 197,
+      "kilojoules": 24653.85
+    },
+    {
+      "date": "2026-05-20",
+      "recovery_score": 43,
+      "hrv_ms": 50,
+      "rhr_bpm": 56,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 96.7253,
+      "sleep_performance": 76,
+      "strain": 4.1,
+      "avg_hr": 57,
+      "max_hr": 131,
+      "kilojoules": 8633.305
+    },
+    {
+      "date": "2026-05-21",
+      "recovery_score": 62,
+      "hrv_ms": 54,
+      "rhr_bpm": 48,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 97.90392,
+      "sleep_performance": 83,
+      "strain": 4,
+      "avg_hr": 55,
+      "max_hr": 117,
+      "kilojoules": 8146.0845
+    },
+    {
+      "date": "2026-05-22",
+      "recovery_score": 40,
+      "hrv_ms": 50,
+      "rhr_bpm": 50,
+      "sleep_hours": 5,
+      "sleep_efficiency": 99.33591,
+      "sleep_performance": 67,
+      "strain": 12,
+      "avg_hr": 64,
+      "max_hr": 165,
+      "kilojoules": 10043.238
+    },
+    {
+      "date": "2026-05-23",
+      "recovery_score": 87,
+      "hrv_ms": 63,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 96.75482,
+      "sleep_performance": 82,
+      "strain": 13.7,
+      "avg_hr": 63,
+      "max_hr": 165,
+      "kilojoules": 11738.573
+    },
+    {
+      "date": "2026-05-24",
+      "recovery_score": 97,
+      "hrv_ms": 66,
+      "rhr_bpm": 43,
+      "sleep_hours": 9.3,
+      "sleep_efficiency": 99.18866,
+      "sleep_performance": 85,
+      "strain": 12.3,
+      "avg_hr": 62,
+      "max_hr": 152,
+      "kilojoules": 11437.996
+    },
+    {
+      "date": "2026-05-25",
+      "recovery_score": 89,
+      "hrv_ms": 65,
+      "rhr_bpm": 45,
+      "sleep_hours": 6.1,
+      "sleep_efficiency": 98.49507,
+      "sleep_performance": 81,
+      "strain": 14,
+      "avg_hr": 59,
+      "max_hr": 188,
+      "kilojoules": 10473.9
+    },
+    {
+      "date": "2026-05-26",
+      "recovery_score": 84,
+      "hrv_ms": 62,
+      "rhr_bpm": 48,
+      "sleep_hours": 9.3,
+      "sleep_efficiency": 96.75632,
+      "sleep_performance": 86,
+      "strain": 8.2,
+      "avg_hr": 60,
+      "max_hr": 150,
+      "kilojoules": 9601.147
+    },
+    {
+      "date": "2026-05-27",
+      "recovery_score": 87,
+      "hrv_ms": 67,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 91.629654,
+      "sleep_performance": 85,
+      "strain": 9.8,
+      "avg_hr": 55,
+      "max_hr": 174,
+      "kilojoules": 9092.126
+    },
+    {
+      "date": "2026-05-28",
+      "recovery_score": 68,
+      "hrv_ms": 61,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 98.23171,
+      "sleep_performance": 86,
+      "strain": 4.4,
+      "avg_hr": 55,
+      "max_hr": 129,
+      "kilojoules": 8002.9326
+    },
+    {
+      "date": "2026-05-29",
+      "recovery_score": 97,
+      "hrv_ms": 77,
+      "rhr_bpm": 40,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 97.34653,
+      "sleep_performance": 95,
+      "strain": 11.8,
+      "avg_hr": 60,
+      "max_hr": 173,
+      "kilojoules": 10338.936
+    },
+    {
+      "date": "2026-05-30",
+      "recovery_score": 56,
+      "hrv_ms": 58,
+      "rhr_bpm": 47,
+      "sleep_hours": 7.9,
+      "sleep_efficiency": 90.71734,
+      "sleep_performance": 92,
+      "strain": 5,
+      "avg_hr": 59,
+      "max_hr": 144,
+      "kilojoules": 8176.5967
+    },
+    {
+      "date": "2026-05-31",
+      "recovery_score": 87,
+      "hrv_ms": 68,
+      "rhr_bpm": 44,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 94.4974,
+      "sleep_performance": 94,
+      "strain": 4.3,
+      "avg_hr": 57,
+      "max_hr": 118,
+      "kilojoules": 8069.0605
+    },
+    {
+      "date": "2026-06-01",
+      "recovery_score": 62,
+      "hrv_ms": 60,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.2,
+      "sleep_efficiency": 91.39918,
+      "sleep_performance": 85,
+      "strain": 13.9,
+      "avg_hr": 67,
+      "max_hr": 160,
+      "kilojoules": 11698.826
+    },
+    {
+      "date": "2026-06-02",
+      "recovery_score": 88,
+      "hrv_ms": 67,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 89.149086,
+      "sleep_performance": 86,
+      "strain": 7.9,
+      "avg_hr": 67,
+      "max_hr": 131,
+      "kilojoules": 9562.66
+    },
+    {
+      "date": "2026-06-03",
+      "recovery_score": 48,
+      "hrv_ms": 55,
+      "rhr_bpm": 57,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 85.51214,
+      "sleep_performance": 69,
+      "strain": 5.2,
+      "avg_hr": 61,
+      "max_hr": 130,
+      "kilojoules": 7653.8237
+    },
+    {
+      "date": "2026-06-04",
+      "recovery_score": 92,
+      "hrv_ms": 69,
+      "rhr_bpm": 46,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 92.88668,
+      "sleep_performance": 85,
+      "strain": 12.5,
+      "avg_hr": 60,
+      "max_hr": 175,
+      "kilojoules": 10541.987
+    },
+    {
+      "date": "2026-06-05",
+      "recovery_score": 74,
+      "hrv_ms": 64,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.1,
+      "sleep_efficiency": 95.883766,
+      "sleep_performance": 89,
+      "strain": 15.5,
+      "avg_hr": 63,
+      "max_hr": 183,
+      "kilojoules": 11000.477
+    },
+    {
+      "date": "2026-06-06",
+      "recovery_score": 65,
+      "hrv_ms": 60,
+      "rhr_bpm": 49,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 93.12323,
+      "sleep_performance": 91,
+      "strain": 12.8,
+      "avg_hr": 63,
+      "max_hr": 181,
+      "kilojoules": 10516.598
+    },
+    {
+      "date": "2026-06-07",
+      "recovery_score": 72,
+      "hrv_ms": 63,
+      "rhr_bpm": 49,
+      "sleep_hours": 8.5,
+      "sleep_efficiency": 85.83855,
+      "sleep_performance": 82,
+      "strain": 6.9,
+      "avg_hr": 57,
+      "max_hr": 158,
+      "kilojoules": 8633.445
+    },
+    {
+      "date": "2026-06-08",
+      "recovery_score": 86,
+      "hrv_ms": 65,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 95.30731,
+      "sleep_performance": 93,
+      "strain": 14.1,
+      "avg_hr": 56,
+      "max_hr": 171,
+      "kilojoules": 10390.204
+    },
+    {
+      "date": "2026-06-09",
+      "recovery_score": 83,
+      "hrv_ms": 66,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 92.54868,
+      "sleep_performance": 97,
+      "strain": 8.1,
+      "avg_hr": 55,
+      "max_hr": 155,
+      "kilojoules": 9383.191
+    },
+    {
+      "date": "2026-06-10",
+      "recovery_score": 84,
+      "hrv_ms": 66,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 95.4063,
+      "sleep_performance": 95,
+      "strain": 8.1,
+      "avg_hr": 58,
+      "max_hr": 148,
+      "kilojoules": 9870.369
+    },
+    {
+      "date": "2026-06-11",
+      "recovery_score": 24,
+      "hrv_ms": 49,
+      "rhr_bpm": 48,
+      "sleep_hours": 3.6,
+      "sleep_efficiency": 95.35214,
+      "sleep_performance": 52,
+      "strain": 10.8,
+      "avg_hr": 65,
+      "max_hr": 162,
+      "kilojoules": 10135.461
+    },
+    {
+      "date": "2026-06-12",
+      "recovery_score": 83,
+      "hrv_ms": 66,
+      "rhr_bpm": 45,
+      "sleep_hours": 9.6,
+      "sleep_efficiency": 96.62044,
+      "sleep_performance": 82,
+      "strain": 7.8,
+      "avg_hr": 58,
+      "max_hr": 150,
+      "kilojoules": 9349.251
+    },
+    {
+      "date": "2026-06-13",
+      "recovery_score": 63,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "sleep_hours": 9.3,
+      "sleep_efficiency": 95.787636,
+      "sleep_performance": 88,
+      "strain": 11.5,
+      "avg_hr": 63,
+      "max_hr": 153,
+      "kilojoules": 11130.658
+    },
+    {
+      "date": "2026-06-14",
+      "recovery_score": 51,
+      "hrv_ms": 54,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 95.5685,
+      "sleep_performance": 82,
+      "strain": 10,
+      "avg_hr": 61,
+      "max_hr": 161,
+      "kilojoules": 9544.87
+    },
+    {
+      "date": "2026-06-15",
+      "recovery_score": 87,
+      "hrv_ms": 70,
+      "rhr_bpm": 43,
+      "sleep_hours": 6.6,
+      "sleep_efficiency": 98.73424,
+      "sleep_performance": 80,
+      "strain": 6.9,
+      "avg_hr": 55,
+      "max_hr": 142,
+      "kilojoules": 9222.516
+    },
+    {
+      "date": "2026-06-16",
+      "recovery_score": 86,
+      "hrv_ms": 68,
+      "rhr_bpm": 45,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 93.38976,
+      "sleep_performance": 89,
+      "strain": 15.3,
+      "avg_hr": 63,
+      "max_hr": 176,
+      "kilojoules": 11274.402
+    },
+    {
+      "date": "2026-06-17",
+      "recovery_score": 67,
+      "hrv_ms": 64,
+      "rhr_bpm": 48,
+      "sleep_hours": 7.1,
+      "sleep_efficiency": 93.26677,
+      "sleep_performance": 83,
+      "strain": 12.7,
+      "avg_hr": 59,
+      "max_hr": 180,
+      "kilojoules": 10102.645
+    },
+    {
+      "date": "2026-06-18",
+      "recovery_score": 73,
+      "hrv_ms": 64,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 95.07235,
+      "sleep_performance": 84,
+      "strain": 1.5,
+      "avg_hr": 50,
+      "max_hr": 94,
+      "kilojoules": 8885.469
+    },
+    {
+      "date": "2026-06-19",
+      "recovery_score": 95,
+      "hrv_ms": 81,
+      "rhr_bpm": 41,
+      "sleep_hours": 7,
+      "sleep_efficiency": 95.93271,
+      "sleep_performance": 83,
+      "strain": 4.1,
+      "avg_hr": 54,
+      "max_hr": 116,
+      "kilojoules": 8200.836
+    },
+    {
+      "date": "2026-06-20",
+      "recovery_score": 44,
+      "hrv_ms": 53,
+      "rhr_bpm": 52,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 95.87593,
+      "sleep_performance": 87,
+      "strain": 9.8,
+      "avg_hr": 64,
+      "max_hr": 150,
+      "kilojoules": 10526.375
+    },
+    {
+      "date": "2026-06-21",
+      "recovery_score": 50,
+      "hrv_ms": 55,
+      "rhr_bpm": 48,
+      "sleep_hours": 7.8,
+      "sleep_efficiency": 92.20361,
+      "sleep_performance": 81,
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 140,
+      "kilojoules": 7644.8438
+    },
+    {
+      "date": "2026-06-22",
+      "recovery_score": 93,
+      "hrv_ms": 73,
+      "rhr_bpm": 42,
+      "sleep_hours": 10,
+      "sleep_efficiency": 94.83935,
+      "sleep_performance": 86,
+      "strain": 9.3,
+      "avg_hr": 58,
+      "max_hr": 150,
+      "kilojoules": 10606.328
+    },
+    {
+      "date": "2026-06-23",
+      "recovery_score": 63,
+      "hrv_ms": 61,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.1,
+      "sleep_efficiency": 96.220276,
+      "sleep_performance": 85,
+      "strain": 15.9,
+      "avg_hr": 67,
+      "max_hr": 179,
+      "kilojoules": 12033.891
+    },
+    {
+      "date": "2026-06-24",
+      "recovery_score": 52,
+      "hrv_ms": 58,
+      "rhr_bpm": 50,
+      "sleep_hours": 7.2,
+      "sleep_efficiency": 94.879875,
+      "sleep_performance": 81,
+      "strain": 10.2,
+      "avg_hr": 63,
+      "max_hr": 162,
+      "kilojoules": 10312.542
+    },
+    {
+      "date": "2026-06-25",
+      "recovery_score": 75,
+      "hrv_ms": 66,
+      "rhr_bpm": 46,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 95.24373,
+      "sleep_performance": 85,
+      "strain": 14.4,
+      "avg_hr": 61,
+      "max_hr": 173,
+      "kilojoules": 11258.311
+    },
+    {
+      "date": "2026-06-26",
+      "recovery_score": 70,
+      "hrv_ms": 64,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 94.807205,
+      "sleep_performance": 85,
+      "strain": 6.5,
+      "avg_hr": 61,
+      "max_hr": 132,
+      "kilojoules": 9092.943
+    },
+    {
+      "date": "2026-06-27",
+      "recovery_score": 54,
+      "hrv_ms": 59,
+      "rhr_bpm": 51,
+      "sleep_hours": 8,
+      "sleep_efficiency": 90.0438,
+      "sleep_performance": 89,
+      "strain": 9.5,
+      "avg_hr": 63,
+      "max_hr": 179,
+      "kilojoules": 9681.895
+    },
+    {
+      "date": "2026-06-28",
+      "recovery_score": 51,
+      "hrv_ms": 60,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 93.1564,
+      "sleep_performance": 84,
+      "strain": 4.6,
+      "avg_hr": 60,
+      "max_hr": 164,
+      "kilojoules": 8203.134
+    },
+    {
+      "date": "2026-06-29",
+      "recovery_score": 72,
+      "hrv_ms": 62,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 85.25725,
+      "sleep_performance": 82,
+      "strain": 5.7,
+      "avg_hr": 62,
+      "max_hr": 125,
+      "kilojoules": 8434.987
+    },
+    {
+      "date": "2026-06-30",
+      "recovery_score": 68,
+      "hrv_ms": 62,
+      "rhr_bpm": 45,
+      "sleep_hours": 10.5,
+      "sleep_efficiency": 92.106804,
+      "sleep_performance": 87,
+      "strain": 2.4,
+      "avg_hr": 51,
+      "max_hr": 108,
+      "kilojoules": 9059.4795
+    },
+    {
+      "date": "2026-07-01",
+      "recovery_score": 73,
+      "hrv_ms": 63,
+      "rhr_bpm": 44,
+      "sleep_hours": 6.6,
+      "sleep_efficiency": 92.25472,
+      "sleep_performance": 81,
+      "strain": 4.7,
+      "avg_hr": 52,
+      "max_hr": 127,
+      "kilojoules": 8790.249
+    },
+    {
+      "date": "2026-07-02",
+      "recovery_score": 95,
+      "hrv_ms": 72,
+      "rhr_bpm": 41,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 90.31251,
+      "sleep_performance": 81,
+      "strain": 5.9,
+      "avg_hr": 51,
+      "max_hr": 131,
+      "kilojoules": 8275.31
+    },
+    {
+      "date": "2026-07-03",
+      "recovery_score": 97,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "sleep_hours": 9.4,
+      "sleep_efficiency": 93.27888,
+      "sleep_performance": 88,
+      "strain": 6.9,
+      "avg_hr": 57,
+      "max_hr": 140,
+      "kilojoules": 9407.297
+    },
+    {
+      "date": "2026-07-04",
+      "recovery_score": 92,
+      "hrv_ms": 78,
+      "rhr_bpm": 43,
+      "sleep_hours": 8.4,
+      "sleep_efficiency": 88.74177,
+      "sleep_performance": 88,
+      "strain": 14,
+      "avg_hr": 61,
+      "max_hr": 173,
+      "kilojoules": 10462.168
+    },
+    {
+      "date": "2026-07-05",
+      "recovery_score": 77,
+      "hrv_ms": 67,
+      "rhr_bpm": 47,
+      "sleep_hours": 9.1,
+      "sleep_efficiency": 96.35231,
+      "sleep_performance": 87,
+      "strain": 6.6,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 9686.242
+    },
+    {
+      "date": "2026-07-06",
+      "recovery_score": 49,
+      "hrv_ms": 59,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 87.940735,
+      "sleep_performance": 83,
+      "strain": 16,
+      "avg_hr": 62,
+      "max_hr": 180,
+      "kilojoules": 11363.679
+    },
+    {
+      "date": "2026-07-07",
+      "recovery_score": 77,
+      "hrv_ms": 70,
+      "rhr_bpm": 48,
+      "sleep_hours": 9.5,
+      "sleep_efficiency": 95.772354,
+      "sleep_performance": 91,
+      "strain": 10.3,
+      "avg_hr": 58,
+      "max_hr": 169,
+      "kilojoules": 9888.115
+    },
+    {
+      "date": "2026-07-08",
+      "recovery_score": 53,
+      "hrv_ms": 62,
+      "rhr_bpm": 50,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 92.3034,
+      "sleep_performance": 81,
+      "strain": 6.3,
+      "avg_hr": 58,
+      "max_hr": 154,
+      "kilojoules": 9139.998
+    },
+    {
+      "date": "2026-07-09",
+      "recovery_score": 66,
+      "hrv_ms": 65,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 97.095245,
+      "sleep_performance": 88,
+      "strain": 10.7,
+      "avg_hr": 57,
+      "max_hr": 169,
+      "kilojoules": 10248.711
+    },
+    {
+      "date": "2026-07-10",
+      "recovery_score": 66,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 96.11756,
+      "sleep_performance": 96,
+      "strain": 18,
+      "avg_hr": 60,
+      "max_hr": 193,
+      "kilojoules": 12060.353
+    },
+    {
+      "date": "2026-07-11",
+      "recovery_score": 62,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 93.78077,
+      "sleep_performance": 86,
+      "strain": 5.8,
+      "avg_hr": 58,
+      "max_hr": 148,
+      "kilojoules": 8871.732
+    },
+    {
+      "date": "2026-07-12",
+      "recovery_score": 90,
+      "hrv_ms": 71,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 94.62055,
+      "sleep_performance": 95,
+      "strain": 1.4,
+      "avg_hr": 50,
+      "max_hr": 125,
+      "kilojoules": 8478.064
+    },
+    {
       "date": "2026-07-13",
       "recovery_score": 66,
       "hrv_ms": 61,
       "rhr_bpm": 44,
       "sleep_hours": 8.7,
+      "sleep_efficiency": 95.30714,
+      "sleep_performance": 99,
+      "strain": 14.2,
+      "avg_hr": 60,
+      "max_hr": 170,
+      "kilojoules": 10804.527
+    },
+    {
+      "date": "2026-07-14",
+      "recovery_score": 95,
+      "hrv_ms": 73,
+      "rhr_bpm": 42,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 97.93125,
+      "sleep_performance": 90,
+      "strain": 0.2,
+      "avg_hr": 46,
+      "max_hr": 99,
+      "kilojoules": 4414.411
+    },
+    {
+      "date": "2026-07-15",
+      "recovery_score": 17,
+      "hrv_ms": 38,
+      "rhr_bpm": 58,
+      "sleep_hours": 4.8,
       "sleep_efficiency": null,
       "sleep_performance": null,
-      "strain": 0.3,
+      "strain": 4.5,
       "avg_hr": null,
       "max_hr": null,
       "kilojoules": null
@@ -17453,7 +23716,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-07-13T15:37:47.875Z"
+      "updated_at": "2026-07-15T23:37:11.872Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
