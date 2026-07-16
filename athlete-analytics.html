@@ -4,15 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tu Coach — Rendimiento & Analytics</title>
+<link rel="stylesheet" href="/tailwind-output.css">
 <style>
 :root{
-  --bg:#0f1117;--bg2:#181c27;--bg3:#1e2336;--border:#2a2f45;
-  --accent:#4f8ef7;--accent2:#7c6ef5;
+  --bg:#121212;--bg2:#1a1a1a;--bg3:#202020;--border:#2e2e2e;
+  --accent:#d97706;--accent2:#f59e0b;
   --green:#22c55e;--red:#ef4444;--orange:#f97316;--yellow:#eab308;
-  --text:#e8eaf0;--text2:#8b92a8;--text3:#5a6080;--card:#1a1f30;
+  --text:#eaeaea;--text2:#9a9a9a;--text3:#6b6b6b;--card:#171717;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sans-serif;min-height:100vh;display:flex}
+
+/* ── FOCUS RING GLOBAL (accesibilidad real, no solo cambio de borde) ── */
+input:not([type=range]):focus-visible, textarea:focus-visible, select:focus-visible,
+button:focus-visible, .icon-btn:focus-visible, .nav-item:focus-visible, [tabindex]:focus-visible {
+  outline:none; border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(217,118,6,.35);
+}
 
 /* SIDEBAR */
 .sidebar{width:220px;min-height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;position:fixed;left:0;top:0;z-index:100}
@@ -21,7 +29,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sa
 .logo-text{font-size:15px;font-weight:700}
 .logo-sub{font-size:10px;color:var(--text2);letter-spacing:1px;text-transform:uppercase}
 .int-strip{display:flex;gap:5px;padding:8px 10px;border-bottom:1px solid var(--border)}
-.int-badge{display:flex;align-items:center;gap:4px;padding:3px 7px;border-radius:20px;font-size:10px;font-weight:700;border:1px solid}
+.int-badge{display:flex;align-items:center;gap:4px;padding:3px 7px;border-radius:10px;font-size:10px;font-weight:700;border:1px solid}
 .int-g{background:rgba(0,123,255,.1);border-color:rgba(0,123,255,.3);color:#4f9ef8}
 .int-w{background:rgba(0,232,122,.08);border-color:rgba(0,232,122,.25);color:#00e87a}
 .int-dot{width:5px;height:5px;border-radius:50%}
@@ -31,7 +39,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sa
 .nav-section{padding:6px 16px 3px;font-size:10px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-top:8px}
 .nav-item{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:13px;color:var(--text2);cursor:pointer;transition:all .15s;margin:1px 8px;border-radius:6px}
 .nav-item:hover{background:var(--bg3);color:var(--text)}
-.nav-item.active{background:rgba(79,142,247,.15);color:var(--accent)}
+.nav-item.active{background:rgba(217,118,6,.15);color:var(--accent)}
 .nav-item svg{width:15px;height:15px;flex-shrink:0}
 .sidebar-bottom{padding:14px;border-top:1px solid var(--border)}
 .s-user{display:flex;align-items:center;gap:10px}
@@ -51,7 +59,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sa
 
 /* STAT HEADER */
 .stats-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:28px}
-.stat-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;position:relative;overflow:hidden}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 22px;position:relative;overflow:hidden}
 .stat-box::after{content:'';position:absolute;top:0;left:0;right:0;height:2px}
 .sb-blue::after{background:var(--accent)}
 .sb-red::after{background:var(--red)}
@@ -66,7 +74,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,sa
 .d-up{color:var(--green)}.d-down{color:var(--red)}.d-neu{color:var(--yellow)}
 
 /* SECTION CARD */
-.section-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px}
+.section-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:24px;margin-bottom:24px}
 .card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
 .card-title{font-size:13px;font-weight:700}
 .card-sub{font-size:11px;color:var(--text3)}
@@ -596,7 +604,7 @@ function renderPMCFull(d){
   const tsbPProj = projIdxMap.length ? [[xOf(todayIdx),yOf(d[todayIdx].tsb)],...projIdxMap.map(i=>[xOf(i),yOf(d[i].tsb)])] : [];
 
   const area=sp(ctlPR)+` L${ctlPR.length?ctlPR[ctlPR.length-1][0]:PL},${PT+cH} L${PL},${PT+cH} Z`;
-  html+=`<path d="${area}" fill="rgba(79,142,247,.06)"/>`;
+  html+=`<path d="${area}" fill="rgba(217,118,6,.06)"/>`;
   html+=`<path d="${sp(atlPR)}" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="4,3" opacity=".8"/>`;
   html+=`<path d="${sp(tsbPR)}" fill="none" stroke="#22c55e" stroke-width="1.8" opacity=".8"/>`;
   html+=`<path d="${sp(ctlPR)}" fill="none" stroke="#4f8ef7" stroke-width="2.5"/>`;
@@ -757,7 +765,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   html+=`<path d="${sp(prPts)}" fill="none" stroke="#3a4060" stroke-width="2"/>`;
   // Current area
   const curArea=sp(curPts)+` L${xOf(durations[durations.length-1])},${PT+cH} L${PL},${PT+cH} Z`;
-  html+=`<path d="${curArea}" fill="rgba(79,142,247,.12)"/>`;
+  html+=`<path d="${curArea}" fill="rgba(217,118,6,.12)"/>`;
   html+=`<path d="${sp(curPts)}" fill="none" stroke="#4f8ef7" stroke-width="2.5"/>`;
   // PR dots where current > historical
   durations.forEach((d,i)=>{
@@ -877,7 +885,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const bMin=yHRV(52*100/100), bMax=yHRV(67*100/100);
   // Actually map baseline 52-67 ms → scale on 0-100
   const bY1=yHRV(67), bY2=yHRV(52);
-  html+=`<rect x="${PL}" y="${bY1}" width="${cW}" height="${bY2-bY1}" fill="rgba(79,142,247,.06)" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3" opacity=".5"/>`;
+  html+=`<rect x="${PL}" y="${bY1}" width="${cW}" height="${bY2-bY1}" fill="rgba(217,118,6,.06)" stroke="#4f8ef7" stroke-width="1" stroke-dasharray="3" opacity=".5"/>`;
   // Last dot
   const li=days-1;
   html+=`<circle cx="${xOf(li)}" cy="${yHRV(hrvData[li])}" r="4" fill="#4f8ef7" stroke="#0f1117" stroke-width="2"/>`;
@@ -1063,7 +1071,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const today=new Date();
     const dayName=today.toLocaleDateString('es-MX',{weekday:'long',day:'numeric',month:'long'});
     const b=document.createElement('div');
-    b.innerHTML=`<div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#4f8ef7;color:#fff;padding:10px 24px;border-radius:30px;font-size:13px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(79,142,247,.4)">
+    b.innerHTML=`<div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#4f8ef7;color:#fff;padding:10px 24px;border-radius:30px;font-size:13px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(217,118,6,.4)">
       📊 Nuevo día — ${dayName}. Actualizando analytics...
     </div>`;
     document.body.appendChild(b);

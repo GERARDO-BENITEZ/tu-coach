@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Skeleton loader — reemplaza los textos "Cargando…" */
+  .skeleton {
+    @apply relative overflow-hidden bg-surface2 rounded-sm;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.06), transparent);
+    animation: skeleton-sweep 1.3s ease-in-out infinite;
+  }
+  @keyframes skeleton-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+}

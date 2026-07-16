@@ -5,7 +5,20 @@
 //  Pipeline: Datos → Físico + Nutrición → Sistemas → CEO → reporte ejecutivo
 // ═══════════════════════════════════════════════════════════════════════════════
 
+const { computeAnalytics } = require('./analytics-engine.js')
+
 const sleep = (ms) => new Promise(r => setTimeout(r, ms))
+
+// Calcula el bloque de métricas reales una sola vez por corrida del pipeline
+function buildAnalytics(d) {
+  return computeAnalytics({
+    pmcSeries:    d.pmc_series    || [],
+    whoopHistory: d.whoop_history || [],
+    workouts:     d.workouts_all  || [],
+    today:        new Date().toISOString().slice(0, 10),
+    phase:        getCurrentPhase(),
+  })
+}
 
 // ── Constantes del plan CAC Games 2026 ───────────────────────────────────────
 const PLAN = {
@@ -85,30 +98,26 @@ function getWorkoutType(workout) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  MOTOR DATOS — PMC + Whoop + adherencia + fase activa
 // ─────────────────────────────────────────────────────────────────────────────
-function analyzeDatos(d) {
-  const { ctl, atl, tsb, garmin_activities, whoop_today, workouts_completed, workouts_planned } = d
+function analyzeDatos(d, A) {
   const phase     = getCurrentPhase()
   const diasCac   = getDaysToRace()
-  const weekTSS   = garmin_activities.slice(-7).reduce((s, a) => s + (a.tss || 0), 0)
-  const tssVsGoal = Math.round((weekTSS / phase.tssWeek) * 100)
-  const adherencia = workouts_planned > 0 ? Math.round((workouts_completed / workouts_planned) * 100) : null
-
-  const tsbZone = tsb < THR.tsb.critico ? '🔴 Sobrecarga'
-                : tsb < THR.tsb.fatiga  ? '🟠 Fatiga activa'
-                : tsb < THR.tsb.fresco  ? '🟡 Bloque de carga'
-                : '🔵 Pico de forma'
-
-  const planDay = getPlanDayNumber(phase)
+  const tssVsGoal = A.weekTSS != null ? Math.round((A.weekTSS / phase.tssWeek) * 100) : null
+  const planDay   = getPlanDayNumber(phase)
   const planTotal = getPhaseTotalDays(phase)
 
+  const tsbZone = A.tsb < THR.tsb.critico ? '🔴 Sobrecarga'
+                : A.tsb < THR.tsb.fatiga  ? '🟠 Carga alta'
+                : A.tsb < THR.tsb.fresco  ? '🟡 Bloque de carga'
+                : '🔵 Forma fresca'
+
   const lines = [
-    `📊 PMC: CTL ${ctl.toFixed(1)} · ATL ${atl.toFixed(1)} · TSB ${tsb.toFixed(1)} (${tsbZone}) · Objetivo CAC: CTL ≥${phase.ctlTarget}`,
-    `📅 ${phase.name} · Día ${planDay}/${planTotal} · Semana: ${weekTSS} TSS (${tssVsGoal}% del objetivo ${phase.tssWeek} en ${phase.key})`,
-    whoop_today
-      ? `🫀 Whoop: Recovery ${whoop_today.recovery_score}% · HRV ${whoop_today.hrv_ms}ms · Sueño ${whoop_today.sleep_hours}h · RHR ${whoop_today.rhr_bpm ?? '—'}bpm`
+    `📊 PMC: CTL ${A.ctl} · ATL ${A.atl} · TSB ${A.tsb} (${tsbZone}) · ACWR ${A.acwr ?? '—'} · ramp CTL ${A.ctlRamp >= 0 ? '+' : ''}${A.ctlRamp ?? '—'}/sem · objetivo CAC CTL ≥${phase.ctlTarget}`,
+    `📅 ${phase.name} · Día ${planDay}/${planTotal} · TSS semana ${A.weekTSS} (${tssVsGoal ?? '—'}% del objetivo ${phase.tssWeek}) · semana previa ${A.prevWeekTSS}`,
+    A.recToday != null
+      ? `🫀 Whoop hoy: Recovery ${A.recToday}% · HRV 7d ${A.hrvRecentAvg}ms (baseline ${A.hrvBaseAvg}±${A.hrvBaseSd}, z=${A.hrvZ}) · Recovery 7d ${A.recRecentAvg}% vs baseline ${A.recBaseAvg}% · Sueño 7d ${A.sleepRecentAvg}h`
       : '🫀 Whoop: sin lectura de hoy — revisar sincronización del brazalete',
-    adherencia != null
-      ? `📋 Adherencia: ${workouts_completed}/${workouts_planned} sesiones (${adherencia}%) · ${diasCac}d para ${PLAN.event}`
+    A.adherence != null
+      ? `📋 Adherencia: ${A.completed}/${A.planned} sesiones (${A.adherence}%) · ${diasCac}d para ${PLAN.event} · ${A.daysOfData.whoop}d de datos Whoop`
       : `📋 ${diasCac} días para ${PLAN.event} · ${phase.name} activa · RIR objetivo: ${phase.rir}`,
   ]
   return lines.map(l => `• ${l}`).join('\n')
@@ -117,18 +126,24 @@ function analyzeDatos(d) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  MOTOR FÍSICO — carga, plan, fuerza ILCA 7, RIR, recomendación de intensidad
 // ─────────────────────────────────────────────────────────────────────────────
-function analyzeFisico(d) {
-  const { ctl, atl, tsb, workout_today, workout_tomorrow, garmin_activities } = d
-  const phase   = getCurrentPhase()
-  const weekTSS = garmin_activities.slice(-7).reduce((s, a) => s + (a.tss || 0), 0)
-  const gap     = phase.tssWeek - weekTSS
-  const rampRate = ctl > 0 ? ((atl - ctl) / ctl * 100).toFixed(1) : 0
-  const wkType  = getWorkoutType(workout_today)
+function analyzeFisico(d, A) {
+  const { workout_today, workout_tomorrow } = d
+  const phase = getCurrentPhase()
+  const gap   = A.weekTSS != null ? phase.tssWeek - A.weekTSS : null
+  const wkType = getWorkoutType(workout_today)
+  const restDay = !workout_today ||
+    /descanso|reposo|libre|recuperaci|movilidad|off|suave/i.test(workout_today.name || '') ||
+    (workout_today.tss_planned != null && workout_today.tss_planned <= 25)
+  const hoyGuia = restDay
+    ? 'Día de descanso/recuperación del plan — respétalo: Z1 suave, hidratación y sueño.'
+    : A.recoveryAction
 
-  const estadoFisico = tsb < THR.tsb.critico ? '🔴 Reducir carga urgente — posible sobrentrenamiento'
-                     : tsb < THR.tsb.fatiga  ? '🟠 Fatiga — bajar intensidad 20% · monitorear RPE'
-                     : tsb < THR.tsb.fresco  ? '🟡 Zona de entrenamiento óptima — plan en marcha'
-                     : '🔵 En forma — ventana de rendimiento disponible'
+  // Veredicto físico real (motor de analítica)
+  const estadoFisico = `${A.verdictEmoji} ${A.verdict}`
+
+  // Marcadores que sustentan el veredicto
+  const flags = [...A.fatigueFlags, ...A.underFlags]
+  const flagsTxt = flags.length ? `Señales: ${flags.join('; ')}.` : 'Sin señales de alarma en HRV, FC reposo ni recovery.'
 
   // Contexto específico por tipo de entreno + fase
   let strengthContext = ''
@@ -139,11 +154,12 @@ function analyzeFisico(d) {
   }
 
   const lines = [
-    `💪 Estado físico ${phase.key}: ${estadoFisico} (TSB ${tsb.toFixed(0)} · CTL actual ${ctl.toFixed(1)} / objetivo ${phase.ctlTarget})`,
+    `💪 Estado físico ${phase.key}: ${estadoFisico} — ${A.verdictText}`,
+    `🔬 ${flagsTxt}`,
     workout_today
-      ? `⚡ Hoy: ${workout_today.name} · ${workout_today.duration_min || '—'}min · TSS ~${workout_today.tss_planned || '—'} · ${workout_today.status === 'COMPLETED' ? '✓ COMPLETADO' : 'pendiente'}${strengthContext}`
-      : '⚡ Hoy: sin entreno planificado — día de recuperación activa · movilidad + foam roller',
-    `📈 Ramp rate ATL/CTL: ${rampRate}% · TSS semana ${weekTSS}${gap > 0 ? ` (${gap} bajo obj. ${phase.tssWeek} ${phase.key} → ${gap > 150 ? 'considera sesión ligera extra' : 'dentro del rango tolerable'})` : ' ✓ objetivo cumplido'}`,
+      ? `⚡ Hoy: ${workout_today.name} · ${workout_today.duration_min || '—'}min · TSS ~${workout_today.tss_planned || '—'} · ${workout_today.status === 'COMPLETED' ? '✓ COMPLETADO' : 'pendiente'} → ${hoyGuia}${restDay ? '' : strengthContext}`
+      : `⚡ Hoy: sin entreno planificado — ${hoyGuia}`,
+    `📈 Carga: ACWR ${A.acwr ?? '—'} · ramp CTL ${A.ctlRamp >= 0 ? '+' : ''}${A.ctlRamp ?? '—'}/sem · TSS semana ${A.weekTSS}${gap > 0 ? ` (${gap} bajo objetivo ${phase.tssWeek} → ${gap > 150 ? 'puedes meter sesión extra' : 'dentro del rango'})` : ' ✓ objetivo cumplido'}`,
     workout_tomorrow
       ? `🔮 Mañana: ${workout_tomorrow.name} · ${workout_tomorrow.duration_min || '—'}min · prepara hidratación + nutrición post-entreno`
       : '🔮 Mañana: sin sesión programada · recuperación activa o movilidad Laser',
@@ -154,8 +170,9 @@ function analyzeFisico(d) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  MOTOR NUTRICIÓN — plan Ivonne, macros, brecha proteína, estrategia por fase
 // ─────────────────────────────────────────────────────────────────────────────
-function analyzeNutricion(d) {
-  const { tsb, workout_today } = d
+function analyzeNutricion(d, A) {
+  const { workout_today } = d
+  const tsb     = A.tsb
   const phase   = getCurrentPhase()
   const dMin    = workout_today?.duration_min || 0
   const isRest  = !workout_today
@@ -200,29 +217,26 @@ function analyzeNutricion(d) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  MOTOR SISTEMAS — salud conexiones + sincronización + estado BD
 // ─────────────────────────────────────────────────────────────────────────────
-function analyzeSistemas(d) {
-  const { garmin_activities, whoop_today, last_garmin_sync, last_whoop_sync } = d
-  const todayStr  = new Date().toISOString().slice(0, 10)
-  const actHoy    = garmin_activities.filter(a => a.date === todayStr)
-  const garminOk  = garmin_activities.length > 0
+function analyzeSistemas(d, A) {
+  const { garmin_total, whoop_today, last_whoop_sync } = d
+  const garminOk  = (garmin_total || 0) > 0
   const whoopOk   = !!whoop_today
   const diasCac   = getDaysToRace()
   const phase     = getCurrentPhase()
 
   const garminSt = garminOk
-    ? `Garmin ✓ · ${garmin_activities.length} actividades · ${actHoy.length > 0 ? `${actHoy.length} registrada(s) hoy · TSS sync ✓` : 'sin actividad registrada hoy'}`
+    ? `Garmin ✓ · ${garmin_total} actividades importadas (histórico completo)`
     : 'Garmin ⚠️ — sin actividades · verifica conexión en Configuración'
 
   const whoopSt = whoopOk
-    ? `Whoop ✓ · Recovery ${whoop_today.recovery_score}% · HRV ${whoop_today.hrv_ms}ms · última sync ${last_whoop_sync ? new Date(last_whoop_sync).toLocaleTimeString('es-MX', {hour:'2-digit',minute:'2-digit'}) : '—'}`
+    ? `Whoop ✓ · ${A.daysOfData.whoop}d de histórico · Recovery hoy ${whoop_today.recovery_score}% · HRV ${whoop_today.hrv_ms}ms · última sync ${last_whoop_sync ? new Date(last_whoop_sync).toLocaleTimeString('es-MX', {hour:'2-digit',minute:'2-digit'}) : '—'}`
     : 'Whoop ⚠️ — sin datos de recuperación · abre la app Whoop y sincroniza esta mañana'
 
-  const nextSync = Math.ceil((new Date().setHours(24,1,0,0) - Date.now()) / 3600000)
   const lines = [
     `⚙️ Tu Coach Server ✓ · BD JSON ✓ · Pipeline agentes ✓ · ${phase.name} activa`,
     `📡 ${garminSt}`,
     `📡 ${whoopSt}`,
-    `🔄 Auto-sync: 00:01 AM diario · próxima ejecución ~${nextSync}h · ${diasCac}d para CAC Games · CTL tracking activo`,
+    `🔄 Auto-sync: Whoop 7 y 10 AM · Garmin+PMC 11:50 PM · ${diasCac}d para CAC Games · CTL tracking activo`,
   ]
   return lines.map(l => `• ${l}`).join('\n')
 }
@@ -230,15 +244,11 @@ function analyzeSistemas(d) {
 // ─────────────────────────────────────────────────────────────────────────────
 //  MOTOR CEO — veredicto ejecutivo cruzando todos los agentes
 // ─────────────────────────────────────────────────────────────────────────────
-function analyzeCEO(d) {
-  const { ctl, atl, tsb, weight_kg, whoop_today, workout_today } = d
+function analyzeCEO(d, A) {
+  const { workout_today } = d
   const phase     = getCurrentPhase()
   const diasCac   = getDaysToRace()
-  const whoopRec  = whoop_today?.recovery_score ?? 70
-  const isCritical = tsb < THR.tsb.critico && whoopRec < THR.whoop.amarillo
-  const isFatigued = tsb < THR.tsb.fatiga  || whoopRec < THR.whoop.amarillo
-  const isPeak     = tsb > THR.tsb.fresco  && whoopRec >= THR.whoop.verde
-  const wkType     = getWorkoutType(workout_today)
+  const wkType    = getWorkoutType(workout_today)
 
   // Contexto específico de fase para el CEO
   const phaseContext = {
@@ -249,29 +259,59 @@ function analyzeCEO(d) {
     COMP: 'CAC Games activo — maximizar rendimiento en regata. Sin entrenamientos de fatiga. Foco en táctica y ejecución.',
   }
 
-  const estado = isCritical ? '🔴 ALERTA — sobrecarga + recuperación crítica'
-               : isFatigued  ? '🟠 FATIGA — ajustar carga hoy'
-               : isPeak      ? '🔵 PICO — máximo rendimiento disponible'
-               : '🟡 ADAPTACIÓN — progresión controlada'
+  // Acción del día derivada del veredicto real + recuperación de hoy
+  const isOvertrain = A.verdict.startsWith('SOBREENTREN')
+  const isOverreach = A.verdict.startsWith('SOBRECARGA')
+  const isUnder     = A.verdict === 'FALTA CARGA'
+  // ¿El plan de hoy ya es descanso/recuperación? (no contradecir con "al 100%")
+  const restDay = !workout_today ||
+    /descanso|reposo|libre|recuperaci|movilidad|off|suave/i.test(workout_today.name || '') ||
+    (workout_today.tss_planned != null && workout_today.tss_planned <= 25)
 
-  const accionBase = isCritical
-    ? `Suspende o convierte a 30min recuperación activa Z1. Comunicar a Coach Erick hoy. Nutrióloga Ivonne: +80g carbos + Mg 400mg esta noche. Prioritario.`
-    : isFatigued
-      ? `Ejecutar ${workout_today?.name || 'sesión'} al 80% de intensidad planificada. TSB ${tsb.toFixed(0)} indica fatiga acumulada — no forzar carga. ${wkType === 'strength' ? `RIR ${phase.rir} en fuerza.` : ''} Proteína +${THR.gapProteinG}g urgente.`
-      : isPeak
-        ? `Sesión completa al 100%. Recovery ${whoopRec}% + TSB ${tsb.toFixed(0)} = ventana de rendimiento ILCA 7 óptima. Aprovecha para TSS alto esta semana.`
-        : `Completar ${workout_today?.name || 'sesión planificada'} según plan ${phase.key}. CTL ${ctl.toFixed(0)} → objetivo ${phase.ctlTarget}. ${diasCac > 7 ? 'Adherencia constante es el diferencial.' : 'Últimos días — cada sesión cuenta para llegar en forma pico.'}`
+  const accionBase = isOvertrain
+    ? `Reduce carga HOY: convierte la sesión en 30min Z1 o descansa. Avisa a Coach Erick. Esta noche: +carbos + Mg 400mg + dormir 9h. Reevalúa HRV mañana.`
+    : isOverreach
+      ? `Ejecuta ${workout_today?.name || 'la sesión'} al ~80% de intensidad. ${A.recoveryAction} ${wkType === 'strength' ? `RIR ${phase.rir} en fuerza, no busques fallo hoy.` : ''} Prioriza proteína (+${THR.gapProteinG}g) y sueño.`
+      : isUnder
+        ? `Tienes margen: sube la carga. ${A.weekTSS < phase.tssWeek ? `Vas en ${A.weekTSS} TSS esta semana vs objetivo ${phase.tssWeek} — mete intensidad o una sesión extra.` : ''} No te estanques rumbo al pico de CTL ${phase.ctlTarget}.`
+        : restDay
+          ? `Hoy el plan es descanso/recuperación: ${workout_today?.name || 'día libre'}. Respétalo aunque tu recovery esté en ${A.recToday ?? '—'}% — Z1 suave máximo, hidratación y sueño. El descanso es parte del entrenamiento.`
+          : `Ejecuta ${workout_today?.name || 'la sesión planificada'} de ${phase.key}. ${A.recoveryAction} CTL ${A.ctl} → objetivo ${phase.ctlTarget}. ${diasCac > 7 ? 'La adherencia constante es el diferencial.' : 'Últimos días — cada sesión cuenta para llegar en pico.'}`
 
-  const semaforo = isCritical ? '🔴' : isFatigued ? '🟠' : isPeak ? '🔵' : '🟡'
-  const ctlGap   = Math.round((PLAN.ctlPeak - ctl) * 10) / 10
+  const ctlGap = Math.round((PLAN.ctlPeak - A.ctl) * 10) / 10
   const nota = [
-    `${semaforo} Coach Erick: ${isFatigued ? '−10min duración hoy' : `ejecutar plan según ${phase.key}`}`,
-    `Nutrióloga Ivonne: ${THR.gapProteinG}g proteína/día pendiente`,
-    `CTL: ${ctl.toFixed(1)} → pico objetivo ${PLAN.ctlPeak} (${ctlGap > 0 ? `faltan +${ctlGap}` : 'objetivo alcanzado ✓'})`,
+    `${A.verdictEmoji} Recuperación hoy: ${A.recoveryState}`,
+    `Carga: ACWR ${A.acwr ?? '—'} · TSB ${A.tsb} · ramp ${A.ctlRamp >= 0 ? '+' : ''}${A.ctlRamp}/sem`,
+    `CTL ${A.ctl} → pico objetivo ${PLAN.ctlPeak} (${ctlGap > 0 ? `faltan +${ctlGap}` : 'objetivo alcanzado ✓'})`,
+    `Nutrición: ${THR.gapProteinG}g proteína/día pendiente`,
     `${diasCac}d para ${PLAN.sport} · ${phaseContext[phase.key] || phaseContext.F1}`,
   ].join('  |  ')
 
-  return `🎯 ESTADO DEL DÍA: ${estado}\n\n⚡ ACCIÓN: ${accionBase}\n\n📋 NOTA TÉCNICA: ${nota}`
+  return `🎯 ESTADO DEL DÍA: ${A.verdictEmoji} ${A.verdict}\n${A.verdictText}\n\n⚡ ACCIÓN: ${accionBase}\n\n📋 NOTA TÉCNICA: ${nota}\n\n${analyzePaginas(d, A)}`
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  RESUMEN POR PÁGINA — qué está pasando en cada sección del dashboard
+// ─────────────────────────────────────────────────────────────────────────────
+function analyzePaginas(d, A) {
+  const { workout_today, workout_tomorrow } = d
+  const phase   = getCurrentPhase()
+  const diasCac = getDaysToRace()
+
+  const recTrend = A.recRecentAvg != null && A.recBaseAvg != null
+    ? (A.recRecentAvg < A.recBaseAvg - 5 ? '↓ bajando' : A.recRecentAvg > A.recBaseAvg + 5 ? '↑ subiendo' : '→ estable')
+    : '—'
+  const hrvTrend = A.hrvZ == null ? '—' : A.hrvZ <= -0.75 ? '↓ suprimido' : A.hrvZ >= 0.75 ? '↑ alto' : '→ en baseline'
+
+  const pags = [
+    `🏠 Dashboard: CTL ${A.ctl} / ATL ${A.atl} / TSB ${A.tsb} · Recovery hoy ${A.recToday ?? '—'}% · ${phase.name}`,
+    `📅 Planificación: hoy ${workout_today ? workout_today.name : 'sin sesión'}${workout_today ? ` (${workout_today.status === 'COMPLETED' ? 'hecho ✓' : 'pendiente'})` : ''} · mañana ${workout_tomorrow ? workout_tomorrow.name : 'libre'}`,
+    `📊 Historial: TSS semana ${A.weekTSS} (previa ${A.prevWeekTSS}) · adherencia ${A.adherence ?? '—'}% (${A.completed}/${A.planned})`,
+    `❤️ Recuperación: Recovery 7d ${A.recRecentAvg ?? '—'}% (${recTrend}) · HRV 7d ${A.hrvRecentAvg ?? '—'}ms (${hrvTrend}) · Sueño ${A.sleepRecentAvg ?? '—'}h · FC reposo ${A.rhrRecentAvg ?? '—'}bpm`,
+    `🥗 Nutrición: brecha de proteína ${THR.gapProteinG}g/día pendiente · plan Ivonne ${THR.kcalPlanEntrenamiento}/${THR.kcalPlanDescanso} kcal`,
+    `🏆 Plan CAC: ${phase.name} día ${getPlanDayNumber(phase)}/${getPhaseTotalDays(phase)} · ${diasCac}d para la meta · CTL ${A.ctl} → objetivo fase ${phase.ctlTarget} (pico ${PLAN.ctlPeak})`,
+  ]
+  return `🗂️ RESUMEN POR PÁGINA:\n${pags.map(p => `• ${p}`).join('\n')}`
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -289,30 +329,33 @@ async function streamLocalPipeline(athleteData, sendEvent) {
     text, name: P[key].name, emoji: P[key].emoji, color: P[key].color,
   })
 
+  // Métricas reales calculadas una sola vez
+  const A = buildAnalytics(athleteData)
+
   // ── Oleada 1: Datos + Sistemas (paralelo visual)
   startAgent('datos')
   startAgent('sistemas')
 
   await sleep(1500)
-  const datosReport = analyzeDatos(athleteData)
+  const datosReport = analyzeDatos(athleteData, A)
   doneAgent('datos', datosReport)
 
   await sleep(500)
-  const sistemasReport = analyzeSistemas(athleteData)
+  const sistemasReport = analyzeSistemas(athleteData, A)
   doneAgent('sistemas', sistemasReport)
 
   // ── Oleada 2: Físico
   await sleep(900)
   startAgent('fisico')
   await sleep(1700)
-  const fisicoReport = analyzeFisico(athleteData)
+  const fisicoReport = analyzeFisico(athleteData, A)
   doneAgent('fisico', fisicoReport)
 
   // ── Oleada 3: Nutrición
   await sleep(700)
   startAgent('nutricion')
   await sleep(1400)
-  const nutricionReport = analyzeNutricion(athleteData)
+  const nutricionReport = analyzeNutricion(athleteData, A)
   doneAgent('nutricion', nutricionReport)
 
   // ── CEO sintetiza con efecto typewriter
@@ -320,7 +363,7 @@ async function streamLocalPipeline(athleteData, sendEvent) {
   startAgent('ceo')
   await sleep(1300)
 
-  const ceoReport = analyzeCEO(athleteData)
+  const ceoReport = analyzeCEO(athleteData, A)
   const chunks = ceoReport.split(/(\s+)/)
   for (const chunk of chunks) {
     if (chunk) sendEvent({ type: 'ceo_chunk', chunk })
@@ -342,12 +385,13 @@ async function streamLocalPipeline(athleteData, sendEvent) {
 //  PIPELINE SIN STREAMING — para guardado en BD sin animación
 // ─────────────────────────────────────────────────────────────────────────────
 async function runFullPipeline(athleteData) {
-  const datosReport     = analyzeDatos(athleteData)
-  const sistemasReport  = analyzeSistemas(athleteData)
-  const fisicoReport    = analyzeFisico(athleteData)
-  const nutricionReport = analyzeNutricion(athleteData)
-  const ceoReport       = analyzeCEO(athleteData)
-  return { datos: datosReport, sistemas: sistemasReport, fisico: fisicoReport, nutricion: nutricionReport, ceo: ceoReport, timestamp: new Date().toISOString() }
+  const A = buildAnalytics(athleteData)
+  const datosReport     = analyzeDatos(athleteData, A)
+  const sistemasReport  = analyzeSistemas(athleteData, A)
+  const fisicoReport    = analyzeFisico(athleteData, A)
+  const nutricionReport = analyzeNutricion(athleteData, A)
+  const ceoReport       = analyzeCEO(athleteData, A)
+  return { datos: datosReport, sistemas: sistemasReport, fisico: fisicoReport, nutricion: nutricionReport, ceo: ceoReport, analytics: A, timestamp: new Date().toISOString() }
 }
 
-module.exports = { runFullPipeline, streamLocalPipeline, AGENT_PERSONAS }
+module.exports = { runFullPipeline, streamLocalPipeline, AGENT_PERSONAS, computeAnalytics }

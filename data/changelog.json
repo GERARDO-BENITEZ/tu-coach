@@ -1,0 +1,58 @@
+[
+  {
+    "ts": "2026-06-30T14:00:00.000Z",
+    "type": "mejora",
+    "icon": "📈",
+    "title": "Gráficas de tendencia en Recuperación",
+    "detail": "La sección Recuperación ahora muestra tu HRV, recovery, FC en reposo y sueño como gráficas reales con tu línea base (30 o 90 días), en vez de barras de ejemplo. Así ves si vas mejorando o cayendo, no solo el número de hoy."
+  },
+  {
+    "ts": "2026-06-30T13:40:00.000Z",
+    "type": "mejora",
+    "icon": "🥗",
+    "title": "Recomendación de comida según tu actividad",
+    "detail": "La sección de Nutrición ahora te dice cuánto comer según el día: en días de carga, comer completo y subir carbos para no quedar en déficit; en descanso, más ligero y con déficit moderado para quemar grasa, siempre manteniendo la proteína. Considera tu gasto y consumo del día anterior. Respeta el plan de Ivonne, solo lo ajusta."
+  },
+  {
+    "ts": "2026-06-30T13:20:00.000Z",
+    "type": "mejora",
+    "icon": "📅",
+    "title": "El calendario ahora refleja los datos reales",
+    "detail": "El grid de Planificación estaba con nombres fijos que no se actualizaban. Ahora se alimenta de tu plan real: si un día cambia (por ejemplo recuperación por enfermedad), se ve correcto en el calendario, no solo al abrir el detalle."
+  },
+  {
+    "ts": "2026-06-30T13:00:00.000Z",
+    "type": "mejora",
+    "icon": "🔄",
+    "title": "Plan Vivo — el entreno se ajusta a tu recuperación",
+    "detail": "Cada día, tu sesión se ajusta automáticamente según tu recovery de Whoop y la carga acumulada (ACWR): verde 100%, amarillo modera, rojo recuperación activa. Detecta señales de enfermedad (HRV bajo + FC reposo alta) para frenarte antes de enfermarte. Se ve en la tarjeta del día y en la notificación matutina."
+  },
+  {
+    "ts": "2026-06-30T12:40:00.000Z",
+    "type": "mejora",
+    "icon": "🧠",
+    "title": "Análisis de IA real (ciencia del deporte)",
+    "detail": "La pestaña de IA dejó de usar reglas fijas. Ahora calcula sobreentrenamiento de verdad con tus 685 días de datos: HRV vs tu baseline, FC reposo, tendencia de recovery, TSB y ACWR. Da veredicto real y resumen de cada página."
+  },
+  {
+    "ts": "2026-06-30T12:30:00.000Z",
+    "type": "mejora",
+    "icon": "✅",
+    "title": "Corregida la falsa alarma de 'sobreentrenamiento crítico'",
+    "detail": "El banner de Estado Integral usaba un umbral viejo que daba alarmas falsas. Ahora toda la página es coherente con el motor real (HRV baseline real, TSS objetivo por fase)."
+  },
+  {
+    "ts": "2026-06-30T11:50:00.000Z",
+    "type": "mejora",
+    "icon": "❤️",
+    "title": "Whoop reparado — histórico completo importado",
+    "detail": "La API de Whoop había cambiado a v2 y el token estaba caducado. Se migró a v2 y se re-vinculó la cuenta: 685 días de recovery, HRV, sueño y strain ahora en el Historial."
+  },
+  {
+    "ts": "2026-06-30T11:30:00.000Z",
+    "type": "mejora",
+    "icon": "⚙️",
+    "title": "El servidor ahora arranca solo",
+    "detail": "Se configuró para que el servidor inicie automáticamente al encender la compu y se mantenga vivo. El sync de Whoop se movió a 7 y 10 AM para que al abrir el dashboard ya esté tu sueño de anoche."
+  }
+]

@@ -2,6 +2,9 @@
 node_modules/
 package-lock.json
 
+# ── CSS compilado (Tailwind) — se regenera en cada deploy vía postinstall ─────
+tailwind-output.css
+
 # ── Credenciales y entorno ────────────────────────────────────────────────────
 .env
 .github-token
