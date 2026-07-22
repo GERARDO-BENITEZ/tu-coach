@@ -2145,14 +2145,14 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-22",
-      "name": "🔵 Movilidad + Stretching",
-      "type": "Core / Movilidad",
+      "name": "🟡 Navegación Técnica + Ajustes de Aparejo",
+      "type": "Vela",
       "duration_min": 90,
-      "tss_planned": 55,
-      "coach_note": "S29 F3 · 🔵 BAJA. Sesión de movilidad completa: caderas, hombros, tobillo. 40 min. HRV debe subir esta semana.",
+      "tss_planned": 35,
+      "coach_note": "Arreglé el nombre — esta sesión traía contenido de navegación pero estaba etiquetada como 'movilidad'. Última semana en casa antes del vuelo del 28. Estás fresco (TSB alto, recovery 72%) así que aprovechamos para pulir técnica, no para meter volumen — ya no hay tiempo de construir más CTL sin arriesgarte a llegar cargado a Barranquilla.",
       "segments": [
         {
-          "name": "Revisión equipo",
+          "name": "Revisión de equipo",
           "duration": "15 min",
           "zone": "Z1 — Recuperación"
         },
@@ -2162,7 +2162,7 @@
           "zone": "Z2 — Base aeróbica"
         },
         {
-          "name": "Ajustes y guindola",
+          "name": "Ajustes de aparejo y guindola",
           "duration": "15 min",
           "zone": "Z1 — Recuperación"
         }
@@ -2176,7 +2176,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-22T03:51:08.364Z",
       "zone": "BLUE"
     },
     {
@@ -2217,26 +2217,41 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-07-24",
-      "name": "🔵 Activación Física Final",
-      "type": "Core / Movilidad",
-      "duration_min": 60,
-      "tss_planned": 28,
-      "coach_note": "S30 F3 · 🔵 BAJA. Activación corta: 10 min movilidad + 3×10 Squat + 3×8 Pull-up sin carga. Guardar energía para CAC.",
+      "name": "🔵 Activación Física Final — Gym",
+      "type": "Fuerza / Gym",
+      "duration_min": 30,
+      "tss_planned": 30,
+      "coach_note": "Arreglé el contenido — traía navegación/inspección de bote pero el nombre y la nota decían gym. Este es tu último toque de potencia real antes del taper total: corto, activa el sistema nervioso, sin acumular fatiga. Guarda energía para Barranquilla.",
       "segments": [
         {
-          "name": "Inspección embarcación",
-          "duration": "25 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Movilidad general",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Navegación suave",
-          "duration": "25 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Squat Jump sin carga",
+          "sets": "3",
+          "reps": "6",
+          "note": "RIR 2-3. Explosivo pero sin llegar a fatigarte."
         },
         {
-          "name": "Revisión mental + plan de carrera",
-          "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Pull-up / Lat Pulldown ligero",
+          "sets": "3",
+          "reps": "5",
+          "note": "Muy suave, lejos del fallo. Solo activar dorsales."
+        },
+        {
+          "exercise": "Med Ball Throw (pecho)",
+          "sets": "3",
+          "reps": "6",
+          "note": "Potencia, no volumen."
+        },
+        {
+          "exercise": "Foam rolling general",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -2248,7 +2263,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-06-09T00:35:31.252112Z",
+      "updated_at": "2026-07-22T03:51:08.514Z",
       "zone": "BLUE"
     },
     {
@@ -2345,13 +2360,13 @@
         }
       ],
       "created_at": "2026-06-09T20:27:17.182Z",
-      "updated_at": "2026-06-09T20:27:17.182Z",
+      "updated_at": "2026-07-22T03:51:08.679Z",
       "date": "2026-07-27",
-      "name": "🔵 Activación Ligera",
-      "type": "Core / Movilidad",
-      "duration_min": 90,
+      "name": "🔵 Activación Ligera Pre-Viaje",
+      "type": "Fuerza / Gym",
+      "duration_min": 25,
       "tss_planned": 35,
-      "coach_note": "S31 F3 · 🔵 ACTIVACIÓN LIGERA PRE-COMP. 20–25 min máximo. Activa SNC con movimientos explosivos pero sin fatiga. Cuerpo fresco para Day 1 CAC.",
+      "coach_note": "Último día completo en casa — mañana empacas y el 28 en la noche vuelas a Barranquilla. 20-25 min máximo, activa el sistema nervioso con movimientos explosivos pero sin fatiga. Cuerpo fresco para los 3 días de entreno en la sede (29-31) y para Day 1 el 1 de agosto.",
       "zone": "BLUE"
     },
     {
@@ -2379,13 +2394,13 @@
         }
       ],
       "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-06-09T20:27:17.183Z",
+      "updated_at": "2026-07-22T03:51:08.819Z",
       "date": "2026-07-28",
-      "name": "Core Activación + Stretching",
+      "name": "🔵 Core + Empacar — Vuelo Nocturno",
       "type": "Core / Movilidad",
-      "duration_min": 35,
+      "duration_min": 25,
       "tss_planned": 12,
-      "coach_note": "S31 F3 · 🔵 CORE ACTIVACIÓN. 25 min. Core anti-rotación suave + estiramientos. Sin impacto. Preparar estabilidad lumbar para el esfuerzo del evento."
+      "coach_note": "Haz esto temprano en el día — tu vuelo es en la noche, llegas a Barranquilla el 29 en la mañana. Core anti-rotación suave + estiramientos, nada de impacto. En el vuelo: hidrátate bien (evita alcohol/cafeína en exceso), muévete cada 1-2h si puedes, y duerme lo que puedas — llegas directo a entrenar el 29."
     },
     {
       "id": "93a24bb2-62ef-4077-9fe4-82e1e48a8b77",
@@ -2394,32 +2409,33 @@
       "status": "PENDING",
       "segments": [
         {
-          "exercise": "Movilidad completa — cadera, hombro, tobillo, columna",
+          "exercise": "Armado de bote + revisión de aparejo",
           "sets": "1",
-          "reps": "15 min",
-          "note": "Cat-cow, hip circles, shoulder CARs. Muy suave."
+          "reps": "30min",
+          "isWarmup": true
         },
         {
-          "exercise": "Activación SNC — saltos en el lugar (10 rep)",
-          "sets": "3",
-          "reps": "10",
-          "note": "Solo despertar piernas. Sin fatiga."
+          "exercise": "Navegación de reconocimiento — sentir viento/corriente local",
+          "sets": "1",
+          "reps": "45min",
+          "note": "Z1-Z2. Sin presión de rendimiento, solo familiarizarte con la cancha."
         },
         {
-          "exercise": "Respiración diafragmática + visualización",
+          "exercise": "Hidratación + estiramiento suave",
           "sets": "1",
-          "reps": "5 min",
-          "note": "Cierra ojos, 4-4-4-4 box breathing."
+          "reps": "15min",
+          "isCooldown": true,
+          "note": "Después: hidrátate agresivo el resto del día, siesta corta si puedes."
         }
       ],
       "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-06-09T20:27:17.183Z",
+      "updated_at": "2026-07-22T03:51:09.053Z",
       "date": "2026-07-29",
-      "name": "🔵 Movilidad + Activación",
-      "type": "Core / Movilidad",
-      "duration_min": 60,
+      "name": "🟡 Llegada Barranquilla — Primer Contacto con el Agua",
+      "type": "Vela",
+      "duration_min": 90,
       "tss_planned": 25,
-      "coach_note": "S31 F3 · 🔵 MOVILIDAD + ACTIVACIÓN MENTAL. Mañana Day 1. Solo mover el cuerpo 20 min y preparar la mente. Sin absolutamente ninguna fatiga.",
+      "coach_note": "Llegaste esta mañana de un vuelo nocturno — prioridad es hidratación y adaptación, no rendimiento. Arma el bote con calma, sal a navegar suave para sentir viento y corriente locales (son distintos a Valle de Bravo). Si el cansancio del vuelo pesa mucho, corta la sesión — mejor corto y bien que forzado.",
       "zone": "BLUE"
     },
     {
@@ -2429,32 +2445,44 @@
       "status": "PENDING",
       "segments": [
         {
-          "exercise": "Foam Rolling piernas completas",
+          "exercise": "Calentamiento en tierra + armado",
           "sets": "1",
-          "reps": "15 min",
-          "note": "Post-Day 1. Cuádriceps, isquios, gemelos. Presión media."
+          "reps": "20min",
+          "isWarmup": true
         },
         {
-          "exercise": "Baño frío / Crioterapia (si disponible)",
+          "exercise": "Práctica de salidas (starts)",
           "sets": "1",
-          "reps": "10 min",
-          "note": "12–15°C. Recuperación muscular."
+          "reps": "40min",
+          "note": "Simula la línea de salida real. Repite 6-8 salidas."
         },
         {
-          "exercise": "Comida de recuperación + hidratación",
+          "exercise": "Boyas y viradas — ceñida/popa",
           "sets": "1",
-          "reps": "Todo el día",
-          "note": "2g/kg proteína, carbohidratos de calidad. Duerme 9h."
+          "reps": "50min",
+          "note": "Calibra tensión de vela para viento local."
+        },
+        {
+          "exercise": "Recorrido corto simulando regata",
+          "sets": "1",
+          "reps": "30min",
+          "note": "Ritmo de regata, no máximo esfuerzo."
+        },
+        {
+          "exercise": "Enfriamiento + hidratación",
+          "sets": "1",
+          "reps": "10min",
+          "isCooldown": true
         }
       ],
       "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-06-09T20:27:17.183Z",
+      "updated_at": "2026-07-22T03:51:09.145Z",
       "date": "2026-07-30",
-      "name": "Descanso Total + Inspección Bote",
-      "type": "Core / Movilidad",
-      "duration_min": 20,
-      "tss_planned": 5,
-      "coach_note": "S31 F3 · 🔵 RECUPERACIÓN POST-DAY 1. Sin entrenamiento. Solo recuperar. Foam rolling + frío + nutrición. Acuéstate temprano."
+      "name": "🟡 Entreno Técnico-Táctico en Cancha",
+      "type": "Vela",
+      "duration_min": 150,
+      "tss_planned": 42,
+      "coach_note": "Tu día más completo de los 3 en sede — ya adaptado del viaje. Foco 100% técnico/táctico: salidas, boyas, calibración de vela para las condiciones de Barranquilla. Intensidad controlada — practica como vas a competir, pero no busques agotarte, todavía falta el 31 y luego arranca la regata el 1."
     },
     {
       "id": "2e2dad2f-e07c-4447-80d9-7a1b9cb83e99",
@@ -2463,32 +2491,37 @@
       "status": "PENDING",
       "segments": [
         {
-          "exercise": "Movilidad articular general (10 min)",
+          "exercise": "Revisión final de bote y aparejo",
           "sets": "1",
-          "reps": "10 min",
-          "isWarmup": true
+          "reps": "25min",
+          "note": "Chequeo completo — nada de sorpresas mañana."
         },
         {
-          "exercise": "Squat explosivo sin carga",
-          "sets": "2",
-          "reps": "6",
-          "note": "Mínimo posible. Solo activar."
+          "exercise": "Navegación muy suave — confirmación de calibración",
+          "sets": "1",
+          "reps": "20min",
+          "note": "Z1. Solo confirmar que el ajuste de ayer sigue bien."
         },
         {
-          "exercise": "Box breathing + visualización race plan",
+          "exercise": "Movilidad articular general",
           "sets": "1",
-          "reps": "5 min",
-          "note": "4-4-4-4. Repasa tu estrategia."
+          "reps": "10min"
+        },
+        {
+          "exercise": "Box breathing + visualización del plan de carrera",
+          "sets": "1",
+          "reps": "5min",
+          "note": "4-4-4-4. Repasa la estrategia para Day 1."
         }
       ],
       "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-06-09T20:27:17.183Z",
+      "updated_at": "2026-07-22T03:51:09.295Z",
       "date": "2026-07-31",
-      "name": "Activación Mínima Pre-Regata",
-      "type": "Core / Movilidad",
-      "duration_min": 25,
-      "tss_planned": 8,
-      "coach_note": "S31 F3 · 🔵 ACTIVACIÓN MÍNIMA PRE-REGATA FINAL. 15 min máximo. Activa, visualiza, confía en el trabajo hecho. Cuerpo = 100%."
+      "name": "🔵 Última Revisión Pre-Regata",
+      "type": "Vela",
+      "duration_min": 60,
+      "tss_planned": 15,
+      "coach_note": "Último día antes de que empiece la regata. Nada de esfuerzo — solo revisión final de bote/aparejo y una navegación corta y suave para confirmar que todo está calibrado. Activación mínima física, mente en el plan de carrera. Mañana es Day 1."
     },
     {
       "id": "d6fbcf95-618b-4a08-aac9-02e1eb525c6d",
@@ -2613,15 +2646,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-07-20T11:33:01.087Z",
+    "built_at": "2026-07-22T03:51:18.219Z",
     "data": [
-      {
-        "date": "2024-07-21",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-07-22",
         "tss": 0,
@@ -7713,32 +7739,32 @@
       },
       {
         "date": "2026-07-19",
-        "tss": 0,
-        "ctl": 33.8,
-        "atl": 26.5,
-        "tsb": 7.2
+        "tss": 19,
+        "ctl": 34.2,
+        "atl": 29.2,
+        "tsb": 5
       },
       {
         "date": "2026-07-20",
         "tss": 0,
-        "ctl": 33,
-        "atl": 22.7,
-        "tsb": 10.2
+        "ctl": 33.4,
+        "atl": 25.1,
+        "tsb": 8.3
+      },
+      {
+        "date": "2026-07-21",
+        "tss": 32,
+        "ctl": 33.4,
+        "atl": 26.1,
+        "tsb": 7.3
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-07-20T11:33:01.087Z",
+      "built_at": "2026-07-22T03:51:18.219Z",
       "data": [
-        {
-          "date": "2024-07-21",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-07-22",
           "tss": 0,
@@ -12830,17 +12856,24 @@
         },
         {
           "date": "2026-07-19",
-          "tss": 0,
-          "ctl": 33.8,
-          "atl": 26.5,
-          "tsb": 7.2
+          "tss": 19,
+          "ctl": 34.2,
+          "atl": 29.2,
+          "tsb": 5
         },
         {
           "date": "2026-07-20",
           "tss": 0,
-          "ctl": 33,
-          "atl": 22.7,
-          "tsb": 10.2
+          "ctl": 33.4,
+          "atl": 25.1,
+          "tsb": 8.3
+        },
+        {
+          "date": "2026-07-21",
+          "tss": 32,
+          "ctl": 33.4,
+          "atl": 26.1,
+          "tsb": 7.3
         }
       ]
     }
@@ -15713,6 +15746,32 @@
       "distance_m": 3796,
       "elevation_m": 67,
       "tss_actual": 0
+    },
+    {
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing",
+      "date": "2026-07-19",
+      "duration_min": 156,
+      "hr_avg": 91,
+      "hr_max": 222,
+      "calories": 606,
+      "distance_m": 7890,
+      "elevation_m": 0,
+      "tss_actual": 19,
+      "source": "garmin-csv-import"
+    },
+    {
+      "activity_name": "Ciclismo en sala",
+      "activity_type": "indoor_cycling",
+      "date": "2026-07-21",
+      "duration_min": 69,
+      "hr_avg": 86,
+      "hr_max": 125,
+      "calories": 268,
+      "distance_m": 10860,
+      "elevation_m": 0,
+      "tss_actual": 32,
+      "source": "garmin-csv-import"
     }
   ],
   "device_syncs": [
@@ -17412,6 +17471,72 @@
         "calories": 606,
         "tss_actual": 19,
         "synced_at": "2026-07-20T10:50:42.440Z"
+      }
+    },
+    {
+      "id": "43425923-31ad-4e2f-9653-8d7ab56ba41b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-20T15:06:02.056Z",
+      "data": {
+        "recovery_score": 60,
+        "hrv_ms": 60,
+        "rhr_bpm": 47,
+        "sleep_hours": 6.5,
+        "sleep_light_h": 3,
+        "sleep_rem_h": 1.8,
+        "sleep_deep_h": 1.7,
+        "sleep_awake_h": 0.1,
+        "sleep_disturbances": 7,
+        "strain": 0.3,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-20T15:06:02.056Z"
+      }
+    },
+    {
+      "id": "d06d0645-f303-42b8-ab28-ffa6aeeaf89d",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-20T18:06:02.351Z",
+      "data": {
+        "recovery_score": 60,
+        "hrv_ms": 60,
+        "rhr_bpm": 47,
+        "sleep_hours": 6.5,
+        "sleep_light_h": 3,
+        "sleep_rem_h": 1.8,
+        "sleep_deep_h": 1.7,
+        "sleep_awake_h": 0.1,
+        "sleep_disturbances": 7,
+        "strain": 1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-20T18:06:02.351Z"
+      }
+    },
+    {
+      "id": "8632c987-e222-4ed7-9769-c812d5895623",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-07-22T03:25:55.045Z",
+      "data": {
+        "recovery_score": 72,
+        "hrv_ms": 67,
+        "rhr_bpm": 44,
+        "sleep_hours": 7.4,
+        "sleep_light_h": 3.3,
+        "sleep_rem_h": 2.2,
+        "sleep_deep_h": 1.5,
+        "sleep_awake_h": 0.4,
+        "sleep_disturbances": 9,
+        "strain": 5.6,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-07-22T03:25:55.045Z"
       }
     }
   ],
@@ -26631,10 +26756,36 @@
       "sleep_hours": 9.2,
       "sleep_efficiency": 90.40542,
       "sleep_performance": 88,
-      "strain": 0.3,
-      "avg_hr": 47,
-      "max_hr": 87,
-      "kilojoules": 4064.2227
+      "strain": 9.3,
+      "avg_hr": 60,
+      "max_hr": 162,
+      "kilojoules": 9794.349
+    },
+    {
+      "date": "2026-07-20",
+      "recovery_score": 60,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "sleep_hours": 6.5,
+      "sleep_efficiency": 98.85423,
+      "sleep_performance": 80,
+      "strain": 2.1,
+      "avg_hr": 57,
+      "max_hr": 104,
+      "kilojoules": 8507.036
+    },
+    {
+      "date": "2026-07-21",
+      "recovery_score": 72,
+      "hrv_ms": 67,
+      "rhr_bpm": 44,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 95.35002,
+      "sleep_performance": 84,
+      "strain": 5.6,
+      "avg_hr": 57,
+      "max_hr": 125,
+      "kilojoules": 8298.393
     }
   ],
   "body_composition": [
@@ -26650,7 +26801,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-07-19T16:10:17.064Z"
+      "updated_at": "2026-07-22T03:25:55.045Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
