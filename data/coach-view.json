@@ -2646,99 +2646,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-07-28T16:14:59.898Z",
+    "built_at": "2026-08-11T05:50:06.100Z",
     "data": [
-      {
-        "date": "2024-07-29",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-07-30",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-07-31",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-01",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-02",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-03",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-04",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-05",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-06",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-07",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-08",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-09",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-10",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-08-11",
         "tss": 0,
@@ -7757,105 +7666,105 @@
         "ctl": 31.7,
         "atl": 19.8,
         "tsb": 11.9
+      },
+      {
+        "date": "2026-07-29",
+        "tss": 0,
+        "ctl": 31,
+        "atl": 17,
+        "tsb": 14
+      },
+      {
+        "date": "2026-07-30",
+        "tss": 0,
+        "ctl": 30.2,
+        "atl": 14.6,
+        "tsb": 15.7
+      },
+      {
+        "date": "2026-07-31",
+        "tss": 30,
+        "ctl": 30.2,
+        "atl": 16.8,
+        "tsb": 13.5
+      },
+      {
+        "date": "2026-08-01",
+        "tss": 0,
+        "ctl": 29.5,
+        "atl": 14.4,
+        "tsb": 15.1
+      },
+      {
+        "date": "2026-08-02",
+        "tss": 0,
+        "ctl": 28.8,
+        "atl": 12.3,
+        "tsb": 16.5
+      },
+      {
+        "date": "2026-08-03",
+        "tss": 0,
+        "ctl": 28.1,
+        "atl": 10.6,
+        "tsb": 17.6
+      },
+      {
+        "date": "2026-08-04",
+        "tss": 0,
+        "ctl": 27.5,
+        "atl": 9,
+        "tsb": 18.4
+      },
+      {
+        "date": "2026-08-05",
+        "tss": 0,
+        "ctl": 26.8,
+        "atl": 7.8,
+        "tsb": 19
+      },
+      {
+        "date": "2026-08-06",
+        "tss": 0,
+        "ctl": 26.2,
+        "atl": 6.6,
+        "tsb": 19.5
+      },
+      {
+        "date": "2026-08-07",
+        "tss": 0,
+        "ctl": 25.5,
+        "atl": 5.7,
+        "tsb": 19.8
+      },
+      {
+        "date": "2026-08-08",
+        "tss": 0,
+        "ctl": 24.9,
+        "atl": 4.9,
+        "tsb": 20
+      },
+      {
+        "date": "2026-08-09",
+        "tss": 0,
+        "ctl": 24.3,
+        "atl": 4.2,
+        "tsb": 20.2
+      },
+      {
+        "date": "2026-08-10",
+        "tss": 0,
+        "ctl": 23.8,
+        "atl": 3.6,
+        "tsb": 20.2
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-07-28T16:14:59.898Z",
+      "built_at": "2026-08-11T05:50:06.100Z",
       "data": [
-        {
-          "date": "2024-07-29",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-07-30",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-07-31",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-01",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-02",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-03",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-04",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-05",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-06",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-07",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-08",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-09",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-10",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-08-11",
           "tss": 0,
@@ -12874,6 +12783,97 @@
           "ctl": 31.7,
           "atl": 19.8,
           "tsb": 11.9
+        },
+        {
+          "date": "2026-07-29",
+          "tss": 0,
+          "ctl": 31,
+          "atl": 17,
+          "tsb": 14
+        },
+        {
+          "date": "2026-07-30",
+          "tss": 0,
+          "ctl": 30.2,
+          "atl": 14.6,
+          "tsb": 15.7
+        },
+        {
+          "date": "2026-07-31",
+          "tss": 30,
+          "ctl": 30.2,
+          "atl": 16.8,
+          "tsb": 13.5
+        },
+        {
+          "date": "2026-08-01",
+          "tss": 0,
+          "ctl": 29.5,
+          "atl": 14.4,
+          "tsb": 15.1
+        },
+        {
+          "date": "2026-08-02",
+          "tss": 0,
+          "ctl": 28.8,
+          "atl": 12.3,
+          "tsb": 16.5
+        },
+        {
+          "date": "2026-08-03",
+          "tss": 0,
+          "ctl": 28.1,
+          "atl": 10.6,
+          "tsb": 17.6
+        },
+        {
+          "date": "2026-08-04",
+          "tss": 0,
+          "ctl": 27.5,
+          "atl": 9,
+          "tsb": 18.4
+        },
+        {
+          "date": "2026-08-05",
+          "tss": 0,
+          "ctl": 26.8,
+          "atl": 7.8,
+          "tsb": 19
+        },
+        {
+          "date": "2026-08-06",
+          "tss": 0,
+          "ctl": 26.2,
+          "atl": 6.6,
+          "tsb": 19.5
+        },
+        {
+          "date": "2026-08-07",
+          "tss": 0,
+          "ctl": 25.5,
+          "atl": 5.7,
+          "tsb": 19.8
+        },
+        {
+          "date": "2026-08-08",
+          "tss": 0,
+          "ctl": 24.9,
+          "atl": 4.9,
+          "tsb": 20
+        },
+        {
+          "date": "2026-08-09",
+          "tss": 0,
+          "ctl": 24.3,
+          "atl": 4.2,
+          "tsb": 20.2
+        },
+        {
+          "date": "2026-08-10",
+          "tss": 0,
+          "ctl": 23.8,
+          "atl": 3.6,
+          "tsb": 20.2
         }
       ]
     }
@@ -12945,6 +12945,19 @@
   ],
   "strength_logs": [],
   "garmin_activities": [
+    {
+      "activity_id": 23830662762,
+      "activity_name": "Vela",
+      "activity_type": "sailing_v2",
+      "date": "2026-07-31",
+      "duration_min": 59,
+      "hr_avg": 112,
+      "hr_max": 167,
+      "calories": 276,
+      "distance_m": 8884,
+      "elevation_m": 971,
+      "tss_actual": 30
+    },
     {
       "activity_id": 23731930005,
       "activity_name": "Valle de Bravo Vela",
@@ -17753,6 +17766,24 @@
         "weight_kg": 90,
         "synced_at": "2026-07-28T13:38:26.792Z"
       }
+    },
+    {
+      "id": "4c84a6bc-b9a5-4545-9db3-9e6908254f08",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-08-11T05:50:04.473Z",
+      "data": {
+        "activity_id": 23830662762,
+        "activity_name": "Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 59,
+        "hr_avg": 112,
+        "hr_max": 167,
+        "calories": 276,
+        "tss_actual": 30,
+        "synced_at": "2026-08-11T05:50:04.472Z"
+      }
     }
   ],
   "wellness": [
@@ -17985,17 +18016,485 @@
   ],
   "whoop_history": [
     {
+      "date": "2026-06-09",
+      "strain": 8.1,
+      "avg_hr": 55,
+      "max_hr": 155,
+      "kilojoules": 9383.191
+    },
+    {
+      "date": "2026-06-10",
+      "strain": 8.1,
+      "avg_hr": 58,
+      "max_hr": 148,
+      "kilojoules": 9870.369
+    },
+    {
+      "date": "2026-06-11",
+      "strain": 10.8,
+      "avg_hr": 65,
+      "max_hr": 162,
+      "kilojoules": 10135.461
+    },
+    {
+      "date": "2026-06-12",
+      "strain": 7.8,
+      "avg_hr": 58,
+      "max_hr": 150,
+      "kilojoules": 9349.251
+    },
+    {
+      "date": "2026-06-13",
+      "strain": 11.5,
+      "avg_hr": 63,
+      "max_hr": 153,
+      "kilojoules": 11130.658
+    },
+    {
+      "date": "2026-06-14",
+      "strain": 10,
+      "avg_hr": 61,
+      "max_hr": 161,
+      "kilojoules": 9544.87
+    },
+    {
+      "date": "2026-06-15",
+      "strain": 6.9,
+      "avg_hr": 55,
+      "max_hr": 142,
+      "kilojoules": 9222.516
+    },
+    {
+      "date": "2026-06-16",
+      "strain": 15.3,
+      "avg_hr": 63,
+      "max_hr": 176,
+      "kilojoules": 11274.402
+    },
+    {
+      "date": "2026-06-17",
+      "strain": 12.7,
+      "avg_hr": 59,
+      "max_hr": 180,
+      "kilojoules": 10102.645
+    },
+    {
+      "date": "2026-06-18",
+      "strain": 1.5,
+      "avg_hr": 50,
+      "max_hr": 94,
+      "kilojoules": 8885.469
+    },
+    {
+      "date": "2026-06-19",
+      "strain": 4.1,
+      "avg_hr": 54,
+      "max_hr": 116,
+      "kilojoules": 8200.836
+    },
+    {
+      "date": "2026-06-20",
+      "strain": 9.8,
+      "avg_hr": 64,
+      "max_hr": 150,
+      "kilojoules": 10526.375
+    },
+    {
+      "date": "2026-06-21",
+      "strain": 4.2,
+      "avg_hr": 55,
+      "max_hr": 140,
+      "kilojoules": 7644.8438
+    },
+    {
+      "date": "2026-06-22",
+      "strain": 9.3,
+      "avg_hr": 58,
+      "max_hr": 150,
+      "kilojoules": 10606.328
+    },
+    {
+      "date": "2026-06-23",
+      "strain": 15.9,
+      "avg_hr": 67,
+      "max_hr": 179,
+      "kilojoules": 12033.891
+    },
+    {
+      "date": "2026-06-24",
+      "strain": 10.2,
+      "avg_hr": 63,
+      "max_hr": 162,
+      "kilojoules": 10312.542
+    },
+    {
+      "date": "2026-06-25",
+      "strain": 14.4,
+      "avg_hr": 61,
+      "max_hr": 173,
+      "kilojoules": 11258.311
+    },
+    {
+      "date": "2026-06-26",
+      "strain": 6.5,
+      "avg_hr": 61,
+      "max_hr": 132,
+      "kilojoules": 9092.943
+    },
+    {
+      "date": "2026-06-27",
+      "strain": 9.5,
+      "avg_hr": 63,
+      "max_hr": 179,
+      "kilojoules": 9681.895
+    },
+    {
+      "date": "2026-06-28",
+      "strain": 4.6,
+      "avg_hr": 60,
+      "max_hr": 164,
+      "kilojoules": 8203.134
+    },
+    {
+      "date": "2026-06-29",
+      "strain": 5.7,
+      "avg_hr": 62,
+      "max_hr": 125,
+      "kilojoules": 8434.987
+    },
+    {
+      "date": "2026-06-30",
+      "strain": 2.4,
+      "avg_hr": 51,
+      "max_hr": 108,
+      "kilojoules": 9059.4795
+    },
+    {
+      "date": "2026-07-01",
+      "strain": 4.7,
+      "avg_hr": 52,
+      "max_hr": 127,
+      "kilojoules": 8790.249
+    },
+    {
+      "date": "2026-07-02",
+      "strain": 5.9,
+      "avg_hr": 51,
+      "max_hr": 131,
+      "kilojoules": 8275.31
+    },
+    {
+      "date": "2026-07-03",
+      "strain": 6.9,
+      "avg_hr": 57,
+      "max_hr": 140,
+      "kilojoules": 9407.297
+    },
+    {
+      "date": "2026-07-04",
+      "recovery_score": 92,
+      "hrv_ms": 78,
+      "rhr_bpm": 43,
+      "strain": 14,
+      "avg_hr": 61,
+      "max_hr": 173,
+      "kilojoules": 10462.168
+    },
+    {
+      "date": "2026-07-05",
+      "recovery_score": 77,
+      "hrv_ms": 67,
+      "rhr_bpm": 47,
+      "strain": 6.6,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 9686.242
+    },
+    {
+      "date": "2026-07-06",
+      "recovery_score": 49,
+      "hrv_ms": 59,
+      "rhr_bpm": 51,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 87.940735,
+      "sleep_performance": 83,
+      "strain": 16,
+      "avg_hr": 62,
+      "max_hr": 180,
+      "kilojoules": 11363.679
+    },
+    {
+      "date": "2026-07-07",
+      "recovery_score": 77,
+      "hrv_ms": 70,
+      "rhr_bpm": 48,
+      "sleep_hours": 9.5,
+      "sleep_efficiency": 95.772354,
+      "sleep_performance": 91,
+      "strain": 10.3,
+      "avg_hr": 58,
+      "max_hr": 169,
+      "kilojoules": 9888.115
+    },
+    {
+      "date": "2026-07-08",
+      "recovery_score": 53,
+      "hrv_ms": 62,
+      "rhr_bpm": 50,
+      "sleep_hours": 6.8,
+      "sleep_efficiency": 92.3034,
+      "sleep_performance": 81,
+      "strain": 6.3,
+      "avg_hr": 58,
+      "max_hr": 154,
+      "kilojoules": 9139.998
+    },
+    {
+      "date": "2026-07-09",
+      "recovery_score": 66,
+      "hrv_ms": 65,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.3,
+      "sleep_efficiency": 97.095245,
+      "sleep_performance": 88,
+      "strain": 10.7,
+      "avg_hr": 57,
+      "max_hr": 169,
+      "kilojoules": 10248.711
+    },
+    {
+      "date": "2026-07-10",
+      "recovery_score": 66,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 96.11756,
+      "sleep_performance": 96,
+      "strain": 18,
+      "avg_hr": 60,
+      "max_hr": 193,
+      "kilojoules": 12060.353
+    },
+    {
+      "date": "2026-07-11",
+      "recovery_score": 62,
+      "hrv_ms": 61,
+      "rhr_bpm": 48,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 93.78077,
+      "sleep_performance": 86,
+      "strain": 5.8,
+      "avg_hr": 58,
+      "max_hr": 148,
+      "kilojoules": 8871.732
+    },
+    {
+      "date": "2026-07-12",
+      "recovery_score": 90,
+      "hrv_ms": 71,
+      "rhr_bpm": 45,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 94.62055,
+      "sleep_performance": 95,
+      "strain": 1.4,
+      "avg_hr": 50,
+      "max_hr": 125,
+      "kilojoules": 8478.064
+    },
+    {
+      "date": "2026-07-13",
+      "recovery_score": 66,
+      "hrv_ms": 61,
+      "rhr_bpm": 44,
+      "sleep_hours": 8.7,
+      "sleep_efficiency": 95.30714,
+      "sleep_performance": 99,
+      "strain": 14.2,
+      "avg_hr": 60,
+      "max_hr": 170,
+      "kilojoules": 10804.527
+    },
+    {
+      "date": "2026-07-14",
+      "recovery_score": 95,
+      "hrv_ms": 73,
+      "rhr_bpm": 42,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 97.93125,
+      "sleep_performance": 90,
+      "strain": 6.7,
+      "avg_hr": 62,
+      "max_hr": 133,
+      "kilojoules": 9933.72
+    },
+    {
+      "date": "2026-07-15",
+      "recovery_score": 17,
+      "hrv_ms": 38,
+      "rhr_bpm": 58,
+      "sleep_hours": 4.8,
+      "sleep_efficiency": 100,
+      "sleep_performance": 45,
+      "strain": 8.8,
+      "avg_hr": 66,
+      "max_hr": 161,
+      "kilojoules": 7698.4023
+    },
+    {
+      "date": "2026-07-16",
+      "recovery_score": 87,
+      "hrv_ms": 72,
+      "rhr_bpm": 44,
+      "sleep_hours": 10.8,
+      "sleep_efficiency": 93.64046,
+      "sleep_performance": 80,
+      "strain": 14.6,
+      "avg_hr": 64,
+      "max_hr": 164,
+      "kilojoules": 11262.799
+    },
+    {
+      "date": "2026-07-17",
+      "recovery_score": 52,
+      "hrv_ms": 65,
+      "rhr_bpm": 47,
+      "sleep_hours": 4.6,
+      "sleep_efficiency": 94.537285,
+      "sleep_performance": 54,
+      "strain": 14.7,
+      "avg_hr": 65,
+      "max_hr": 172,
+      "kilojoules": 11038.219
+    },
+    {
+      "date": "2026-07-18",
+      "recovery_score": 73,
+      "hrv_ms": 66,
+      "rhr_bpm": 46,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 94.833595,
+      "sleep_performance": 84,
+      "strain": 6.3,
+      "avg_hr": 60,
+      "max_hr": 148,
+      "kilojoules": 8724.132
+    },
+    {
+      "date": "2026-07-19",
+      "recovery_score": 75,
+      "hrv_ms": 67,
+      "rhr_bpm": 46,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 90.40542,
+      "sleep_performance": 88,
+      "strain": 9.3,
+      "avg_hr": 60,
+      "max_hr": 162,
+      "kilojoules": 9794.349
+    },
+    {
+      "date": "2026-07-20",
+      "recovery_score": 60,
+      "hrv_ms": 60,
+      "rhr_bpm": 47,
+      "sleep_hours": 6.5,
+      "sleep_efficiency": 98.85423,
+      "sleep_performance": 80,
+      "strain": 2.1,
+      "avg_hr": 57,
+      "max_hr": 104,
+      "kilojoules": 8507.036
+    },
+    {
+      "date": "2026-07-21",
+      "recovery_score": 72,
+      "hrv_ms": 67,
+      "rhr_bpm": 44,
+      "sleep_hours": 7.4,
+      "sleep_efficiency": 95.35002,
+      "sleep_performance": 84,
+      "strain": 5.6,
+      "avg_hr": 57,
+      "max_hr": 125,
+      "kilojoules": 8882.152
+    },
+    {
+      "date": "2026-07-22",
+      "recovery_score": 87,
+      "hrv_ms": 77,
+      "rhr_bpm": 43,
+      "sleep_hours": 7.7,
+      "sleep_efficiency": 91.15656,
+      "sleep_performance": 85,
+      "strain": 8.6,
+      "avg_hr": 58,
+      "max_hr": 161,
+      "kilojoules": 9630.216
+    },
+    {
+      "date": "2026-07-23",
+      "recovery_score": 87,
+      "hrv_ms": 72,
+      "rhr_bpm": 42,
+      "sleep_hours": 7.5,
+      "sleep_efficiency": 94.30659,
+      "sleep_performance": 88,
+      "strain": 8.6,
+      "avg_hr": 58,
+      "max_hr": 146,
+      "kilojoules": 9225.046
+    },
+    {
+      "date": "2026-07-24",
+      "recovery_score": 72,
+      "hrv_ms": 67,
+      "rhr_bpm": 44,
+      "sleep_hours": 8.2,
+      "sleep_efficiency": 93.10252,
+      "sleep_performance": 86,
+      "strain": 6.8,
+      "avg_hr": 59,
+      "max_hr": 148,
+      "kilojoules": 9113.961
+    },
+    {
       "date": "2026-07-25",
       "recovery_score": 91,
       "hrv_ms": 73,
       "rhr_bpm": 42,
       "sleep_hours": 8.9,
-      "sleep_efficiency": null,
-      "sleep_performance": null,
+      "sleep_efficiency": 96.131775,
+      "sleep_performance": 93,
       "strain": 11.9,
-      "avg_hr": null,
-      "max_hr": null,
-      "kilojoules": null
+      "avg_hr": 60,
+      "max_hr": 175,
+      "kilojoules": 10747.353
+    },
+    {
+      "date": "2026-07-26",
+      "recovery_score": 66,
+      "hrv_ms": 67,
+      "rhr_bpm": 50,
+      "sleep_hours": 8.8,
+      "sleep_efficiency": 90.22865,
+      "sleep_performance": 85,
+      "strain": 6,
+      "avg_hr": 57,
+      "max_hr": 154,
+      "kilojoules": 9327.774
+    },
+    {
+      "date": "2026-07-27",
+      "recovery_score": 79,
+      "hrv_ms": 70,
+      "rhr_bpm": 44,
+      "sleep_hours": 6.9,
+      "sleep_efficiency": 93.655815,
+      "sleep_performance": 82,
+      "strain": 3.8,
+      "avg_hr": 54,
+      "max_hr": 105,
+      "kilojoules": 8020.342
     },
     {
       "date": "2026-07-28",
@@ -18003,12 +18502,12 @@
       "hrv_ms": 67,
       "rhr_bpm": 44,
       "sleep_hours": 8.2,
-      "sleep_efficiency": null,
-      "sleep_performance": null,
+      "sleep_efficiency": 95.65491,
+      "sleep_performance": 90,
       "strain": 0.2,
-      "avg_hr": null,
-      "max_hr": null,
-      "kilojoules": null
+      "avg_hr": 44,
+      "max_hr": 89,
+      "kilojoules": 3019.2192
     }
   ],
   "body_composition": [
