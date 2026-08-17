@@ -20,6 +20,7 @@ const { localDate } = require('./src/utils/ids')
 const { notFound, errorHandler } = require('./src/middleware/errorHandler')
 const { DB } = require('./src/services/db')
 const { scheduleMidnightSync, runAutoSync } = require('./src/services/sync')
+const { PLAN } = require('./agents-system')
 
 const authRoutes = require('./src/routes/auth.routes')
 const coachRoutes = require('./src/routes/coach.routes')
@@ -87,7 +88,7 @@ app.listen(PORT, () => {
 `)
   const startDate = localDate()
   const startDow = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'][new Date().getDay()]
-  logger.info(`Fecha actual: ${startDow} ${startDate} — Días para CAC Games (1 ago): ${Math.max(0, Math.ceil((new Date('2026-08-01') - new Date()) / 86400000))}`)
+  logger.info(`Fecha actual: ${startDow} ${startDate} — Días para ${PLAN.event}: ${Math.max(0, Math.ceil((new Date(PLAN.raceDate) - new Date()) / 86400000))}`)
   scheduleMidnightSync()
   runAutoSync() // sync inmediato al arrancar si es día nuevo
 })

@@ -4343,9 +4343,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const calDaysEl = document.getElementById('cal-cac-days')
   if (calDaysEl) calDaysEl.textContent = Math.max(0, daysLeft)
   const todayISOStr = today.toISOString().slice(0,10)
-  // Fases del plan (deben coincidir con las tarjetas del plan CAC):
-  // F1 BASE Jun 7–21 · F2 CARGA Jun 22–Jul 5 · F3 PICO Jul 6–19 · F4 TAPER Jul 20–25 · 🏁 CAC
-  const phase = todayISOStr <= '2026-06-21' ? 'F1' : todayISOStr <= '2026-07-05' ? 'F2' : todayISOStr <= '2026-07-19' ? 'F3' : todayISOStr <= '2026-07-25' ? 'F4' : '🏁'
+  // Fases del plan (deben coincidir con las tarjetas del plan, ver PLAN.phases en agents-system.js):
+  // F1 BASE Jun 7–21 · F2 CARGA Jun 22–Jul 5 · F3 PICO Jul 6–19 · F4 TAPER Jul 20–25 · 🏁 CAC Jul26-Ago8
+  // REC0 Ago9-17 · F1B Ago18-23 · F2B Ago24-Sep6 · F3B Sep7-11 · F4B Sep12-15 · CORK Sep16-28
+  // REC Sep29-Oct4 · F5 Oct5-Nov1 · F6 Nov2-29 · F7 Nov30-Dic20 · F8 Dic21-31
+  const phase = todayISOStr <= '2026-06-21' ? 'F1' : todayISOStr <= '2026-07-05' ? 'F2' : todayISOStr <= '2026-07-19' ? 'F3' : todayISOStr <= '2026-07-25' ? 'F4'
+    : todayISOStr <= '2026-08-08' ? '🏁' : todayISOStr <= '2026-08-17' ? 'REC0' : todayISOStr <= '2026-08-23' ? 'F1B'
+    : todayISOStr <= '2026-09-06' ? 'F2B' : todayISOStr <= '2026-09-11' ? 'F3B' : todayISOStr <= '2026-09-15' ? 'F4B'
+    : todayISOStr <= '2026-09-28' ? 'CORK' : todayISOStr <= '2026-10-04' ? 'REC' : todayISOStr <= '2026-11-01' ? 'F5'
+    : todayISOStr <= '2026-11-29' ? 'F6' : todayISOStr <= '2026-12-20' ? 'F7' : todayISOStr <= '2026-12-31' ? 'F8' : '—'
   const calPhaseEl = document.getElementById('cal-cac-phase')
   if (calPhaseEl) calPhaseEl.textContent = phase
   const phaseEl = document.getElementById('cac-phase')
@@ -7260,11 +7266,21 @@ function renderHstCalendar() {
         const cls    = isSail ? 'sail' : isCyc ? 'cyc' : isStr ? 'str' : isMob ? 'mob' : 'rest'
         const icon   = isSail ? '⛵' : isCyc ? '🚴' : isStr ? '🏋️' : isMob ? '🧘' : '📋'
 
-        // Fase del plan
+        // Fase del plan (ver PLAN.phases en agents-system.js)
         const phase = dateStr <= '2026-06-21' ? 'F1' : dateStr <= '2026-07-05' ? 'F2'
-                    : dateStr <= '2026-07-20' ? 'F3' : 'TAPER'
-        const phaseColor = phase === 'F1' ? '#60a5fa' : phase === 'F2' ? '#fbbf24'
-                         : phase === 'F3' ? '#f87171' : '#a78bfa'
+                    : dateStr <= '2026-07-25' ? 'F3' : dateStr <= '2026-08-08' ? 'TAPER'
+                    : dateStr <= '2026-08-17' ? 'REC0' : dateStr <= '2026-08-23' ? 'F1B'
+                    : dateStr <= '2026-09-06' ? 'F2B' : dateStr <= '2026-09-11' ? 'F3B'
+                    : dateStr <= '2026-09-15' ? 'F4B' : dateStr <= '2026-09-28' ? 'CORK'
+                    : dateStr <= '2026-10-04' ? 'REC' : dateStr <= '2026-11-01' ? 'F5'
+                    : dateStr <= '2026-11-29' ? 'F6' : dateStr <= '2026-12-20' ? 'F7'
+                    : dateStr <= '2026-12-31' ? 'F8' : '—'
+        const phaseColorMap = {
+          F1:'#60a5fa', F2:'#fbbf24', F3:'#f87171', TAPER:'#a78bfa',
+          REC0:'#94a3b8', F1B:'#4f8ef7', F2B:'#f97316', F3B:'#22c55e', F4B:'#eab308',
+          CORK:'#ef4444', REC:'#94a3b8', F5:'#a855f7', F6:'#f97316', F7:'#4f8ef7', F8:'#94a3b8',
+        }
+        const phaseColor = phaseColorMap[phase] || '#a78bfa'
 
         // Calorías estimadas (MET × 90kg × horas)
         const dur = r.duration_planned || 50

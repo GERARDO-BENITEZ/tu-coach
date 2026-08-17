@@ -22,20 +22,32 @@ function buildAnalytics(d) {
 
 // ── Constantes del plan CAC Games 2026 ───────────────────────────────────────
 const PLAN = {
-  raceDate:    '2026-08-01',       // Día 1 CAC Games
-  compEnd:     '2026-08-08',       // Día 8 CAC Games (cierre)
-  weightGoal:  86,                 // kg objetivo a los juegos
+  raceDate:    '2026-09-16',       // Día 1 CORK — clasificatorio Panamericano
+  compEnd:     '2026-09-28',       // Cierre CORK
+  weightGoal:  86,                 // kg objetivo
   weightStart: 90,                 // kg inicio plan (Jun 7)
   bodyfatGoal: 18,                 // % grasa objetivo
-  ctlPeak:     55,                 // CTL objetivo al llegar a los juegos
+  ctlPeak:     35,                 // CTL objetivo real hacia CORK (el 55 original de CAC nunca se alcanzó en la práctica)
   sport:       'ILCA 7 (Laser)',   // clase vela
-  event:       'CAC Games 2026 · Barranquilla',
+  event:       'CORK 2026 · Kingston · Clasificatorio Panamericano',
   phases: [
     { key:'F1', name:'F1 Base Técnica',  start:'2026-06-07', end:'2026-06-21', rir:'3-4', focus:'técnica + base aeróbica + fuerza general', tssWeek:360, ctlTarget:28,  pct:'65-72%', color:'#4f8ef7' },
     { key:'F2', name:'F2 Carga',          start:'2026-06-22', end:'2026-07-12', rir:'1-2', focus:'fuerza máxima + potencia explosiva',        tssWeek:490, ctlTarget:45,  pct:'80-88%', color:'#f97316' },
     { key:'F3', name:'F3 Especificidad',  start:'2026-07-13', end:'2026-07-26', rir:'0-1', focus:'potencia específica vela + pico CTL',        tssWeek:430, ctlTarget:55,  pct:'85-95%', color:'#22c55e' },
     { key:'F4', name:'F4 Taper',          start:'2026-07-27', end:'2026-08-01', rir:'3-4', focus:'reducción de carga + activación pico',       tssWeek:160, ctlTarget:55,  pct:'60-70%', color:'#eab308' },
     { key:'COMP', name:'CAC Games',       start:'2026-08-01', end:'2026-08-08', rir:'—',   focus:'regatas ILCA 7 · máximo rendimiento',        tssWeek:220, ctlTarget:52,  pct:'100%',  color:'#ef4444' },
+    // Plan post-CAC → CORK → base general (agregado 17 ago 2026, ver [[training-plan-state]])
+    { key:'REC0', name:'Recuperación Post-CAC',  start:'2026-08-09', end:'2026-08-17', rir:'3-4', focus:'recuperación tras CAC Games — sin estructura formal', tssWeek:130, ctlTarget:24, pct:'50-65%', color:'#94a3b8' },
+    { key:'F1B',  name:'F1B Reactivación',       start:'2026-08-18', end:'2026-08-23', rir:'3-2', focus:'reintroducir gym + vela con carga controlada', tssWeek:300, ctlTarget:26, pct:'65-75%', color:'#4f8ef7' },
+    { key:'F2B',  name:'F2B Carga General',      start:'2026-08-24', end:'2026-09-06', rir:'2-1', focus:'fuerza general todo el cuerpo + volumen de vela', tssWeek:480, ctlTarget:33, pct:'75-85%', color:'#f97316' },
+    { key:'F3B',  name:'F3B Especificidad Vela', start:'2026-09-07', end:'2026-09-11', rir:'1-2', focus:'prioridad al agua, gym de mantenimiento corto', tssWeek:400, ctlTarget:35, pct:'80-90%', color:'#22c55e' },
+    { key:'F4B',  name:'F4B Taper + Viaje',      start:'2026-09-12', end:'2026-09-15', rir:'3-4', focus:'activación ligera, llegar fresco a Kingston', tssWeek:140, ctlTarget:34, pct:'60-70%', color:'#eab308' },
+    { key:'CORK', name:'CORK — Clasificatorio Panamericano', start:'2026-09-16', end:'2026-09-28', rir:'—', focus:'regatas ILCA 7 · clasificación a Juegos Panamericanos', tssWeek:260, ctlTarget:34, pct:'100%', color:'#ef4444' },
+    { key:'REC',  name:'Recuperación Post-CORK', start:'2026-09-29', end:'2026-10-04', rir:'4-3', focus:'descarga tras la regata clasificatoria', tssWeek:150, ctlTarget:30, pct:'50-65%', color:'#94a3b8' },
+    { key:'F5',   name:'F5 Fuerza General',      start:'2026-10-05', end:'2026-11-01', rir:'2-3', focus:'brazo, antebrazo, hombro, espalda, pierna, abdomen — hipertrofia general', tssWeek:420, ctlTarget:40, pct:'70-80%', color:'#a855f7' },
+    { key:'F6',   name:'F6 Fuerza Máxima + Potencia', start:'2026-11-02', end:'2026-11-29', rir:'1-2', focus:'convertir hipertrofia en fuerza funcional, retoma specificidad vela', tssWeek:440, ctlTarget:45, pct:'80-90%', color:'#f97316' },
+    { key:'F7',   name:'F7 Transición + Base Aeróbica', start:'2026-11-30', end:'2026-12-20', rir:'2-3', focus:'base aeróbica + mantenimiento de fuerza, arranca temporada 2027', tssWeek:400, ctlTarget:46, pct:'70-80%', color:'#4f8ef7' },
+    { key:'F8',   name:'F8 Cierre de Año',       start:'2026-12-21', end:'2026-12-31', rir:'3-4', focus:'volumen bajo, prioridad descanso/familia', tssWeek:180, ctlTarget:42, pct:'55-65%', color:'#94a3b8' },
   ],
 }
 
@@ -257,6 +269,18 @@ function analyzeCEO(d, A) {
     F3: `${phase.key} Especificidad — potencia ILCA 7 al máximo. RIR ${phase.rir}, pico de CTL hacia ${phase.ctlTarget}. Cada sesión cuenta.`,
     F4: `${phase.key} Taper — reducir volumen 40%, mantener intensidad. RIR ${phase.rir}. Llegar fresco a Barranquilla.`,
     COMP: 'CAC Games activo — maximizar rendimiento en regata. Sin entrenamientos de fatiga. Foco en táctica y ejecución.',
+    // Plan post-CAC → CORK → base general
+    REC0: 'Recuperación post-CAC Games — sin estructura formal, dejar que el cuerpo asimile la carga de Barranquilla.',
+    F1B: `${phase.key} Reactivación — reintroduciendo gym y vela con carga controlada tras el descanso. RIR ${phase.rir}.`,
+    F2B: `${phase.key} Carga General — bloque fuerte de fuerza (todo el cuerpo) + volumen de vela antes del taper. RIR ${phase.rir}, CTL objetivo ${phase.ctlTarget}.`,
+    F3B: `${phase.key} Especificidad Vela — prioridad al agua, gym de mantenimiento corto. RIR ${phase.rir}.`,
+    F4B: `${phase.key} Taper + Viaje — reducir volumen, activación ligera, llegar fresco a Kingston.`,
+    CORK: 'CORK activo — clasificatorio a Juegos Panamericanos. Sin carga de gym, solo activación + regata + recuperación. Cada regata cuenta.',
+    REC: 'Recuperación post-CORK — descarga tras la regata clasificatoria antes de retomar el bloque general.',
+    F5: `${phase.key} Fuerza General — brazo, antebrazo, hombro, espalda, pierna y abdomen. RIR ${phase.rir}, hipertrofia general sin presión de competencia.`,
+    F6: `${phase.key} Fuerza Máxima + Potencia — convirtiendo la hipertrofia en fuerza funcional. RIR ${phase.rir}, retoma specificidad vela.`,
+    F7: `${phase.key} Transición — base aeróbica + mantenimiento de fuerza, arranca la construcción de la temporada 2027.`,
+    F8: `${phase.key} Cierre de Año — volumen bajo, prioridad descanso y familia.`,
   }
 
   // Acción del día derivada del veredicto real + recuperación de hoy
@@ -394,4 +418,4 @@ async function runFullPipeline(athleteData) {
   return { datos: datosReport, sistemas: sistemasReport, fisico: fisicoReport, nutricion: nutricionReport, ceo: ceoReport, analytics: A, timestamp: new Date().toISOString() }
 }
 
-module.exports = { runFullPipeline, streamLocalPipeline, AGENT_PERSONAS, computeAnalytics }
+module.exports = { runFullPipeline, streamLocalPipeline, AGENT_PERSONAS, computeAnalytics, PLAN }

@@ -2642,11 +2642,6188 @@
       "duration_min": 240,
       "tss_planned": 80,
       "coach_note": "ÚLTIMO DÍA. 63 días de trabajo para este momento. Deja todo en el agua. ¡Disfruta la regata!"
+    },
+    {
+      "id": "4d27bac1-1f16-4d83-abd4-3b5b3f25f849",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-18",
+      "name": "🔵 Reactivación — Full Body",
+      "type": "Fuerza / Gym",
+      "duration_min": 55,
+      "tss_planned": 45,
+      "coach_note": "Primer día de gym formal post-CAC Games. RIR 3, poco volumen — el objetivo es reintroducir el patrón de movimiento, no fatigar.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "23404ec1-f669-4805-a97e-70525d41aa20",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-19",
+      "name": "🟡 Navegación Técnica Z2",
+      "type": "Vela",
+      "duration_min": 80,
+      "tss_planned": 35,
+      "coach_note": "Vela suave, foco 100% en técnica y sensaciones del bote. Sin presión de rendimiento.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica Z1-Z2",
+          "duration": "55 min",
+          "zone": "Z2 — Base aeróbica"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2d980c24-389c-4684-a5ff-465a528d51f7",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-20",
+      "name": "🔵 Reactivación — Full Body",
+      "type": "Fuerza / Gym",
+      "duration_min": 55,
+      "tss_planned": 45,
+      "coach_note": "Segunda sesión de reintroducción. RIR 3, mismos patrones, un poco más de confianza en la carga.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "bffd986a-dc9c-40b3-83be-a7d002a34205",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-21",
+      "name": "🟡 Vela + Hiking Ligero",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Primeros intervalos de hiking desde el regreso. Cortos, controlados — sube el ritmo, no lo fuerces.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación + intervalos de hiking cortos",
+          "duration": "65 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c6b54d8c-01e1-4805-9db0-69279b2ea93f",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-22",
+      "name": "🚴 Ciclismo Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Fin de semana = sin gym (regla del plan). Bici suave para mantener base aeróbica.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "34 min",
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "5a6a9c6d-e27f-405a-b142-31b92ae02f2a",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-23",
+      "name": "Descanso activo + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de la semana de reactivación. Movilidad suave, hidratación, sueño.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e9fe13bb-7479-4f0e-b0d0-0038ff86937b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-24",
+      "name": "🔴 F2B S1 · Piernas/Hiking + Core",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana 1 del bloque de carga — RIR 2. Piernas y core — la base de hiking que ya funciona bien de F1-F3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "64d2f8b4-bef1-4302-8e1e-39c08c9cda20",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-25",
+      "name": "🟡 Vela Técnica + Hiking Específico",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 55,
+      "coach_note": "Volumen medio en el agua, intervalos de hiking más largos que la semana pasada.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica + hiking específico",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "03102e41-8245-421e-8a6d-69ae1feb3aa0",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-26",
+      "name": "🔴 F2B S1 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 62,
+      "coach_note": "Semana 1 del bloque de carga — El día que ataca directamente lo que pediste: antebrazo/agarre para caña y escota en viento fuerte, y hombro para sostener el trimeo largo. RIR 2, técnica limpia antes que carga.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "fa478fc0-cf4f-4337-a97f-67da35868124",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-27",
+      "name": "🟡 Vela — Volumen + Táctica",
+      "type": "Vela",
+      "duration_min": 110,
+      "tss_planned": 60,
+      "coach_note": "Sesión más larga de la semana. Mete trabajo táctico (salidas, layline) sin perder el foco físico.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación volumen + trabajo táctico",
+          "duration": "85 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9aff92c0-a7b6-4355-b0b4-f83b46e7c1d2",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-28",
+      "name": "🔴 F2B S1 · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana 1 del bloque de carga — RIR 1-2. Cierra la semana de fuerza — empuje y rotación de tronco (roll tacks/gybes).",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Elevación de piernas colgado",
+          "sets": "3",
+          "reps": "10-12",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "5ad5a5d8-c2fc-48a5-ac37-58b5a087569c",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-29",
+      "name": "🚴 Ciclismo Z3",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 50,
+      "coach_note": "Fin de semana sin gym. Bici con algo más de intensidad que la semana de reactivación.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z3",
+          "duration": "40 min",
+          "zone": "Z3"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "44b17269-4d11-4d5b-a29c-cc9f17ebd203",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-30",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Descanso completo antes de arrancar la siguiente semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "33fdcba1-e4ff-45fa-a5e7-2e3a4b9d12c5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-31",
+      "name": "🔴 F2B S2 · Piernas/Hiking + Core",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — RIR 2. Piernas y core — la base de hiking que ya funciona bien de F1-F3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2fd11f78-2298-4b7e-bd78-8760eb4d773a",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-01",
+      "name": "🟡 Vela Técnica + Hiking Específico",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 55,
+      "coach_note": "Volumen medio en el agua, intervalos de hiking más largos que la semana pasada.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica + hiking específico",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c2c00b38-1bab-45dd-be6a-40bb69d5b933",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-02",
+      "name": "🔴 F2B S2 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 62,
+      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — El día que ataca directamente lo que pediste: antebrazo/agarre para caña y escota en viento fuerte, y hombro para sostener el trimeo largo. RIR 2, técnica limpia antes que carga.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "a18e3561-052a-48f5-92a8-8a979fcb71a5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-03",
+      "name": "🟡 Vela — Volumen + Táctica",
+      "type": "Vela",
+      "duration_min": 110,
+      "tss_planned": 60,
+      "coach_note": "Sesión más larga de la semana. Mete trabajo táctico (salidas, layline) sin perder el foco físico.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación volumen + trabajo táctico",
+          "duration": "85 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "d715fbb5-89a6-4d2f-9514-3263391ba94e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-04",
+      "name": "🔴 F2B S2 · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — RIR 1-2. Cierra la semana de fuerza — empuje y rotación de tronco (roll tacks/gybes).",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Elevación de piernas colgado",
+          "sets": "3",
+          "reps": "10-12",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "8ff9eb91-1d09-451a-a5fb-e9f69966ed53",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-05",
+      "name": "🚴 Ciclismo Z3",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 50,
+      "coach_note": "Fin de semana sin gym. Bici con algo más de intensidad que la semana de reactivación.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z3",
+          "duration": "40 min",
+          "zone": "Z3"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "086da925-6b7c-433e-a661-c1f9024ee90c",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-06",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Descanso completo antes de arrancar la siguiente semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "830ff645-27b1-443d-9424-de63e44a5a36",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-07",
+      "name": "🟡 Vela Específica + Piernas Corto",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 55,
+      "coach_note": "Arranca la semana de especificidad — prioridad total al agua. Gym corto de piernas después, solo mantenimiento.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación específica — salidas y boyas",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "dc6fdb76-5e00-4dc0-9a99-5cf45e0c7ca6",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-08",
+      "name": "🔴 Fuerza Upper — Mantenimiento",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 35,
+      "coach_note": "Sesión corta, RIR 1 — solo mantener la fuerza ganada, cero volumen extra que reste frescura para el agua.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1."
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 1."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0d1a3943-229c-4a73-850f-f7844a0d97ef",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-09",
+      "name": "🟡 Vela — Simulacro de Día de Regata",
+      "type": "Vela",
+      "duration_min": 150,
+      "tss_planned": 75,
+      "coach_note": "La sesión más exigente antes del taper — simula un día completo de regata en Kingston.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Simulacro de regata — mangas + espera",
+          "duration": "120 min",
+          "zone": "Z2-Z4"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f9b43f8b-1229-42d1-9f4a-15d6ab812b20",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-10",
+      "name": "🔵 Fuerza Full-Body Activación",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 32,
+      "coach_note": "RIR 2, activación general. Empieza a bajar volumen — el taper arranca en 2 días.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f0543d2f-1b41-487f-990a-655e583bbaec",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-11",
+      "name": "🟡 Vela Técnica + Velocidad",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 45,
+      "coach_note": "Última sesión de agua en Valle de Bravo antes del viaje. Foco en velocidad pura, no en volumen.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica — velocidad y salidas",
+          "duration": "65 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "53064ab4-b81c-458b-be69-819f82271801",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-12",
+      "name": "🚴 Bici Suave + Movilidad",
+      "type": "Ciclismo",
+      "duration_min": 35,
+      "tss_planned": 22,
+      "coach_note": "Inicio del taper. Muy suave — solo mantener las piernas vivas.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici muy suave",
+          "duration": "20 min",
+          "zone": "Z1-Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c4cc0373-804e-4be9-8b55-736378936d00",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-13",
+      "name": "Descanso total",
+      "type": "Descanso",
+      "duration_min": 20,
+      "tss_planned": 8,
+      "coach_note": "Descanso completo. Empieza a preparar equipo y maleta para Canadá.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "706fbee7-bcb6-4299-a815-e15244e81229",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-14",
+      "name": "🔵 Activación Corta + Vela Ligera",
+      "type": "Vela",
+      "duration_min": 70,
+      "tss_planned": 30,
+      "coach_note": "Último día completo en casa. Activación neuromuscular corta + navegación ligera para sentir el bote una vez más.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación ligera de cierre",
+          "duration": "40 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1bd629da-767b-442e-a2d6-8807139517c0",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-15",
+      "name": "🔵 Día de Viaje — Movilidad Mínima",
+      "type": "Core / Movilidad",
+      "duration_min": 20,
+      "tss_planned": 8,
+      "coach_note": "Vuelas a Kingston hoy. Solo movilidad ligera en el aeropuerto/hotel — prioridad hidratación y dormir en el vuelo si puedes.",
+      "segments": [
+        {
+          "exercise": "Movilidad general + estiramiento",
+          "sets": "1",
+          "reps": "15min",
+          "note": "Cero carga. Cuerpo fresco para llegar a Canadá."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "a17a320f-ff97-4ee9-ad7e-d6becaf30a48",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-16",
+      "name": "🏁 CORK — Regata Día 1",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 62,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "3940b78d-a86e-423e-90c8-22b266b6b63b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-17",
+      "name": "🏁 CORK — Regata Día 2",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 68,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "34e5c14f-5bf0-429e-8278-8f41c9c0c9aa",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-18",
+      "name": "🏁 CORK — Regata Día 3",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 60,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e4c4dc02-9a9c-4df2-8bd2-4612793066b2",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-19",
+      "name": "🏁 CORK — Regata Día 4",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 72,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "817a1dff-8574-4e77-bbfd-769939b9a7ce",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-20",
+      "name": "🏁 CORK — Regata Día 5",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 58,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "50035801-e1f0-48cb-abc4-236d5c05774e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-21",
+      "name": "🏁 CORK — Regata Día 6",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 65,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "ee089a66-8872-4d13-bc27-53a0f342a480",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-22",
+      "name": "⚪ CORK — Día de Reserva/Descanso",
+      "type": "Descanso",
+      "duration_min": 30,
+      "tss_planned": 15,
+      "coach_note": "Lay day del calendario CORK (placeholder — ajusta según el Notice of Race real). Aprovecha para recuperación activa: movilidad, revisión de equipo, mentalidad para la segunda mitad.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2ee75af4-b4a2-42a2-ae8b-c3d7385f8012",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-23",
+      "name": "🏁 CORK — Regata Día 7",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 70,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "80b87945-038e-407c-a106-ec9ed9a53eca",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-24",
+      "name": "🏁 CORK — Regata Día 8",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 64,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c49a98a8-4bf0-466e-8f38-8cb764f0cc22",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-25",
+      "name": "🏁 CORK — Regata Día 9",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 68,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1dd0f4a1-b7f9-4759-9010-55b563e4d1e8",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-26",
+      "name": "🏁 CORK — Regata Día 10",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 60,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "90d23c8e-9c01-4f92-9269-e15b559f00b4",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-27",
+      "name": "🏁 CORK — Regata Día 11",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 55,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e6e4b077-9845-42c0-bd22-aba791824694",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-28",
+      "name": "🏁 CORK — Regata Día 12",
+      "type": "Vela",
+      "duration_min": 240,
+      "tss_planned": 50,
+      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "segments": [
+        {
+          "name": "Activación pre-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Activación"
+        },
+        {
+          "name": "Regata ILCA 7",
+          "duration": "210 min",
+          "zone": "Z2-Z4 — Variable según viento"
+        },
+        {
+          "name": "Recuperación post-regata",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "bfbd71a7-983a-430b-957d-cb283e51bc04",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-29",
+      "name": "Descanso total — Llegada",
+      "type": "Descanso",
+      "duration_min": 15,
+      "tss_planned": 5,
+      "coach_note": "Llegada del viaje. Descanso total, sin excepciones.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "bbfb2418-468d-4b3e-9526-016bd2eb0992",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-30",
+      "name": "🔵 Movilidad + Bici Muy Suave",
+      "type": "Ciclismo",
+      "duration_min": 35,
+      "tss_planned": 18,
+      "coach_note": "Reintroducción muy suave. Escucha al cuerpo tras 13 días de regata intensa.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici muy suave",
+          "duration": "20 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "ca53875a-dd3e-4718-91c0-0737645b6bcc",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-01",
+      "name": "🚴 Bici Z1-Z2",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 30,
+      "coach_note": "Sigue la descarga — un poco más de volumen, cero intensidad.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z1-Z2",
+          "duration": "30 min",
+          "zone": "Z1-Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "3175dbdb-6e46-4ed5-94ff-70b1b441950b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-02",
+      "name": "🔵 Activación Ligera Gym",
+      "type": "Fuerza / Gym",
+      "duration_min": 35,
+      "tss_planned": 25,
+      "coach_note": "Primer contacto con el gym desde antes de CORK. RIR 4, solo activar patrones.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 4 — muy suave."
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 4 — muy suave."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "afedc01e-e21f-4b85-be73-13fcdc3ecda9",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-03",
+      "name": "🚴 Bici Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "Sube un poco más el volumen aeróbico de cara al bloque de fuerza general que arranca el lunes.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "35 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f16463fd-ddf9-4c87-9a70-dc8cfcd155cc",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-04",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Último día de descarga antes de arrancar F5 — fuerza general.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "13c1f9a0-6211-4ca7-bbb1-4d7ec21c305e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-05",
+      "name": "🟢 F5 S1 · Piernas/Hiking + Abdomen",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Bloque de fuerza general post-CORK. Sin regata a la vista hasta 2027 — ahora es cuando construyes base para cerrar los huecos que sentiste. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Wall sit hiking simulation",
+          "sets": "3",
+          "reps": "55s",
+          "note": "90° en rodilla — igual a la posición de hiking en el Laser. RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2048431b-064f-4960-95c2-6ce014b573da",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-06",
+      "name": "🟡 Vela Técnica / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 80,
+      "tss_planned": 40,
+      "coach_note": "Mantener sensaciones de vela sin que sea la prioridad del bloque — si no hay agua disponible, sustituye por bici/carrera Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica suave",
+          "duration": "55 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "8abac528-e619-4c6f-96ab-6534f7f0e69e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-07",
+      "name": "🟢 F5 S1 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 60,
+      "coach_note": "El día clave para lo que pediste: brazo, antebrazo, hombro y espalda. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 3."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9e59125a-fb84-4b45-bf55-cec14df10598",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-08",
+      "name": "🚴 Aeróbico Z2 — Base",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 40,
+      "coach_note": "Construcción de base aeróbica — de cara a un bloque más largo sin la presión de una regata cercana.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici o carrera Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "96d9cd21-ef97-4eba-8764-89c42f9972d0",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-09",
+      "name": "🟢 F5 S1 · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Empuje (press/fondos) + rotación de tronco — roll tacks/gybes y trimeo bajo carga. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Elevación de piernas colgado",
+          "sets": "3",
+          "reps": "10-12",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "918b68f7-d025-44b0-8c5a-8a67525943d8",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-10",
+      "name": "🏠 Gym en Casa — Full Body Integrado",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 35,
+      "coach_note": "Fin de semana sin gym formal (regla del plan) — sesión en casa con mancuernas/peso corporal, integra hiking + tirón.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e178d17c-40ae-49c1-9dda-859a48aeb1ce",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-11",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana. El descanso permite que la fuerza se consolide.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9d6bf6da-a8bc-4801-8b3c-efe42ab0bb9b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-12",
+      "name": "🟢 F5 S2 · Piernas/Hiking + Abdomen",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Bloque de fuerza general post-CORK. Sin regata a la vista hasta 2027 — ahora es cuando construyes base para cerrar los huecos que sentiste. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Wall sit hiking simulation",
+          "sets": "3",
+          "reps": "55s",
+          "note": "90° en rodilla — igual a la posición de hiking en el Laser. RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "d04c8e12-c888-4553-945f-4eb66a9be4ec",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-13",
+      "name": "🟡 Vela Técnica / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 80,
+      "tss_planned": 40,
+      "coach_note": "Mantener sensaciones de vela sin que sea la prioridad del bloque — si no hay agua disponible, sustituye por bici/carrera Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica suave",
+          "duration": "55 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "bda3d138-5516-47f6-a168-c98c840fa30b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-14",
+      "name": "🟢 F5 S2 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 60,
+      "coach_note": "El día clave para lo que pediste: brazo, antebrazo, hombro y espalda. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2-3."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c726b6ef-9537-4de4-81b9-8d14b9a3c252",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-15",
+      "name": "🚴 Aeróbico Z2 — Base",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 40,
+      "coach_note": "Construcción de base aeróbica — de cara a un bloque más largo sin la presión de una regata cercana.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici o carrera Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "6696a672-ba0f-448c-9e1d-8cdee02a596b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-16",
+      "name": "🟢 F5 S2 · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Empuje (press/fondos) + rotación de tronco — roll tacks/gybes y trimeo bajo carga. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Elevación de piernas colgado",
+          "sets": "3",
+          "reps": "10-12",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c4d284d2-bc17-4319-97da-4278c181cf00",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-17",
+      "name": "🏠 Gym en Casa — Full Body Integrado",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 35,
+      "coach_note": "Fin de semana sin gym formal (regla del plan) — sesión en casa con mancuernas/peso corporal, integra hiking + tirón.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "3f15cb4d-399e-4286-9196-15db56b5dbd9",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-18",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana. El descanso permite que la fuerza se consolide.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "5d82e1c5-89d2-4e86-866e-d2dd293ff013",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-19",
+      "name": "🟢 F5 S3 · Piernas/Hiking + Abdomen",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Bloque de fuerza general post-CORK. Sin regata a la vista hasta 2027 — ahora es cuando construyes base para cerrar los huecos que sentiste. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Wall sit hiking simulation",
+          "sets": "3",
+          "reps": "55s",
+          "note": "90° en rodilla — igual a la posición de hiking en el Laser. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2dabe576-d19b-4544-8e67-510dcbb37065",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-20",
+      "name": "🟡 Vela Técnica / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 80,
+      "tss_planned": 40,
+      "coach_note": "Mantener sensaciones de vela sin que sea la prioridad del bloque — si no hay agua disponible, sustituye por bici/carrera Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica suave",
+          "duration": "55 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0194a523-19de-41b1-960f-c316e86db8de",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-21",
+      "name": "🟢 F5 S3 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 60,
+      "coach_note": "El día clave para lo que pediste: brazo, antebrazo, hombro y espalda. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "6842a53a-d6ad-4d65-ab46-ecaae99c8410",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-22",
+      "name": "🚴 Aeróbico Z2 — Base",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 40,
+      "coach_note": "Construcción de base aeróbica — de cara a un bloque más largo sin la presión de una regata cercana.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici o carrera Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2a1cc19b-4e70-47cd-afae-36baaad8f77a",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-23",
+      "name": "🟢 F5 S3 · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 55,
+      "coach_note": "Empuje (press/fondos) + rotación de tronco — roll tacks/gybes y trimeo bajo carga. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Elevación de piernas colgado",
+          "sets": "3",
+          "reps": "10-12",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e05b92a4-711e-46de-be14-12295ac1da4f",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-24",
+      "name": "🏠 Gym en Casa — Full Body Integrado",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 35,
+      "coach_note": "Fin de semana sin gym formal (regla del plan) — sesión en casa con mancuernas/peso corporal, integra hiking + tirón.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3, sin llegar al fallo."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "72058f1c-2fd1-487e-9d60-cfcf5dcf24a3",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-25",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana. El descanso permite que la fuerza se consolide.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "ce50e1dc-6708-465b-8861-931e71245cec",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-26",
+      "name": "🟢 F5 S4 · Descarga · Piernas/Hiking + Abdomen",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 38,
+      "coach_note": "Semana de descarga — baja el volumen ~30%, mantén la técnica. Bloque de fuerza general post-CORK. Sin regata a la vista hasta 2027 — ahora es cuando construyes base para cerrar los huecos que sentiste. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "511a9551-3699-4d8b-a663-3950993ef557",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-27",
+      "name": "🟡 Vela Técnica / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 80,
+      "tss_planned": 25,
+      "coach_note": "Mantener sensaciones de vela sin que sea la prioridad del bloque — si no hay agua disponible, sustituye por bici/carrera Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica suave",
+          "duration": "55 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "98709f00-22ef-4cbf-a21d-a16735ceb674",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-28",
+      "name": "🟢 F5 S4 · Descarga · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 43,
+      "coach_note": "Descarga — mismo patrón, menos volumen. El día clave para lo que pediste: brazo, antebrazo, hombro y espalda. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "858e4122-befd-4314-82d6-23816412175e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-29",
+      "name": "🚴 Aeróbico Z2 — Base",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 25,
+      "coach_note": "Construcción de base aeróbica — de cara a un bloque más largo sin la presión de una regata cercana.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici o carrera Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "5570947d-1924-4044-9279-532aaab9be33",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-30",
+      "name": "🟢 F5 S4 · Descarga · Empuje Superior + Core Rotacional",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 38,
+      "coach_note": "Descarga. Empuje (press/fondos) + rotación de tronco — roll tacks/gybes y trimeo bajo carga. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "7e98c75d-134e-4044-8f93-eecdb91b59b5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-10-31",
+      "name": "🚴 Bici Z2 — Descarga",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 28,
+      "coach_note": "Fin de semana de descarga — bici suave en vez de gym en casa.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 suave",
+          "duration": "30 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f0ef4565-1f0e-43f6-b41c-da7a4ab8d778",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-01",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana. El descanso permite que la fuerza se consolide.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "10cee8d9-2aa6-4ebd-b7bd-29d3e2aa8176",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-02",
+      "name": "🔴 F6 S1 · Piernas/Hiking + Potencia",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Convirtiendo la hipertrofia de F5 en fuerza funcional. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Squat jump",
+          "sets": "4",
+          "reps": "6",
+          "note": "Velocidad máxima, descanso completo entre sets. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1800163c-eaef-4b1a-aac3-f639cc79e5f8",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-03",
+      "name": "🟡 Vela — Retoma Especificidad",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 50,
+      "coach_note": "Sube el volumen/intensidad de vela otra vez — empieza a construir specificidad de cara a 2027.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación específica",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2a0a4b85-fc01-4bbb-aebb-8ad5ea8a7b0b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-04",
+      "name": "🔴 F6 S1 · Tirón + Hombro + Antebrazo (Potencia)",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Mantiene el trabajo de antebrazo/hombro pero con menos volumen y más carga. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay explosivo",
+          "sets": "4",
+          "reps": "5",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "75bc0303-b092-4843-9d27-380e0d5cb817",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-05",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "Mantiene la base aeróbica mientras sube la intensidad de fuerza.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "35 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "065648a6-c7b3-47be-aecb-bb2e4f86a436",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-06",
+      "name": "🔴 F6 S1 · Empuje + Core + Explosivo",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Empuje + trabajo explosivo de tronco (rotación) — transferencia directa a roll tack/gybe. RIR 2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Med ball rotational slam",
+          "sets": "3",
+          "reps": "8/lado",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "61efd354-b009-4086-be5d-3e305b96bab1",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-07",
+      "name": "🟡 Vela o Bici Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Sesión de fin de semana — vela si hay agua/logística, si no bici Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación libre",
+          "duration": "65 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c8365cf6-9bb6-4141-a954-1c3e0fd61749",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-08",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "934e8331-d41a-4c41-844e-0d5ab4c99470",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-09",
+      "name": "🔴 F6 S2 · Piernas/Hiking + Potencia",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Convirtiendo la hipertrofia de F5 en fuerza funcional. RIR 1-2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1-2."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 1-2."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Squat jump",
+          "sets": "4",
+          "reps": "6",
+          "note": "Velocidad máxima, descanso completo entre sets. RIR 1-2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "b516e68f-2e25-4fa0-ae32-50c25525fad2",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-10",
+      "name": "🟡 Vela — Retoma Especificidad",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 50,
+      "coach_note": "Sube el volumen/intensidad de vela otra vez — empieza a construir specificidad de cara a 2027.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación específica",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "7cc66a23-34ca-4917-a9ad-e1eda5bf5be4",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-11",
+      "name": "🔴 F6 S2 · Tirón + Hombro + Antebrazo (Potencia)",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Mantiene el trabajo de antebrazo/hombro pero con menos volumen y más carga. RIR 1-2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1-2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 1-2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1-2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 1-2."
+        },
+        {
+          "exercise": "Remo Pendlay explosivo",
+          "sets": "4",
+          "reps": "5",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0ef92cda-dc07-49b8-8e74-9e04b51d5455",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-12",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "Mantiene la base aeróbica mientras sube la intensidad de fuerza.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "35 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9f1183f9-b35e-4c3a-8ebc-8284f70dccaf",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-13",
+      "name": "🔴 F6 S2 · Empuje + Core + Explosivo",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Empuje + trabajo explosivo de tronco (rotación) — transferencia directa a roll tack/gybe. RIR 1-2.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Med ball rotational slam",
+          "sets": "3",
+          "reps": "8/lado",
+          "note": "RIR 1-2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "a74466d3-56a7-4b94-af57-93c4dd7022c7",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-14",
+      "name": "🟡 Vela o Bici Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Sesión de fin de semana — vela si hay agua/logística, si no bici Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación libre",
+          "duration": "65 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "eb1c9962-66e0-477c-979e-533329f0d783",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-15",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0351c4b3-df0e-47da-8bfd-965bb5139462",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-16",
+      "name": "🔴 F6 S3 · Piernas/Hiking + Potencia",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Convirtiendo la hipertrofia de F5 en fuerza funcional. RIR 1.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 1."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Squat jump",
+          "sets": "4",
+          "reps": "6",
+          "note": "Velocidad máxima, descanso completo entre sets. RIR 1."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "98f00fc8-1cb6-4613-ae1f-0bfd4ca5e32f",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-17",
+      "name": "🟡 Vela — Retoma Especificidad",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 50,
+      "coach_note": "Sube el volumen/intensidad de vela otra vez — empieza a construir specificidad de cara a 2027.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación específica",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9c382201-0032-465c-a926-f0adee2aae01",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-18",
+      "name": "🔴 F6 S3 · Tirón + Hombro + Antebrazo (Potencia)",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Mantiene el trabajo de antebrazo/hombro pero con menos volumen y más carga. RIR 1.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 1."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 1."
+        },
+        {
+          "exercise": "Remo Pendlay explosivo",
+          "sets": "4",
+          "reps": "5",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f41b7a6a-1cab-4a7d-95b4-f5a10c5454e5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-19",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "Mantiene la base aeróbica mientras sube la intensidad de fuerza.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "35 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "15765b72-2475-4305-839a-43061deb072a",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-20",
+      "name": "🔴 F6 S3 · Empuje + Core + Explosivo",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Empuje + trabajo explosivo de tronco (rotación) — transferencia directa a roll tack/gybe. RIR 1.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Med ball rotational slam",
+          "sets": "3",
+          "reps": "8/lado",
+          "note": "RIR 1."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "4748614d-c5d0-4e18-b49c-87ff59bba390",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-21",
+      "name": "🟡 Vela o Bici Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Sesión de fin de semana — vela si hay agua/logística, si no bici Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación libre",
+          "duration": "65 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "d0dc0131-4901-4e37-9d1e-bcb1ab669bef",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-22",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1e1d525a-b68d-41e6-9363-e3fec66ced55",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-23",
+      "name": "🔴 F6 S4 · Descarga · Piernas/Hiking + Potencia",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 40,
+      "coach_note": "Descarga — semana de Acción de Gracias, aprovecha para bajar volumen. Convirtiendo la hipertrofia de F5 en fuerza funcional. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "08af26dc-9d25-475d-b919-d6b0004f68de",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-24",
+      "name": "🟡 Vela — Retoma Especificidad",
+      "type": "Vela",
+      "duration_min": 100,
+      "tss_planned": 50,
+      "coach_note": "Sube el volumen/intensidad de vela otra vez — empieza a construir specificidad de cara a 2027.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación específica",
+          "duration": "75 min",
+          "zone": "Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1f8c393e-1400-4373-8058-7c58427d80e7",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-25",
+      "name": "🔴 F6 S4 · Descarga · Tirón + Hombro + Antebrazo (Potencia)",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 40,
+      "coach_note": "Descarga. Mantiene el trabajo de antebrazo/hombro pero con menos volumen y más carga. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "4e12d565-4e88-46b3-9f44-b9bb50053444",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-26",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 50,
+      "tss_planned": 38,
+      "coach_note": "Mantiene la base aeróbica mientras sube la intensidad de fuerza.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "35 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "10f24cd3-5ce9-4c51-b5e3-99669a997cc5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-27",
+      "name": "🔴 F6 S4 · Descarga · Empuje + Core + Explosivo",
+      "type": "Fuerza / Gym",
+      "duration_min": 45,
+      "tss_planned": 40,
+      "coach_note": "Descarga. Empuje + trabajo explosivo de tronco (rotación) — transferencia directa a roll tack/gybe. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Fondos en paralelas",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "75690bd5-98fc-46ed-9f2f-5c500ed99908",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-28",
+      "name": "🟡 Vela o Bici Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Sesión de fin de semana — vela si hay agua/logística, si no bici Z2.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación libre",
+          "duration": "65 min",
+          "zone": "Z2-Z3"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0d4dbb61-fecc-4e6f-a85f-062412d6cdca",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-29",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "8ed9cc1a-1a84-4b32-9cc9-cccc655961f9",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-11-30",
+      "name": "🟢 F7 S1 · Fuerza Mantenimiento — Piernas + Core",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Gym baja a mantenimiento (2-3x/semana) — el foco pasa a base aeróbica. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "8537c2d3-c4e8-4ab1-ae57-11f32a074684",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-01",
+      "name": "🚴 Aeróbico Z2 — Base Larga",
+      "type": "Ciclismo",
+      "duration_min": 70,
+      "tss_planned": 55,
+      "coach_note": "Sesión larga de base — construyendo el volumen aeróbico de cara a 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 larga",
+          "duration": "50 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "7ce3e70b-49d2-49db-91f1-8047e869e619",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-02",
+      "name": "🟢 F7 S1 · Fuerza Mantenimiento — Tirón + Hombro",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Mantiene lo ganado en F5/F6 sin agregar más volumen. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "afe78996-b7a2-4a3a-a86c-25132243c3ae",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-03",
+      "name": "🟡 Vela (si hay logística) / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 45,
+      "coach_note": "Vela si el calendario y clima lo permiten; si no, aeróbico Z2 equivalente.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación base",
+          "duration": "65 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "ad907572-16c9-4073-b830-b09ba4ac644b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-04",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 42,
+      "coach_note": "Segunda sesión aeróbica de la semana — construcción de base 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "7bc46a44-667c-4858-a2c6-b682c41205a4",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-05",
+      "name": "🏠 Gym en Casa — Full Body Ligero",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Fin de semana sin gym formal — sesión ligera en casa.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "902766aa-eb5f-45bd-8315-b5c2bd4470b7",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-06",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "61f937f1-2365-49c9-b7a7-abf3e184d8fd",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-07",
+      "name": "🟢 F7 S2 · Fuerza Mantenimiento — Piernas + Core",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Gym baja a mantenimiento (2-3x/semana) — el foco pasa a base aeróbica. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "3423dc10-bb2d-456a-82e7-95243e9efe47",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-08",
+      "name": "🚴 Aeróbico Z2 — Base Larga",
+      "type": "Ciclismo",
+      "duration_min": 70,
+      "tss_planned": 55,
+      "coach_note": "Sesión larga de base — construyendo el volumen aeróbico de cara a 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 larga",
+          "duration": "50 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "f4d5234c-c385-4e5b-95d8-19eaf885ae3b",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-09",
+      "name": "🟢 F7 S2 · Fuerza Mantenimiento — Tirón + Hombro",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Mantiene lo ganado en F5/F6 sin agregar más volumen. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "e99c24f6-fbf4-466c-a6e7-659a38c70e0e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-10",
+      "name": "🟡 Vela (si hay logística) / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 45,
+      "coach_note": "Vela si el calendario y clima lo permiten; si no, aeróbico Z2 equivalente.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación base",
+          "duration": "65 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "a3168093-6712-4745-98a1-b910b92e7fab",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-11",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 42,
+      "coach_note": "Segunda sesión aeróbica de la semana — construcción de base 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "70b9532f-18e6-4896-af5b-b8cb0c6b656e",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-12",
+      "name": "🏠 Gym en Casa — Full Body Ligero",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Fin de semana sin gym formal — sesión ligera en casa.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "af5202e4-69ca-4ff7-8af6-0810771e40f8",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-13",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "d9e767e3-1226-4576-9756-94b23c745823",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-14",
+      "name": "🟢 F7 S3 · Fuerza Mantenimiento — Piernas + Core",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Gym baja a mantenimiento (2-3x/semana) — el foco pasa a base aeróbica. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Sentadilla trasera",
+          "sets": "4",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "8972aa82-4e1b-4073-bc2d-2bffd2b07650",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-15",
+      "name": "🚴 Aeróbico Z2 — Base Larga",
+      "type": "Ciclismo",
+      "duration_min": 70,
+      "tss_planned": 55,
+      "coach_note": "Sesión larga de base — construyendo el volumen aeróbico de cara a 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 larga",
+          "duration": "50 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "c14f632a-a7ed-47dd-a566-b7bbb9d67792",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-16",
+      "name": "🟢 F7 S3 · Fuerza Mantenimiento — Tirón + Hombro",
+      "type": "Fuerza / Gym",
+      "duration_min": 50,
+      "tss_planned": 42,
+      "coach_note": "Mantiene lo ganado en F5/F6 sin agregar más volumen. RIR 2-3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2-3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2d935999-1643-4d6c-8d59-60ad8554dcad",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-17",
+      "name": "🟡 Vela (si hay logística) / Aeróbico Z2",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 45,
+      "coach_note": "Vela si el calendario y clima lo permiten; si no, aeróbico Z2 equivalente.",
+      "segments": [
+        {
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación base",
+          "duration": "65 min",
+          "zone": "Z2"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "9d4a16bd-d625-487e-8edd-3f48fcd1d3ed",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-18",
+      "name": "🚴 Aeróbico Z2",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 42,
+      "coach_note": "Segunda sesión aeróbica de la semana — construcción de base 2027.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "40 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "ed17d5fd-aaa1-4e1a-a60f-537cf01b03e9",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-19",
+      "name": "🏠 Gym en Casa — Full Body Ligero",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Fin de semana sin gym formal — sesión ligera en casa.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "3e628884-0ce1-4b52-8fe1-7d629fb594b7",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-20",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Cierre de semana.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "450c0fa7-ab39-4e50-92db-9a03a71f5f70",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-21",
+      "name": "🔵 Fuerza Full Body Ligera",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Arranca la semana de cierre de año — volumen bajo, prioridad descanso/familia. RIR 3-4.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "da5e5c9e-019a-4ad3-82a6-d717f531edbc",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-22",
+      "name": "🚴 Bici Z2 Suave",
+      "type": "Ciclismo",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Cardio ligero, sin presión.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 suave",
+          "duration": "25 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "0ea2e8f9-b9af-49c1-9435-36eab766d007",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-23",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "Prioridad familia y descanso estas fechas.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "2eed13de-98df-41bf-bc3d-82064c983627",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-24",
+      "name": "Descanso — Nochebuena",
+      "type": "Descanso",
+      "duration_min": 10,
+      "tss_planned": 2,
+      "coach_note": "Descanso total.",
+      "segments": [
+        {
+          "exercise": "Descanso total",
+          "sets": "1",
+          "reps": "—",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:38.594Z"
+    },
+    {
+      "id": "7fc69f3d-b346-4d2c-9692-1b92ab155b56",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-25",
+      "name": "Descanso — Navidad",
+      "type": "Descanso",
+      "duration_min": 10,
+      "tss_planned": 2,
+      "coach_note": "Descanso total.",
+      "segments": [
+        {
+          "exercise": "Descanso total",
+          "sets": "1",
+          "reps": "—",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:38.594Z"
+    },
+    {
+      "id": "ee4d6c24-b20f-44b2-b42f-1fff36a77c11",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-26",
+      "name": "🔵 Fuerza Full Body Ligera",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Retoma suave post-Navidad. RIR 3-4.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3-4."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "02aa2426-5907-4f16-ae53-fbc7f3c54b93",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-27",
+      "name": "🚴 Bici Z2",
+      "type": "Ciclismo",
+      "duration_min": 40,
+      "tss_planned": 30,
+      "coach_note": "Cardio ligero.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2",
+          "duration": "25 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "1b3950da-e77f-47d0-aff4-21a3f9108ae0",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-28",
+      "name": "Descanso + movilidad",
+      "type": "Descanso",
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "Descanso.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "21c210ef-671f-4454-8022-6560e92cea6a",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-29",
+      "name": "🔵 Fuerza Full Body Ligera",
+      "type": "Fuerza / Gym",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Última sesión de fuerza del año. RIR 3.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Pull-up o remo con banda",
+          "sets": "3",
+          "reps": "8-10",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Zancadas con mancuernas",
+          "sets": "3",
+          "reps": "12/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "50s",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Elevaciones laterales con mancuerna ligera",
+          "sets": "3",
+          "reps": "15",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Hip thrust a una pierna",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "5d811ab2-c123-427f-a341-07fc97f92642",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-30",
+      "name": "🚴 Bici Z2 Suave",
+      "type": "Ciclismo",
+      "duration_min": 40,
+      "tss_planned": 26,
+      "coach_note": "Cardio ligero antes de cerrar el año.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "8 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Bici Z2 suave",
+          "duration": "25 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "7 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "d77b0305-5d02-437b-aee8-c3ad07d702f2",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-12-31",
+      "name": "Cierre de Año — Descanso/Reflexión",
+      "type": "Descanso",
+      "duration_min": 15,
+      "tss_planned": 5,
+      "coach_note": "Cierra el año: de CAC Games (5to lugar, viento extremo) a CORK (clasificatorio Panamericano) a un bloque completo de fuerza general. 2027 arranca con más base que nunca.",
+      "segments": [
+        {
+          "exercise": "Descanso total o movilidad muy suave",
+          "sets": "1",
+          "reps": "15-20min",
+          "note": "El descanso es parte del entrenamiento."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-17T23:51:17.214Z"
     }
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-17T23:25:16.702Z",
+    "built_at": "2026-08-17T23:55:43.041Z",
     "data": [
       {
         "date": "2015-01-11",

@@ -4,7 +4,8 @@ const { auth } = require('../middleware/auth')
 const { now, localDate } = require('../utils/ids')
 const { DB } = require('../services/db')
 const { weekStartISO } = require('../services/pmc')
-const { computeAnalytics } = require('../../agents-system')
+const { computeAnalytics, PLAN } = require('../../agents-system')
+const { phaseForDate } = require('../services/analytics')
 
 const router = express.Router()
 
@@ -31,15 +32,15 @@ router.get('/executive-summary', auth, (req, res) => {
   const wkWorkouts = allWk.filter((w) => w.date >= wkStart && w.status === 'COMPLETED')
   const weeklyTSS = wkWorkouts.reduce((s, w) => s + (Number(w.actual_tss ?? 0) || 0), 0)
 
-  // Mini PMC: últimas 6 semanas reales + proyección plan hasta CAC (Jul 25)
+  // Mini PMC: últimas 6 semanas reales + proyección plan hasta la próxima meta (CORK)
   const realSlice = pmcCacheArr.slice(-42).map((p) => ({ date: p.date, tss: p.tss || 0, ctl: p.ctl, atl: p.atl, tsb: p.tsb, projected: false }))
   // Proyectar hacia adelante usando workouts PENDING del plan
   const today = localDate()
-  const planFuture = allWk.filter((w) => w.date > today && w.date <= '2026-07-26').sort((a, b) => a.date.localeCompare(b.date))
+  const planFuture = allWk.filter((w) => w.date > today && w.date <= PLAN.compEnd).sort((a, b) => a.date.localeCompare(b.date))
   let projCtl = lastPMC.ctl || 0, projAtl = lastPMC.atl || 0
   const kCtl = 1 - Math.exp(-1 / 42), kAtl = 1 - Math.exp(-1 / 7)
   // Iterar fecha a fecha desde mañana hasta el fin del plan
-  const projEnd = new Date('2026-07-26T12:00:00Z')
+  const projEnd = new Date(PLAN.compEnd + 'T12:00:00Z')
   const projStart = new Date(today + 'T12:00:00Z')
   projStart.setUTCDate(projStart.getUTCDate() + 1)
   const planTssByDate = {}
@@ -86,13 +87,8 @@ router.get('/executive-summary', auth, (req, res) => {
   } : null
 
   // ── Motor de analítica real (mismo veredicto que el panel Análisis IA) ──────
-  const sumPhases = [
-    { name: 'F1 Base Técnica', start: '2026-06-07', end: '2026-06-21', tssWeek: 360, ctlTarget: 28 },
-    { name: 'F2 Carga', start: '2026-06-22', end: '2026-07-12', tssWeek: 490, ctlTarget: 45 },
-    { name: 'F3 Especificidad', start: '2026-07-13', end: '2026-07-26', tssWeek: 430, ctlTarget: 55 },
-    { name: 'F4 Taper', start: '2026-07-27', end: '2026-08-01', tssWeek: 160, ctlTarget: 55 },
-  ]
-  const sumPhase = sumPhases.find((p) => today >= p.start && today <= p.end) || sumPhases[0]
+  // Fuente única de fases: CAC_PHASES en src/services/analytics.js (ver phaseForDate)
+  const sumPhase = phaseForDate(today)
   const A = computeAnalytics({
     pmcSeries: pmcCacheArr.slice(-60),
     whoopHistory: (DB.whoop_history || []).slice(-60),
@@ -142,16 +138,11 @@ router.get('/ai-analysis', auth, (req, res) => {
   const wkStart = weekStartISO()
   const weekDone = allWk.filter((w) => w.date >= wkStart && w.status === 'COMPLETED')
   const weekTSS = weekDone.reduce((s, w) => s + (Number(w.actual_tss ?? 0) || 0), 0)
-  const daysToRace = Math.max(0, Math.ceil((new Date('2026-08-01') - new Date(today + 'T12:00:00Z')) / 86400000))
+  const daysToRace = Math.max(0, Math.ceil((new Date(PLAN.raceDate) - new Date(today + 'T12:00:00Z')) / 86400000))
 
   // ── Plan phase detection ─────────────────────────────────────────────────
-  const planPhases = [
-    { name: 'F1 Base Técnica', start: '2026-06-07', end: '2026-06-21', color: '#4f8ef7', tssWeek: 360 },
-    { name: 'F2 Carga', start: '2026-06-22', end: '2026-07-12', color: '#f97316', tssWeek: 490 },
-    { name: 'F3 Especificidad', start: '2026-07-13', end: '2026-07-26', color: '#22c55e', tssWeek: 430 },
-    { name: 'F4 Taper', start: '2026-07-27', end: '2026-08-01', color: '#eab308', tssWeek: 160 },
-  ]
-  const currentPhase = planPhases.find((p) => today >= p.start && today <= p.end) || planPhases[0]
+  // Fuente única de fases: CAC_PHASES en src/services/analytics.js (ver phaseForDate)
+  const currentPhase = phaseForDate(today)
   const tssGoal = currentPhase.tssWeek || 360
   const planDayNum = Math.max(1, Math.ceil((new Date(today + 'T12:00:00Z') - new Date(currentPhase.start + 'T12:00:00Z')) / 86400000) + 1)
   const phaseTotalDays = Math.ceil((new Date(currentPhase.end + 'T12:00:00Z') - new Date(currentPhase.start + 'T12:00:00Z')) / 86400000) + 1
@@ -307,7 +298,7 @@ router.get('/ai-analysis', auth, (req, res) => {
     planWks.forEach((w) => { const t = w.tss_planned || 0; c = c + (t - c) * kc; a = a + (t - a) * ka })
     return Math.round(c * 10) / 10
   })()
-  correlations.push({ icon: '📈', title: 'CTL proyectado', value: `${projectedCTLAtRace} CTL`, body: `Si cumples el plan F1 esta semana: CTL proyectado ${projectedCTLAtRace} en 7 días (vs ${ctl} hoy). Tendencia positiva en construcción.`, strength: 3, projected: true })
+  correlations.push({ icon: '📈', title: 'CTL proyectado', value: `${projectedCTLAtRace} CTL`, body: `Si cumples el plan de ${currentPhase.name} esta semana: CTL proyectado ${projectedCTLAtRace} en 7 días (vs ${ctl} hoy). Tendencia positiva en construcción.`, strength: 3, projected: true })
 
   // ── Radar scores 0-100 ───────────────────────────────────────────────────
   const radarRendimiento = (() => {
