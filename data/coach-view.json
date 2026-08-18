@@ -3921,30 +3921,21 @@
       "updated_at": "2026-08-17T23:51:17.214Z"
     },
     {
-      "id": "a17a320f-ff97-4ee9-ad7e-d6becaf30a48",
+      "id": "f6fafbc2-aa2e-49ce-aa1b-5e02f3d5a2b7",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-16",
-      "name": "🏁 CORK — Regata Día 1",
-      "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 62,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "name": "🔵 Llegada a Kingston",
+      "type": "Core / Movilidad",
+      "duration_min": 30,
+      "tss_planned": 12,
+      "coach_note": "Llegada a Canadá. Prioridad: hidratación, adaptación de horario, movilidad suave. Nada de carga.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
-        },
-        {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
-        },
-        {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Movilidad general + caminata suave",
+          "sets": "1",
+          "reps": "20min",
+          "note": "Sin presión — el cuerpo necesita adaptarse al viaje y al cambio de horario."
         }
       ],
       "status": "PENDING",
@@ -3956,32 +3947,32 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "3940b78d-a86e-423e-90c8-22b266b6b63b",
+      "id": "439d15d6-3843-4f93-af1a-5e2970f619a6",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-17",
-      "name": "🏁 CORK — Regata Día 2",
+      "name": "🟡 Aclimatación — Reconocimiento de Cancha",
       "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 68,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "duration_min": 90,
+      "tss_planned": 35,
+      "coach_note": "Primer contacto con el agua en Kingston. Sentir viento y corriente locales antes de la regata previa de mañana.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
+          "name": "Armado de bote + revisión de aparejo",
+          "duration": "20 min",
+          "zone": "Z1 — Recuperación"
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
+          "name": "Navegación de reconocimiento",
+          "duration": "55 min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
+          "name": "Hidratación + estiramiento",
+          "duration": "10 min",
           "zone": "Z1 — Recuperación"
         }
       ],
@@ -3994,18 +3985,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "34e5c14f-5bf0-429e-8278-8f41c9c0c9aa",
+      "id": "9094aba0-d478-4c3b-b602-1f6bfa040218",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-18",
-      "name": "🏁 CORK — Regata Día 3",
+      "name": "🏁 Regata Previa — Día 1",
       "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 60,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "duration_min": 210,
+      "tss_planned": 55,
+      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4013,8 +4004,8 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
+          "name": "Regata previa ILCA 7",
+          "duration": "180 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
         {
@@ -4032,18 +4023,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "e4c4dc02-9a9c-4df2-8bd2-4612793066b2",
+      "id": "b32e8f23-5d3c-4846-992a-b9877f7987f6",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-19",
-      "name": "🏁 CORK — Regata Día 4",
+      "name": "🏁 Regata Previa — Día 2",
       "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 72,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "duration_min": 210,
+      "tss_planned": 55,
+      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4051,8 +4042,8 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
+          "name": "Regata previa ILCA 7",
+          "duration": "180 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
         {
@@ -4070,18 +4061,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "817a1dff-8574-4e77-bbfd-769939b9a7ce",
+      "id": "a02ff5cd-382c-497f-b0c3-982bff84ef68",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-20",
-      "name": "🏁 CORK — Regata Día 5",
+      "name": "🏁 Regata Previa — Día 3",
       "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 58,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "duration_min": 210,
+      "tss_planned": 55,
+      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4089,8 +4080,8 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
+          "name": "Regata previa ILCA 7",
+          "duration": "180 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
         {
@@ -4108,33 +4099,52 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "50035801-e1f0-48cb-abc4-236d5c05774e",
+      "id": "9ccd011d-9839-4448-9ee0-eda74ae32a97",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-21",
-      "name": "🏁 CORK — Regata Día 6",
-      "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 65,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "name": "🏃 Full Body Bodyweight + Carrera Suave",
+      "type": "Core / Movilidad",
+      "duration_min": 50,
+      "tss_planned": 40,
+      "coach_note": "Sin gym disponible — trabajo con tu propio peso corporal. Full body ligero para no llegar cargado a la regata principal del viernes.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
+          "exercise": "Push-ups",
+          "sets": "3",
+          "reps": "12-15",
+          "note": "RIR 3. Si es fácil, eleva los pies."
         },
         {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Sentadilla búlgara a una pierna (bodyweight)",
+          "sets": "3",
+          "reps": "12/pierna"
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "45s"
+        },
+        {
+          "exercise": "Carrera continua suave",
+          "sets": "1",
+          "reps": "20min",
+          "note": "Z2, conversacional."
+        },
+        {
+          "exercise": "Estiramiento",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -4146,24 +4156,48 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "ee089a66-8872-4d13-bc27-53a0f342a480",
+      "id": "924234b3-4330-4c46-9cbf-bf4196b169a4",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-22",
-      "name": "⚪ CORK — Día de Reserva/Descanso",
-      "type": "Descanso",
-      "duration_min": 30,
-      "tss_planned": 15,
-      "coach_note": "Lay day del calendario CORK (placeholder — ajusta según el Notice of Race real). Aprovecha para recuperación activa: movilidad, revisión de equipo, mentalidad para la segunda mitad.",
+      "name": "🏃 Tirón Bodyweight + Intervalos Carrera",
+      "type": "Core / Movilidad",
+      "duration_min": 50,
+      "tss_planned": 45,
+      "coach_note": "Segundo día sin gym. Si hay barra disponible (parque/muelle), dominadas son oro para antebrazo/espalda — si no, remo con banda o toalla en puerta.",
       "segments": [
         {
-          "exercise": "Descanso total o movilidad muy suave",
+          "exercise": "Calentamiento articular",
           "sets": "1",
-          "reps": "15-20min",
-          "note": "El descanso es parte del entrenamiento."
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Dominadas (o remo con banda/toalla)",
+          "sets": "4",
+          "reps": "máx reps limpias",
+          "note": "RIR 2. Antebrazo y espalda — clave para lo que venimos trabajando."
+        },
+        {
+          "exercise": "Dead hang en barra",
+          "sets": "3",
+          "reps": "30-40s",
+          "note": "Directo a agarre — igual que farmer carry pero sin peso extra."
+        },
+        {
+          "exercise": "Intervalos de carrera 5×2min",
+          "sets": "5",
+          "reps": "2min fuerte / 2min trote",
+          "note": "Z3-Z4 en el esfuerzo, mantiene motor sin sobrecargar piernas de hiking."
+        },
+        {
+          "exercise": "Estiramiento hombro/espalda",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -4175,33 +4209,52 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "2ee75af4-b4a2-42a2-ae8b-c3d7385f8012",
+      "id": "ee5ed2f8-3b26-4b92-8504-5b47be715912",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-23",
-      "name": "🏁 CORK — Regata Día 7",
-      "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 70,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "name": "🏃 Piernas Bodyweight + Carrera Tempo",
+      "type": "Core / Movilidad",
+      "duration_min": 55,
+      "tss_planned": 42,
+      "coach_note": "Tercer día sin gym. Piernas con peso corporal — mantiene la resistencia de hiking sin barra.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
+          "exercise": "Calentamiento articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
+          "exercise": "Wall sit hiking simulation",
+          "sets": "3",
+          "reps": "50s",
+          "note": "Contra una pared — sigue siendo el mejor sustituto de hiking en tierra."
         },
         {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Zancadas caminando",
+          "sets": "3",
+          "reps": "12/pierna"
+        },
+        {
+          "exercise": "Nordic curl asistido (o hamstring curl en pareja)",
+          "sets": "3",
+          "reps": "6-8"
+        },
+        {
+          "exercise": "Carrera tempo continua",
+          "sets": "1",
+          "reps": "25min",
+          "note": "Z3 — sostenido pero controlado, últimos días antes de la regata principal."
+        },
+        {
+          "exercise": "Estiramiento",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -4213,33 +4266,36 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "80b87945-038e-407c-a106-ec9ed9a53eca",
+      "id": "e64ce4d0-3c0b-48dd-8024-0d5130998521",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-24",
-      "name": "🏁 CORK — Regata Día 8",
-      "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 64,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "name": "🔵 Activación Corta + Trote Suave",
+      "type": "Core / Movilidad",
+      "duration_min": 35,
+      "tss_planned": 22,
+      "coach_note": "Último día antes de la regata principal — bajas el volumen a propósito. Activación corta, nada de fatiga nueva.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
+          "exercise": "Movilidad dinámica",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
         },
         {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
+          "exercise": "Push-ups + sentadilla bodyweight (activación)",
+          "sets": "2",
+          "reps": "10+10",
+          "note": "Muy suave — solo despertar el sistema nervioso."
         },
         {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Trote muy suave",
+          "sets": "1",
+          "reps": "15min",
+          "note": "Z1-Z2. Piernas frescas para mañana."
         }
       ],
       "status": "PENDING",
@@ -4251,18 +4307,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "c49a98a8-4bf0-466e-8f38-8cb764f0cc22",
+      "id": "4168db26-2f61-41a5-9890-643bc0dd2347",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-25",
-      "name": "🏁 CORK — Regata Día 9",
+      "name": "🏆 LA REGATA — Clasificatorio Panamericano · Día 1",
       "type": "Vela",
       "duration_min": 240,
       "tss_planned": 68,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "coach_note": "Esta es la regata que clasifica a los Juegos Panamericanos. Activación corta antes de salir, cero carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4270,7 +4326,7 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
+          "name": "Regata ILCA 7 — clasificatorio",
           "duration": "210 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
@@ -4289,18 +4345,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "1dd0f4a1-b7f9-4759-9010-55b563e4d1e8",
+      "id": "176e52aa-ca46-4440-9c12-1047e1a3cd37",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-26",
-      "name": "🏁 CORK — Regata Día 10",
+      "name": "🏆 LA REGATA — Clasificatorio Panamericano · Día 2",
       "type": "Vela",
       "duration_min": 240,
-      "tss_planned": 60,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "tss_planned": 68,
+      "coach_note": "Esta es la regata que clasifica a los Juegos Panamericanos. Activación corta antes de salir, cero carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4308,7 +4364,7 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
+          "name": "Regata ILCA 7 — clasificatorio",
           "duration": "210 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
@@ -4327,18 +4383,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "90d23c8e-9c01-4f92-9269-e15b559f00b4",
+      "id": "31c2acd9-942b-441f-b55b-95ca58a3ec85",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-27",
-      "name": "🏁 CORK — Regata Día 11",
+      "name": "🏆 LA REGATA — Clasificatorio Panamericano · Día 3",
       "type": "Vela",
       "duration_min": 240,
-      "tss_planned": 55,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "tss_planned": 68,
+      "coach_note": "Esta es la regata que clasifica a los Juegos Panamericanos. Activación corta antes de salir, cero carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
       "segments": [
         {
           "name": "Activación pre-regata",
@@ -4346,7 +4402,7 @@
           "zone": "Z1 — Activación"
         },
         {
-          "name": "Regata ILCA 7",
+          "name": "Regata ILCA 7 — clasificatorio",
           "duration": "210 min",
           "zone": "Z2-Z4 — Variable según viento"
         },
@@ -4365,33 +4421,24 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
-      "id": "e6e4b077-9845-42c0-bd22-aba791824694",
+      "id": "d92409f9-950d-4782-9935-7c6fe0d43f7a",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-28",
-      "name": "🏁 CORK — Regata Día 12",
-      "type": "Vela",
-      "duration_min": 240,
-      "tss_planned": 50,
-      "coach_note": "Clasificatorio Panamericano. Activación corta antes de salir, sin carga de gym — todo el enfoque en ejecución y táctica. Recuperación agresiva en la noche: proteína, sueño, movilidad.",
+      "name": "🔵 Cierre + Viaje de Regreso",
+      "type": "Descanso",
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "Cierre del CORK — ceremonia de premiación y/o viaje de regreso. Descanso total, celebra el trabajo del último mes y medio.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
-        },
-        {
-          "name": "Regata ILCA 7",
-          "duration": "210 min",
-          "zone": "Z2-Z4 — Variable según viento"
-        },
-        {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Descanso total",
+          "sets": "1",
+          "reps": "—",
+          "note": "El resultado ya está en el agua — ahora toca descansar y volver a casa."
         }
       ],
       "status": "PENDING",
@@ -4403,7 +4450,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:03:50.476Z"
     },
     {
       "id": "bfbd71a7-983a-430b-957d-cb283e51bc04",
@@ -8823,7 +8870,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-17T23:55:43.041Z",
+    "built_at": "2026-08-18T00:03:59.108Z",
     "data": [
       {
         "date": "2015-01-11",
