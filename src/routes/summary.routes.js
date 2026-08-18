@@ -5,9 +5,16 @@ const { now, localDate } = require('../utils/ids')
 const { DB } = require('../services/db')
 const { weekStartISO } = require('../services/pmc')
 const { computeAnalytics, PLAN } = require('../../agents-system')
-const { phaseForDate } = require('../services/analytics')
+const { phaseForDate, CAC_PHASES } = require('../services/analytics')
 
 const router = express.Router()
+
+// ════════════════════════════════════════════════════════════════════════════
+//  FASES DEL PLAN — fuente única para que el frontend deje de hardcodear fechas
+// ════════════════════════════════════════════════════════════════════════════
+router.get('/plan/phases', auth, (req, res) => {
+  res.json({ ok: true, phases: CAC_PHASES, raceDate: PLAN.raceDate, event: PLAN.event })
+})
 
 // ════════════════════════════════════════════════════════════════════════════
 //  RESUMEN EJECUTIVO — agrega los 4 bloques en un solo endpoint
