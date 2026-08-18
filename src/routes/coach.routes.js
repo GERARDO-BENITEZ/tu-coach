@@ -75,12 +75,21 @@ router.post('/workouts/bulk', auth, (req, res) => {
   res.json({ ok: true, count: workouts.length })
 })
 
-// Editar workout
+// Editar workout — merge parcial: un campo omitido en el body conserva su valor actual
+// (antes Object.assign ponía `undefined` en cualquier campo no enviado y lo borraba)
 router.put('/workouts/:id', auth, (req, res) => {
   const idx = DB.workouts.findIndex((w) => w.id === req.params.id && w.coach_id === req.user.id)
   if (idx < 0) return res.status(404).json({ error: 'No encontrado' })
   const { name, type, durationMin, tssPlanned, coachNote, segments, date } = req.body
-  Object.assign(DB.workouts[idx], { name, type, duration_min: durationMin, tss_planned: tssPlanned, coach_note: coachNote, segments, date, updated_at: now() })
+  const patch = { updated_at: now() }
+  if (name !== undefined) patch.name = name
+  if (type !== undefined) patch.type = type
+  if (durationMin !== undefined) patch.duration_min = durationMin
+  if (tssPlanned !== undefined) patch.tss_planned = tssPlanned
+  if (coachNote !== undefined) patch.coach_note = coachNote
+  if (segments !== undefined) patch.segments = segments
+  if (date !== undefined) patch.date = date
+  Object.assign(DB.workouts[idx], patch)
   save()
   res.json(DB.workouts[idx])
 })

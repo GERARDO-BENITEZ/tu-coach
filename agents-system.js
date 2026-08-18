@@ -1,7 +1,7 @@
 'use strict'
 // ═══════════════════════════════════════════════════════════════════════════════
 //  Tu Coach — Motor de Agentes LOCAL (reglas JS puras, sin API externa)
-//  Atleta: Gerardo Benítez · ILCA 7 (Laser) · CAC Games 2026 · Barranquilla
+//  Atleta: Gerardo Benítez · ILCA 7 (Laser) · CAC Games 2026 · Santo Domingo, RD
 //  Pipeline: Datos → Físico + Nutrición → Sistemas → CEO → reporte ejecutivo
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -267,10 +267,10 @@ function analyzeCEO(d, A) {
     F1: `${phase.key} Base — construyendo fundamentos aeróbicos y fuerza general. RIR ${phase.rir} en gym. CTL objetivo: ${phase.ctlTarget}+.`,
     F2: `${phase.key} Carga — semanas de mayor estrés del ciclo. RIR ${phase.rir}, cargas 80-88%RM. Recuperación y proteína son críticas.`,
     F3: `${phase.key} Especificidad — potencia ILCA 7 al máximo. RIR ${phase.rir}, pico de CTL hacia ${phase.ctlTarget}. Cada sesión cuenta.`,
-    F4: `${phase.key} Taper — reducir volumen 40%, mantener intensidad. RIR ${phase.rir}. Llegar fresco a Barranquilla.`,
+    F4: `${phase.key} Taper — reducir volumen 40%, mantener intensidad. RIR ${phase.rir}. Llegar fresco a Santo Domingo.`,
     COMP: 'CAC Games activo — maximizar rendimiento en regata. Sin entrenamientos de fatiga. Foco en táctica y ejecución.',
     // Plan post-CAC → CORK → base general
-    REC0: 'Recuperación post-CAC Games — sin estructura formal, dejar que el cuerpo asimile la carga de Barranquilla.',
+    REC0: 'Recuperación post-CAC Games — sin estructura formal, dejar que el cuerpo asimile la carga de Santo Domingo (incluyendo la enfermedad que tuvo Gerardo en competencia).',
     F1B: `${phase.key} Reactivación — reintroduciendo gym y vela con carga controlada tras el descanso. RIR ${phase.rir}.`,
     F2B: `${phase.key} Carga General — bloque fuerte de fuerza (todo el cuerpo) + volumen de vela antes del taper. RIR ${phase.rir}, CTL objetivo ${phase.ctlTarget}.`,
     F3B: `${phase.key} Especificidad Vela — prioridad al agua, gym de mantenimiento corto. RIR ${phase.rir}.`,

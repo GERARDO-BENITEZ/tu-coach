@@ -2141,45 +2141,6 @@
       "updated_at": "2026-06-09T00:35:31.252112Z"
     },
     {
-      "id": "02312257-e9be-4bfe-91c1-9ce387a5da26",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-07-22",
-      "name": "🟡 Navegación Técnica + Ajustes de Aparejo",
-      "type": "Vela",
-      "duration_min": 90,
-      "tss_planned": 35,
-      "coach_note": "Arreglé el nombre — esta sesión traía contenido de navegación pero estaba etiquetada como 'movilidad'. Última semana en casa antes del vuelo del 28. Estás fresco (TSB alto, recovery 72%) así que aprovechamos para pulir técnica, no para meter volumen — ya no hay tiempo de construir más CTL sin arriesgarte a llegar cargado a Barranquilla.",
-      "segments": [
-        {
-          "name": "Revisión de equipo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Navegación técnica suave",
-          "duration": "60 min",
-          "zone": "Z2 — Base aeróbica"
-        },
-        {
-          "name": "Ajustes de aparejo y guindola",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-07-22T03:51:08.364Z",
-      "zone": "BLUE"
-    },
-    {
       "id": "4383ddb3-da7c-4c4b-81dc-60907bc11ff2",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
@@ -2211,60 +2172,6 @@
       "whoop_data": null,
       "created_at": "2026-06-09T00:35:31.252112Z",
       "updated_at": "2026-06-09T00:35:31.252112Z"
-    },
-    {
-      "id": "662ca6e3-0ee4-4bdc-8866-79f19d54d1db",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-07-24",
-      "name": "🔵 Activación Física Final — Gym",
-      "type": "Fuerza / Gym",
-      "duration_min": 30,
-      "tss_planned": 30,
-      "coach_note": "Arreglé el contenido — traía navegación/inspección de bote pero el nombre y la nota decían gym. Este es tu último toque de potencia real antes del taper total: corto, activa el sistema nervioso, sin acumular fatiga. Guarda energía para Barranquilla.",
-      "segments": [
-        {
-          "exercise": "Movilidad general",
-          "sets": "1",
-          "reps": "10min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Squat Jump sin carga",
-          "sets": "3",
-          "reps": "6",
-          "note": "RIR 2-3. Explosivo pero sin llegar a fatigarte."
-        },
-        {
-          "exercise": "Pull-up / Lat Pulldown ligero",
-          "sets": "3",
-          "reps": "5",
-          "note": "Muy suave, lejos del fallo. Solo activar dorsales."
-        },
-        {
-          "exercise": "Med Ball Throw (pecho)",
-          "sets": "3",
-          "reps": "6",
-          "note": "Potencia, no volumen."
-        },
-        {
-          "exercise": "Foam rolling general",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-06-09T00:35:31.252112Z",
-      "updated_at": "2026-07-22T03:51:08.514Z",
-      "zone": "BLUE"
     },
     {
       "id": "28765bb5-50e4-49ff-9686-54e864787a4d",
@@ -2328,161 +2235,6 @@
       "tss_planned": 8,
       "coach_note": "S30 F3 · 🔵 DESCANSO TOTAL. Domingo antes de semana CAC. Sin ningún esfuerzo. Sueño 9h, hidratación, mental tranquilo.",
       "zone": "BLUE"
-    },
-    {
-      "id": "af223092-49bf-42f2-9fcd-a731811b9ecb",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "status": "PENDING",
-      "segments": [
-        {
-          "exercise": "Movilidad de cadera y tobillo",
-          "sets": "2",
-          "reps": "10 rep c/u",
-          "note": "90/90 hip stretch, rotaciones tobillo. Muy suave."
-        },
-        {
-          "exercise": "Squat explosivo (sin carga)",
-          "sets": "3",
-          "reps": "10",
-          "note": "Solo peso corporal. Activa SNC sin fatiga."
-        },
-        {
-          "exercise": "Pull-up (o Lat Pulldown ligero)",
-          "sets": "3",
-          "reps": "5",
-          "note": "Muy suave, sin llegar al fallo. Solo activar dorsales."
-        },
-        {
-          "exercise": "Foam rolling espalda alta y hombros",
-          "sets": "1",
-          "reps": "8 min"
-        }
-      ],
-      "created_at": "2026-06-09T20:27:17.182Z",
-      "updated_at": "2026-07-22T03:51:08.679Z",
-      "date": "2026-07-27",
-      "name": "🔵 Activación Ligera Pre-Viaje",
-      "type": "Fuerza / Gym",
-      "duration_min": 25,
-      "tss_planned": 35,
-      "coach_note": "Último día completo en casa — mañana empacas y el 28 en la noche vuelas a Barranquilla. 20-25 min máximo, activa el sistema nervioso con movimientos explosivos pero sin fatiga. Cuerpo fresco para los 3 días de entreno en la sede (29-31) y para Day 1 el 1 de agosto.",
-      "zone": "BLUE"
-    },
-    {
-      "id": "b045b2fa-4346-4702-8779-e72c47f7020b",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "status": "PENDING",
-      "segments": [
-        {
-          "exercise": "Body Saw TRX / Deslizadores",
-          "sets": "3",
-          "reps": "10",
-          "note": "Control total. Sin apresurar."
-        },
-        {
-          "exercise": "Press Pallof (anti-rotación)",
-          "sets": "3",
-          "reps": "10/lado",
-          "note": "Banda ligera. Mantén posición 1s."
-        },
-        {
-          "exercise": "Estiramientos activos — cadena posterior",
-          "sets": "1",
-          "reps": "10 min"
-        }
-      ],
-      "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-07-22T03:51:08.819Z",
-      "date": "2026-07-28",
-      "name": "🔵 Core + Empacar — Vuelo Nocturno",
-      "type": "Core / Movilidad",
-      "duration_min": 25,
-      "tss_planned": 12,
-      "coach_note": "Haz esto temprano en el día — tu vuelo es en la noche, llegas a Barranquilla el 29 en la mañana. Core anti-rotación suave + estiramientos, nada de impacto. En el vuelo: hidrátate bien (evita alcohol/cafeína en exceso), muévete cada 1-2h si puedes, y duerme lo que puedas — llegas directo a entrenar el 29."
-    },
-    {
-      "id": "93a24bb2-62ef-4077-9fe4-82e1e48a8b77",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "status": "PENDING",
-      "segments": [
-        {
-          "exercise": "Armado de bote + revisión de aparejo",
-          "sets": "1",
-          "reps": "30min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Navegación de reconocimiento — sentir viento/corriente local",
-          "sets": "1",
-          "reps": "45min",
-          "note": "Z1-Z2. Sin presión de rendimiento, solo familiarizarte con la cancha."
-        },
-        {
-          "exercise": "Hidratación + estiramiento suave",
-          "sets": "1",
-          "reps": "15min",
-          "isCooldown": true,
-          "note": "Después: hidrátate agresivo el resto del día, siesta corta si puedes."
-        }
-      ],
-      "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-07-22T03:51:09.053Z",
-      "date": "2026-07-29",
-      "name": "🟡 Llegada Barranquilla — Primer Contacto con el Agua",
-      "type": "Vela",
-      "duration_min": 90,
-      "tss_planned": 25,
-      "coach_note": "Llegaste esta mañana de un vuelo nocturno — prioridad es hidratación y adaptación, no rendimiento. Arma el bote con calma, sal a navegar suave para sentir viento y corriente locales (son distintos a Valle de Bravo). Si el cansancio del vuelo pesa mucho, corta la sesión — mejor corto y bien que forzado.",
-      "zone": "BLUE"
-    },
-    {
-      "id": "e58fd63d-f04b-4c28-ba35-29164f2be5ed",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "status": "PENDING",
-      "segments": [
-        {
-          "exercise": "Calentamiento en tierra + armado",
-          "sets": "1",
-          "reps": "20min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Práctica de salidas (starts)",
-          "sets": "1",
-          "reps": "40min",
-          "note": "Simula la línea de salida real. Repite 6-8 salidas."
-        },
-        {
-          "exercise": "Boyas y viradas — ceñida/popa",
-          "sets": "1",
-          "reps": "50min",
-          "note": "Calibra tensión de vela para viento local."
-        },
-        {
-          "exercise": "Recorrido corto simulando regata",
-          "sets": "1",
-          "reps": "30min",
-          "note": "Ritmo de regata, no máximo esfuerzo."
-        },
-        {
-          "exercise": "Enfriamiento + hidratación",
-          "sets": "1",
-          "reps": "10min",
-          "isCooldown": true
-        }
-      ],
-      "created_at": "2026-06-09T20:27:17.183Z",
-      "updated_at": "2026-07-22T03:51:09.145Z",
-      "date": "2026-07-30",
-      "name": "🟡 Entreno Técnico-Táctico en Cancha",
-      "type": "Vela",
-      "duration_min": 150,
-      "tss_planned": 42,
-      "coach_note": "Tu día más completo de los 3 en sede — ya adaptado del viaje. Foco 100% técnico/táctico: salidas, boyas, calibración de vela para las condiciones de Barranquilla. Intensidad controlada — practica como vas a competir, pero no busques agotarte, todavía falta el 31 y luego arranca la regata el 1."
     },
     {
       "id": "2e2dad2f-e07c-4447-80d9-7a1b9cb83e99",
@@ -2652,7 +2404,7 @@
       "type": "Ciclismo",
       "duration_min": 100,
       "tss_planned": 65,
-      "coach_note": "Arranca la regla nueva: martes = rodada más larga de la semana. Reactivación post-CAC, todo en Z2 — construye base sin generar fatiga. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
+      "coach_note": "Martes = rodada más larga de la semana. Ayer arrancaste con activación suave — hoy sube el volumen (todo en Z2, sin forzar intensidad). Si hay viento y las condiciones lo permiten, sal a navegar además de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
           "name": "Calentamiento",
@@ -2679,7 +2431,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:47:32.965Z"
+      "updated_at": "2026-08-18T00:55:22.640Z"
     },
     {
       "id": "102ac144-7154-4153-a8d2-e9dab44d752d",
@@ -8891,11 +8643,316 @@
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
       "updated_at": "2026-08-17T23:51:17.214Z"
+    },
+    {
+      "id": "34feaded-e28a-4b37-9ba7-5037d80e337c",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-17",
+      "name": "🔵 Activación — Cardio Suave",
+      "type": "Cardio Máquina",
+      "duration_min": 50,
+      "tss_planned": 25,
+      "coach_note": "Arranca hoy en vez de mañana — buena decisión, tu check-in de hoy ya muestra listo para entrenar (readiness 8/10, sin dolor, 8.5h de sueño). 40min cardio suave Z1-Z2 puro (bici, elíptica, remo o SkiErg, lo que se sienta más cómodo) + 10min de estiramiento cadera/hombro/antebrazo al cerrar. Mañana martes retoma la rodada larga en bici.",
+      "segments": [
+        {
+          "name": "Cardio suave Z1-Z2",
+          "duration": "40 min",
+          "zone": "Z1-Z2"
+        },
+        {
+          "name": "Estiramiento cadera/hombro/antebrazo",
+          "duration": "10 min",
+          "zone": "Z1"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T00:55:22.555Z",
+      "updated_at": "2026-08-18T00:55:22.555Z"
+    },
+    {
+      "id": "9ef4cce9-a7de-4517-b397-bbc9fa1c1c06",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-22",
+      "name": "🟡 Navegación Técnica + Ajustes de Aparejo",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 35,
+      "coach_note": "Arreglé el nombre — esta sesión traía contenido de navegación pero estaba etiquetada como 'movilidad'. Última semana en casa antes del vuelo del 28. Estás fresco (TSB alto, recovery 72%) así que aprovechamos para pulir técnica, no para meter volumen — ya no hay tiempo de construir más CTL sin arriesgarte a llegar cargado a Santo Domingo.",
+      "segments": [
+        {
+          "name": "Revisión de equipo",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        },
+        {
+          "name": "Navegación técnica suave",
+          "duration": "60 min",
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Ajustes de aparejo y guindola",
+          "duration": "15 min",
+          "zone": "Z1 — Recuperación"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
+    },
+    {
+      "id": "2b16eaa8-8ff3-4d83-acb7-408b1f5c52c5",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-24",
+      "name": "🔵 Activación Física Final — Gym",
+      "type": "Fuerza / Gym",
+      "duration_min": 30,
+      "tss_planned": 30,
+      "coach_note": "Arreglé el contenido — traía navegación/inspección de bote pero el nombre y la nota decían gym. Este es tu último toque de potencia real antes del taper total: corto, activa el sistema nervioso, sin acumular fatiga. Guarda energía para Santo Domingo.",
+      "segments": [
+        {
+          "exercise": "Movilidad general",
+          "sets": "1",
+          "reps": "10min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Squat Jump sin carga",
+          "sets": "3",
+          "reps": "6",
+          "note": "RIR 2-3. Explosivo pero sin llegar a fatigarte."
+        },
+        {
+          "exercise": "Pull-up / Lat Pulldown ligero",
+          "sets": "3",
+          "reps": "5",
+          "note": "Muy suave, lejos del fallo. Solo activar dorsales."
+        },
+        {
+          "exercise": "Med Ball Throw (pecho)",
+          "sets": "3",
+          "reps": "6",
+          "note": "Potencia, no volumen."
+        },
+        {
+          "exercise": "Foam rolling general",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
+    },
+    {
+      "id": "400847c8-d9c9-49ef-a478-65d832af0ce8",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-27",
+      "name": "🔵 Activación Ligera Pre-Viaje",
+      "type": "Fuerza / Gym",
+      "duration_min": 25,
+      "tss_planned": 35,
+      "coach_note": "Último día completo en casa — mañana empacas y el 28 en la noche vuelas a Santo Domingo. 20-25 min máximo, activa el sistema nervioso con movimientos explosivos pero sin fatiga. Cuerpo fresco para los 3 días de entreno en la sede (29-31) y para Day 1 el 1 de agosto.",
+      "segments": [
+        {
+          "exercise": "Movilidad de cadera y tobillo",
+          "sets": "2",
+          "reps": "10 rep c/u",
+          "note": "90/90 hip stretch, rotaciones tobillo. Muy suave."
+        },
+        {
+          "exercise": "Squat explosivo (sin carga)",
+          "sets": "3",
+          "reps": "10",
+          "note": "Solo peso corporal. Activa SNC sin fatiga."
+        },
+        {
+          "exercise": "Pull-up (o Lat Pulldown ligero)",
+          "sets": "3",
+          "reps": "5",
+          "note": "Muy suave, sin llegar al fallo. Solo activar dorsales."
+        },
+        {
+          "exercise": "Foam rolling espalda alta y hombros",
+          "sets": "1",
+          "reps": "8 min"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
+    },
+    {
+      "id": "e6fef656-5733-4d40-b444-e03ca1390bdc",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-28",
+      "name": "🔵 Core + Empacar — Vuelo Nocturno",
+      "type": "Core / Movilidad",
+      "duration_min": 25,
+      "tss_planned": 12,
+      "coach_note": "Haz esto temprano en el día — tu vuelo es en la noche, llegas a Santo Domingo el 29 en la mañana. Core anti-rotación suave + estiramientos, nada de impacto. En el vuelo: hidrátate bien (evita alcohol/cafeína en exceso), muévete cada 1-2h si puedes, y duerme lo que puedas — llegas directo a entrenar el 29.",
+      "segments": [
+        {
+          "exercise": "Body Saw TRX / Deslizadores",
+          "sets": "3",
+          "reps": "10",
+          "note": "Control total. Sin apresurar."
+        },
+        {
+          "exercise": "Press Pallof (anti-rotación)",
+          "sets": "3",
+          "reps": "10/lado",
+          "note": "Banda ligera. Mantén posición 1s."
+        },
+        {
+          "exercise": "Estiramientos activos — cadena posterior",
+          "sets": "1",
+          "reps": "10 min"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
+    },
+    {
+      "id": "f2e30f3c-d51d-4fd6-ad08-d778589b2421",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-29",
+      "name": "🟡 Llegada Santo Domingo — Primer Contacto con el Agua",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 25,
+      "coach_note": "Llegaste esta mañana de un vuelo nocturno — prioridad es hidratación y adaptación, no rendimiento. Arma el bote con calma, sal a navegar suave para sentir viento y corriente locales (son distintos a Valle de Bravo). Si el cansancio del vuelo pesa mucho, corta la sesión — mejor corto y bien que forzado.",
+      "segments": [
+        {
+          "exercise": "Armado de bote + revisión de aparejo",
+          "sets": "1",
+          "reps": "30min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Navegación de reconocimiento — sentir viento/corriente local",
+          "sets": "1",
+          "reps": "45min",
+          "note": "Z1-Z2. Sin presión de rendimiento, solo familiarizarte con la cancha."
+        },
+        {
+          "exercise": "Hidratación + estiramiento suave",
+          "sets": "1",
+          "reps": "15min",
+          "isCooldown": true,
+          "note": "Después: hidrátate agresivo el resto del día, siesta corta si puedes."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
+    },
+    {
+      "id": "5f95ddcf-8de7-472f-8272-a04aea9771d4",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-07-30",
+      "name": "🟡 Entreno Técnico-Táctico en Cancha",
+      "type": "Vela",
+      "duration_min": 150,
+      "tss_planned": 42,
+      "coach_note": "Tu día más completo de los 3 en sede — ya adaptado del viaje. Foco 100% técnico/táctico: salidas, boyas, calibración de vela para las condiciones de Santo Domingo. Intensidad controlada — practica como vas a competir, pero no busques agotarte, todavía falta el 31 y luego arranca la regata el 1.",
+      "segments": [
+        {
+          "exercise": "Calentamiento en tierra + armado",
+          "sets": "1",
+          "reps": "20min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Práctica de salidas (starts)",
+          "sets": "1",
+          "reps": "40min",
+          "note": "Simula la línea de salida real. Repite 6-8 salidas."
+        },
+        {
+          "exercise": "Boyas y viradas — ceñida/popa",
+          "sets": "1",
+          "reps": "50min",
+          "note": "Calibra tensión de vela para viento local."
+        },
+        {
+          "exercise": "Recorrido corto simulando regata",
+          "sets": "1",
+          "reps": "30min",
+          "note": "Ritmo de regata, no máximo esfuerzo."
+        },
+        {
+          "exercise": "Enfriamiento + hidratación",
+          "sets": "1",
+          "reps": "10min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-18T04:53:57.619Z",
+      "updated_at": "2026-08-18T04:53:57.619Z"
     }
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-18T00:47:40.943Z",
+    "built_at": "2026-08-18T04:55:16.247Z",
     "data": [
       {
         "date": "2015-01-11",
