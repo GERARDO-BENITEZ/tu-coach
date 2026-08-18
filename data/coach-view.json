@@ -2644,48 +2644,89 @@
       "coach_note": "ÚLTIMO DÍA. 63 días de trabajo para este momento. Deja todo en el agua. ¡Disfruta la regata!"
     },
     {
-      "id": "4d27bac1-1f16-4d83-abd4-3b5b3f25f849",
+      "id": "f25ef9c8-27db-4878-854a-04ddbee94283",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-18",
+      "name": "🚴 Rodada Larga Z2",
+      "type": "Ciclismo",
+      "duration_min": 100,
+      "tss_planned": 65,
+      "coach_note": "Arranca la regla nueva: martes = rodada más larga de la semana. Reactivación post-CAC, todo en Z2 — construye base sin generar fatiga. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "15 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Bici Z2 sostenido",
+          "duration": "75 min",
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-18T00:47:32.965Z"
+    },
+    {
+      "id": "102ac144-7154-4153-a8d2-e9dab44d752d",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-08-19",
       "name": "🔵 Reactivación — Full Body",
       "type": "Fuerza / Gym",
       "duration_min": 55,
       "tss_planned": 45,
-      "coach_note": "Primer día de gym formal post-CAC Games. RIR 3, poco volumen — el objetivo es reintroducir el patrón de movimiento, no fatigar.",
+      "coach_note": "Segunda sesión de gym de la semana. RIR 3, técnica antes que carga. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
-          "exercise": "Activación dinámica + movilidad articular",
+          "exercise": "Activación dinámica",
           "sets": "1",
           "reps": "8min",
           "isWarmup": true
         },
         {
           "exercise": "Sentadilla trasera",
-          "sets": "4",
-          "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
-        },
-        {
-          "exercise": "Búlgaro con mancuernas",
           "sets": "3",
-          "reps": "10/pierna",
+          "reps": "10",
           "note": "RIR 3."
         },
         {
-          "exercise": "Chin-up lastrado",
-          "sets": "4",
+          "exercise": "Chin-up (o remo con banda)",
+          "sets": "3",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
-        },
-        {
-          "exercise": "Press banca",
-          "sets": "4",
-          "reps": "8",
           "note": "RIR 3."
         },
         {
-          "exercise": "Enfriamiento + movilidad",
+          "exercise": "Hip thrust",
+          "sets": "3",
+          "reps": "10"
+        },
+        {
+          "exercise": "Press militar con mancuerna",
+          "sets": "3",
+          "reps": "10"
+        },
+        {
+          "exercise": "Plancha frontal",
+          "sets": "3",
+          "reps": "40s"
+        },
+        {
+          "exercise": "Enfriamiento",
           "sets": "1",
           "reps": "8min",
           "isCooldown": true
@@ -2700,28 +2741,38 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:47:32.965Z"
     },
     {
-      "id": "23404ec1-f669-4805-a97e-70525d41aa20",
+      "id": "cd11ef52-ae37-4d25-b35f-6e74dd9fa42f",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
-      "date": "2026-08-19",
-      "name": "🟡 Navegación Técnica Z2",
-      "type": "Vela",
-      "duration_min": 80,
-      "tss_planned": 35,
-      "coach_note": "Vela suave, foco 100% en técnica y sensaciones del bote. Sin presión de rendimiento.",
+      "date": "2026-08-20",
+      "name": "🚣 Remo + SkiErg — Intervalos Z2",
+      "type": "Cardio Máquina",
+      "duration_min": 45,
+      "tss_planned": 42,
+      "coach_note": "Usa el equipo que tienes en el gym — remadora y SkiErg son excelentes para el motor aeróbico sin el impacto de correr. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento remo suave",
+          "duration": "8 min",
+          "zone": "Z1"
         },
         {
-          "name": "Navegación técnica Z1-Z2",
-          "duration": "55 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Remadora — 4×5min Z2",
+          "duration": "20 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "SkiErg — 4×3min Z2",
+          "duration": "12 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "5 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -2733,51 +2784,54 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:47:32.965Z"
     },
     {
-      "id": "2d980c24-389c-4684-a5ff-465a528d51f7",
+      "id": "46ffd044-94a9-4446-8ee7-a35744737589",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "name": "🔵 Reactivación — Full Body",
       "type": "Fuerza / Gym",
       "duration_min": 55,
       "tss_planned": 45,
-      "coach_note": "Segunda sesión de reintroducción. RIR 3, mismos patrones, un poco más de confianza en la carga.",
+      "coach_note": "Tercera y última sesión de gym de la semana — mañana y pasado son fin de semana, sin gym. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
-          "exercise": "Activación dinámica + movilidad articular",
+          "exercise": "Activación dinámica",
           "sets": "1",
           "reps": "8min",
           "isWarmup": true
         },
         {
-          "exercise": "Remo Pendlay",
-          "sets": "4",
-          "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
-        },
-        {
-          "exercise": "Fondos en paralelas",
+          "exercise": "Peso muerto rumano (RDL)",
           "sets": "3",
-          "reps": "8-10",
+          "reps": "10",
           "note": "RIR 3."
         },
         {
-          "exercise": "Peso muerto rumano (RDL)",
-          "sets": "4",
-          "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+          "exercise": "Remo Pendlay",
+          "sets": "3",
+          "reps": "8",
+          "note": "RIR 3."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna"
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15"
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
-          "reps": "12/lado",
-          "note": "RIR 3."
+          "reps": "12/lado"
         },
         {
-          "exercise": "Enfriamiento + movilidad",
+          "exercise": "Enfriamiento",
           "sets": "1",
           "reps": "8min",
           "isCooldown": true
@@ -2792,66 +2846,33 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:47:32.965Z"
     },
     {
-      "id": "bffd986a-dc9c-40b3-83be-a7d002a34205",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-08-21",
-      "name": "🟡 Vela + Hiking Ligero",
-      "type": "Vela",
-      "duration_min": 90,
-      "tss_planned": 40,
-      "coach_note": "Primeros intervalos de hiking desde el regreso. Cortos, controlados — sube el ritmo, no lo fuerces.",
-      "segments": [
-        {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Navegación + intervalos de hiking cortos",
-          "duration": "65 min",
-          "zone": "Z2-Z3"
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
-    },
-    {
-      "id": "c6b54d8c-01e1-4805-9db0-69279b2ea93f",
+      "id": "580b036a-2888-46f0-9bbf-5fd5ec43b772",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-22",
-      "name": "🚴 Ciclismo Z2",
+      "name": "🚴 Bici Z2 o SUP",
       "type": "Ciclismo",
-      "duration_min": 50,
-      "tss_planned": 42,
-      "coach_note": "Fin de semana = sin gym (regla del plan). Bici suave para mantener base aeróbica.",
+      "duration_min": 60,
+      "tss_planned": 40,
+      "coach_note": "Fin de semana = sin gym (sábado Y domingo, regla actualizada). Bici Z2 o stand up paddle si prefieres variar — lo que tengas ganas. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
           "name": "Calentamiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "duration": "10 min",
+          "zone": "Z1"
         },
         {
-          "name": "Bici Z2",
-          "duration": "34 min",
-          "zone": "Z2 — Base aeróbica"
+          "name": "Bici Z2 (o SUP continuo)",
+          "duration": "40 min",
+          "zone": "Z2"
         },
         {
           "name": "Enfriamiento",
-          "duration": "8 min",
-          "zone": "Z1 — Recuperación"
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -2863,24 +2884,28 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:47:32.965Z"
     },
     {
-      "id": "5a6a9c6d-e27f-405a-b142-31b92ae02f2a",
+      "id": "c002e7dc-6aa3-40fb-9c16-3a088fb01612",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-23",
-      "name": "Descanso activo + movilidad",
-      "type": "Descanso",
-      "duration_min": 25,
-      "tss_planned": 12,
-      "coach_note": "Cierre de la semana de reactivación. Movilidad suave, hidratación, sueño.",
+      "name": "🚣 SkiErg/Remo Suave + Movilidad",
+      "type": "Cardio Máquina",
+      "duration_min": 40,
+      "tss_planned": 28,
+      "coach_note": "Domingo — sin gym, pero sigue siendo un día físico (nada de descanso total). Suave, prioriza movilidad y sensaciones antes de arrancar F2B mañana. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no sustituye el entreno físico del día.",
       "segments": [
         {
-          "exercise": "Descanso total o movilidad muy suave",
-          "sets": "1",
-          "reps": "15-20min",
-          "note": "El descanso es parte del entrenamiento."
+          "name": "SkiErg o remadora muy suave",
+          "duration": "20 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Movilidad general",
+          "duration": "15 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -2892,7 +2917,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-18T00:47:32.965Z"
     },
     {
       "id": "e9fe13bb-7479-4f0e-b0d0-0038ff86937b",
@@ -8870,7 +8895,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-18T00:34:31.845Z",
+    "built_at": "2026-08-18T00:47:40.943Z",
     "data": [
       {
         "date": "2015-01-11",
