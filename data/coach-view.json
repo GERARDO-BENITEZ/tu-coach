@@ -3051,139 +3051,51 @@
       "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "3a7b89f2-888d-406c-bd79-b0957bbf5353",
+      "id": "459a42c2-c90a-40fb-ac0f-23fe5b0da939",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-31",
-      "name": "🏆 Test de Fuerza Máxima — Piernas (3RM)",
+      "name": "🔴 F2B S2 · Piernas/Hiking + Core",
       "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 50,
-      "coach_note": "Antes de arrancar: revisa tu recovery de hoy. Si amanece notablemente bajo (rojo/<50%), pospón 1-2 días — un test de máxima fuerza necesita sistema nervioso fresco para ser válido y seguro, forzarlo con fatiga solo sube el riesgo de lesión sin dar un número real. Objetivo: 3RM (no 1RM absoluto) en sentadilla trasera y RDL — casi la misma información útil con mucho menos riesgo. Máximo 3-4 intentos pesados por ejercicio, no acumules intentos de más. Usa rack con pines de seguridad para la sentadilla — no negociable entrenando solo.",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — RIR 2. Piernas y core — la base de hiking que ya funciona bien de F1-F3.",
       "segments": [
         {
-          "exercise": "Calentamiento general",
+          "exercise": "Activación dinámica + movilidad articular",
           "sets": "1",
-          "reps": "10min",
-          "isWarmup": true,
-          "note": "Cardio suave + movilidad de cadera y tobillo."
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "exercise": "Rampa — Sentadilla trasera",
-          "sets": "5",
-          "reps": "8/5/3/2/1",
-          "note": "Progresión: ~50%×8 → 65%×5 → 75%×3 → 85%×2 → 92%×1. Descanso 2-4min entre sets, más largo conforme sube el peso. Esto prepara el sistema nervioso, no es el test."
-        },
-        {
-          "exercise": "🏆 TEST — Sentadilla trasera 3RM",
-          "sets": "3-4 intentos",
-          "reps": "3",
-          "note": "Profundidad completa (cadera bajo la rodilla), sin rebote, espalda neutra. Si completas 3 reps limpias con margen, sube 5-10kg y reintenta tras 4-5min de descanso. Si las 3 reps salen al límite absoluto, ese es tu 3RM — para ahí. Una rep con técnica comprometida NO cuenta."
-        },
-        {
-          "exercise": "Descanso activo",
-          "sets": "1",
-          "reps": "10-15min",
-          "note": "Camina, hidrátate, deja que el sistema nervioso se asiente antes del segundo ejercicio."
-        },
-        {
-          "exercise": "Rampa — Peso muerto rumano (RDL)",
-          "sets": "3",
-          "reps": "5/3/1",
-          "note": "Progresión más corta (ya estás caliente): ~60%×5 → 75%×3 → 88%×1."
-        },
-        {
-          "exercise": "🏆 TEST — RDL 3RM",
-          "sets": "3-4 intentos",
-          "reps": "3",
-          "note": "Espalda neutra todo el recorrido, barra pegada a las piernas, cadera hacia atrás no hacia abajo. Mismo protocolo: sube de a poco, para cuando las 3 reps salgan al límite real."
-        },
-        {
-          "exercise": "Enfriamiento + movilidad",
-          "sets": "1",
-          "reps": "10min",
-          "isCooldown": true
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
-    },
-    {
-      "id": "ad8130f1-27d5-48e1-b5b5-500f0024b4f2",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-09-01",
-      "name": "🚴 Bici Z1-Z2 Suave — Recuperación Post-Test",
-      "type": "Ciclismo",
-      "duration_min": 45,
-      "tss_planned": 25,
-      "coach_note": "Ayer fue tu test de fuerza máxima de piernas — hoy NO es otra sesión dura, aunque sea martes. Bici muy suave, moviliza sin fatigar, deja que el sistema nervioso termine de recuperarse del esfuerzo máximo. La rodada larga de los martes vuelve la próxima semana. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no un bloque fijo del plan.",
-      "segments": [
-        {
-          "name": "Bici muy suave",
-          "duration": "35 min",
-          "zone": "Z1-Z2"
-        },
-        {
-          "name": "Movilidad general",
-          "duration": "10 min",
-          "zone": "Z1"
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
-    },
-    {
-      "id": "7a1b6b59-1f90-43b3-a4fc-159aa53cadde",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-09-02",
-      "name": "🏆 Test de Fuerza Máxima — Tirón (3RM)",
-      "type": "Fuerza / Gym",
-      "duration_min": 55,
-      "tss_planned": 40,
-      "coach_note": "Mismo chequeo que el lunes: si el recovery de hoy amanece bajo, pospón. Objetivo: 3RM en remo con barra (bent-over row) — tu lift de tirón principal. Un solo ejercicio de test hoy, no acumules varios — el objetivo es un número limpio, no una sesión larga.",
-      "segments": [
-        {
-          "exercise": "Calentamiento general",
-          "sets": "1",
-          "reps": "10min",
-          "isWarmup": true,
-          "note": "Cardio suave + activación de dorsal/escápula."
-        },
-        {
-          "exercise": "Rampa — Remo con barra (bent-over row)",
+          "exercise": "Sentadilla trasera",
           "sets": "4",
-          "reps": "8/5/3/1",
-          "note": "Progresión: ~50%×8 → 65%×5 → 78%×3 → 90%×1."
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
         },
         {
-          "exercise": "🏆 TEST — Remo con barra 3RM",
-          "sets": "3-4 intentos",
-          "reps": "3",
-          "note": "Sin balanceo de tronco (si necesitas impulso con la espalda, el peso ya es demasiado), rango de movimiento completo, control en la bajada. Sube de a poco hasta que las 3 reps salgan al límite real con técnica limpia."
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "4",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
         },
         {
-          "exercise": "Face pull con cuerda",
+          "exercise": "Hip thrust con barra",
+          "sets": "4",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
           "sets": "3",
-          "reps": "15",
-          "note": "Accesorio ligero post-test, mantiene el hombro activo sin fatigar el resultado del test. RIR 3."
+          "reps": "10/pierna",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "3",
+          "reps": "6-8",
+          "note": "RIR 2."
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -3201,7 +3113,116 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
+      "updated_at": "2026-08-24T03:27:35.802Z"
+    },
+    {
+      "id": "ad8130f1-27d5-48e1-b5b5-500f0024b4f2",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-01",
+      "name": "🚴 Rodada Larga Z2",
+      "type": "Ciclismo",
+      "duration_min": 100,
+      "tss_planned": 65,
+      "coach_note": "Martes = rodada más larga de la semana. Reemplaza el bloque de vela fijo que tenía esta fecha en el plan viejo — la vela ahora es extra si el clima da, no una sesión programada.",
+      "segments": [
+        {
+          "name": "Calentamiento",
+          "duration": "15 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Bici Z2 sostenido",
+          "duration": "75 min",
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-24T03:27:47.984Z"
+    },
+    {
+      "id": "0d96fa18-4bd7-48ba-ad10-2b9df0400315",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-02",
+      "name": "🔴 F2B S2 · Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 70,
+      "tss_planned": 62,
+      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — El día que ataca directamente lo que pediste: antebrazo/agarre para caña y escota en viento fuerte, y hombro para sostener el trimeo largo. RIR 2, técnica limpia antes que carga.",
+      "segments": [
+        {
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2."
+        },
+        {
+          "exercise": "Farmer carry pesado",
+          "sets": "3",
+          "reps": "40m",
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-08-24T03:27:35.802Z"
     },
     {
       "id": "a18e3561-052a-48f5-92a8-8a979fcb71a5",
@@ -8969,7 +8990,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-24T03:22:17.871Z",
+    "built_at": "2026-08-24T03:27:55.995Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -38677,7 +38698,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-24T03:22:17.871Z",
+      "built_at": "2026-08-24T03:27:55.995Z",
       "data": [
         {
           "date": "2015-01-11",
