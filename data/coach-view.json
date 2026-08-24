@@ -2692,31 +2692,35 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+          "rm_pct": 73,
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2 (~73% de tu 1RM estimado para 10 reps)."
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+          "rm_pct": 73,
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2 (~73% 1RM)."
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2."
+          "rm_pct": 73,
+          "note": "RIR 2 (~73% 1RM)."
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2."
+          "rm_pct": 73,
+          "note": "RIR 2 (~73% 1RM por pierna)."
         },
         {
           "exercise": "Nordic curl excéntrico",
           "sets": "3",
           "reps": "6-8",
-          "note": "RIR 2."
+          "note": "RIR 2. Es excéntrico asistido por peso corporal — el %RM no aplica aquí, regula por dificultad del ángulo/asistencia."
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -2734,7 +2738,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:11:33.727Z"
     },
     {
       "id": "64d2f8b4-bef1-4302-8e1e-39c08c9cda20",
@@ -8952,7 +8956,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-24T03:01:11.265Z",
+    "built_at": "2026-08-24T03:11:52.084Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -38660,7 +38664,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-24T03:01:11.265Z",
+      "built_at": "2026-08-24T03:11:52.084Z",
       "data": [
         {
           "date": "2015-01-11",
