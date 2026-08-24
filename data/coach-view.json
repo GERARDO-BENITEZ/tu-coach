@@ -2627,16 +2627,16 @@
           "zone": "Z1"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "athlete_note": "Vela + wing/ski foil — sin reloj/HR, TSS estimado (~100min combinados). Reemplazó la bici/SUP planeada. Ajustar si la duración real fue distinta.",
+      "actual_duration_min": 100,
+      "actual_tss": 50,
+      "completed_at": "2026-08-24T03:01:10.654Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:47:32.965Z"
+      "updated_at": "2026-08-24T03:01:10.654Z"
     },
     {
       "id": "c002e7dc-6aa3-40fb-9c16-3a088fb01612",
@@ -8952,7 +8952,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-24T02:59:04.405Z",
+    "built_at": "2026-08-24T03:01:11.265Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -38643,24 +38643,24 @@
       },
       {
         "date": "2026-08-22",
-        "tss": 0,
-        "ctl": 26.9,
-        "atl": 30.1,
-        "tsb": -3.2
+        "tss": 50,
+        "ctl": 28.1,
+        "atl": 37.3,
+        "tsb": -9.2
       },
       {
         "date": "2026-08-23",
         "tss": 34,
-        "ctl": 27.1,
-        "atl": 30.7,
-        "tsb": -3.6
+        "ctl": 28.2,
+        "atl": 36.8,
+        "tsb": -8.6
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-24T02:59:04.405Z",
+      "built_at": "2026-08-24T03:01:11.265Z",
       "data": [
         {
           "date": "2015-01-11",
@@ -68351,17 +68351,17 @@
         },
         {
           "date": "2026-08-22",
-          "tss": 0,
-          "ctl": 26.9,
-          "atl": 30.1,
-          "tsb": -3.2
+          "tss": 50,
+          "ctl": 28.1,
+          "atl": 37.3,
+          "tsb": -9.2
         },
         {
           "date": "2026-08-23",
           "tss": 34,
-          "ctl": 27.1,
-          "atl": 30.7,
-          "tsb": -3.6
+          "ctl": 28.2,
+          "atl": 36.8,
+          "tsb": -8.6
         }
       ]
     }
