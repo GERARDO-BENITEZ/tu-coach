@@ -2741,25 +2741,30 @@
       "updated_at": "2026-08-24T03:11:33.727Z"
     },
     {
-      "id": "64d2f8b4-bef1-4302-8e1e-39c08c9cda20",
+      "id": "e8111d87-00ff-4334-ad65-e9d6e22f14e8",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-25",
-      "name": "🟡 Vela Técnica + Hiking Específico",
-      "type": "Vela",
+      "name": "🚴 Rodada Larga Z2",
+      "type": "Ciclismo",
       "duration_min": 100,
-      "tss_planned": 55,
-      "coach_note": "Volumen medio en el agua, intervalos de hiking más largos que la semana pasada.",
+      "tss_planned": 65,
+      "coach_note": "Martes = rodada más larga de la semana. Reemplaza el bloque de vela fijo que tenía esta fecha en el plan viejo — la vela ahora es extra si el clima da, no una sesión programada. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no un bloque fijo del plan.",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
+          "name": "Calentamiento",
           "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "zone": "Z1"
         },
         {
-          "name": "Navegación técnica + hiking específico",
+          "name": "Bici Z2 sostenido",
           "duration": "75 min",
-          "zone": "Z3"
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -2771,10 +2776,10 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "03102e41-8245-421e-8a6d-69ae1feb3aa0",
+      "id": "6898ad90-4d87-4fca-aa37-2061bc96b454",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-26",
@@ -2794,37 +2799,39 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2. %RM no aplica limpio en lastrado (base peso corporal) — regula por RIR."
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+          "rm_pct": 77,
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2 (~77% 1RM)."
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2. Accesorio de estabilidad, no se programa por %RM."
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2."
+          "rm_pct": 73,
+          "note": "RIR 2 (~73% 1RM)."
         },
         {
           "exercise": "Farmer carry pesado",
           "sets": "3",
           "reps": "40m",
-          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
+          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2. Se programa por carga máxima sostenible, no %RM."
         },
         {
           "exercise": "Wrist curl + reverse wrist curl",
           "sets": "3",
           "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2. Accesorio de aislamiento, no se programa por %RM."
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -2842,28 +2849,38 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "fa478fc0-cf4f-4337-a97f-67da35868124",
+      "id": "7b1d3630-7266-4d19-adcd-2177557fecba",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-27",
-      "name": "🟡 Vela — Volumen + Táctica",
-      "type": "Vela",
-      "duration_min": 110,
-      "tss_planned": 60,
-      "coach_note": "Sesión más larga de la semana. Mete trabajo táctico (salidas, layline) sin perder el foco físico.",
+      "name": "🚣 Remo + SkiErg — Intervalos Z2",
+      "type": "Cardio Máquina",
+      "duration_min": 45,
+      "tss_planned": 42,
+      "coach_note": "Reemplaza el bloque de vela fijo del plan viejo — usa el equipo del gym para el motor aeróbico. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no un bloque fijo del plan.",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Calentamiento remo suave",
+          "duration": "8 min",
+          "zone": "Z1"
         },
         {
-          "name": "Navegación volumen + trabajo táctico",
-          "duration": "85 min",
-          "zone": "Z2-Z3"
+          "name": "Remadora — 4×5min Z2",
+          "duration": "20 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "SkiErg — 4×3min Z2",
+          "duration": "12 min",
+          "zone": "Z2"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "5 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -2875,18 +2892,18 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "9aff92c0-a7b6-4355-b0b4-f83b46e7c1d2",
+      "id": "d5020b79-ea0e-4ceb-869f-824cb27551ab",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-28",
-      "name": "🔴 F2B S1 · Empuje Superior + Core Rotacional",
+      "name": "🔴 F2B S1 · Empuje Superior + Core Rotacional + Fisio",
       "type": "Fuerza / Gym",
       "duration_min": 65,
       "tss_planned": 58,
-      "coach_note": "Semana 1 del bloque de carga — RIR 1-2. Cierra la semana de fuerza — empuje y rotación de tronco (roll tacks/gybes).",
+      "coach_note": "Semana 1 del bloque de carga — RIR 1-2. Cierra la semana de fuerza — empuje y rotación de tronco (roll tacks/gybes). Fisio de viernes: foco cadera/glúteo/lumbar/isquios (rodada larga del martes) + hombro/dorsal (día de tirón del miércoles).",
       "segments": [
         {
           "exercise": "Activación dinámica + movilidad articular",
@@ -2898,43 +2915,51 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 1-2."
+          "rm_pct": 78,
+          "note": "RIR 1-2 (~78% 1RM)."
         },
         {
           "exercise": "Fondos en paralelas",
           "sets": "3",
           "reps": "8-10",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2. Bodyweight — %RM no aplica, añade lastre si lo necesitas para llegar al RIR objetivo."
         },
         {
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1-2."
+          "rm_pct": 74,
+          "note": "RIR 1-2 (~74% 1RM)."
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2. Accesorio de aislamiento, no se programa por %RM."
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2. Core anti-rotación, no se programa por %RM."
         },
         {
           "exercise": "Elevación de piernas colgado",
           "sets": "3",
           "reps": "10-12",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2. Bodyweight, no se programa por %RM."
         },
         {
           "exercise": "Woodchopper con cable",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2. Core rotacional, no se programa por %RM."
+        },
+        {
+          "exercise": "🩺 Fisioterapeuta — cadera/glúteo/lumbar/isquios + hombro/dorsal",
+          "sets": "1",
+          "reps": "45-60min",
+          "note": "Liberación miofascial + movilidad. Avisa cualquier molestia específica de la semana."
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -2952,7 +2977,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
       "id": "5ad5a5d8-c2fc-48a5-ac37-58b5a087569c",
@@ -2993,21 +3018,25 @@
       "updated_at": "2026-08-17T23:51:17.214Z"
     },
     {
-      "id": "44b17269-4d11-4d5b-a29c-cc9f17ebd203",
+      "id": "a9334ccf-318f-42c6-aaa4-bc1fed6b58af",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-30",
-      "name": "Descanso + movilidad",
-      "type": "Descanso",
-      "duration_min": 25,
-      "tss_planned": 12,
-      "coach_note": "Descanso completo antes de arrancar la siguiente semana.",
+      "name": "🚣 SkiErg/Remo Suave + Movilidad",
+      "type": "Cardio Máquina",
+      "duration_min": 40,
+      "tss_planned": 25,
+      "coach_note": "Domingo — sin gym, pero sigue siendo un día físico (nada de descanso total). Suave A PROPÓSITO: mañana lunes es tu test de fuerza máxima de piernas — llegar fresco importa más que meter carga hoy.",
       "segments": [
         {
-          "exercise": "Descanso total o movilidad muy suave",
-          "sets": "1",
-          "reps": "15-20min",
-          "note": "El descanso es parte del entrenamiento."
+          "name": "SkiErg o remadora muy suave",
+          "duration": "20 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Movilidad general — cadera/tobillo (relevante para sentadilla de mañana)",
+          "duration": "15 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -3019,59 +3048,60 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "33fdcba1-e4ff-45fa-a5e7-2e3a4b9d12c5",
+      "id": "3a7b89f2-888d-406c-bd79-b0957bbf5353",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-31",
-      "name": "🔴 F2B S2 · Piernas/Hiking + Core",
+      "name": "🏆 Test de Fuerza Máxima — Piernas (3RM)",
       "type": "Fuerza / Gym",
-      "duration_min": 65,
-      "tss_planned": 58,
-      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — RIR 2. Piernas y core — la base de hiking que ya funciona bien de F1-F3.",
+      "duration_min": 70,
+      "tss_planned": 50,
+      "coach_note": "Antes de arrancar: revisa tu recovery de hoy. Si amanece notablemente bajo (rojo/<50%), pospón 1-2 días — un test de máxima fuerza necesita sistema nervioso fresco para ser válido y seguro, forzarlo con fatiga solo sube el riesgo de lesión sin dar un número real. Objetivo: 3RM (no 1RM absoluto) en sentadilla trasera y RDL — casi la misma información útil con mucho menos riesgo. Máximo 3-4 intentos pesados por ejercicio, no acumules intentos de más. Usa rack con pines de seguridad para la sentadilla — no negociable entrenando solo.",
       "segments": [
         {
-          "exercise": "Activación dinámica + movilidad articular",
+          "exercise": "Calentamiento general",
           "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
+          "reps": "10min",
+          "isWarmup": true,
+          "note": "Cardio suave + movilidad de cadera y tobillo."
         },
         {
-          "exercise": "Sentadilla trasera",
-          "sets": "4",
-          "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+          "exercise": "Rampa — Sentadilla trasera",
+          "sets": "5",
+          "reps": "8/5/3/2/1",
+          "note": "Progresión: ~50%×8 → 65%×5 → 75%×3 → 85%×2 → 92%×1. Descanso 2-4min entre sets, más largo conforme sube el peso. Esto prepara el sistema nervioso, no es el test."
         },
         {
-          "exercise": "Peso muerto rumano (RDL)",
-          "sets": "4",
-          "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+          "exercise": "🏆 TEST — Sentadilla trasera 3RM",
+          "sets": "3-4 intentos",
+          "reps": "3",
+          "note": "Profundidad completa (cadera bajo la rodilla), sin rebote, espalda neutra. Si completas 3 reps limpias con margen, sube 5-10kg y reintenta tras 4-5min de descanso. Si las 3 reps salen al límite absoluto, ese es tu 3RM — para ahí. Una rep con técnica comprometida NO cuenta."
         },
         {
-          "exercise": "Hip thrust con barra",
-          "sets": "4",
-          "reps": "10",
-          "note": "RIR 2."
+          "exercise": "Descanso activo",
+          "sets": "1",
+          "reps": "10-15min",
+          "note": "Camina, hidrátate, deja que el sistema nervioso se asiente antes del segundo ejercicio."
         },
         {
-          "exercise": "Búlgaro con mancuernas",
+          "exercise": "Rampa — Peso muerto rumano (RDL)",
           "sets": "3",
-          "reps": "10/pierna",
-          "note": "RIR 2."
+          "reps": "5/3/1",
+          "note": "Progresión más corta (ya estás caliente): ~60%×5 → 75%×3 → 88%×1."
         },
         {
-          "exercise": "Nordic curl excéntrico",
-          "sets": "3",
-          "reps": "6-8",
-          "note": "RIR 2."
+          "exercise": "🏆 TEST — RDL 3RM",
+          "sets": "3-4 intentos",
+          "reps": "3",
+          "note": "Espalda neutra todo el recorrido, barra pegada a las piernas, cadera hacia atrás no hacia abajo. Mismo protocolo: sube de a poco, para cuando las 3 reps salgan al límite real."
         },
         {
           "exercise": "Enfriamiento + movilidad",
           "sets": "1",
-          "reps": "8min",
+          "reps": "10min",
           "isCooldown": true
         }
       ],
@@ -3084,28 +3114,28 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "2fd11f78-2298-4b7e-bd78-8760eb4d773a",
+      "id": "ad8130f1-27d5-48e1-b5b5-500f0024b4f2",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-01",
-      "name": "🟡 Vela Técnica + Hiking Específico",
-      "type": "Vela",
-      "duration_min": 100,
-      "tss_planned": 55,
-      "coach_note": "Volumen medio en el agua, intervalos de hiking más largos que la semana pasada.",
+      "name": "🚴 Bici Z1-Z2 Suave — Recuperación Post-Test",
+      "type": "Ciclismo",
+      "duration_min": 45,
+      "tss_planned": 25,
+      "coach_note": "Ayer fue tu test de fuerza máxima de piernas — hoy NO es otra sesión dura, aunque sea martes. Bici muy suave, moviliza sin fatigar, deja que el sistema nervioso termine de recuperarse del esfuerzo máximo. La rodada larga de los martes vuelve la próxima semana. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no un bloque fijo del plan.",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Bici muy suave",
+          "duration": "35 min",
+          "zone": "Z1-Z2"
         },
         {
-          "name": "Navegación técnica + hiking específico",
-          "duration": "75 min",
-          "zone": "Z3"
+          "name": "Movilidad general",
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -3117,60 +3147,43 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
-      "id": "c2c00b38-1bab-45dd-be6a-40bb69d5b933",
+      "id": "7a1b6b59-1f90-43b3-a4fc-159aa53cadde",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-02",
-      "name": "🔴 F2B S2 · Tirón Superior + Hombro + Antebrazo",
+      "name": "🏆 Test de Fuerza Máxima — Tirón (3RM)",
       "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 62,
-      "coach_note": "Semana 2, sube ligeramente la carga vs. la semana pasada — El día que ataca directamente lo que pediste: antebrazo/agarre para caña y escota en viento fuerte, y hombro para sostener el trimeo largo. RIR 2, técnica limpia antes que carga.",
+      "duration_min": 55,
+      "tss_planned": 40,
+      "coach_note": "Mismo chequeo que el lunes: si el recovery de hoy amanece bajo, pospón. Objetivo: 3RM en remo con barra (bent-over row) — tu lift de tirón principal. Un solo ejercicio de test hoy, no acumules varios — el objetivo es un número limpio, no una sesión larga.",
       "segments": [
         {
-          "exercise": "Activación dinámica + movilidad articular",
+          "exercise": "Calentamiento general",
           "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
+          "reps": "10min",
+          "isWarmup": true,
+          "note": "Cardio suave + activación de dorsal/escápula."
         },
         {
-          "exercise": "Chin-up lastrado",
+          "exercise": "Rampa — Remo con barra (bent-over row)",
           "sets": "4",
-          "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+          "reps": "8/5/3/1",
+          "note": "Progresión: ~50%×8 → 65%×5 → 78%×3 → 90%×1."
         },
         {
-          "exercise": "Remo Pendlay",
-          "sets": "4",
-          "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+          "exercise": "🏆 TEST — Remo con barra 3RM",
+          "sets": "3-4 intentos",
+          "reps": "3",
+          "note": "Sin balanceo de tronco (si necesitas impulso con la espalda, el peso ya es demasiado), rango de movimiento completo, control en la bajada. Sube de a poco hasta que las 3 reps salgan al límite real con técnica limpia."
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
-        },
-        {
-          "exercise": "Press militar sentado con mancuerna",
-          "sets": "3",
-          "reps": "10",
-          "note": "RIR 2."
-        },
-        {
-          "exercise": "Farmer carry pesado",
-          "sets": "3",
-          "reps": "40m",
-          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 2."
-        },
-        {
-          "exercise": "Wrist curl + reverse wrist curl",
-          "sets": "3",
-          "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+          "note": "Accesorio ligero post-test, mantiene el hombro activo sin fatigar el resultado del test. RIR 3."
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -3188,7 +3201,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-08-24T03:21:59.637Z"
     },
     {
       "id": "a18e3561-052a-48f5-92a8-8a979fcb71a5",
@@ -8956,7 +8969,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-24T03:11:52.084Z",
+    "built_at": "2026-08-24T03:22:17.871Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -38664,7 +38677,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-24T03:11:52.084Z",
+      "built_at": "2026-08-24T03:22:17.871Z",
       "data": [
         {
           "date": "2015-01-11",
