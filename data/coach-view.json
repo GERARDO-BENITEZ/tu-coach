@@ -2745,11 +2745,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-08-25",
-      "name": "🚴 Rodada Larga Z2",
+      "name": "🚴 Rodada con Grupo — Z3/Z4",
       "type": "Ciclismo",
-      "duration_min": 100,
-      "tss_planned": 65,
-      "coach_note": "Martes = rodada más larga de la semana. Reemplaza el bloque de vela fijo que tenía esta fecha en el plan viejo — la vela ahora es extra si el clima da, no una sesión programada. Si hay viento y las condiciones lo permiten, sal a navegar ADEMÁS de esto — la vela es extra, no un bloque fijo del plan.",
+      "duration_min": 140,
+      "tss_planned": 95,
+      "coach_note": "Sales con tu grupo de amigos los martes — el ritmo real termina siendo Z3/Z4, no Z2 puro, y eso es normal en rodada grupal (no se controla el ritmo igual que solo). Ya no pelea contra esto: el día está planificado con la intensidad real que vas a hacer. Sigue siendo tu día más largo/fuerte de la semana en bici.",
       "segments": [
         {
           "name": "Calentamiento",
@@ -2776,7 +2776,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-27T00:51:50.681Z"
+      "updated_at": "2026-08-27T00:54:21.290Z"
     },
     {
       "id": "6898ad90-4d87-4fca-aa37-2061bc96b454",
@@ -3120,11 +3120,11 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-01",
-      "name": "🚴 Rodada Larga Z2",
+      "name": "🚴 Rodada con Grupo — Z3/Z4",
       "type": "Ciclismo",
-      "duration_min": 100,
-      "tss_planned": 65,
-      "coach_note": "Martes = rodada más larga de la semana. Reemplaza el bloque de vela fijo que tenía esta fecha en el plan viejo — la vela ahora es extra si el clima da, no una sesión programada.",
+      "duration_min": 140,
+      "tss_planned": 95,
+      "coach_note": "Sales con tu grupo de amigos los martes — el ritmo real termina siendo Z3/Z4, no Z2 puro. Planificado con la intensidad real que vas a hacer en vez de pelear contra el patrón cada semana.",
       "segments": [
         {
           "name": "Calentamiento",
@@ -3151,7 +3151,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:27:47.984Z"
+      "updated_at": "2026-08-27T00:54:43.056Z"
     },
     {
       "id": "0d96fa18-4bd7-48ba-ad10-2b9df0400315",
@@ -8990,7 +8990,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-27T00:51:57.856Z",
+    "built_at": "2026-08-27T00:54:57.955Z",
     "data": [
       {
         "date": "2015-01-11",
@@ -38719,7 +38719,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-27T00:51:57.856Z",
+      "built_at": "2026-08-27T00:54:57.955Z",
       "data": [
         {
           "date": "2015-01-11",
