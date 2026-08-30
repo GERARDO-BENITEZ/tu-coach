@@ -8990,22 +8990,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-08-28T12:13:41.153Z",
+    "built_at": "2026-08-30T07:16:42.799Z",
     "data": [
-      {
-        "date": "2024-08-29",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-08-30",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-08-31",
         "tss": 0,
@@ -14083,46 +14069,46 @@
       },
       {
         "date": "2026-08-26",
-        "tss": 0,
-        "ctl": 29.5,
-        "atl": 39.3,
-        "tsb": -9.8
+        "tss": 26,
+        "ctl": 30.1,
+        "atl": 43,
+        "tsb": -12.9
       },
       {
         "date": "2026-08-27",
-        "tss": 0,
-        "ctl": 28.8,
-        "atl": 33.7,
-        "tsb": -4.9
+        "tss": 11,
+        "ctl": 29.6,
+        "atl": 38.4,
+        "tsb": -8.8
       },
       {
         "date": "2026-08-28",
+        "tss": 31,
+        "ctl": 29.7,
+        "atl": 37.4,
+        "tsb": -7.7
+      },
+      {
+        "date": "2026-08-29",
+        "tss": 114,
+        "ctl": 31.7,
+        "atl": 48.3,
+        "tsb": -16.7
+      },
+      {
+        "date": "2026-08-30",
         "tss": 0,
-        "ctl": 28.1,
-        "atl": 28.9,
-        "tsb": -0.8
+        "ctl": 30.9,
+        "atl": 41.4,
+        "tsb": -10.5
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-08-28T12:13:41.153Z",
+      "built_at": "2026-08-30T07:16:42.799Z",
       "data": [
-        {
-          "date": "2024-08-29",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-08-30",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-08-31",
           "tss": 0,
@@ -19200,24 +19186,38 @@
         },
         {
           "date": "2026-08-26",
-          "tss": 0,
-          "ctl": 29.5,
-          "atl": 39.3,
-          "tsb": -9.8
+          "tss": 26,
+          "ctl": 30.1,
+          "atl": 43,
+          "tsb": -12.9
         },
         {
           "date": "2026-08-27",
-          "tss": 0,
-          "ctl": 28.8,
-          "atl": 33.7,
-          "tsb": -4.9
+          "tss": 11,
+          "ctl": 29.6,
+          "atl": 38.4,
+          "tsb": -8.8
         },
         {
           "date": "2026-08-28",
+          "tss": 31,
+          "ctl": 29.7,
+          "atl": 37.4,
+          "tsb": -7.7
+        },
+        {
+          "date": "2026-08-29",
+          "tss": 114,
+          "ctl": 31.7,
+          "atl": 48.3,
+          "tsb": -16.7
+        },
+        {
+          "date": "2026-08-30",
           "tss": 0,
-          "ctl": 28.1,
-          "atl": 28.9,
-          "tsb": -0.8
+          "ctl": 30.9,
+          "atl": 41.4,
+          "tsb": -10.5
         }
       ]
     }
@@ -19289,6 +19289,97 @@
   ],
   "strength_logs": [],
   "garmin_activities": [
+    {
+      "activity_id": 24163510894,
+      "activity_name": "Valle de Bravo Ciclismo en ruta",
+      "activity_type": "road_biking",
+      "date": "2026-08-29",
+      "duration_min": 129,
+      "hr_avg": 147,
+      "hr_max": 186,
+      "calories": 1287,
+      "distance_m": 43780,
+      "elevation_m": 925,
+      "tss_actual": 114
+    },
+    {
+      "activity_id": 24154418064,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-08-28",
+      "duration_min": 94,
+      "hr_avg": 96,
+      "hr_max": 162,
+      "calories": 436,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 31
+    },
+    {
+      "activity_id": 24141512250,
+      "activity_name": "Valle de Bravo Vela",
+      "activity_type": "sailing_v2",
+      "date": "2026-08-27",
+      "duration_min": 28,
+      "hr_avg": 99,
+      "hr_max": 160,
+      "calories": 147,
+      "distance_m": 1414,
+      "elevation_m": 7,
+      "tss_actual": 11
+    },
+    {
+      "activity_id": 24131144363,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-08-26",
+      "duration_min": 69,
+      "hr_avg": 94,
+      "hr_max": 151,
+      "calories": 298,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 26
+    },
+    {
+      "activity_id": 24115845009,
+      "activity_name": "Valle de Bravo Ciclismo en ruta",
+      "activity_type": "road_biking",
+      "date": "2026-08-25",
+      "duration_min": 82,
+      "hr_avg": 148,
+      "hr_max": 189,
+      "calories": 881,
+      "distance_m": 28163,
+      "elevation_m": 536,
+      "tss_actual": 71
+    },
+    {
+      "activity_id": 24115844930,
+      "activity_name": "Valle de Bravo Ciclismo en ruta",
+      "activity_type": "road_biking",
+      "date": "2026-08-25",
+      "duration_min": 67,
+      "hr_avg": 125,
+      "hr_max": 225,
+      "calories": 568,
+      "distance_m": 27235,
+      "elevation_m": 257,
+      "tss_actual": 23
+    },
+    {
+      "activity_id": 24104595993,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-08-24",
+      "duration_min": 69,
+      "hr_avg": 123,
+      "hr_max": 173,
+      "calories": 508,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 44
+    },
     {
       "activity_id": 24090151914,
       "activity_name": "Valle de Bravo Vela",
@@ -24615,6 +24706,68 @@
         "max_heart_rate": 197,
         "weight_kg": 90,
         "synced_at": "2026-08-27T16:56:26.807Z"
+      }
+    },
+    {
+      "id": "7ed53878-5026-4fef-8d1a-984d7de22dfe",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-08-28T16:19:02.661Z",
+      "data": {
+        "recovery_score": 85,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 7.6,
+        "sleep_light_h": 4.4,
+        "sleep_rem_h": 1.5,
+        "sleep_deep_h": 1.5,
+        "sleep_awake_h": 0.2,
+        "sleep_disturbances": 12,
+        "strain": 0.1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-08-28T16:19:02.661Z"
+      }
+    },
+    {
+      "id": "85ff6d2c-e593-4514-8d17-7e9f4d22953f",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-08-29T20:07:34.484Z",
+      "data": {
+        "recovery_score": 63,
+        "hrv_ms": 63,
+        "rhr_bpm": 47,
+        "sleep_hours": 8.6,
+        "sleep_light_h": 3.3,
+        "sleep_rem_h": 2.2,
+        "sleep_deep_h": 2.3,
+        "sleep_awake_h": 0.8,
+        "sleep_disturbances": 11,
+        "strain": 19.2,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-08-29T20:07:34.484Z"
+      }
+    },
+    {
+      "id": "7c4d0f1f-cf3b-4175-95a2-c4f24dd0c8c1",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-08-30T07:16:43.314Z",
+      "data": {
+        "activity_id": 24163510894,
+        "activity_name": "Valle de Bravo Ciclismo en ruta",
+        "activity_type": "road_biking",
+        "duration_min": 129,
+        "hr_avg": 147,
+        "hr_max": 186,
+        "calories": 1287,
+        "tss_actual": 114,
+        "synced_at": "2026-08-30T07:16:43.314Z"
       }
     }
   ],
@@ -34337,10 +34490,36 @@
       "sleep_hours": 7.6,
       "sleep_efficiency": 90.815796,
       "sleep_performance": 85,
-      "strain": 2.8,
-      "avg_hr": 49,
-      "max_hr": 101,
-      "kilojoules": 3958.1528
+      "strain": 5.6,
+      "avg_hr": 56,
+      "max_hr": 160,
+      "kilojoules": 8816.639
+    },
+    {
+      "date": "2026-08-28",
+      "recovery_score": 85,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "sleep_hours": 7.6,
+      "sleep_efficiency": 96.82033,
+      "sleep_performance": 90,
+      "strain": 6.4,
+      "avg_hr": 55,
+      "max_hr": 162,
+      "kilojoules": 8792.053
+    },
+    {
+      "date": "2026-08-29",
+      "recovery_score": 63,
+      "hrv_ms": 63,
+      "rhr_bpm": 47,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 91.13694,
+      "sleep_performance": 91,
+      "strain": 19.2,
+      "avg_hr": 65,
+      "max_hr": 186,
+      "kilojoules": 11063.199
     }
   ],
   "body_composition": [
@@ -34356,7 +34535,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-08-27T16:56:26.807Z"
+      "updated_at": "2026-08-29T20:07:34.484Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
