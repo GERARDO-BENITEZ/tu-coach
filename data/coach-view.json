@@ -2840,16 +2840,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 69,
+      "actual_tss": 26,
+      "completed_at": "2026-09-01T17:40:27.576Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
+      "updated_at": "2026-09-01T17:40:27.576Z"
     },
     {
       "id": "7b1d3630-7266-4d19-adcd-2177557fecba",
@@ -2883,16 +2883,16 @@
           "zone": "Z1"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 28,
+      "actual_tss": 11,
+      "completed_at": "2026-09-01T17:40:27.681Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
+      "updated_at": "2026-09-01T17:40:27.681Z"
     },
     {
       "id": "d5020b79-ea0e-4ceb-869f-824cb27551ab",
@@ -2968,16 +2968,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 94,
+      "actual_tss": 31,
+      "completed_at": "2026-09-01T17:40:27.781Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
+      "updated_at": "2026-09-01T17:40:27.781Z"
     },
     {
       "id": "5ad5a5d8-c2fc-48a5-ac37-58b5a087569c",
@@ -3006,16 +3006,16 @@
           "zone": "Z1 — Recuperación"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 129,
+      "actual_tss": 114,
+      "completed_at": "2026-09-01T17:40:27.881Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-01T17:40:27.881Z"
     },
     {
       "id": "a9334ccf-318f-42c6-aaa4-bc1fed6b58af",
@@ -3039,7 +3039,7 @@
           "zone": "Z1"
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3048,7 +3048,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:21:59.637Z"
+      "updated_at": "2026-09-01T17:40:27.977Z"
     },
     {
       "id": "459a42c2-c90a-40fb-ac0f-23fe5b0da939",
@@ -3104,7 +3104,7 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3113,7 +3113,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:27:35.802Z"
+      "updated_at": "2026-09-01T17:40:28.014Z"
     },
     {
       "id": "ad8130f1-27d5-48e1-b5b5-500f0024b4f2",
@@ -8990,15 +8990,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-01T13:01:39.451Z",
+    "built_at": "2026-09-02T13:01:43.066Z",
     "data": [
-      {
-        "date": "2024-09-02",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-09-03",
         "tss": 0,
@@ -14101,21 +14094,21 @@
         "ctl": 29.5,
         "atl": 30.4,
         "tsb": -1
+      },
+      {
+        "date": "2026-09-02",
+        "tss": 0,
+        "ctl": 28.8,
+        "atl": 26.1,
+        "tsb": 2.7
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-01T13:01:39.451Z",
+      "built_at": "2026-09-02T13:01:43.066Z",
       "data": [
-        {
-          "date": "2024-09-02",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-09-03",
           "tss": 0,
@@ -19218,6 +19211,13 @@
           "ctl": 29.5,
           "atl": 30.4,
           "tsb": -1
+        },
+        {
+          "date": "2026-09-02",
+          "tss": 0,
+          "ctl": 28.8,
+          "atl": 26.1,
+          "tsb": 2.7
         }
       ]
     }
@@ -24870,6 +24870,64 @@
         "max_heart_rate": 197,
         "weight_kg": 90,
         "synced_at": "2026-09-01T13:01:38.878Z"
+      }
+    },
+    {
+      "id": "db0f3deb-1de4-488e-b39a-d79a0fa72f81",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-01T17:40:09.053Z",
+      "data": {
+        "activity_id": 24163510894,
+        "activity_name": "Valle de Bravo Ciclismo en ruta",
+        "activity_type": "road_biking",
+        "duration_min": 129,
+        "hr_avg": 147,
+        "hr_max": 186,
+        "calories": 1287,
+        "tss_actual": 114,
+        "synced_at": "2026-09-01T17:40:09.053Z"
+      }
+    },
+    {
+      "id": "bc37d968-4c1b-4fb2-8bd0-c23d08e8289f",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-02T13:01:40.146Z",
+      "data": {
+        "activity_id": 24163510894,
+        "activity_name": "Valle de Bravo Ciclismo en ruta",
+        "activity_type": "road_biking",
+        "duration_min": 129,
+        "hr_avg": 147,
+        "hr_max": 186,
+        "calories": 1287,
+        "tss_actual": 114,
+        "synced_at": "2026-09-02T13:01:40.146Z"
+      }
+    },
+    {
+      "id": "f6f5da78-fcdd-4798-b008-ff5586d6b01b",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-02T13:01:40.267Z",
+      "data": {
+        "recovery_score": 80,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 8.6,
+        "sleep_light_h": 4.5,
+        "sleep_rem_h": 1.9,
+        "sleep_deep_h": 1.9,
+        "sleep_awake_h": 0.3,
+        "sleep_disturbances": 13,
+        "strain": 1.6,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-02T13:01:40.267Z"
       }
     }
   ],
@@ -34644,20 +34702,33 @@
       "sleep_hours": 9.1,
       "sleep_efficiency": 90.750244,
       "sleep_performance": 79,
-      "strain": 0.1,
-      "avg_hr": 44,
-      "max_hr": 91,
-      "kilojoules": 4062.9392
+      "strain": 1.1,
+      "avg_hr": 51,
+      "max_hr": 102,
+      "kilojoules": 8826.257
     },
     {
       "date": "2026-09-01",
-      "recovery_score": 88,
-      "hrv_ms": 78,
-      "rhr_bpm": 42,
-      "sleep_hours": 9.1,
+      "recovery_score": 80,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "sleep_hours": 8.6,
+      "sleep_efficiency": 96.704185,
+      "sleep_performance": 86,
+      "strain": 0.1,
+      "avg_hr": 44,
+      "max_hr": 88,
+      "kilojoules": 4179.9497
+    },
+    {
+      "date": "2026-09-02",
+      "recovery_score": 80,
+      "hrv_ms": 71,
+      "rhr_bpm": 43,
+      "sleep_hours": 8.6,
       "sleep_efficiency": null,
       "sleep_performance": null,
-      "strain": 1.1,
+      "strain": 1.6,
       "avg_hr": null,
       "max_hr": null,
       "kilojoules": null
@@ -34676,7 +34747,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-09-01T13:01:38.878Z"
+      "updated_at": "2026-09-02T13:01:40.267Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
