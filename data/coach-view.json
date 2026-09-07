@@ -3142,7 +3142,7 @@
           "zone": "Z1"
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3151,7 +3151,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-27T00:54:43.056Z"
+      "updated_at": "2026-09-03T15:16:18.208Z"
     },
     {
       "id": "0d96fa18-4bd7-48ba-ad10-2b9df0400315",
@@ -3213,37 +3213,74 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 72,
+      "actual_tss": 44,
+      "completed_at": "2026-09-03T15:16:18.252Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-24T03:27:35.802Z"
+      "updated_at": "2026-09-03T15:16:18.253Z"
     },
     {
       "id": "a18e3561-052a-48f5-92a8-8a979fcb71a5",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-03",
-      "name": "🟡 Vela — Volumen + Táctica",
-      "type": "Vela",
-      "duration_min": 110,
-      "tss_planned": 60,
-      "coach_note": "Sesión más larga de la semana. Mete trabajo táctico (salidas, layline) sin perder el foco físico.",
+      "name": "🔴 F2B S2 · Piernas/Hiking + Core (swap de Vela — sin condiciones)",
+      "type": "Fuerza / Gym",
+      "duration_min": 55,
+      "tss_planned": 49,
+      "coach_note": "Swap de Vela por gym: no hubo condiciones para navegar. Se recupera la sesión de piernas que faltó el lunes 31 ago, ajustada -15% por recovery 63% (RIR 2→3, 4 series→3 en los principales).",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Navegación volumen + trabajo táctico",
-          "duration": "85 min",
-          "zone": "Z2-Z3"
+          "exercise": "Sentadilla trasera",
+          "sets": "3",
+          "reps": "10",
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3.",
+          "rm_pct": 70
+        },
+        {
+          "exercise": "Peso muerto rumano (RDL)",
+          "sets": "3",
+          "reps": "10",
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3.",
+          "rm_pct": 70
+        },
+        {
+          "exercise": "Hip thrust con barra",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 3.",
+          "rm_pct": 70
+        },
+        {
+          "exercise": "Búlgaro con mancuernas",
+          "sets": "3",
+          "reps": "10/pierna",
+          "note": "RIR 3.",
+          "rm_pct": 70
+        },
+        {
+          "exercise": "Nordic curl excéntrico",
+          "sets": "2",
+          "reps": "6-8",
+          "note": "RIR 3. Excéntrico asistido por peso corporal — no aplica %RM.",
+          "rm_pct": null
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -3255,7 +3292,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:26:28.409Z"
     },
     {
       "id": "d715fbb5-89a6-4d2f-9514-3263391ba94e",
@@ -3278,7 +3315,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 77
         },
         {
           "exercise": "Fondos en paralelas",
@@ -3290,19 +3328,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 70
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 70
         },
         {
           "exercise": "Elevación de piernas colgado",
@@ -3314,7 +3355,8 @@
           "exercise": "Woodchopper con cable",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -3332,7 +3374,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.666Z"
     },
     {
       "id": "8ff9eb91-1d09-451a-a5fb-e9f69966ed53",
@@ -3455,13 +3497,15 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1.",
+          "rm_pct": 80
         },
         {
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 78
         },
         {
           "exercise": "Farmer carry pesado",
@@ -3485,7 +3529,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.779Z"
     },
     {
       "id": "0d1a3943-229c-4a73-850f-f7844a0d97ef",
@@ -3541,19 +3585,22 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -3571,7 +3618,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.807Z"
     },
     {
       "id": "f0543d2f-1b41-487f-990a-655e583bbaec",
@@ -4393,13 +4440,15 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 4 — muy suave."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 4 — muy suave.",
+          "rm_pct": 67
         },
         {
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 4 — muy suave."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 4 — muy suave.",
+          "rm_pct": 71
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -4417,7 +4466,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.835Z"
     },
     {
       "id": "afedc01e-e21f-4b85-be73-13fcdc3ecda9",
@@ -4507,25 +4556,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -4555,7 +4608,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.861Z"
     },
     {
       "id": "2048431b-064f-4960-95c2-6ce014b573da",
@@ -4611,25 +4664,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3.",
+          "rm_pct": 59
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Farmer carry pesado",
@@ -4641,7 +4698,8 @@
           "exercise": "Wrist curl + reverse wrist curl",
           "sets": "3",
           "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 3."
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 3.",
+          "rm_pct": 59
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -4659,7 +4717,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.938Z"
     },
     {
       "id": "9e59125a-fb84-4b45-bf55-cec14df10598",
@@ -4720,7 +4778,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Fondos en paralelas",
@@ -4732,19 +4791,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Elevación de piernas colgado",
@@ -4756,7 +4818,8 @@
           "exercise": "Woodchopper con cable",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -4774,7 +4837,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.958Z"
     },
     {
       "id": "918b68f7-d025-44b0-8c5a-8a67525943d8",
@@ -4803,7 +4866,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 67
         },
         {
           "exercise": "Plancha frontal",
@@ -4815,13 +4879,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 61
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -4839,7 +4905,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:38.981Z"
     },
     {
       "id": "e178d17c-40ae-49c1-9dda-859a48aeb1ce",
@@ -4891,25 +4957,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -4939,7 +5009,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.003Z"
     },
     {
       "id": "d04c8e12-c888-4553-945f-4eb66a9be4ec",
@@ -4995,25 +5065,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3.",
+          "rm_pct": 76
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3.",
+          "rm_pct": 61
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Farmer carry pesado",
@@ -5025,7 +5099,8 @@
           "exercise": "Wrist curl + reverse wrist curl",
           "sets": "3",
           "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2-3."
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2-3.",
+          "rm_pct": 61
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5043,7 +5118,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.024Z"
     },
     {
       "id": "c726b6ef-9537-4de4-81b9-8d14b9a3c252",
@@ -5104,7 +5179,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Fondos en paralelas",
@@ -5116,19 +5192,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 67
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 67
         },
         {
           "exercise": "Elevación de piernas colgado",
@@ -5140,7 +5219,8 @@
           "exercise": "Woodchopper con cable",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 67
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5158,7 +5238,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.050Z"
     },
     {
       "id": "c4d284d2-bc17-4319-97da-4278c181cf00",
@@ -5187,7 +5267,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 67
         },
         {
           "exercise": "Plancha frontal",
@@ -5199,13 +5280,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 61
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5223,7 +5306,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.072Z"
     },
     {
       "id": "3f15cb4d-399e-4286-9196-15db56b5dbd9",
@@ -5275,25 +5358,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -5323,7 +5410,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.094Z"
     },
     {
       "id": "2dabe576-d19b-4544-8e67-510dcbb37065",
@@ -5379,25 +5466,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2.",
+          "rm_pct": 77
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2.",
+          "rm_pct": 62
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Farmer carry pesado",
@@ -5409,7 +5500,8 @@
           "exercise": "Wrist curl + reverse wrist curl",
           "sets": "3",
           "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2."
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2.",
+          "rm_pct": 62
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5427,7 +5519,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.116Z"
     },
     {
       "id": "6842a53a-d6ad-4d65-ab46-ecaae99c8410",
@@ -5488,7 +5580,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Fondos en paralelas",
@@ -5500,19 +5593,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 68
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 68
         },
         {
           "exercise": "Elevación de piernas colgado",
@@ -5524,7 +5620,8 @@
           "exercise": "Woodchopper con cable",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 68
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5542,7 +5639,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.138Z"
     },
     {
       "id": "e05b92a4-711e-46de-be14-12295ac1da4f",
@@ -5571,7 +5668,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 67
         },
         {
           "exercise": "Plancha frontal",
@@ -5583,13 +5681,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 61
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3, sin llegar al fallo."
+          "note": "RIR 2-3, sin llegar al fallo.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5607,7 +5707,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.159Z"
     },
     {
       "id": "72058f1c-2fd1-487e-9d60-cfcf5dcf24a3",
@@ -5659,25 +5759,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5695,7 +5799,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.182Z"
     },
     {
       "id": "511a9551-3699-4d8b-a663-3950993ef557",
@@ -5751,25 +5855,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3.",
+          "rm_pct": 59
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5787,7 +5895,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.203Z"
     },
     {
       "id": "858e4122-befd-4314-82d6-23816412175e",
@@ -5848,7 +5956,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Fondos en paralelas",
@@ -5860,13 +5969,15 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -5884,7 +5995,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.226Z"
     },
     {
       "id": "7e98c75d-134e-4044-8f93-eecdb91b59b5",
@@ -5974,25 +6085,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -6022,7 +6137,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.252Z"
     },
     {
       "id": "1800163c-eaef-4b1a-aac3-f639cc79e5f8",
@@ -6078,25 +6193,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2.",
+          "rm_pct": 77
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2.",
+          "rm_pct": 62
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Farmer carry pesado",
@@ -6108,7 +6227,8 @@
           "exercise": "Remo Pendlay explosivo",
           "sets": "4",
           "reps": "5",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 83
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -6126,7 +6246,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.275Z"
     },
     {
       "id": "75bc0303-b092-4843-9d27-380e0d5cb817",
@@ -6187,7 +6307,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Fondos en paralelas",
@@ -6199,19 +6320,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 73
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 68
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 2."
+          "note": "RIR 2.",
+          "rm_pct": 68
         },
         {
           "exercise": "Med ball rotational slam",
@@ -6235,7 +6359,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.302Z"
     },
     {
       "id": "61efd354-b009-4086-be5d-3e305b96bab1",
@@ -6320,25 +6444,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1-2."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 1-2."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -6368,7 +6496,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.326Z"
     },
     {
       "id": "b516e68f-2e25-4fa0-ae32-50c25525fad2",
@@ -6424,25 +6552,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1-2."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1-2.",
+          "rm_pct": 79
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 1-2."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 1-2.",
+          "rm_pct": 77
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1-2."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1-2.",
+          "rm_pct": 64
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Farmer carry pesado",
@@ -6454,7 +6586,8 @@
           "exercise": "Remo Pendlay explosivo",
           "sets": "4",
           "reps": "5",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 85
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -6472,7 +6605,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.349Z"
     },
     {
       "id": "0ef92cda-dc07-49b8-8e74-9e04b51d5455",
@@ -6533,7 +6666,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 77
         },
         {
           "exercise": "Fondos en paralelas",
@@ -6545,19 +6679,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 75
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 70
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1-2."
+          "note": "RIR 1-2.",
+          "rm_pct": 70
         },
         {
           "exercise": "Med ball rotational slam",
@@ -6581,7 +6718,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.371Z"
     },
     {
       "id": "a74466d3-56a7-4b94-af57-93c4dd7022c7",
@@ -6666,25 +6803,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 1."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Nordic curl excéntrico",
@@ -6714,7 +6855,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.393Z"
     },
     {
       "id": "98f00fc8-1cb6-4613-ae1f-0bfd4ca5e32f",
@@ -6770,25 +6911,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 1.",
+          "rm_pct": 80
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 1."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 1.",
+          "rm_pct": 78
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 1.",
+          "rm_pct": 65
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Farmer carry pesado",
@@ -6800,7 +6945,8 @@
           "exercise": "Remo Pendlay explosivo",
           "sets": "4",
           "reps": "5",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 86
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -6818,7 +6964,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.415Z"
     },
     {
       "id": "f41b7a6a-1cab-4a7d-95b4-f5a10c5454e5",
@@ -6879,7 +7025,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 78
         },
         {
           "exercise": "Fondos en paralelas",
@@ -6891,19 +7038,22 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 76
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 71
         },
         {
           "exercise": "Pallof press",
           "sets": "3",
           "reps": "12/lado",
-          "note": "RIR 1."
+          "note": "RIR 1.",
+          "rm_pct": 71
         },
         {
           "exercise": "Med ball rotational slam",
@@ -6927,7 +7077,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.437Z"
     },
     {
       "id": "4748614d-c5d0-4e18-b49c-87ff59bba390",
@@ -7012,25 +7162,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7048,7 +7202,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.459Z"
     },
     {
       "id": "08af26dc-9d25-475d-b919-d6b0004f68de",
@@ -7104,25 +7258,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3.",
+          "rm_pct": 59
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7140,7 +7298,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.481Z"
     },
     {
       "id": "4e12d565-4e88-46b3-9f44-b9bb50053444",
@@ -7201,7 +7359,8 @@
           "exercise": "Press banca",
           "sets": "4",
           "reps": "8",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Fondos en paralelas",
@@ -7213,13 +7372,15 @@
           "exercise": "Press Arnold",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Extensión tríceps en polea",
           "sets": "3",
           "reps": "12",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7237,7 +7398,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.506Z"
     },
     {
       "id": "75690bd5-98fc-46ed-9f2f-5c500ed99908",
@@ -7322,25 +7483,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7358,7 +7523,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.528Z"
     },
     {
       "id": "8537c2d3-c4e8-4ab1-ae57-11f32a074684",
@@ -7419,25 +7584,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3.",
+          "rm_pct": 76
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3.",
+          "rm_pct": 61
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7455,7 +7624,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.551Z"
     },
     {
       "id": "afe78996-b7a2-4a3a-a86c-25132243c3ae",
@@ -7555,7 +7724,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Plancha frontal",
@@ -7579,7 +7749,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.571Z"
     },
     {
       "id": "902766aa-eb5f-45bd-8315-b5c2bd4470b7",
@@ -7631,25 +7801,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7667,7 +7841,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.593Z"
     },
     {
       "id": "3423dc10-bb2d-456a-82e7-95243e9efe47",
@@ -7728,25 +7902,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3.",
+          "rm_pct": 76
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3.",
+          "rm_pct": 61
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7764,7 +7942,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.616Z"
     },
     {
       "id": "e99c24f6-fbf4-466c-a6e7-659a38c70e0e",
@@ -7864,7 +8042,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Plancha frontal",
@@ -7888,7 +8067,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.638Z"
     },
     {
       "id": "af5202e4-69ca-4ff7-8af6-0810771e40f8",
@@ -7940,25 +8119,29 @@
           "exercise": "Sentadilla trasera",
           "sets": "4",
           "reps": "10",
-          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3."
+          "note": "Tempo 3-1-2-0, técnica antes que carga. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Peso muerto rumano (RDL)",
           "sets": "4",
           "reps": "10",
-          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3."
+          "note": "Espalda neutra, cadera hacia atrás. RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Hip thrust con barra",
           "sets": "4",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Búlgaro con mancuernas",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -7976,7 +8159,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.659Z"
     },
     {
       "id": "8972aa82-4e1b-4073-bc2d-2bffd2b07650",
@@ -8037,25 +8220,29 @@
           "exercise": "Chin-up lastrado",
           "sets": "4",
           "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3."
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2-3.",
+          "rm_pct": 76
         },
         {
           "exercise": "Remo Pendlay",
           "sets": "4",
           "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3."
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2-3.",
+          "rm_pct": 74
         },
         {
           "exercise": "Face pull con cuerda",
           "sets": "3",
           "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3."
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2-3.",
+          "rm_pct": 61
         },
         {
           "exercise": "Press militar sentado con mancuerna",
           "sets": "3",
           "reps": "10",
-          "note": "RIR 2-3."
+          "note": "RIR 2-3.",
+          "rm_pct": 72
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -8073,7 +8260,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.681Z"
     },
     {
       "id": "2d935999-1643-4d6c-8d59-60ad8554dcad",
@@ -8173,7 +8360,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Plancha frontal",
@@ -8197,7 +8385,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.702Z"
     },
     {
       "id": "3e628884-0ce1-4b52-8fe1-7d629fb594b7",
@@ -8255,7 +8443,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 64
         },
         {
           "exercise": "Plancha frontal",
@@ -8267,13 +8456,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 58
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 69
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -8291,7 +8482,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.726Z"
     },
     {
       "id": "da5e5c9e-019a-4ad3-82a6-d717f531edbc",
@@ -8445,7 +8636,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 64
         },
         {
           "exercise": "Plancha frontal",
@@ -8457,13 +8649,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 58
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3-4."
+          "note": "RIR 3-4.",
+          "rm_pct": 69
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -8481,7 +8675,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.749Z"
     },
     {
       "id": "02aa2426-5907-4f16-ae53-fbc7f3c54b93",
@@ -8577,7 +8771,8 @@
           "exercise": "Zancadas con mancuernas",
           "sets": "3",
           "reps": "12/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 65
         },
         {
           "exercise": "Plancha frontal",
@@ -8589,13 +8784,15 @@
           "exercise": "Elevaciones laterales con mancuerna ligera",
           "sets": "3",
           "reps": "15",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 59
         },
         {
           "exercise": "Hip thrust a una pierna",
           "sets": "3",
           "reps": "10/pierna",
-          "note": "RIR 3."
+          "note": "RIR 3.",
+          "rm_pct": 70
         },
         {
           "exercise": "Enfriamiento + movilidad",
@@ -8613,7 +8810,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-03T15:30:39.773Z"
     },
     {
       "id": "5d811ab2-c123-427f-a341-07fc97f92642",
@@ -8990,43 +9187,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-02T13:01:43.066Z",
+    "built_at": "2026-09-07T06:01:03.481Z",
     "data": [
-      {
-        "date": "2024-09-03",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-09-04",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-09-05",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-09-06",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-09-07",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-09-08",
         "tss": 0,
@@ -14097,53 +14259,53 @@
       },
       {
         "date": "2026-09-02",
+        "tss": 44,
+        "ctl": 29.8,
+        "atl": 32.4,
+        "tsb": -2.6
+      },
+      {
+        "date": "2026-09-03",
+        "tss": 42,
+        "ctl": 30.1,
+        "atl": 33.7,
+        "tsb": -3.7
+      },
+      {
+        "date": "2026-09-04",
+        "tss": 41,
+        "ctl": 30.3,
+        "atl": 34.8,
+        "tsb": -4.4
+      },
+      {
+        "date": "2026-09-05",
         "tss": 0,
-        "ctl": 28.8,
-        "atl": 26.1,
-        "tsb": 2.7
+        "ctl": 29.6,
+        "atl": 29.8,
+        "tsb": -0.2
+      },
+      {
+        "date": "2026-09-06",
+        "tss": 0,
+        "ctl": 28.9,
+        "atl": 25.6,
+        "tsb": 3.4
+      },
+      {
+        "date": "2026-09-07",
+        "tss": 0,
+        "ctl": 28.2,
+        "atl": 21.9,
+        "tsb": 6.3
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-02T13:01:43.066Z",
+      "built_at": "2026-09-07T06:01:03.481Z",
       "data": [
-        {
-          "date": "2024-09-03",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-09-04",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-09-05",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-09-06",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-09-07",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-09-08",
           "tss": 0,
@@ -19214,10 +19376,45 @@
         },
         {
           "date": "2026-09-02",
+          "tss": 44,
+          "ctl": 29.8,
+          "atl": 32.4,
+          "tsb": -2.6
+        },
+        {
+          "date": "2026-09-03",
+          "tss": 42,
+          "ctl": 30.1,
+          "atl": 33.7,
+          "tsb": -3.7
+        },
+        {
+          "date": "2026-09-04",
+          "tss": 41,
+          "ctl": 30.3,
+          "atl": 34.8,
+          "tsb": -4.4
+        },
+        {
+          "date": "2026-09-05",
           "tss": 0,
-          "ctl": 28.8,
-          "atl": 26.1,
-          "tsb": 2.7
+          "ctl": 29.6,
+          "atl": 29.8,
+          "tsb": -0.2
+        },
+        {
+          "date": "2026-09-06",
+          "tss": 0,
+          "ctl": 28.9,
+          "atl": 25.6,
+          "tsb": 3.4
+        },
+        {
+          "date": "2026-09-07",
+          "tss": 0,
+          "ctl": 28.2,
+          "atl": 21.9,
+          "tsb": 6.3
         }
       ]
     }
@@ -19289,6 +19486,58 @@
   ],
   "strength_logs": [],
   "garmin_activities": [
+    {
+      "activity_id": 24250688476,
+      "activity_name": "Vela",
+      "activity_type": "sailing_v2",
+      "date": "2026-09-05",
+      "duration_min": 0,
+      "hr_avg": 0,
+      "hr_max": 0,
+      "calories": 0,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 0
+    },
+    {
+      "activity_id": 24241299411,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-09-04",
+      "duration_min": 70,
+      "hr_avg": 119,
+      "hr_max": 171,
+      "calories": 517,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 41
+    },
+    {
+      "activity_id": 24230111681,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-09-03",
+      "duration_min": 80,
+      "hr_avg": 113,
+      "hr_max": 168,
+      "calories": 524,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 42
+    },
+    {
+      "activity_id": 24216767434,
+      "activity_name": "Fuerza",
+      "activity_type": "strength_training",
+      "date": "2026-09-02",
+      "duration_min": 72,
+      "hr_avg": 111,
+      "hr_max": 155,
+      "calories": 437,
+      "distance_m": 0,
+      "elevation_m": 0,
+      "tss_actual": 44
+    },
     {
       "activity_id": 24163510894,
       "activity_name": "Valle de Bravo Ciclismo en ruta",
@@ -24928,6 +25177,156 @@
         "max_heart_rate": 197,
         "weight_kg": 90,
         "synced_at": "2026-09-02T13:01:40.267Z"
+      }
+    },
+    {
+      "id": "cc10043d-b1be-41ef-9e44-2de392876371",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-03T15:11:08.030Z",
+      "data": {
+        "recovery_score": 63,
+        "hrv_ms": 62,
+        "rhr_bpm": 46,
+        "sleep_hours": 10.3,
+        "sleep_light_h": 5.9,
+        "sleep_rem_h": 2.3,
+        "sleep_deep_h": 1.7,
+        "sleep_awake_h": 0.4,
+        "sleep_disturbances": 9,
+        "strain": 0.2,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-03T15:11:08.030Z"
+      }
+    },
+    {
+      "id": "42091db0-04c6-4d48-9fe0-53e532dc9de1",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-03T16:00:01.818Z",
+      "data": {
+        "recovery_score": 63,
+        "hrv_ms": 62,
+        "rhr_bpm": 46,
+        "sleep_hours": 10.3,
+        "sleep_light_h": 5.9,
+        "sleep_rem_h": 2.3,
+        "sleep_deep_h": 1.7,
+        "sleep_awake_h": 0.4,
+        "sleep_disturbances": 9,
+        "strain": 0.2,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-03T16:00:01.815Z"
+      }
+    },
+    {
+      "id": "d0e815e2-e2b2-4561-9680-7367f29f3a84",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-04T14:59:42.198Z",
+      "data": {
+        "recovery_score": 68,
+        "hrv_ms": 63,
+        "rhr_bpm": 46,
+        "sleep_hours": 9,
+        "sleep_light_h": 3.8,
+        "sleep_rem_h": 2.8,
+        "sleep_deep_h": 2.2,
+        "sleep_awake_h": 0.3,
+        "sleep_disturbances": 10,
+        "strain": 0.1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-04T14:59:42.198Z"
+      }
+    },
+    {
+      "id": "726e23df-0d44-42f2-8ac2-97856d61b2b9",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-04T16:00:08.070Z",
+      "data": {
+        "recovery_score": 68,
+        "hrv_ms": 63,
+        "rhr_bpm": 46,
+        "sleep_hours": 9,
+        "sleep_light_h": 3.8,
+        "sleep_rem_h": 2.8,
+        "sleep_deep_h": 2.2,
+        "sleep_awake_h": 0.3,
+        "sleep_disturbances": 10,
+        "strain": 0.1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-04T16:00:08.070Z"
+      }
+    },
+    {
+      "id": "c0db1ec6-0f53-4860-b83e-77247632a03c",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-06T00:26:23.279Z",
+      "data": {
+        "recovery_score": 66,
+        "hrv_ms": 62,
+        "rhr_bpm": 45,
+        "sleep_hours": 8,
+        "sleep_light_h": 4.5,
+        "sleep_rem_h": 1.9,
+        "sleep_deep_h": 1.3,
+        "sleep_awake_h": 0.3,
+        "sleep_disturbances": 10,
+        "strain": 4,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-06T00:26:23.279Z"
+      }
+    },
+    {
+      "id": "a833010b-ca0a-4230-a254-06b8ed4f569d",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-06T23:01:20.300Z",
+      "data": {
+        "recovery_score": 73,
+        "hrv_ms": 65,
+        "rhr_bpm": 46,
+        "sleep_hours": 9.2,
+        "sleep_light_h": 4.3,
+        "sleep_rem_h": 2.2,
+        "sleep_deep_h": 2.1,
+        "sleep_awake_h": 0.6,
+        "sleep_disturbances": 14,
+        "strain": 5.1,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-06T23:01:20.300Z"
+      }
+    },
+    {
+      "id": "8f32f133-8d07-4777-aeae-9c467b47e657",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-07T06:01:01.551Z",
+      "data": {
+        "activity_id": 24250688476,
+        "activity_name": "Vela",
+        "activity_type": "sailing_v2",
+        "duration_min": 0,
+        "hr_avg": 0,
+        "hr_max": 0,
+        "calories": 0,
+        "tss_actual": 0,
+        "synced_at": "2026-09-07T06:01:01.551Z"
       }
     }
   ],
@@ -34715,23 +35114,75 @@
       "sleep_hours": 8.6,
       "sleep_efficiency": 96.704185,
       "sleep_performance": 86,
-      "strain": 0.1,
-      "avg_hr": 44,
-      "max_hr": 88,
-      "kilojoules": 4179.9497
+      "strain": 1.1,
+      "avg_hr": 50,
+      "max_hr": 97,
+      "kilojoules": 8760.588
     },
     {
       "date": "2026-09-02",
-      "recovery_score": 80,
-      "hrv_ms": 71,
-      "rhr_bpm": 43,
-      "sleep_hours": 8.6,
-      "sleep_efficiency": null,
-      "sleep_performance": null,
-      "strain": 1.6,
-      "avg_hr": null,
-      "max_hr": null,
-      "kilojoules": null
+      "recovery_score": 50,
+      "hrv_ms": 56,
+      "rhr_bpm": 50,
+      "sleep_hours": 6.7,
+      "sleep_efficiency": 98.01556,
+      "sleep_performance": 82,
+      "strain": 8.2,
+      "avg_hr": 64,
+      "max_hr": 155,
+      "kilojoules": 8563.366
+    },
+    {
+      "date": "2026-09-03",
+      "recovery_score": 63,
+      "hrv_ms": 62,
+      "rhr_bpm": 46,
+      "sleep_hours": 10.3,
+      "sleep_efficiency": 96.07865,
+      "sleep_performance": 84,
+      "strain": 8.5,
+      "avg_hr": 55,
+      "max_hr": 168,
+      "kilojoules": 10086.909
+    },
+    {
+      "date": "2026-09-04",
+      "recovery_score": 68,
+      "hrv_ms": 63,
+      "rhr_bpm": 46,
+      "sleep_hours": 9,
+      "sleep_efficiency": 97.480545,
+      "sleep_performance": 92,
+      "strain": 9.6,
+      "avg_hr": 60,
+      "max_hr": 171,
+      "kilojoules": 9618.954
+    },
+    {
+      "date": "2026-09-05",
+      "recovery_score": 66,
+      "hrv_ms": 62,
+      "rhr_bpm": 45,
+      "sleep_hours": 8,
+      "sleep_efficiency": 97.18216,
+      "sleep_performance": 87,
+      "strain": 4,
+      "avg_hr": 55,
+      "max_hr": 116,
+      "kilojoules": 8307.994
+    },
+    {
+      "date": "2026-09-06",
+      "recovery_score": 73,
+      "hrv_ms": 65,
+      "rhr_bpm": 46,
+      "sleep_hours": 9.2,
+      "sleep_efficiency": 93.39291,
+      "sleep_performance": 94,
+      "strain": 5.1,
+      "avg_hr": 55,
+      "max_hr": 141,
+      "kilojoules": 6777.0103
     }
   ],
   "body_composition": [
@@ -34747,7 +35198,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-09-02T13:01:40.267Z"
+      "updated_at": "2026-09-06T23:01:20.300Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
