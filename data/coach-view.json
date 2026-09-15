@@ -3283,16 +3283,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 80,
+      "actual_tss": 42,
+      "completed_at": "2026-09-15T20:46:37.490Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-09-03T15:26:28.409Z"
+      "updated_at": "2026-09-15T20:46:37.490Z"
     },
     {
       "id": "d715fbb5-89a6-4d2f-9514-3263391ba94e",
@@ -3365,16 +3365,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 70,
+      "actual_tss": 41,
+      "completed_at": "2026-09-15T20:46:37.585Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-09-03T15:30:38.666Z"
+      "updated_at": "2026-09-15T20:46:37.585Z"
     },
     {
       "id": "8ff9eb91-1d09-451a-a5fb-e9f69966ed53",
@@ -3403,7 +3403,7 @@
           "zone": "Z1 — Recuperación"
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3412,7 +3412,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:46:38.405Z"
     },
     {
       "id": "086da925-6b7c-433e-a661-c1f9024ee90c",
@@ -3432,16 +3432,16 @@
           "note": "El descanso es parte del entrenamiento."
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
       "actual_tss": null,
-      "completed_at": null,
+      "completed_at": "2026-09-15T20:46:37.708Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:46:37.708Z"
     },
     {
       "id": "830ff645-27b1-443d-9424-de63e44a5a36",
@@ -3465,16 +3465,16 @@
           "zone": "Z3"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 145,
+      "actual_tss": 122,
+      "completed_at": "2026-09-15T20:46:37.813Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:46:37.813Z"
     },
     {
       "id": "dc6fdb76-5e00-4dc0-9a99-5cf45e0c7ca6",
@@ -3520,16 +3520,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 90,
+      "actual_tss": 44,
+      "completed_at": "2026-09-15T20:46:37.931Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-09-03T15:30:38.779Z"
+      "updated_at": "2026-09-15T20:46:37.931Z"
     },
     {
       "id": "0d1a3943-229c-4a73-850f-f7844a0d97ef",
@@ -3553,16 +3553,16 @@
           "zone": "Z2-Z4"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 114,
+      "actual_tss": 86,
+      "completed_at": "2026-09-15T20:46:38.042Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:46:38.042Z"
     },
     {
       "id": "f9b43f8b-1229-42d1-9f4a-15d6ab812b20",
@@ -3609,16 +3609,16 @@
           "isCooldown": true
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "actual_duration_min": 86,
+      "actual_tss": 31,
+      "completed_at": "2026-09-15T20:46:38.156Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-09-03T15:30:38.807Z"
+      "updated_at": "2026-09-15T20:46:38.156Z"
     },
     {
       "id": "f0543d2f-1b41-487f-990a-655e583bbaec",
@@ -3642,7 +3642,7 @@
           "zone": "Z3"
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3651,7 +3651,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:49:28.861Z"
     },
     {
       "id": "53064ab4-b81c-458b-be69-819f82271801",
@@ -3680,7 +3680,7 @@
           "zone": "Z1 — Recuperación"
         }
       ],
-      "status": "PENDING",
+      "status": "SKIPPED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
@@ -3689,7 +3689,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:49:28.900Z"
     },
     {
       "id": "c4cc0373-804e-4be9-8b55-736378936d00",
@@ -3709,16 +3709,16 @@
           "note": "El descanso es parte del entrenamiento."
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
       "athlete_note": null,
       "actual_duration_min": null,
       "actual_tss": null,
-      "completed_at": null,
+      "completed_at": "2026-09-15T20:46:38.280Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:46:38.280Z"
     },
     {
       "id": "706fbee7-bcb6-4299-a815-e15244e81229",
@@ -3742,33 +3742,42 @@
           "zone": "Z2"
         }
       ],
-      "status": "PENDING",
+      "status": "COMPLETED",
       "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
+      "athlete_note": "Pádel 3h con amigos (igual a la sesión del 7 sep) en vez de la activación ligera planeada.",
+      "actual_duration_min": 145,
+      "actual_tss": 122,
+      "completed_at": "2026-09-15T20:49:28.755Z",
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:49:28.755Z"
     },
     {
       "id": "1bd629da-767b-442e-a2d6-8807139517c0",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-15",
-      "name": "🔵 Día de Viaje — Movilidad Mínima",
-      "type": "Core / Movilidad",
-      "duration_min": 20,
-      "tss_planned": 8,
-      "coach_note": "Vuelas a Kingston hoy. Solo movilidad ligera en el aeropuerto/hotel — prioridad hidratación y dormir en el vuelo si puedes.",
+      "name": "🚴 Rodada con Grupo — Z3/Z4",
+      "type": "Ciclismo",
+      "duration_min": 140,
+      "tss_planned": 95,
+      "coach_note": "El viaje a Kingston se corrió al 21 sep — esta semana se entrena normal en Valle de Bravo. Vuelve el patrón de martes con tu grupo (ritmo real Z3/Z4).",
       "segments": [
         {
-          "exercise": "Movilidad general + estiramiento",
-          "sets": "1",
-          "reps": "15min",
-          "note": "Cero carga. Cuerpo fresco para llegar a Canadá."
+          "name": "Calentamiento",
+          "duration": "15 min",
+          "zone": "Z1"
+        },
+        {
+          "name": "Bici Z2 sostenido",
+          "duration": "115 min",
+          "zone": "Z3/Z4 real de grupo"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -3780,24 +3789,65 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-17T23:51:17.214Z"
+      "updated_at": "2026-09-15T20:54:27.034Z"
     },
     {
       "id": "f6fafbc2-aa2e-49ce-aa1b-5e02f3d5a2b7",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-16",
-      "name": "🔵 Llegada a Kingston",
-      "type": "Core / Movilidad",
-      "duration_min": 30,
-      "tss_planned": 12,
-      "coach_note": "Llegada a Canadá. Prioridad: hidratación, adaptación de horario, movilidad suave. Nada de carga.",
+      "name": "🔴 Tirón Superior + Hombro + Antebrazo",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Semana extra de carga en casa antes de volar el 21 — vela solo si hay viento en la tarde (no se puede planificar como fija).",
       "segments": [
         {
-          "exercise": "Movilidad general + caminata suave",
+          "exercise": "Activación dinámica + movilidad articular",
           "sets": "1",
-          "reps": "20min",
-          "note": "Sin presión — el cuerpo necesita adaptarse al viaje y al cambio de horario."
+          "reps": "8min",
+          "isWarmup": true
+        },
+        {
+          "exercise": "Chin-up lastrado",
+          "sets": "4",
+          "reps": "6-8",
+          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 2.",
+          "rm_pct": 80
+        },
+        {
+          "exercise": "Remo Pendlay",
+          "sets": "4",
+          "reps": "8",
+          "note": "Explosivo en la subida, controlado en la bajada. RIR 2.",
+          "rm_pct": 75
+        },
+        {
+          "exercise": "Press militar sentado con mancuerna",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2.",
+          "rm_pct": 73
+        },
+        {
+          "exercise": "Face pull con cuerda",
+          "sets": "3",
+          "reps": "15",
+          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 2.",
+          "rm_pct": 62
+        },
+        {
+          "exercise": "Wrist curl + reverse wrist curl",
+          "sets": "3",
+          "reps": "15+15",
+          "note": "Antebrazo — directo para agarre de escota/caña. RIR 2.",
+          "rm_pct": 62
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -3809,33 +3859,33 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.079Z"
     },
     {
       "id": "439d15d6-3843-4f93-af1a-5e2970f619a6",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-17",
-      "name": "🟡 Aclimatación — Reconocimiento de Cancha",
-      "type": "Vela",
-      "duration_min": 90,
-      "tss_planned": 35,
-      "coach_note": "Primer contacto con el agua en Kingston. Sentir viento y corriente locales antes de la regata previa de mañana.",
+      "name": "🟡 Aeróbico Z2 — Remo/SkiErg",
+      "type": "Cardio",
+      "duration_min": 70,
+      "tss_planned": 45,
+      "coach_note": "Vela en la tarde si hay viento (dijiste que esta semana solo puedes navegar en tardes) — no reemplaza esta sesión, se suma si se da.",
       "segments": [
         {
-          "name": "Armado de bote + revisión de aparejo",
-          "duration": "20 min",
-          "zone": "Z1 — Recuperación"
-        },
-        {
-          "name": "Navegación de reconocimiento",
-          "duration": "55 min",
-          "zone": "Z1-Z2"
-        },
-        {
-          "name": "Hidratación + estiramiento",
+          "name": "Calentamiento",
           "duration": "10 min",
-          "zone": "Z1 — Recuperación"
+          "zone": "Z1"
+        },
+        {
+          "name": "Remo/SkiErg Z2",
+          "duration": "50 min",
+          "zone": "Z2 — Base aeróbica"
+        },
+        {
+          "name": "Enfriamiento",
+          "duration": "10 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -3847,33 +3897,71 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.154Z"
     },
     {
       "id": "9094aba0-d478-4c3b-b602-1f6bfa040218",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-18",
-      "name": "🏁 Regata Previa — Día 1",
-      "type": "Vela",
-      "duration_min": 210,
-      "tss_planned": 55,
-      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
+      "name": "🔴 Empuje Superior + Core Rotacional + Fisio",
+      "type": "Fuerza / Gym",
+      "duration_min": 65,
+      "tss_planned": 58,
+      "coach_note": "Viernes = fisio de siempre — foco cadera/glúteo/lumbar (cadena de hiking) + lo que pida el hombro después del tirón del miércoles. Vela en la tarde si hay viento.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
+          "exercise": "Activación dinámica + movilidad articular",
+          "sets": "1",
+          "reps": "8min",
+          "isWarmup": true
         },
         {
-          "name": "Regata previa ILCA 7",
-          "duration": "180 min",
-          "zone": "Z2-Z4 — Variable según viento"
+          "exercise": "Press banca",
+          "sets": "4",
+          "reps": "8",
+          "note": "RIR 2.",
+          "rm_pct": 75
         },
         {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "exercise": "Press Arnold",
+          "sets": "3",
+          "reps": "10",
+          "note": "RIR 2.",
+          "rm_pct": 73
+        },
+        {
+          "exercise": "Extensión tríceps en polea",
+          "sets": "3",
+          "reps": "12",
+          "note": "RIR 2.",
+          "rm_pct": 68
+        },
+        {
+          "exercise": "Pallof press",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2.",
+          "rm_pct": 68
+        },
+        {
+          "exercise": "Woodchopper con cable",
+          "sets": "3",
+          "reps": "12/lado",
+          "note": "RIR 2.",
+          "rm_pct": 68
+        },
+        {
+          "exercise": "🩺 Fisioterapeuta — cadera/glúteo/lumbar + hombro",
+          "sets": "1",
+          "reps": "30-40min",
+          "note": "Prioridad cadena de hiking, revisar hombro por el tirón del miércoles."
+        },
+        {
+          "exercise": "Enfriamiento + movilidad",
+          "sets": "1",
+          "reps": "8min",
+          "isCooldown": true
         }
       ],
       "status": "PENDING",
@@ -3885,33 +3973,23 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.205Z"
     },
     {
       "id": "b32e8f23-5d3c-4846-992a-b9877f7987f6",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-19",
-      "name": "🏁 Regata Previa — Día 2",
-      "type": "Vela",
-      "duration_min": 210,
-      "tss_planned": 55,
-      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
+      "name": "🔵 Bici Suave o SUP",
+      "type": "Cross-training",
+      "duration_min": 60,
+      "tss_planned": 25,
+      "coach_note": "Sábado — sin gym. Vela en la tarde si hay condiciones.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
-        },
-        {
-          "name": "Regata previa ILCA 7",
-          "duration": "180 min",
-          "zone": "Z2-Z4 — Variable según viento"
-        },
-        {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Bici suave o SUP",
+          "duration": "60 min",
+          "zone": "Z1-Z2 — Recuperación activa"
         }
       ],
       "status": "PENDING",
@@ -3923,33 +4001,23 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.279Z"
     },
     {
       "id": "a02ff5cd-382c-497f-b0c3-982bff84ef68",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-20",
-      "name": "🏁 Regata Previa — Día 3",
-      "type": "Vela",
-      "duration_min": 210,
-      "tss_planned": 55,
-      "coach_note": "Regata de calentamiento antes de la principal (25-27). Úsala para calibrar salidas y sentir la flota — sin la presión de puntos que cuentan para la clasificación, pero con seriedad de competencia real.",
+      "name": "🔵 Descanso + Movilidad",
+      "type": "Recuperación",
+      "duration_min": 20,
+      "tss_planned": 10,
+      "coach_note": "Domingo — sin gym. Última oportunidad de navegar en Valle de Bravo antes de volar el lunes, solo si hay viento en la tarde. Empacar.",
       "segments": [
         {
-          "name": "Activación pre-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Activación"
-        },
-        {
-          "name": "Regata previa ILCA 7",
-          "duration": "180 min",
-          "zone": "Z2-Z4 — Variable según viento"
-        },
-        {
-          "name": "Recuperación post-regata",
-          "duration": "15 min",
-          "zone": "Z1 — Recuperación"
+          "name": "Movilidad suave + empacar",
+          "duration": "20 min",
+          "zone": "Z1"
         }
       ],
       "status": "PENDING",
@@ -3961,24 +4029,91 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.305Z"
     },
     {
       "id": "9ccd011d-9839-4448-9ee0-eda74ae32a97",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-21",
-      "name": "🏃 Full Body Bodyweight + Carrera Suave",
-      "type": "Core / Movilidad",
-      "duration_min": 50,
-      "tss_planned": 40,
-      "coach_note": "Sin gym disponible — trabajo con tu propio peso corporal. Full body ligero para no llegar cargado a la regata principal del viernes.",
+      "name": "🔵 Día de Viaje — Vuelo a Kingston",
+      "type": "Recuperación",
+      "duration_min": 15,
+      "tss_planned": 8,
+      "coach_note": "Día de vuelo a Kingston (reprogramado del 21, antes era 15-16 sep). Movilidad mínima, sin presión — cuerpo fresco para arrancar a navegar el 22.",
       "segments": [
         {
-          "exercise": "Calentamiento articular",
-          "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
+          "name": "Movilidad general + estiramiento",
+          "duration": "15 min",
+          "zone": "Sin carga"
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-09-15T20:54:27.330Z"
+    },
+    {
+      "id": "924234b3-4330-4c46-9cbf-bf4196b169a4",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-22",
+      "name": "🟡 Navegación — Entrenamiento Previo Día 1",
+      "type": "Vela",
+      "duration_min": 180,
+      "tss_planned": 70,
+      "coach_note": "Primer día en el agua en Kingston, reconocimiento de cancha real. Sin gym disponible — complemento de tierra con bodyweight ya cargado abajo.",
+      "segments": [
+        {
+          "name": "Navegación — reconocimiento de cancha",
+          "duration": "150 min",
+          "zone": "Técnica + volumen"
+        },
+        {
+          "exercise": "Dominadas (o remo con banda/toalla)",
+          "sets": "3",
+          "reps": "máx reps limpias",
+          "note": "RIR 2. Antebrazo y espalda — complemento sin gym."
+        },
+        {
+          "exercise": "Wall sit hiking simulation",
+          "sets": "3",
+          "reps": "50s",
+          "note": "90° en rodilla — sigue siendo el mejor sustituto de hiking en tierra."
+        }
+      ],
+      "status": "PENDING",
+      "rpe": null,
+      "athlete_note": null,
+      "actual_duration_min": null,
+      "actual_tss": null,
+      "completed_at": null,
+      "garmin_data": null,
+      "whoop_data": null,
+      "created_at": "2026-08-17T23:51:17.214Z",
+      "updated_at": "2026-09-15T20:54:27.356Z"
+    },
+    {
+      "id": "ee5ed2f8-3b26-4b92-8504-5b47be715912",
+      "athlete_id": "athlete-gb-001",
+      "coach_id": "coach-erick-001",
+      "date": "2026-09-23",
+      "name": "🟡 Navegación — Entrenamiento Previo Día 2",
+      "type": "Vela",
+      "duration_min": 180,
+      "tss_planned": 65,
+      "coach_note": "Segundo día en el agua — táctica y velocidad de cara a la regata del 25. Sin gym disponible.",
+      "segments": [
+        {
+          "name": "Navegación — táctica y velocidad",
+          "duration": "150 min",
+          "zone": "Técnica + táctica"
         },
         {
           "exercise": "Push-ups",
@@ -3987,136 +4122,10 @@
           "note": "RIR 3. Si es fácil, eleva los pies."
         },
         {
-          "exercise": "Sentadilla búlgara a una pierna (bodyweight)",
-          "sets": "3",
-          "reps": "12/pierna"
-        },
-        {
           "exercise": "Plancha frontal",
           "sets": "3",
-          "reps": "45s"
-        },
-        {
-          "exercise": "Carrera continua suave",
-          "sets": "1",
-          "reps": "20min",
-          "note": "Z2, conversacional."
-        },
-        {
-          "exercise": "Estiramiento",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
-    },
-    {
-      "id": "924234b3-4330-4c46-9cbf-bf4196b169a4",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-09-22",
-      "name": "🏃 Tirón Bodyweight + Intervalos Carrera",
-      "type": "Core / Movilidad",
-      "duration_min": 50,
-      "tss_planned": 45,
-      "coach_note": "Segundo día sin gym. Si hay barra disponible (parque/muelle), dominadas son oro para antebrazo/espalda — si no, remo con banda o toalla en puerta.",
-      "segments": [
-        {
-          "exercise": "Calentamiento articular",
-          "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Dominadas (o remo con banda/toalla)",
-          "sets": "4",
-          "reps": "máx reps limpias",
-          "note": "RIR 2. Antebrazo y espalda — clave para lo que venimos trabajando."
-        },
-        {
-          "exercise": "Dead hang en barra",
-          "sets": "3",
-          "reps": "30-40s",
-          "note": "Directo a agarre — igual que farmer carry pero sin peso extra."
-        },
-        {
-          "exercise": "Intervalos de carrera 5×2min",
-          "sets": "5",
-          "reps": "2min fuerte / 2min trote",
-          "note": "Z3-Z4 en el esfuerzo, mantiene motor sin sobrecargar piernas de hiking."
-        },
-        {
-          "exercise": "Estiramiento hombro/espalda",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
-        }
-      ],
-      "status": "PENDING",
-      "rpe": null,
-      "athlete_note": null,
-      "actual_duration_min": null,
-      "actual_tss": null,
-      "completed_at": null,
-      "garmin_data": null,
-      "whoop_data": null,
-      "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
-    },
-    {
-      "id": "ee5ed2f8-3b26-4b92-8504-5b47be715912",
-      "athlete_id": "athlete-gb-001",
-      "coach_id": "coach-erick-001",
-      "date": "2026-09-23",
-      "name": "🏃 Piernas Bodyweight + Carrera Tempo",
-      "type": "Core / Movilidad",
-      "duration_min": 55,
-      "tss_planned": 42,
-      "coach_note": "Tercer día sin gym. Piernas con peso corporal — mantiene la resistencia de hiking sin barra.",
-      "segments": [
-        {
-          "exercise": "Calentamiento articular",
-          "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
-        },
-        {
-          "exercise": "Wall sit hiking simulation",
-          "sets": "3",
           "reps": "50s",
-          "note": "Contra una pared — sigue siendo el mejor sustituto de hiking en tierra."
-        },
-        {
-          "exercise": "Zancadas caminando",
-          "sets": "3",
-          "reps": "12/pierna"
-        },
-        {
-          "exercise": "Nordic curl asistido (o hamstring curl en pareja)",
-          "sets": "3",
-          "reps": "6-8"
-        },
-        {
-          "exercise": "Carrera tempo continua",
-          "sets": "1",
-          "reps": "25min",
-          "note": "Z3 — sostenido pero controlado, últimos días antes de la regata principal."
-        },
-        {
-          "exercise": "Estiramiento",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
+          "note": "RIR 3."
         }
       ],
       "status": "PENDING",
@@ -4128,36 +4137,29 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.384Z"
     },
     {
       "id": "e64ce4d0-3c0b-48dd-8024-0d5130998521",
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-09-24",
-      "name": "🔵 Activación Corta + Trote Suave",
-      "type": "Core / Movilidad",
-      "duration_min": 35,
-      "tss_planned": 22,
-      "coach_note": "Último día antes de la regata principal — bajas el volumen a propósito. Activación corta, nada de fatiga nueva.",
+      "name": "🔵 Navegación Ligera — Últimos Ajustes",
+      "type": "Vela",
+      "duration_min": 90,
+      "tss_planned": 40,
+      "coach_note": "Último día antes de la regata — bajar volumen, solo ajustes de aparejo y activación. Cuerpo fresco para el 25.",
       "segments": [
         {
-          "exercise": "Movilidad dinámica",
-          "sets": "1",
-          "reps": "10min",
-          "isWarmup": true
+          "name": "Navegación ligera — ajustes de aparejo",
+          "duration": "75 min",
+          "zone": "Z1-Z2, sin fatiga"
         },
         {
           "exercise": "Push-ups + sentadilla bodyweight (activación)",
           "sets": "2",
           "reps": "10+10",
           "note": "Muy suave — solo despertar el sistema nervioso."
-        },
-        {
-          "exercise": "Trote muy suave",
-          "sets": "1",
-          "reps": "15min",
-          "note": "Z1-Z2. Piernas frescas para mañana."
         }
       ],
       "status": "PENDING",
@@ -4169,7 +4171,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-08-18T00:03:50.476Z"
+      "updated_at": "2026-09-15T20:54:27.408Z"
     },
     {
       "id": "4168db26-2f61-41a5-9890-643bc0dd2347",
@@ -9187,7 +9189,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-15T14:57:16.794Z",
+    "built_at": "2026-09-15T20:49:28.812Z",
     "data": [
       {
         "date": "2024-09-16",
@@ -14287,24 +14289,24 @@
       },
       {
         "date": "2026-09-14",
-        "tss": 0,
-        "ctl": 29.7,
-        "atl": 23.9,
-        "tsb": 5.8
+        "tss": 122,
+        "ctl": 32.6,
+        "atl": 41.4,
+        "tsb": -8.8
       },
       {
         "date": "2026-09-15",
         "tss": 0,
-        "ctl": 29,
-        "atl": 20.5,
-        "tsb": 8.5
+        "ctl": 31.8,
+        "atl": 35.5,
+        "tsb": -3.6
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-15T14:57:16.794Z",
+      "built_at": "2026-09-15T20:49:28.812Z",
       "data": [
         {
           "date": "2024-09-16",
@@ -19404,17 +19406,17 @@
         },
         {
           "date": "2026-09-14",
-          "tss": 0,
-          "ctl": 29.7,
-          "atl": 23.9,
-          "tsb": 5.8
+          "tss": 122,
+          "ctl": 32.6,
+          "atl": 41.4,
+          "tsb": -8.8
         },
         {
           "date": "2026-09-15",
           "tss": 0,
-          "ctl": 29,
-          "atl": 20.5,
-          "tsb": 8.5
+          "ctl": 31.8,
+          "atl": 35.5,
+          "tsb": -3.6
         }
       ]
     }
@@ -25591,6 +25593,28 @@
         "calories": 427,
         "tss_actual": 31,
         "synced_at": "2026-09-15T14:57:13.541Z"
+      }
+    },
+    {
+      "id": "7435d322-eaef-4b2b-8e29-4ca612a7de02",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-15T16:00:00.988Z",
+      "data": {
+        "recovery_score": 63,
+        "hrv_ms": 65,
+        "rhr_bpm": 48,
+        "sleep_hours": 8,
+        "sleep_light_h": 4.1,
+        "sleep_rem_h": 1.5,
+        "sleep_deep_h": 1.6,
+        "sleep_awake_h": 0.6,
+        "sleep_disturbances": 10,
+        "strain": 0.3,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-15T16:00:00.988Z"
       }
     }
   ],
@@ -35547,10 +35571,10 @@
       "sleep_hours": 9.5,
       "sleep_efficiency": 90.35124,
       "sleep_performance": 95,
-      "strain": 0.1,
-      "avg_hr": 44,
-      "max_hr": 87,
-      "kilojoules": 4001.4502
+      "strain": 14.2,
+      "avg_hr": 59,
+      "max_hr": 182,
+      "kilojoules": 12178.445
     },
     {
       "date": "2026-09-15",
@@ -35558,12 +35582,12 @@
       "hrv_ms": 65,
       "rhr_bpm": 48,
       "sleep_hours": 8,
-      "sleep_efficiency": null,
-      "sleep_performance": null,
-      "strain": 0.3,
-      "avg_hr": null,
-      "max_hr": null,
-      "kilojoules": null
+      "sleep_efficiency": 89.14272,
+      "sleep_performance": 87,
+      "strain": 0.8,
+      "avg_hr": 50,
+      "max_hr": 83,
+      "kilojoules": 5339.265
     }
   ],
   "body_composition": [
@@ -35579,7 +35603,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-09-15T14:57:13.460Z"
+      "updated_at": "2026-09-15T16:00:00.988Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
