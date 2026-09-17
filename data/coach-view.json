@@ -9189,15 +9189,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-16T16:02:18.506Z",
+    "built_at": "2026-09-17T14:16:54.625Z",
     "data": [
-      {
-        "date": "2024-09-17",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-09-18",
         "tss": 0,
@@ -14296,25 +14289,25 @@
       },
       {
         "date": "2026-09-16",
+        "tss": 102,
+        "ctl": 35.2,
+        "atl": 53.8,
+        "tsb": -18.6
+      },
+      {
+        "date": "2026-09-17",
         "tss": 0,
-        "ctl": 32.7,
-        "atl": 39.2,
-        "tsb": -6.5
+        "ctl": 34.3,
+        "atl": 46.1,
+        "tsb": -11.8
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-16T16:02:18.506Z",
+      "built_at": "2026-09-17T14:16:54.625Z",
       "data": [
-        {
-          "date": "2024-09-17",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-09-18",
           "tss": 0,
@@ -19413,10 +19406,17 @@
         },
         {
           "date": "2026-09-16",
+          "tss": 102,
+          "ctl": 35.2,
+          "atl": 53.8,
+          "tsb": -18.6
+        },
+        {
+          "date": "2026-09-17",
           "tss": 0,
-          "ctl": 32.7,
-          "atl": 39.2,
-          "tsb": -6.5
+          "ctl": 34.3,
+          "atl": 46.1,
+          "tsb": -11.8
         }
       ]
     }
@@ -19488,6 +19488,19 @@
   ],
   "strength_logs": [],
   "garmin_activities": [
+    {
+      "activity_id": 24391288878,
+      "activity_name": "Valle de Bravo Pádel",
+      "activity_type": "paddelball",
+      "date": "2026-09-16",
+      "duration_min": 189,
+      "hr_avg": 118,
+      "hr_max": 175,
+      "calories": 899,
+      "distance_m": 31,
+      "elevation_m": 0,
+      "tss_actual": 102
+    },
     {
       "activity_id": 24378040545,
       "activity_name": "Valle de Bravo Ciclismo en ruta",
@@ -25668,6 +25681,46 @@
         "calories": 939,
         "tss_actual": 72,
         "synced_at": "2026-09-16T16:02:16.532Z"
+      }
+    },
+    {
+      "id": "fc826ab8-8ff1-4ae9-89fa-13d5f144c9cb",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-17T14:16:52.793Z",
+      "data": {
+        "activity_id": 24391288878,
+        "activity_name": "Valle de Bravo Pádel",
+        "activity_type": "paddelball",
+        "duration_min": 189,
+        "hr_avg": 118,
+        "hr_max": 175,
+        "calories": 899,
+        "tss_actual": 102,
+        "synced_at": "2026-09-17T14:16:52.793Z"
+      }
+    },
+    {
+      "id": "e70e38e9-94c5-4fa8-ab45-01a0403e15c8",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-17T14:16:53.802Z",
+      "data": {
+        "recovery_score": 55,
+        "hrv_ms": 64,
+        "rhr_bpm": 50,
+        "sleep_hours": 6.1,
+        "sleep_light_h": 2.8,
+        "sleep_rem_h": 1.3,
+        "sleep_deep_h": 1.7,
+        "sleep_awake_h": 0.3,
+        "sleep_disturbances": 6,
+        "strain": 14.3,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-17T14:16:53.802Z"
       }
     }
   ],
@@ -35637,10 +35690,10 @@
       "sleep_hours": 8,
       "sleep_efficiency": 89.14272,
       "sleep_performance": 87,
-      "strain": 0.8,
-      "avg_hr": 50,
-      "max_hr": 83,
-      "kilojoules": 5339.265
+      "strain": 15.8,
+      "avg_hr": 63,
+      "max_hr": 187,
+      "kilojoules": 13086.582
     },
     {
       "date": "2026-09-16",
@@ -35648,9 +35701,22 @@
       "hrv_ms": 64,
       "rhr_bpm": 50,
       "sleep_hours": 6.1,
+      "sleep_efficiency": 96.11997,
+      "sleep_performance": 74,
+      "strain": 0.4,
+      "avg_hr": 50,
+      "max_hr": 100,
+      "kilojoules": 2669.8345
+    },
+    {
+      "date": "2026-09-17",
+      "recovery_score": 55,
+      "hrv_ms": 64,
+      "rhr_bpm": 50,
+      "sleep_hours": 6.1,
       "sleep_efficiency": null,
       "sleep_performance": null,
-      "strain": 0.4,
+      "strain": 14.3,
       "avg_hr": null,
       "max_hr": null,
       "kilojoules": null
@@ -35669,7 +35735,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-09-16T16:02:13.036Z"
+      "updated_at": "2026-09-17T14:16:53.802Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
