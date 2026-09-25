@@ -9189,15 +9189,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-24T19:33:25.843Z",
+    "built_at": "2026-09-25T14:03:29.380Z",
     "data": [
-      {
-        "date": "2024-09-25",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-09-26",
         "tss": 0,
@@ -14300,21 +14293,21 @@
         "ctl": 29,
         "atl": 15.7,
         "tsb": 13.3
+      },
+      {
+        "date": "2026-09-25",
+        "tss": 0,
+        "ctl": 28.3,
+        "atl": 13.4,
+        "tsb": 14.9
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-24T19:33:25.843Z",
+      "built_at": "2026-09-25T14:03:29.380Z",
       "data": [
-        {
-          "date": "2024-09-25",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-09-26",
           "tss": 0,
@@ -19417,6 +19410,13 @@
           "ctl": 29,
           "atl": 15.7,
           "tsb": 13.3
+        },
+        {
+          "date": "2026-09-25",
+          "tss": 0,
+          "ctl": 28.3,
+          "atl": 13.4,
+          "tsb": 14.9
         }
       ]
     }
@@ -25849,6 +25849,24 @@
         "calories": 899,
         "tss_actual": 102,
         "synced_at": "2026-09-23T21:03:48.632Z"
+      }
+    },
+    {
+      "id": "a57955f0-cf92-4687-978c-fd4038e4147a",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-25T12:33:40.826Z",
+      "data": {
+        "activity_id": 24391288878,
+        "activity_name": "Valle de Bravo Pádel",
+        "activity_type": "paddelball",
+        "duration_min": 189,
+        "hr_avg": 118,
+        "hr_max": 175,
+        "calories": 899,
+        "tss_actual": 102,
+        "synced_at": "2026-09-25T12:33:40.825Z"
       }
     }
   ],
