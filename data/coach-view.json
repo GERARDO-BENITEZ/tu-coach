@@ -9189,7 +9189,7 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-29T00:56:48.550Z",
+    "built_at": "2026-09-29T03:50:13.409Z",
     "data": [
       {
         "date": "2024-09-29",
@@ -14306,7 +14306,7 @@
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-29T00:56:48.550Z",
+      "built_at": "2026-09-29T03:50:13.409Z",
       "data": [
         {
           "date": "2024-09-29",
@@ -25911,6 +25911,46 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-09-29T00:56:47.985Z"
+      }
+    },
+    {
+      "id": "f80a65db-f0c7-4cad-8fdc-f594bd6995bf",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-29T01:00:57.517Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "sleep_light_h": null,
+        "sleep_rem_h": null,
+        "sleep_deep_h": null,
+        "sleep_awake_h": null,
+        "sleep_disturbances": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-09-29T01:00:57.517Z"
+      }
+    },
+    {
+      "id": "24763b4d-f64d-4c2d-9633-ae2ca214ecb4",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-09-29T03:50:09.229Z",
+      "data": {
+        "activity_id": 24391288878,
+        "activity_name": "Valle de Bravo Pádel",
+        "activity_type": "paddelball",
+        "duration_min": 189,
+        "hr_avg": 118,
+        "hr_max": 175,
+        "calories": 899,
+        "tss_actual": 102,
+        "synced_at": "2026-09-29T03:50:09.229Z"
       }
     }
   ],
