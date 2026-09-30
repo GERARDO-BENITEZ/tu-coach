@@ -9189,22 +9189,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-29T03:50:13.409Z",
+    "built_at": "2026-09-30T14:18:35.374Z",
     "data": [
-      {
-        "date": "2024-09-29",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-09-30",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-10-01",
         "tss": 0,
@@ -14300,28 +14286,28 @@
         "ctl": 26.3,
         "atl": 8.5,
         "tsb": 17.9
+      },
+      {
+        "date": "2026-09-29",
+        "tss": 0,
+        "ctl": 25.7,
+        "atl": 7.2,
+        "tsb": 18.5
+      },
+      {
+        "date": "2026-09-30",
+        "tss": 0,
+        "ctl": 25.1,
+        "atl": 6.2,
+        "tsb": 18.9
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-29T03:50:13.409Z",
+      "built_at": "2026-09-30T14:18:35.374Z",
       "data": [
-        {
-          "date": "2024-09-29",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-09-30",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-10-01",
           "tss": 0,
@@ -19417,6 +19403,20 @@
           "ctl": 26.3,
           "atl": 8.5,
           "tsb": 17.9
+        },
+        {
+          "date": "2026-09-29",
+          "tss": 0,
+          "ctl": 25.7,
+          "atl": 7.2,
+          "tsb": 18.5
+        },
+        {
+          "date": "2026-09-30",
+          "tss": 0,
+          "ctl": 25.1,
+          "atl": 6.2,
+          "tsb": 18.9
         }
       ]
     }
@@ -25952,6 +25952,72 @@
         "tss_actual": 102,
         "synced_at": "2026-09-29T03:50:09.229Z"
       }
+    },
+    {
+      "id": "3f649181-1af8-4271-a70f-63365018c24f",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-29T13:18:34.480Z",
+      "data": {
+        "recovery_score": 89,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 8.4,
+        "sleep_light_h": 4.3,
+        "sleep_rem_h": 1.6,
+        "sleep_deep_h": 2,
+        "sleep_awake_h": 0.5,
+        "sleep_disturbances": 11,
+        "strain": 4.5,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-29T13:18:34.480Z"
+      }
+    },
+    {
+      "id": "67682455-a371-4daa-8718-745e9a68c215",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-29T14:00:04.912Z",
+      "data": {
+        "recovery_score": 89,
+        "hrv_ms": 71,
+        "rhr_bpm": 43,
+        "sleep_hours": 8.4,
+        "sleep_light_h": 4.3,
+        "sleep_rem_h": 1.6,
+        "sleep_deep_h": 2,
+        "sleep_awake_h": 0.5,
+        "sleep_disturbances": 11,
+        "strain": 4.5,
+        "max_heart_rate": 197,
+        "weight_kg": 90,
+        "synced_at": "2026-09-29T14:00:04.912Z"
+      }
+    },
+    {
+      "id": "f457a9ab-5395-47e4-91ae-e6067af8b5cf",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-09-30T14:18:35.030Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "sleep_light_h": null,
+        "sleep_rem_h": null,
+        "sleep_deep_h": null,
+        "sleep_awake_h": null,
+        "sleep_disturbances": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-09-30T14:18:35.030Z"
+      }
     }
   ],
   "wellness": [
@@ -26211,7 +26277,7 @@
       "recorded_by": "nutri-001",
       "notes": "Medición inicial DEXA. Meta: 86 kg sin perder masa muscular para Juegos CAC.",
       "created_at": "2026-06-08T02:30:20.249Z",
-      "updated_at": "2026-09-23T21:03:39.694Z"
+      "updated_at": "2026-09-29T14:00:04.912Z"
     },
     {
       "id": "65824f31-4f80-46eb-8ed3-3c7a4bd551ed",
