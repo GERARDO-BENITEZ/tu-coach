@@ -9189,15 +9189,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-09-30T14:18:35.374Z",
+    "built_at": "2026-10-01T12:18:32.652Z",
     "data": [
-      {
-        "date": "2024-10-01",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-10-02",
         "tss": 0,
@@ -14300,21 +14293,21 @@
         "ctl": 25.1,
         "atl": 6.2,
         "tsb": 18.9
+      },
+      {
+        "date": "2026-10-01",
+        "tss": 0,
+        "ctl": 24.5,
+        "atl": 5.3,
+        "tsb": 19.2
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-09-30T14:18:35.374Z",
+      "built_at": "2026-10-01T12:18:32.652Z",
       "data": [
-        {
-          "date": "2024-10-01",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-10-02",
           "tss": 0,
@@ -19417,6 +19410,13 @@
           "ctl": 25.1,
           "atl": 6.2,
           "tsb": 18.9
+        },
+        {
+          "date": "2026-10-01",
+          "tss": 0,
+          "ctl": 24.5,
+          "atl": 5.3,
+          "tsb": 19.2
         }
       ]
     }
@@ -26017,6 +26017,28 @@
         "max_heart_rate": null,
         "weight_kg": null,
         "synced_at": "2026-09-30T14:18:35.030Z"
+      }
+    },
+    {
+      "id": "1e4fd747-ae7f-403d-a8e5-e9493730c47a",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "whoop",
+      "synced_at": "2026-10-01T12:18:31.912Z",
+      "data": {
+        "recovery_score": null,
+        "hrv_ms": null,
+        "rhr_bpm": null,
+        "sleep_hours": null,
+        "sleep_light_h": null,
+        "sleep_rem_h": null,
+        "sleep_deep_h": null,
+        "sleep_awake_h": null,
+        "sleep_disturbances": null,
+        "strain": null,
+        "max_heart_rate": null,
+        "weight_kg": null,
+        "synced_at": "2026-10-01T12:18:31.912Z"
       }
     }
   ],
