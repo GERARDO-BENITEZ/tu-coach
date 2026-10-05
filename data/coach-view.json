@@ -9189,22 +9189,8 @@
   ],
   "pmc_cache": {
     "athlete_id": "athlete-gb-001",
-    "built_at": "2026-10-03T14:21:29.926Z",
+    "built_at": "2026-10-05T15:01:10.110Z",
     "data": [
-      {
-        "date": "2024-10-04",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
-      {
-        "date": "2024-10-05",
-        "tss": 0,
-        "ctl": 0,
-        "atl": 0,
-        "tsb": 0
-      },
       {
         "date": "2024-10-06",
         "tss": 0,
@@ -14300,28 +14286,28 @@
         "ctl": 23.3,
         "atl": 3.9,
         "tsb": 19.4
+      },
+      {
+        "date": "2026-10-04",
+        "tss": 0,
+        "ctl": 22.8,
+        "atl": 3.4,
+        "tsb": 19.4
+      },
+      {
+        "date": "2026-10-05",
+        "tss": 0,
+        "ctl": 22.2,
+        "atl": 2.9,
+        "tsb": 19.4
       }
     ]
   },
   "pmc_cache_by_athlete": {
     "athlete-gb-001": {
       "athlete_id": "athlete-gb-001",
-      "built_at": "2026-10-03T14:21:29.926Z",
+      "built_at": "2026-10-05T15:01:10.110Z",
       "data": [
-        {
-          "date": "2024-10-04",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
-        {
-          "date": "2024-10-05",
-          "tss": 0,
-          "ctl": 0,
-          "atl": 0,
-          "tsb": 0
-        },
         {
           "date": "2024-10-06",
           "tss": 0,
@@ -19416,6 +19402,20 @@
           "tss": 0,
           "ctl": 23.3,
           "atl": 3.9,
+          "tsb": 19.4
+        },
+        {
+          "date": "2026-10-04",
+          "tss": 0,
+          "ctl": 22.8,
+          "atl": 3.4,
+          "tsb": 19.4
+        },
+        {
+          "date": "2026-10-05",
+          "tss": 0,
+          "ctl": 22.2,
+          "atl": 2.9,
           "tsb": 19.4
         }
       ]
@@ -26123,6 +26123,24 @@
         "calories": 899,
         "tss_actual": 102,
         "synced_at": "2026-10-03T14:21:27.306Z"
+      }
+    },
+    {
+      "id": "e480a9e7-5568-4052-8ac4-58508e55da08",
+      "athlete_id": "athlete-gb-001",
+      "workout_id": null,
+      "device": "garmin",
+      "synced_at": "2026-10-04T10:44:25.628Z",
+      "data": {
+        "activity_id": 24391288878,
+        "activity_name": "Valle de Bravo Pádel",
+        "activity_type": "paddelball",
+        "duration_min": 189,
+        "hr_avg": 118,
+        "hr_max": 175,
+        "calories": 899,
+        "tss_actual": 102,
+        "synced_at": "2026-10-04T10:44:25.620Z"
       }
     }
   ],
@@ -36161,19 +36179,6 @@
       "avg_hr": 53,
       "max_hr": 117,
       "kilojoules": 6462.158
-    },
-    {
-      "date": "2026-10-03",
-      "recovery_score": 89,
-      "hrv_ms": 71,
-      "rhr_bpm": 43,
-      "sleep_hours": 8.4,
-      "sleep_efficiency": null,
-      "sleep_performance": null,
-      "strain": 4.5,
-      "avg_hr": null,
-      "max_hr": null,
-      "kilojoules": null
     }
   ],
   "body_composition": [
