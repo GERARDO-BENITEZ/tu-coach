@@ -4700,64 +4700,32 @@
       "athlete_id": "athlete-gb-001",
       "coach_id": "coach-erick-001",
       "date": "2026-10-07",
-      "name": "🟢 F5 S1 · Tirón Superior + Hombro + Antebrazo",
-      "type": "Fuerza / Gym",
-      "duration_min": 70,
-      "tss_planned": 60,
-      "coach_note": "El día clave para lo que pediste: brazo, antebrazo, hombro y espalda. RIR 3.",
+      "name": "🚴 Bici Rodillo + Test de Potencia (hombro en reposo)",
+      "type": "Ciclismo",
+      "duration_min": 55,
+      "tss_planned": 75,
+      "coach_note": "Cambio de hoy: amaneciste con dolor de hombro, así que fuera el Tirón Superior que tocaba. Aprovechamos que puedes hacer bici/rodillo sin comprometer el hombro para tomar tu test de potencia. IMPORTANTE: hoy NO uses el chaleco de 20kg — las correas cargan directo sobre el hombro y es justo lo que no quieres con dolor ahí. Si el dolor es más que una molestia leve o sigue igual mañana, adelanta la revisión de fisio en vez de esperar al viernes — mejor prevenir que cargar un hombro lesionado toda la semana.",
       "segments": [
         {
-          "exercise": "Activación dinámica + movilidad articular",
-          "sets": "1",
-          "reps": "8min",
-          "isWarmup": true
+          "name": "Calentamiento progresivo en rodillo",
+          "duration": "15-20 min",
+          "zone": "Z1 → Z2 progresivo"
         },
         {
-          "exercise": "Chin-up lastrado",
-          "sets": "4",
-          "reps": "6-8",
-          "note": "RIR objetivo del día. Añade peso si las últimas reps salen limpias. RIR 3.",
-          "rm_pct": 74
+          "name": "Test de potencia — protocolo 20min FTP",
+          "duration": "35 min",
+          "zone": "5min fuerte (abrir piernas, no máximo) + 10min muy suave + 20min todo lo que puedas sostener constante. FTP ≈ 95% del promedio de los 20min."
         },
         {
-          "exercise": "Remo Pendlay",
-          "sets": "4",
-          "reps": "8",
-          "note": "Explosivo en la subida, controlado en la bajada. RIR 3.",
-          "rm_pct": 72
+          "name": "Enfriamiento",
+          "duration": "10-15 min",
+          "zone": "Z1 — Recuperación"
         },
         {
-          "exercise": "Face pull con cuerda",
-          "sets": "3",
-          "reps": "15",
-          "note": "Manguito rotador — clave para trimeo repetitivo. RIR 3.",
-          "rm_pct": 59
-        },
-        {
-          "exercise": "Press militar sentado con mancuerna",
-          "sets": "3",
-          "reps": "10",
-          "note": "RIR 3.",
-          "rm_pct": 70
-        },
-        {
-          "exercise": "Farmer carry pesado",
-          "sets": "3",
-          "reps": "40m",
-          "note": "Máximo peso que puedas cargar 40m sin soltar. RIR 3."
-        },
-        {
-          "exercise": "Wrist curl + reverse wrist curl",
-          "sets": "3",
-          "reps": "15+15",
-          "note": "Antebrazo — directo para agarre de escota/caña. RIR 3.",
-          "rm_pct": 59
-        },
-        {
-          "exercise": "Enfriamiento + movilidad",
-          "sets": "1",
-          "reps": "8min",
-          "isCooldown": true
+          "exercise": "Dead bug",
+          "sets": "2",
+          "reps": "10 por lado",
+          "note": "Opcional si te queda energía — 100% seguro para el hombro (posición boca arriba, sin cargarlo). Si molesta algo, lo saltas."
         }
       ],
       "status": "PENDING",
@@ -4769,7 +4737,7 @@
       "garmin_data": null,
       "whoop_data": null,
       "created_at": "2026-08-17T23:51:17.214Z",
-      "updated_at": "2026-09-03T15:30:38.938Z"
+      "updated_at": "2026-10-07T23:03:26.700Z"
     },
     {
       "id": "9e59125a-fb84-4b45-bf55-cec14df10598",
